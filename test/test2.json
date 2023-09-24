@@ -1,0 +1,167 @@
+[
+   {
+    "circuit": "broadcast", 
+    "name": "datetime",
+    "passive": true,
+    "write": false,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [7, 0], "comment": "Datum/Uhrzeit",
+    "fielddefs": [
+     { "name": "outsidetemp", "slave": false, "type": "D2B", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 2, "result": "number", "unit": "°C", "comment": "Temperatur"},
+     { "name": "time", "slave": false, "type": "BTI", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 3, "result": "time", "unit": "", "comment": "Uhrzeit"},
+     { "name": "date", "slave": false, "type": "BDA", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 4, "result": "date", "unit": "", "comment": "Datum"}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "error",
+    "passive": true,
+    "write": false,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [254, 1], "comment": "Fehlernachricht",
+    "fielddefs": [
+     { "name": "error", "slave": false, "type": "STR", "isbits": false, "isadjustable": true, "isignored": false, "isreverse": false, "length": 10, "result": "string", "unit": "", "comment": ""}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "hwcStatus",
+    "passive": true,
+    "write": false,
+    "filename": "vaillant/broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [181, 5, 39], "comment": "Status Warmwasser",
+    "fielddefs": [
+     { "name": "onoff", "slave": false, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "values": { "0": "off", "1": "on" }, "unit": "", "comment": ""},
+     { "name": "VF1", "slave": false, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "unit": "°C", "comment": "Temperatur"},
+     { "name": "onoff", "slave": false, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "values": { "0": "off", "1": "on" }, "unit": "", "comment": ""}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "id",
+    "passive": true,
+    "write": false,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [7, 4], "comment": "Identifikation",
+    "fielddefs": [
+     { "name": "manufacturer", "slave": false, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "values": { "6": "Dungs", "15": "FH Ostfalia", "16": "TEM", "17": "Lamberti", "20": "CEB", "21": "Landis-Staefa", "22": "FERRO", "23": "MONDIAL", "24": "Wikon", "25": "Wolf", "32": "RAWE", "48": "Satronic", "64": "ENCON", "80": "Kromschröder", "96": "Eberle", "101": "EBV", "117": "Grässlin", "133": "ebm-papst", "149": "SIG", "165": "Theben", "167": "Thermowatt", "181": "Vaillant", "192": "Toby", "197": "Weishaupt", "253": "ebusd.eu" }, "unit": "", "comment": "Geräte-Hersteller"},
+     { "name": "id", "slave": false, "type": "STR", "isbits": false, "isadjustable": true, "isignored": false, "isreverse": false, "length": 5, "result": "string", "unit": "", "comment": "Geräte-ID"},
+     { "name": "software", "slave": false, "type": "PIN", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 2, "result": "number", "unit": "", "comment": "Software-Version"},
+     { "name": "hardware", "slave": false, "type": "PIN", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 2, "result": "number", "unit": "", "comment": "Hardware-Version"}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "id",
+    "passive": false,
+    "write": false,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 170,
+    "id": [7, 4], "comment": "Identifikation",
+    "fielddefs": [
+     { "name": "manufacturer", "slave": true, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "values": { "6": "Dungs", "15": "FH Ostfalia", "16": "TEM", "17": "Lamberti", "20": "CEB", "21": "Landis-Staefa", "22": "FERRO", "23": "MONDIAL", "24": "Wikon", "25": "Wolf", "32": "RAWE", "48": "Satronic", "64": "ENCON", "80": "Kromschröder", "96": "Eberle", "101": "EBV", "117": "Grässlin", "133": "ebm-papst", "149": "SIG", "165": "Theben", "167": "Thermowatt", "181": "Vaillant", "192": "Toby", "197": "Weishaupt", "253": "ebusd.eu" }, "unit": "", "comment": "Geräte-Hersteller"},
+     { "name": "id", "slave": true, "type": "STR", "isbits": false, "isadjustable": true, "isignored": false, "isreverse": false, "length": 5, "result": "string", "unit": "", "comment": "Geräte-ID"},
+     { "name": "software", "slave": true, "type": "PIN", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 2, "result": "number", "unit": "", "comment": "Software-Version"},
+     { "name": "hardware", "slave": true, "type": "PIN", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 2, "result": "number", "unit": "", "comment": "Hardware-Version"}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "id",
+    "passive": false,
+    "write": true,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [7, 4], "comment": "Identifikation",
+    "fielddefs": [
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "load",
+    "passive": true,
+    "write": false,
+    "filename": "vaillant/broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [181, 5, 6], "comment": "Quick - WW Speicherladung",
+    "fielddefs": [
+     { "name": "onoff", "slave": false, "type": "UCH", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 1, "result": "number", "values": { "0": "off", "1": "on" }, "unit": "", "comment": ""}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "outsidetemp",
+    "passive": true,
+    "write": false,
+    "filename": "vaillant/broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [181, 22, 1], "comment": "Außentemperatur",
+    "fielddefs": [
+     { "name": "temp2", "slave": false, "type": "D2B", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 2, "result": "number", "unit": "°C", "comment": "Temperatur"}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "queryexistence",
+    "passive": false,
+    "write": true,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [7, 254], "comment": "Existenzanfrage",
+    "fielddefs": [
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "signoflife",
+    "passive": true,
+    "write": false,
+    "filename": "broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [7, 255], "comment": "Lebenszeichen",
+    "fielddefs": [
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "vdatetime",
+    "passive": true,
+    "write": false,
+    "filename": "vaillant/broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [181, 22, 0], "comment": "Datum/Uhrzeit",
+    "fielddefs": [
+     { "name": "time", "slave": false, "type": "BTI", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 3, "result": "time", "unit": "", "comment": ""},
+     { "name": "date", "slave": false, "type": "BDA", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 4, "result": "date", "unit": "", "comment": ""}
+    ]
+   },
+   {
+    "circuit": "broadcast", 
+    "name": "vdatetime",
+    "passive": false,
+    "write": true,
+    "filename": "vaillant/broadcast.csv",
+    "level": "",
+    "zz": 254,
+    "id": [181, 22, 0], "comment": "Datum/Uhrzeit",
+    "fielddefs": [
+     { "name": "time", "slave": false, "type": "BTI", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": true, "length": 3, "result": "time", "unit": "", "comment": ""},
+     { "name": "date", "slave": false, "type": "BDA", "isbits": false, "isadjustable": false, "isignored": false, "isreverse": false, "length": 4, "result": "date", "unit": "", "comment": ""}
+    ]
+   }
+]
