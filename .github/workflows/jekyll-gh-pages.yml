@@ -39,14 +39,8 @@ jobs:
         run: |
           ls -lah
           shopt -s dotglob
-          chmod +x ./github/workflows/genindex.sh
-          for file in `find repo/ebusd-2.1.x -type f`; do
-            t=`git log -m -r --name-only --no-color --pretty=raw -z -1 "$file"|grep -a committer|head -n 1|sed -e 's# +[0-9]*$##' -e 's#^.* ##'`
-            if [[ $t -gt 1 ]]; then
-              touch -d "@$t" -c -m "$file"
-            fi
-          done
-          find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./github/workflows/genindex.sh \{\} \;
+          chmod +x ./.github/workflows/genindex.sh
+          find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./.github/workflows/genindex.sh \{\} \;
           mv repo/ebusd-2.1.x/* .
           rm -rf repo
           ls -lah
