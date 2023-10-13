@@ -43,7 +43,7 @@ jobs:
           find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./.github/workflows/genindex.sh \{\} \;
           mv repo/ebusd-2.1.x/* .
           rm -rf repo
-          ls -lah
+          ls -lah de en
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
