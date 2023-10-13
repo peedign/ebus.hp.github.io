@@ -39,6 +39,7 @@ jobs:
         run: |
           ls -lah
           shopt -s dotglob
+          find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./github/genindex.sh \{\} \;
           mv repo/ebusd-2.1.x/* .
           rm -rf repo
           ls -lah
