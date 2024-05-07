@@ -1,0 +1,41 @@
+name: Import changes from ebusd-configuration repository.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+    - name: Checkout ebusd-configuration
+      uses: actions/checkout@v4
+      with:
+        repository: john30/ebusd-configuration
+        path: repo
+        sparse-checkout: ebusd-2.1.x
+        fetch-depth: 0
+    - name: Move repo folders
+      run: |
+        ls -lah
+        shopt -s dotglob
+        chmod +x ./.github/workflows/genindex.sh
+        find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./.github/workflows/genindex.sh \{\} \;
+        rm -rf de en
+        mv repo/ebusd-2.1.x/* .
+        rm -rf repo
+        ls -lah de en
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "import changes from ebusd-configuration"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
