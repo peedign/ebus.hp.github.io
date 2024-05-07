@@ -28,22 +28,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Checkout ebusd-configuration
-        uses: actions/checkout@v4
-        with:
-          repository: john30/ebusd-configuration
-          path: repo
-          sparse-checkout: ebusd-2.1.x
-          fetch-depth: 0
-      - name: Move repo folders
-        run: |
-          ls -lah
-          shopt -s dotglob
-          chmod +x ./.github/workflows/genindex.sh
-          find repo/ebusd-2.1.x/ -mindepth 1 -type d -exec ./.github/workflows/genindex.sh \{\} \;
-          mv repo/ebusd-2.1.x/* .
-          rm -rf repo
-          ls -lah de en
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
