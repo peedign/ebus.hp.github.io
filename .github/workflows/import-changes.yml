@@ -18,10 +18,6 @@ jobs:
         repository: john30/ebusd-configuration
         ref: rework-normalize
         path: repo
-        sparse-checkout: |
-          src
-          package.json
-          *.sh
         fetch-depth: 0
     - name: Use Node.js node 20.x
       uses: actions/setup-node@v3
