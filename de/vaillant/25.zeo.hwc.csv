@@ -1,15 +1,21 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,ZEO00,Zeolite AMU,ZEO00 197 DHW,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-# ##### DHW: #####,,,,,,,,,,,,,
-r,,OperatingMode,Betriebsart,,,,"0600",,,mcmode,,,1=Ein 2=Aus 3=Auto
-r,,TempDesired,Solltemperatur,,,,"0D00",,,temp1,,,1/2 °C resolution
-r,,CircuitDiaState,CircuitDiaState,,,,"1800",,,UCH,,,
-r,,CircuitsStates,Zustand Wärmeabnehmer,,,,"1E00",,,UCH,,,
-r,,CleaningLady,Sparfunktion,,,,"2300",,,UCH,,,"0,5h"
-r,,HwcLegioProtectionMaxTimer,Legionellenschutz max. Timer,,,,"2D00",,,UCH,,,
-r,,ActualTempDesired,Akt. Solltemperatur,,,,"3300",,,temp1,,,1/2°C Auflösung
-r,,HwcLegioTempOkTimer,Max. Rücklauftemperatur,,,,"3400",,,temp0,,,
-!include,hwcmode.inc,,,,,,,,,,,,
-!include,timer.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,OperatingMode,Betriebsart,,,b509,0d0600,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,1=Ein 2=Aus 3=Auto
+r,,,TempDesired,Solltemperatur,,,b509,0d0d00,value,,D1C,,°C,1/2 °C resolution
+r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1800,value,,UCH,,,
+r,,,CircuitsStates,Zustand Wärmeabnehmer,,,b509,0d1e00,value,,UCH,,,
+r,,,CleaningLady,Sparfunktion,,,b509,0d2300,value,,UCH,,,"0,5h"
+r,,,HwcLegioProtectionMaxTimer,Legionellenschutz max. Timer,,,b509,0d2d00,value,,UCH,,,
+r,,,ActualTempDesired,Akt. Solltemperatur,,,b509,0d3300,value,,D1C,,°C,1/2°C Auflösung
+r,,,HwcLegioTempOkTimer,Max. Rücklauftemperatur,,,b509,0d3400,value,,UCH,,°C,Temperatur
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+r,,,Params,Parameter,,,b504,09,temp,,UCH,,°C,Temperatur,ign,,IGN:3,,,,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,temps,,SCH,,°C,Temperatur,ign_1,,IGN,,,,temps_1,,SCH,,°C,Temperatur,temps_2,,SCH,,°C,Temperatur,ign_2,,IGN,,,
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Soll/Status/Ist/Soll,,,b504,0d,temp,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,temp_1,,D2C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur

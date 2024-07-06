@@ -1,17 +1,47 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,35000,VTS 160,173 173,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-*wi,#install,,,,,"B509","0E",,,,,,
-*ws,#service,,,,,"B509","0E",,,,,,
-*[SW],scan,,,SW,,,,,,,,,
-r;w,,Date,System Date,,,,"6100",,,date,,,Aktuelles Datum
-r;w,,Time,System Time,,,,"6000",,,time,,,Aktuelle Uhrzeit
-r;w,,SystemOnOff,System OnOFF,,,,"0100",,,UCH,0=on;1=off,,
-r;w,,OperatingMode,Betriebsmodus,,,,"2F00",,,UCH,2=Auto;3=Comfort,,
-r;w,,OverrideMode,Override-Modus,,,,"5D00",,,UCH,0=None;1=Party;4=Holiday,,
-r;w,,HolidayStartPeriod,Urlaub Startdatum,,,,"1100",,,date,,,Beginn des Urlaubs
-r;w,,HolidayEndPeriod,Urlaub Enddatum,,,,"1200",,,date,,,Enddatum des Urlaubs
-r;w,,LcdContrastValue,Display Kontrastwert,,,,"5A00",,,UCH,,,Einstellung des LCD-Kontrasts
-!include,timerhwc.inc,,,,,,,,,,,,
-!include,timerhc.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,Date,System Date,,,b509,0d6100,value,,HDA,,,Aktuelles Datum
+w,,,Date,System Date,,,b509,0e6100,value,,HDA,,,Aktuelles Datum
+r,,,Time,System Time,,,b509,0d6000,value,,HTI,,,Aktuelle Uhrzeit
+w,,,Time,System Time,,,b509,0e6000,value,,HTI,,,Aktuelle Uhrzeit
+r,,,SystemOnOff,System OnOFF,,,b509,0d0100,value,,UCH,0=on;1=off,,
+w,,,SystemOnOff,System OnOFF,,,b509,0e0100,value,,UCH,0=on;1=off,,
+r,,,OperatingMode,Betriebsmodus,,,b509,0d2f00,value,,UCH,2=Auto;3=Comfort,,
+w,,,OperatingMode,Betriebsmodus,,,b509,0e2f00,value,,UCH,2=Auto;3=Comfort,,
+r,,,OverrideMode,Override-Modus,,,b509,0d5d00,value,,UCH,0=None;1=Party;4=Holiday,,
+w,,,OverrideMode,Override-Modus,,,b509,0e5d00,value,,UCH,0=None;1=Party;4=Holiday,,
+r,,,HolidayStartPeriod,Urlaub Startdatum,,,b509,0d1100,value,,HDA,,,Beginn des Urlaubs
+w,,,HolidayStartPeriod,Urlaub Startdatum,,,b509,0e1100,value,,HDA,,,Beginn des Urlaubs
+r,,,HolidayEndPeriod,Urlaub Enddatum,,,b509,0d1200,value,,HDA,,,Enddatum des Urlaubs
+w,,,HolidayEndPeriod,Urlaub Enddatum,,,b509,0e1200,value,,HDA,,,Enddatum des Urlaubs
+r,,,LcdContrastValue,Display Kontrastwert,,,b509,0d5a00,value,,UCH,,,Einstellung des LCD-Kontrasts
+w,,,LcdContrastValue,Display Kontrastwert,,,b509,0e5a00,value,,UCH,,,Einstellung des LCD-Kontrasts
+r,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0101,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0101,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0201,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0201,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0301,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0301,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Friday,Zeitfenster Freitag,,,b515,0401,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Friday,Zeitfenster Freitag,,,b515,0401,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Saturday,Zeitfenster Samstag,,,b515,0501,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Saturday,Zeitfenster Samstag,,,b515,0501,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

@@ -1,55 +1,94 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,EHP00,AMU Wärmepumpe,EHP00 172 Mixer,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*u,,,,,,"B509","29",,,IGN:2,,,
-*w,,,,,,"B509","0E",,,,,,
-*wi,#install,,,,,"B509","0E",,,,,,
-*[mixer],mc,CfgHeatSinkType,,,,1,,,,,,,
-*[fix],mc,CfgHeatSinkType,,,,2,,,,,,,
-*[SW],scan,,,SW,,,,,,,,,
-# ##### MK: Parameter und Informationen #####,,,,,,,,,,,,,
-r;w,,OperatingMode,Betriebsart,,,,"2B00",,,mcmode,,,"Betriebsmodus Heizen (Auto, Eco, Heizen, Absenken, Aus)"
-r;wi,,CfgHeatSinkType,Kreis Typ,,,,"3C00",,,mctype,,,Einstellung des Typs für den Heizkreis.- Brennerkreis: Hydraulikplan 1 und 3.- Mischerkreis: Hydraulikplan 2 und 4.- Festwert: Fest eingestellte Vorlauf-Solltemperatur für Tag und für Nacht.
-[mixer]r;w,,TempDesired,Raumsolltemperatur,,,,"3200",,,temp1,,,Raumsolltemperatur
-[fix]r;w,,TempDesired,Festwert Tag,,,,"3200",,,temp1,,,Festwert Tag
-[mixer]r;w,,TempDesiredLow,Absenktemperatur,,,,"3300",,,temp1,,,Absenktemperatur
-[fix]r;w,,TempDesiredLow,Festwert Nacht,,,,"3300",,,temp1,,,Festwert Nacht
-[mixer]r;w,,HeatingCurve,Heizkurve,,,,"3500",,,curve,,,Die Heizkurve stellt das Verhältnis zwischen Außentemperatur und Vorlaufsolltemperatur dar. Die Einstellung erfolgt für jeden Heizkreis separat.
-r;w,,OtShutdownLimit,Außentemp. Abschaltgrenze,,,,"3600",,,desiredtemp,,,AT-Abschaltgrenze: Temperaturgrenze für Abschaltung des Heizbetriebs (Sommer-Funktion)
-r;wi,,FlowTempMin,Min. Vorlauftemp.,,,,"3000",,,temp0,,,BMR:Minimum Flow Temperature for circuit
-r;w;u,,FlowTempDesired,Vorlaufsolltemperatur,,,,"4600",,,temp1,,,BMR:flow temperature that is actually desired by circuit
-r;wi,,FlowTempMax,Max. Vorlauftemp.,,,,"3100",,,temp0,,,BMR:Maximum Flow Temperature for circuit
-r;wi,,HcMaxPreHeating,Max. Voraufheizung,,,,"3800",,,hours,,,"Um die Trägheit der Fußbodenheizung zu berücksichtigen, können Sie eine Voraufheizung vor Beginn der programmierten Heizzeit manuell einstellen"
-[SW<=339]r;wi,,FloorProtectionLimit,Fußbodenschutz,,,,"7B01",,,desiredtemp,,,Fußbodenschutztemperatur. Überschreitet die VF2 -IST-Temperatur diesen Wert wird ein Fehler ausgelöst.
-[SW>=340]r,,FloorProtectionLimit,Fußbodenschutz,,,,"7B01",,,desiredtemp,,,Fußbodenschutztemperatur. Überschreitet die VF2 -IST-Temperatur diesen Wert wird ein Fehler ausgelöst.
-r;wi,,FloorPavingDryingDay,Estrichtrocknung Tag,,,,"3B00",,,UCH,,,"Sie können den Anfangstag für die Estrichtrocknung wählen, die Temperatur für die Vorlaufsolltemperatur wird automatisch gemäß Estrich trocknungsfunktion aufgerufen."
-# ***** Nur für Kühlbetrieb *****,,,,,,,,,,,,,
-[SW>=350]r;w,,CoolingOperatingModeHc2,CoolingOperatingMode_HK2,,,,"8C01",,,hwcmode,,,"Kühlungsbetriebsart: Verfügbare Einstellwerte:3=Auto, 1=An, 2= Aus"
-[SW>=350]r;wi,,CoolingSupportedHc2,CoolingSupported_HK2,,,,"8601",,,yesno,,,Gibt an ob der entsprechende Heizkreis für den Kühlbetrieb freigegeben ist. HK2 Wert
-[SW>=350]r,,Tot24hHc2,Tot_24h_HK2,,,,"8801",,,temp,,,24 Stunden Außentemperaturmittelwert. Heizkreisspezifischer Wert
-[SW>=350]r;wi,,CoolingStartOffsetHc2,CoolingStartOffset_HK2,,,,"8701",,,temp1,,,Heizkreisspezifischer Offset auf die eingestellte AT-Abschaltgrenze zur Erzeugung einer Kühlanforderung. HK2 Wert.
-[SW>=350]r,,TotAverageTimeHc2,Tot_AverageTime_HK2,,,,"8901",,,hours,,,Heizkreisspezifischer (HK2) Außentemperatur Mittelungszeitraum
-[SW>=350]r;wi,,DWMOffToHeatingDelayHc2,DWMOffToHeatingDelay_HK2,,,,"8401",,,hours,,,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Heizanforderung nach vorherigem Kühlbetrieb. HK2 Wert.
-[SW>=350]r;wi,,DWMOffToCoolingDelayHc2,DWMOffToCoolingDelay_HK2,,,,"8501",,,hours,,,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Kühlanforderung nach vorherigem Heizbetrieb. HK2 Wert.
-[SW>=350]r;wi,,EfficiencyHysteresisHc2Min,MinEfficiencyHysteresis_HK2,,,,"8B01",,,calibration1,,,"Wenn ein Fernbediengerät angeschlossen ist, gibt dieser Wert die minimal zulässige Differenz zwischen Sammelvorlauftemperatur (VF2) und Raumtemperatur."
-[SW>=350]r;wi,,CoolingWhileHolidaySupportedHc2,CoolingWhileHolidaySupported_HK2,,,,"9501",,,yesno,,,Gibt an ob der Kühlbetrieb innerhalb eines Ferienzeitraumes fortgesetzt werden soll (kann für Quellenregeneration genutzt werden).
-[SW>=350]r,,CoolingCircuitStatesHc2,CoolingCircuitStates_HK2,,,,"9701",,,UIN,,,Enthält Statusbits für verschiedene Zustände der Kühlfunktionen. Hilfreich bei Fehleranalyse oder Tests.
-[SW>=350]r,,DesiredWorkingModeHc2,DesiredWorkingMode_HK2,,,,"7E01",,,UCH,,,"f. Autocool : HeatingAutomatic, OffAutomatic, CoolingAutomatic; SM1"
-[SW>=350]r,,LastDesiredWorkingModeHc2,LastDesiredWorkingMode_HK2,,,,"8001",,,UCH,,,"f. Autocool : Standby, Heating or Cooling"
-[SW>=350]r,,CoolingRequestHc2,CoolingRequest_HK2,,,,"8301",,,yesno,,,"Heizkreisspezifische Kühlanforderung abhängig von der Kühlungsbetriebsart, Zeitfenstern und Effizienzfunktionen"
-[SW>=350]r,,CoolingEfficiencyStateHc2,CoolingEfficiencyState_HK2,,,,"8A01",,,UCH,,,SM2
-[SW>=350]r,,CoolingModeStateCounterHc2,CoolingModeStateCounter_HK2,,,,"8D01",,,UCH,,,Counts up if pump is runnig in cooling mode
-[SW>=350]r,,HcManualWorkingModeTriggeringActiveHc2,HCManualWorkingModeTriggeringActive_HK2,,,,"8F01",,,UCH,,,f. Autocool :Automatic or Manual
-[SW>=350]r,,AutocoolTestModeActiveHc2,AutocoolTestModeActive_HK2,,,,"8201",,,onoff,,,"Testbetrieb, nur für die Entwicklung!"
-# ***** Nur für Hocheffizenzpumpen *****,,,,,,,,,,,,,
-[SW>=407]r,,HcPumpStatus,CHPumpStatus,,,,"B901",,,UCH,,,0=HEP_ok: 1= HEP_error; >=2=noHEP
-[SW>=407]r,,HcPumpPWM,CHPumpPWM,,,,"BA01",,,percent0,,,actual speed of central heating CH pump (7%=off)
-[SW>=407]r;wi,,Hc1PumpSpeedControlHeatBuffer,CH1P_PumpSpeedControlHeatBuffer,,,,"BF01",,,percent0,,,CH pump speed setpoint while buffer is loaded [%]
-[SW>=407]r;wi,,Hc1PumpSpeedControlDirectCircuit,CH1P_PumpSpeedControlDirectCircuit,,,,"C001",,,percent0,,,CH pump speed setpoint while energybalancing and compressor=on [%]
-[SW>=414]r;wi,,Hc1PumpSpeedControlDirectCircuitWhileO,CH1P_PumpSpeedControlDirectCircuitWhileOff,,,,"E101",,,percent0,,,CH pump speed setpoint while energybalancing and compressor=off
-!include,mcmode.inc,,,,,,,,,,,,
-!include,timer.inc,,,,,,,,,,,,
-!include,iotesthp.inc,,,,,,,,,,,,
-!include,errors.inc,,,,,,,,,,,,
-!include,roomtempoffset.inc,,,,,,,,,,,,
-!include,quick.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+*u,
+*[cfgheatsinktype],,,cfgheatsinktype,,value
+*[id_sw],scan,,,,SW
+[cfgheatsinktype=1]r,,,TempDesired,Raumsolltemperatur,,,b509,0d3200,value,,D1C,,°C,Raumsolltemperatur
+[cfgheatsinktype=1]w,,,TempDesired,Raumsolltemperatur,,,b509,0e3200,value,,D1C,,°C,Raumsolltemperatur
+[cfgheatsinktype=1]r,,,TempDesiredLow,Absenktemperatur,,,b509,0d3300,value,,D1C,,°C,Absenktemperatur
+[cfgheatsinktype=1]w,,,TempDesiredLow,Absenktemperatur,,,b509,0e3300,value,,D1C,,°C,Absenktemperatur
+[cfgheatsinktype=1]r,,,HeatingCurve,Ferienprogramm aktiv,,,b509,0d3500,value,,UIN,100,,Die Heizkurve stellt das Verhältnis zwischen Außentemperatur und Vorlaufsolltemperatur dar. Die Einstellung erfolgt für jeden Heizkreis separat.
+[cfgheatsinktype=1]w,,,HeatingCurve,Ferienprogramm aktiv,,,b509,0e3500,value,,UIN,100,,Die Heizkurve stellt das Verhältnis zwischen Außentemperatur und Vorlaufsolltemperatur dar. Die Einstellung erfolgt für jeden Heizkreis separat.
+[cfgheatsinktype=2]r,,,TempDesired,Festwert Tag,,,b509,0d3200,value,,D1C,,°C,Festwert Tag
+[cfgheatsinktype=2]w,,,TempDesired,Festwert Tag,,,b509,0e3200,value,,D1C,,°C,Festwert Tag
+[cfgheatsinktype=2]r,,,TempDesiredLow,Festwert Nacht,,,b509,0d3300,value,,D1C,,°C,Festwert Nacht
+[cfgheatsinktype=2]w,,,TempDesiredLow,Festwert Nacht,,,b509,0e3300,value,,D1C,,°C,Festwert Nacht
+[id_sw<=339]r,,,FloorProtectionLimit,Fußbodenschutz,,,b509,0d7b01,value,,UCH,,°C,Fußbodenschutztemperatur. Überschreitet die VF2 -IST-Temperatur diesen Wert wird ein Fehler ausgelöst.
+[id_sw<=339]w,,install,FloorProtectionLimit,Fußbodenschutz,,,b509,0e7b01,value,,UCH,,°C,Fußbodenschutztemperatur. Überschreitet die VF2 -IST-Temperatur diesen Wert wird ein Fehler ausgelöst.
+[id_sw>=340]r,,,FloorProtectionLimit,Fußbodenschutz,,,b509,0d7b01,value,,UCH,,°C,Fußbodenschutztemperatur. Überschreitet die VF2 -IST-Temperatur diesen Wert wird ein Fehler ausgelöst.
+[id_sw>=350]r,,,CoolingOperatingModeHc2,CoolingOperatingMode_HK2,,,b509,0d8c01,value,,UCH,0=disabled;1=on;2=off;3=auto,,"Kühlungsbetriebsart: Verfügbare Einstellwerte:3=Auto, 1=An, 2= Aus"
+[id_sw>=350]w,,,CoolingOperatingModeHc2,CoolingOperatingMode_HK2,,,b509,0e8c01,value,,UCH,0=disabled;1=on;2=off;3=auto,,"Kühlungsbetriebsart: Verfügbare Einstellwerte:3=Auto, 1=An, 2= Aus"
+[id_sw>=350]r,,,CoolingSupportedHc2,CoolingSupported_HK2,,,b509,0d8601,value,,UCH,0=no;1=yes,,Gibt an ob der entsprechende Heizkreis für den Kühlbetrieb freigegeben ist. HK2 Wert
+[id_sw>=350]w,,install,CoolingSupportedHc2,CoolingSupported_HK2,,,b509,0e8601,value,,UCH,0=no;1=yes,,Gibt an ob der entsprechende Heizkreis für den Kühlbetrieb freigegeben ist. HK2 Wert
+[id_sw>=350]r,,,Tot24hHc2,Tot_24h_HK2,,,b509,0d8801,value,,D2C,,°C,24 Stunden Außentemperaturmittelwert. Heizkreisspezifischer Wert
+[id_sw>=350]r,,,CoolingStartOffsetHc2,CoolingStartOffset_HK2,,,b509,0d8701,value,,D1C,,°C,Heizkreisspezifischer Offset auf die eingestellte AT-Abschaltgrenze zur Erzeugung einer Kühlanforderung. HK2 Wert.
+[id_sw>=350]w,,install,CoolingStartOffsetHc2,CoolingStartOffset_HK2,,,b509,0e8701,value,,D1C,,°C,Heizkreisspezifischer Offset auf die eingestellte AT-Abschaltgrenze zur Erzeugung einer Kühlanforderung. HK2 Wert.
+[id_sw>=350]r,,,TotAverageTimeHc2,Tot_AverageTime_HK2,,,b509,0d8901,value,,UCH,,hour,Heizkreisspezifischer (HK2) Außentemperatur Mittelungszeitraum
+[id_sw>=350]r,,,DWMOffToHeatingDelayHc2,DWMOffToHeatingDelay_HK2,,,b509,0d8401,value,,UCH,,hour,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Heizanforderung nach vorherigem Kühlbetrieb. HK2 Wert.
+[id_sw>=350]w,,install,DWMOffToHeatingDelayHc2,DWMOffToHeatingDelay_HK2,,,b509,0e8401,value,,UCH,,hour,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Heizanforderung nach vorherigem Kühlbetrieb. HK2 Wert.
+[id_sw>=350]r,,,DWMOffToCoolingDelayHc2,DWMOffToCoolingDelay_HK2,,,b509,0d8501,value,,UCH,,hour,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Kühlanforderung nach vorherigem Heizbetrieb. HK2 Wert.
+[id_sw>=350]w,,install,DWMOffToCoolingDelayHc2,DWMOffToCoolingDelay_HK2,,,b509,0e8501,value,,UCH,,hour,Heizkreisspezifische Sperrzeit für den Wechsel von Bereitschaft zur Kühlanforderung nach vorherigem Heizbetrieb. HK2 Wert.
+[id_sw>=350]r,,,EfficiencyHysteresisHc2Min,MinEfficiencyHysteresis_HK2,,,b509,0d8b01,value,,D1C,,K,"Wenn ein Fernbediengerät angeschlossen ist, gibt dieser Wert die minimal zulässige Differenz zwischen Sammelvorlauftemperatur (VF2) und Raumtemperatur."
+[id_sw>=350]w,,install,EfficiencyHysteresisHc2Min,MinEfficiencyHysteresis_HK2,,,b509,0e8b01,value,,D1C,,K,"Wenn ein Fernbediengerät angeschlossen ist, gibt dieser Wert die minimal zulässige Differenz zwischen Sammelvorlauftemperatur (VF2) und Raumtemperatur."
+[id_sw>=350]r,,,CoolingWhileHolidaySupportedHc2,CoolingWhileHolidaySupported_HK2,,,b509,0d9501,value,,UCH,0=no;1=yes,,Gibt an ob der Kühlbetrieb innerhalb eines Ferienzeitraumes fortgesetzt werden soll (kann für Quellenregeneration genutzt werden).
+[id_sw>=350]w,,install,CoolingWhileHolidaySupportedHc2,CoolingWhileHolidaySupported_HK2,,,b509,0e9501,value,,UCH,0=no;1=yes,,Gibt an ob der Kühlbetrieb innerhalb eines Ferienzeitraumes fortgesetzt werden soll (kann für Quellenregeneration genutzt werden).
+[id_sw>=350]r,,,CoolingCircuitStatesHc2,CoolingCircuitStates_HK2,,,b509,0d9701,value,,UIN,,,Enthält Statusbits für verschiedene Zustände der Kühlfunktionen. Hilfreich bei Fehleranalyse oder Tests.
+[id_sw>=350]r,,,DesiredWorkingModeHc2,DesiredWorkingMode_HK2,,,b509,0d7e01,value,,UCH,,,"f. Autocool : HeatingAutomatic, OffAutomatic, CoolingAutomatic; SM1"
+[id_sw>=350]r,,,LastDesiredWorkingModeHc2,LastDesiredWorkingMode_HK2,,,b509,0d8001,value,,UCH,,,"f. Autocool : Standby, Heating or Cooling"
+[id_sw>=350]r,,,CoolingRequestHc2,CoolingRequest_HK2,,,b509,0d8301,value,,UCH,0=no;1=yes,,"Heizkreisspezifische Kühlanforderung abhängig von der Kühlungsbetriebsart, Zeitfenstern und Effizienzfunktionen"
+[id_sw>=350]r,,,CoolingEfficiencyStateHc2,CoolingEfficiencyState_HK2,,,b509,0d8a01,value,,UCH,,,SM2
+[id_sw>=350]r,,,CoolingModeStateCounterHc2,CoolingModeStateCounter_HK2,,,b509,0d8d01,value,,UCH,,,Counts up if pump is runnig in cooling mode
+[id_sw>=350]r,,,HcManualWorkingModeTriggeringActiveHc2,HCManualWorkingModeTriggeringActive_HK2,,,b509,0d8f01,value,,UCH,,,f. Autocool :Automatic or Manual
+[id_sw>=350]r,,,AutocoolTestModeActiveHc2,AutocoolTestModeActive_HK2,,,b509,0d8201,value,,UCH,0=off;1=on,,"Testbetrieb, nur für die Entwicklung!"
+[id_sw>=407]r,,,HcPumpStatus,CHPumpStatus,,,b509,0db901,value,,UCH,,,0=HEP_ok: 1= HEP_error; >=2=noHEP
+[id_sw>=407]r,,,HcPumpPWM,CHPumpPWM,,,b509,0dba01,value,,UCH,,%,actual speed of central heating CH pump (7%=off)
+[id_sw>=407]r,,,Hc1PumpSpeedControlHeatBuffer,CH1P_PumpSpeedControlHeatBuffer,,,b509,0dbf01,value,,UCH,,%,CH pump speed setpoint while buffer is loaded [%]
+[id_sw>=407]w,,install,Hc1PumpSpeedControlHeatBuffer,CH1P_PumpSpeedControlHeatBuffer,,,b509,0ebf01,value,,UCH,,%,CH pump speed setpoint while buffer is loaded [%]
+[id_sw>=407]r,,,Hc1PumpSpeedControlDirectCircuit,CH1P_PumpSpeedControlDirectCircuit,,,b509,0dc001,value,,UCH,,%,CH pump speed setpoint while energybalancing and compressor=on [%]
+[id_sw>=407]w,,install,Hc1PumpSpeedControlDirectCircuit,CH1P_PumpSpeedControlDirectCircuit,,,b509,0ec001,value,,UCH,,%,CH pump speed setpoint while energybalancing and compressor=on [%]
+[id_sw>=414]r,,,Hc1PumpSpeedControlDirectCircuitWhileO,CH1P_PumpSpeedControlDirectCircuitWhileOff,,,b509,0de101,value,,UCH,,%,CH pump speed setpoint while energybalancing and compressor=off
+[id_sw>=414]w,,install,Hc1PumpSpeedControlDirectCircuitWhileO,CH1P_PumpSpeedControlDirectCircuitWhileOff,,,b509,0ee101,value,,UCH,,%,CH pump speed setpoint while energybalancing and compressor=off
+r,,,CfgHeatSinkType,Kreis Typ,,,b509,0d3c00,value,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Einstellung des Typs für den Heizkreis.- Brennerkreis: Hydraulikplan 1 und 3.- Mischerkreis: Hydraulikplan 2 und 4.- Festwert: Fest eingestellte Vorlauf-Solltemperatur für Tag und für Nacht.
+w,,install,CfgHeatSinkType,Kreis Typ,,,b509,0e3c00,value,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Einstellung des Typs für den Heizkreis.- Brennerkreis: Hydraulikplan 1 und 3.- Mischerkreis: Hydraulikplan 2 und 4.- Festwert: Fest eingestellte Vorlauf-Solltemperatur für Tag und für Nacht.
+r,,,OperatingMode,Betriebsart,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,"Betriebsmodus Heizen (Auto, Eco, Heizen, Absenken, Aus)"
+w,,,OperatingMode,Betriebsart,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,"Betriebsmodus Heizen (Auto, Eco, Heizen, Absenken, Aus)"
+r,,,OtShutdownLimit,Außentemp. Abschaltgrenze,,,b509,0d3600,value,,UCH,,°C,AT-Abschaltgrenze: Temperaturgrenze für Abschaltung des Heizbetriebs (Sommer-Funktion)
+w,,,OtShutdownLimit,Außentemp. Abschaltgrenze,,,b509,0e3600,value,,UCH,,°C,AT-Abschaltgrenze: Temperaturgrenze für Abschaltung des Heizbetriebs (Sommer-Funktion)
+r,,,FlowTempMin,Min. Vorlauftemp.,,,b509,0d3000,value,,UCH,,°C,BMR:Minimum Flow Temperature for circuit
+w,,install,FlowTempMin,Min. Vorlauftemp.,,,b509,0e3000,value,,UCH,,°C,BMR:Minimum Flow Temperature for circuit
+r,,,FlowTempDesired,Vorlaufsolltemperatur,,,b509,0d4600,value,,D1C,,°C,BMR:flow temperature that is actually desired by circuit
+w,,,FlowTempDesired,Vorlaufsolltemperatur,,,b509,0e4600,value,,D1C,,°C,BMR:flow temperature that is actually desired by circuit
+u,,,FlowTempDesired,Vorlaufsolltemperatur,,,b509,294600,value,,IGN:2,,,,value,,D1C,,°C,BMR:flow temperature that is actually desired by circuit
+r,,,FlowTempMax,Max. Vorlauftemp.,,,b509,0d3100,value,,UCH,,°C,BMR:Maximum Flow Temperature for circuit
+w,,install,FlowTempMax,Max. Vorlauftemp.,,,b509,0e3100,value,,UCH,,°C,BMR:Maximum Flow Temperature for circuit
+r,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0d3800,value,,UCH,,hours,"Um die Trägheit der Fußbodenheizung zu berücksichtigen, können Sie eine Voraufheizung vor Beginn der programmierten Heizzeit manuell einstellen"
+w,,install,HcMaxPreHeating,Max. Voraufheizung,,,b509,0e3800,value,,UCH,,hours,"Um die Trägheit der Fußbodenheizung zu berücksichtigen, können Sie eine Voraufheizung vor Beginn der programmierten Heizzeit manuell einstellen"
+r,,,FloorPavingDryingDay,Estrichtrocknung Tag,,,b509,0d3b00,value,,UCH,,,"Sie können den Anfangstag für die Estrichtrocknung wählen, die Temperatur für die Vorlaufsolltemperatur wird automatisch gemäß Estrich trocknungsfunktion aufgerufen."
+w,,install,FloorPavingDryingDay,Estrichtrocknung Tag,,,b509,0e3b00,value,,UCH,,,"Sie können den Anfangstag für die Estrichtrocknung wählen, die Temperatur für die Vorlaufsolltemperatur wird automatisch gemäß Estrich trocknungsfunktion aufgerufen."
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,tempdesired,,UCH,,°C,Temperatur,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,floorpavingdryingday,,UCH,,,Tage,floorpavingdryingtemp,,UCH,,°C,Temperatur,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,SetFloorPavingDryingDay,Estrichtrocknungstag setzen,,,b505,03,value,,UCH,,,Tage
+w,,,SetFloorPavingDryingTemp,Estrichtrocknungstemperatur setzen,,,b505,04,value,,UCH,,°C,Temperatur
+w,,,SetType,Kreis Typ setzen,,,b505,08,value,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Mischer Typ
+w,,,SetTempDesiredLow,Absenksollwert setzen,,,b505,0a,value,,UCH,,°C,Temperatur
+w,,,SetHeatingCurve,Heizkurve setzen,,,b505,0b,value,,UIN,100,,Ferienprogramm aktiv
+w,,,SetShutdownTemp,Aussentemp. Abschaltgrenze setzen,,,b505,0c,value,,UCH,,°C,Temperatur
+w,,,SetPumpIdlePeriod,Pumpensperrzeit setzen,,,b505,0d,value,,UCH,,min,Minuten
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+w,,,SetMaxPreHeating,Max. Voraufheizung setzen,,,b505,10,value,,UCH,-12,h,Stunden
+r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Ferienprogramm aktiv,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,-12,h,Stunden
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Status Vorlauf Soll/Ist,,,b504,0d,flowtempdesired,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,Temperatur,tempdesired,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
+w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,0=off;1=coolvalve;2=sourcepump;3=hcpump;4=injector;5=caseheater;6=backup;7=hwchcvalve;8=cirpump;9=sc2pump;10=hc2pump;11=hc2mixeropen;12=hc2mixerclose,,
+w,,install,Ioteststop,I/O Test stoppen,,,b506,01,
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+w,,,Party,Quick - Party,,,b505,05,value,,UCH,0=off;1=on,,
+w,,,Load,Quick - WW Speicherladung,,,b505,06,value,,UCH,0=off;1=on,,
+w,,,Save,Quick - Sparen bis,,,b505,07,value,,TTH,,,

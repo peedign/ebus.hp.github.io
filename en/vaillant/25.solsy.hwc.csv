@@ -1,39 +1,54 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,SOLSY,auroMATIC 620/3,0020080463 163 DHW,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-*wi,#install,,,,,"B509","0E",,,,,,
-*ws,#service,,,,,"B509","0E",,,,,,
-# ##### Statistics #####,,,,,,,,,,,,,
-r,,StatPowerOn,StatPowerOn,,,,"CC00",,,UIN,,,
-r,,StatOperatingHours,StatOperatingHours,,,,"CD00",,,UIN,,,
-r,,StatMonthOfInstallation,StatMonthOfInstallation,,,,"CE00",,,UCH,,,
-r,,StatYearOfInstallation,StatYearOfInstallation,,,,"CF00",,,UCH,,,
-r,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,,"D000",,,UCH,,,
-r,,StatRTOSErrorcode,StatRTOSErrorcode,,,,"D100",,,UIN,,,
-r,,StatRestarts,StatRestarts,,,,"D200",,,UIN,,,
-r,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,,"D300",,,UIN,,,
-# ##### DHW: Data #####,,,,,,,,,,,,,
-r,,Storage1Sensor2,Storage1Sensor2,,,,"0000",,,tempsensor,,,Temperature of SP1 sensor
-r,,CirPump2,CirculationPump2,,,,"0C00",,,onoff,,,State of the circulation pump
-r,,ThreeWayValveLoadingPump12,ThreeWayValveLoadingPump12,,,,"1000",,,onoff,,,State of LP/UV1
-r,,LegioPump2,LegioPump2,,,,"1100",,,onoff,,,State of the legionella pump
-r,,TeleSwitch,TeleSwitch,,,,"0A00",,,onoff,,,State of the Teleswitch
-r,,OneTimeCirSwitch,OneTimeCirculationSwitch,,,,"0B00",,,onoff,,,non-recurring circulation pump running period
-r,,IsInParty,IsInParty,,,,"4E00",,,UCH,,,Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC
-# ##### DHW: Configuration #####,,,,,,,,,,,,,
-r;w,,HwcLaggingTime2,DhwLaggingTime2,,,,"6100",,,minutes0,,,Time pump is running after energy demand is met
-r,,FlowTempDesired2,DesiredFlowTemperature2,,,,"4600",,,temp1,,,Flow setpoint if tank has an energy demand
-r;w,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2,,,,"5500",,,yesno,,,Heating cuircuits can be loaded in parallel to an active tank loading
-r;w,,HwcLoadingDelay2,DhwLoadingDelay2,,,,"6200",,,minutes0,,,Time waiting for a heating demand in caser of solar gain
-r;ws,,SpreadingHwcLoading,SpreadingDhwLoading,,,,"8800",,,calibration0,,,Offset for DHW flow temperature
-r;w,,LegioStartTime2,LegioStartTime2,,,,"8A00",,,UCH,,,Hour for legio protection
-r;wi,,NativeHwcCircuitDisabled,NativeDhwCircuitDisabled,,,,"A900",,,yesno,,,Disable DHW
-r;w,,NormalHwcHysteresis,NormalDhwHysteresis,,,,"AF00",,,calibration0,,,The hysteresis for DHW loading
-r;w,,OperatingMode2,OperatingMode2,,,,"2B00",,,mcmode,,,Operating mode of the water circuit
-r;w,,TempDesired2,DesiredTemperature2,,,,"3200",,,temp1,,,Temperature setpoint of water tank
-r;w,,TeleswitchOperatingMode2,TeleswitchOperatingMode2,,,,"3F00",,,mcmode,,,If the tele switch port is activated the water circuit operates in this mode
-!include,hwcmode.inc,,,,,,,,,,,,
-!include,timer.inc,,,,,,,,,,,,
-!include,iotest620.inc,,,,,,,,,,,,
-!include,errors.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
+r,,,Storage1Sensor2,Storage1Sensor2,,,b509,0d0000,temp,,D2C,,°C,Temperature of SP1 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,CirPump2,CirculationPump2,,,b509,0d0c00,value,,UCH,0=off;1=on,,State of the circulation pump
+r,,,ThreeWayValveLoadingPump12,ThreeWayValveLoadingPump12,,,b509,0d1000,value,,UCH,0=off;1=on,,State of LP/UV1
+r,,,LegioPump2,LegioPump2,,,b509,0d1100,value,,UCH,0=off;1=on,,State of the legionella pump
+r,,,TeleSwitch,TeleSwitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,State of the Teleswitch
+r,,,OneTimeCirSwitch,OneTimeCirculationSwitch,,,b509,0d0b00,value,,UCH,0=off;1=on,,non-recurring circulation pump running period
+r,,,IsInParty,IsInParty,,,b509,0d4e00,value,,UCH,,,Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC
+r,,,HwcLaggingTime2,DhwLaggingTime2,,,b509,0d6100,value,,UCH,,min,Time pump is running after energy demand is met
+w,,,HwcLaggingTime2,DhwLaggingTime2,,,b509,0e6100,value,,UCH,,min,Time pump is running after energy demand is met
+r,,,FlowTempDesired2,DesiredFlowTemperature2,,,b509,0d4600,value,,D1C,,°C,Flow setpoint if tank has an energy demand
+r,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2,,,b509,0d5500,value,,UCH,0=no;1=yes,,Heating cuircuits can be loaded in parallel to an active tank loading
+w,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2,,,b509,0e5500,value,,UCH,0=no;1=yes,,Heating cuircuits can be loaded in parallel to an active tank loading
+r,,,HwcLoadingDelay2,DhwLoadingDelay2,,,b509,0d6200,value,,UCH,,min,Time waiting for a heating demand in caser of solar gain
+w,,,HwcLoadingDelay2,DhwLoadingDelay2,,,b509,0e6200,value,,UCH,,min,Time waiting for a heating demand in caser of solar gain
+r,,,SpreadingHwcLoading,SpreadingDhwLoading,,,b509,0d8800,value,,UCH,,K,Offset for DHW flow temperature
+w,,service,SpreadingHwcLoading,SpreadingDhwLoading,,,b509,0e8800,value,,UCH,,K,Offset for DHW flow temperature
+r,,,LegioStartTime2,LegioStartTime2,,,b509,0d8a00,value,,UCH,,,Hour for legio protection
+w,,,LegioStartTime2,LegioStartTime2,,,b509,0e8a00,value,,UCH,,,Hour for legio protection
+r,,,NativeHwcCircuitDisabled,NativeDhwCircuitDisabled,,,b509,0da900,value,,UCH,0=no;1=yes,,Disable DHW
+w,,install,NativeHwcCircuitDisabled,NativeDhwCircuitDisabled,,,b509,0ea900,value,,UCH,0=no;1=yes,,Disable DHW
+r,,,NormalHwcHysteresis,NormalDhwHysteresis,,,b509,0daf00,value,,UCH,,K,The hysteresis for DHW loading
+w,,,NormalHwcHysteresis,NormalDhwHysteresis,,,b509,0eaf00,value,,UCH,,K,The hysteresis for DHW loading
+r,,,OperatingMode2,OperatingMode2,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of the water circuit
+w,,,OperatingMode2,OperatingMode2,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of the water circuit
+r,,,TempDesired2,DesiredTemperature2,,,b509,0d3200,value,,D1C,,°C,Temperature setpoint of water tank
+w,,,TempDesired2,DesiredTemperature2,,,b509,0e3200,value,,D1C,,°C,Temperature setpoint of water tank
+r,,,TeleswitchOperatingMode2,TeleswitchOperatingMode2,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the water circuit operates in this mode
+w,,,TeleswitchOperatingMode2,TeleswitchOperatingMode2,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the water circuit operates in this mode
+r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
+r,,,Mode,Operation mode,,,b504,01,temp,,UCH,,°C,temperature,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,day/night mode
+w,,,SetTempDesired,Set desired temperature,,,b505,01,value,,UCH,,°C,temperature
+w,,,SetMode,Set operation mode,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode
+w,,,SetFlowTempMin,Set min flow temperature,,,b505,0e,value,,UCH,,°C,temperature
+w,,,SetFlowTempMax,Set max flow temperature,,,b505,0f,value,,UCH,,°C,temperature
+r,,,Params,Parameters,,,b504,09,temp,,UCH,,°C,temperature,ign,,IGN:3,,,,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,temps,,SCH,,°C,temperature,ign_1,,IGN,,,,temps_1,,SCH,,°C,temperature,temps_2,,SCH,,°C,temperature,ign_2,,IGN,,,
+r,,,Status0a,Status flow temperature/mixer/pump/desired flow temperature,,,b504,0a,flowtemp,,D2C,,°C,temperature,mixer,,UCH,0=off;1=open;2=close,,mixer State,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,temperature
+r,,,Status,Desired flow/status/flow/desired temperature,,,b504,0d,temp,,UCH,,°C,temperature,onoff,,UCH,0=off;1=on,,,temp_1,,D2C,,°C,temperature,temp_2,,UCH,,°C,temperature
+r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature
+w,,install,Iotest,I/O test,,,b506,02,value,,UCH,0=valve1;1=cirpump;2=pump1;3=hc2mixeropen;4=hc2mixerclose;5=hc2pump;6=col1pump;7=col2pump;8=valve2;9=valve3;10=legiopump;11=valve4;12=c1c2,,
+w,,install,Ioteststop,stop I/O test,,,b506,01,
+r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

@@ -1,61 +1,68 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,PMS00,VPM 20 S,0020071488 243,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-*wi,#install,,,,,"B509","0E",,,,,,
-# ##### general #####,,,,,,,,,,,,,
-r,,Ntc1RawData,Ntc1RawData,,,,"0000",,,UIN,,,
-r,,Ntc2RawData,Ntc2RawData,,,,"0100",,,UIN,,,
-r,,Ntc3RawData,Ntc3RawData,,,,"0200",,,UIN,,,
-r,,Ntc4RawData,Ntc4RawData,,,,"0300",,,UIN,,,
-r,,Ntc1Sensor,Ntc1Sensor,,,,"0500",,,tempsensor,,,Temperature in solar flow (from solar collector)
-r,,Ntc2Sensor,Ntc2Sensor,,,,"0600",,,tempsensor,,,Temperature in solar back flow (to solar collector)
-r,,Ntc3Sensor,Ntc3Sensor,,,,"0700",,,tempsensor,,,Temperature in buffer flow (to buffer)
-r,,Ntc4Sensor,Ntc4Sensor,,,,"0800",,,tempsensor,,,Temperature in buffer back flow (from buffer)
-r;wi,,SolPumpRelay,Relais Solarpumpe,,,,"0F00",,,onoff,,,Solar pump relay: 0: OFF; 1: ON
-r;wi,,SolPumpPower,SolarPumpPower,,,,"1000",,,power,,,Performance of solar pump: (7 - 100 %)
-r;wi,,BufferPumpPower,BufferPumpPower,,,,"1100",,,power,,,Performance of buffer pump: (15 - 100%)
-r,,MonitorMatlabLast5minSolAverage,MonitorMatlab_Last5minSolarAverage,,,,"1700",,,SIN,,,
-r,,CurrentSolTempDesired,CurrentSolarSetpoint,,,,"1800",,,UIN,,°C,Temperature target in solar flow at sensor Ntc1Sensor
-r,,CurrentVPMLoadingMode,CurrentVPM_LoadingMode,,,,"1900",,,UCH,,,"1. DHW-Support (stand alone), 2. CH-Support (stand alone), 3. +10K (stand alone), 4. SwimmingPool, 5.DHW-Support (with external control), 6. CH-Support (with external control), 7. +10K (with external control)"
-r,,RunTimePump1Minutes,RunTimePump1_Minutes,,,,"1A00",,,minutes0,,,Runtime of solar pump in minutes
-r,,RunTimePump1Hours,RunTimePump1_Hours,,,,"1B00",,,hoursum2,,,Runtime of solar pump in hours
-r,,ExternalHwcRequest,ExternalDHWRequest,,,,"1C00",,,onoff,,,0: No request; 1: Request
-r,,ExternalHcRequest,ExternalCHRequest,,,,"1D00",,,onoff,,,0: No request; 1: Request
-r,,ExternalHwcTempDesired,ExternalDHWSetpoint,,,,"1E00",,,desiredtemp,,,Requested temperature for DHW
-r,,ExternalHcTempDesired,ExternalCHSetpoint,,,,"1F00",,,desiredtemp,,,Requested temperature for CH
-r,,CurrentASCStateforExternals,CurrentASCStateforExternals,,,,"2000",,,UCH,,,1:OFF 2: Proofing 3:DHWLoading 4:CHLoading 5:Overtemperature
-r,,CurrentASCStateforASI,CurrentASCStateforASI,,,,"2100",,,UCH,,,1: Standby 2:Proofing 3:StorageLoading 4:Error_System_blocked
-r,,DateAndTimeIsSet,DateAndTimeIsSet,,,,"2200",,,onoff,,,0: Date and Time is not set; 1: Date and Time is set
-r;wi,,Time,time,,,,"2300",,,time,,,
-r;wi,,Date,date,,,,"2400",,,date,,,
-r,,BufferControlPress,P_BufferControl,,,,"2500",,,SIN,,,
-r,,BufferControlInt,I_BufferControl,,,,"2600",,,SIN,,,
-r,,BufferControlDiff,D_BufferControl,,,,"2700",,,SIN,,,
-r,,SolControlPress,P_SolarControl,,,,"2800",,,SIN,,,
-r,,SolControlInt,I_SolarControl,,,,"2900",,,SIN,,,
-r,,SolControlDiff,D_SolarControl,,,,"2A00",,,SIN,,,
-r,,MonitorBufferPIDValue,MonitorBufferPIDValue,,,,"2B00",,,SIN,,,
-r,,MonitorSolPIDValue,MonitorSolarPIDValue,,,,"2C00",,,SIN,,,
-r,,FlowSensorFrequency,FlowSensorFrequency,,,,"2D00",,,UIN,,,
-r,,CurrentFlow,CurrentFlow,,,,"2E00",,,UIN,,ml / min,Flow thru buffer circuit if loading the storage
-r,,Variante,Variante,,,,"3000",,,UCH,,,1: VMS 30 2: VPM 20 S 3: VPM 60 S (identified by resistor in harness)
-r,,CurrentSystemMode,CurrentSystemMode,,,,"3300",,,UCH,,,"1: Standalone, 3: With external control"
-r,,InternalHwcTempDesired,InternalDHWSetpoint,,,,"3500",,,UCH,,,Temperature target for DHW loading if solar module is in stand alone appliccation without external control
-r,,InternalHcTempDesired,InternalCHSetpoint,,,,"3600",,,UCH,,,Temperature target for CW loading if solar module is in stand alone appliccation without external control
-r,,ASIDetected,ASIDetected,,,,"3800",,,onoff,,,
-r;wi,,CountryZone,CountryZone,,,,"3900",,,UCH,,,Location for calculation of sun calender. See list in control manual (default = 2: Germany)
-r,,RequestForExternalDateTimeSetting,RequestForExternalDateTimeSetting,,,,"3A00",,,onoff,,,0: Time and Date is set; 1: Time and Date is not set
-r;wi,,YieldCurrentDay,SolarYieldCurrentDay,,,,"3B00",,,energy,,,Accumulated solar gain from 00:00 to 24:00 if time is set
-r,,PowerOnCounter,PowerOnCounter,,,,"3F00",,,UIN,,,
-r,,RTCLowVoltageCounter,RTCLowVoltageCounter,,,,"4000",,,UIN,,,
-r,,ForceStartSolPumpKick,ForceStartSolarPumpKick,,,,"4700",,,onoff,,,"Start solar pump for max. 5min to check collector temperature 0: OFF, 1: ON"
-r,,MonitorMatlabState,MonitorMatlabState,,,,"4800",,,UCH,,,main states: 201: Waiting; 209: Loading; 41: Night Modus
-r,,CurrentBufferTempDesired,CurrentBufferSetpoint,,,,"4900",,,SIN,,,Temperature target in buffer circuit at sensor Ntc3Sensor
-r,,RunTimeBufferPumpMinutes,RunTimeBufferPump_Minutes,,,,"4B00",,,minutes0,,,Runtime of buffer pump in minutes
-r,,RunTimeBufferPumpHours,RunTimeBufferPump_Hours,,,,"4C00",,,hoursum2,,,Runtime of buffer pump in hours
-r,,MonitorOverheatState,MonitorOverheatState,,,,"4F00",,,UCH,,,111: Waiting; 112 and 113: Temperature to high; 220 and 221: In Overheat protection
-r,,MonitorMatlabHwcCalculation,Monitor_Matlab_DHW_Calculation,,,,"5300",,,SIN,,,
-r,,MonitorMatlabHcCalculation,Monitor_Matlab_CH_Calculation,,,,"5400",,,SIN,,,
-r;wi,,YieldTotal,SolarYieldTotal,,,,"5600",,,energy4,,,Accumulated solar gain since installation
-!include,errors.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,Ntc1RawData,Ntc1RawData,,,b509,0d0000,value,,UIN,,,
+r,,,Ntc2RawData,Ntc2RawData,,,b509,0d0100,value,,UIN,,,
+r,,,Ntc3RawData,Ntc3RawData,,,b509,0d0200,value,,UIN,,,
+r,,,Ntc4RawData,Ntc4RawData,,,b509,0d0300,value,,UIN,,,
+r,,,Ntc1Sensor,Ntc1Sensor,,,b509,0d0500,temp,,D2C,,°C,Temperature in solar flow (from solar collector),sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,Ntc2Sensor,Ntc2Sensor,,,b509,0d0600,temp,,D2C,,°C,Temperature in solar back flow (to solar collector),sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,Ntc3Sensor,Ntc3Sensor,,,b509,0d0700,temp,,D2C,,°C,Temperature in buffer flow (to buffer),sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,Ntc4Sensor,Ntc4Sensor,,,b509,0d0800,temp,,D2C,,°C,Temperature in buffer back flow (from buffer),sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,SolPumpRelay,Relais Solarpumpe,,,b509,0d0f00,value,,UCH,0=off;1=on,,Solar pump relay: 0: OFF; 1: ON
+w,,install,SolPumpRelay,Relais Solarpumpe,,,b509,0e0f00,value,,UCH,0=off;1=on,,Solar pump relay: 0: OFF; 1: ON
+r,,,SolPumpPower,SolarPumpPower,,,b509,0d1000,value,,UCH,,kW,Performance of solar pump: (7 - 100 %)
+w,,install,SolPumpPower,SolarPumpPower,,,b509,0e1000,value,,UCH,,kW,Performance of solar pump: (7 - 100 %)
+r,,,BufferPumpPower,BufferPumpPower,,,b509,0d1100,value,,UCH,,kW,Performance of buffer pump: (15 - 100%)
+w,,install,BufferPumpPower,BufferPumpPower,,,b509,0e1100,value,,UCH,,kW,Performance of buffer pump: (15 - 100%)
+r,,,MonitorMatlabLast5minSolAverage,MonitorMatlab_Last5minSolarAverage,,,b509,0d1700,value,,SIN,,,
+r,,,CurrentSolTempDesired,CurrentSolarSetpoint,,,b509,0d1800,value,,UIN,,°C,Temperature target in solar flow at sensor Ntc1Sensor
+r,,,CurrentVPMLoadingMode,CurrentVPM_LoadingMode,,,b509,0d1900,value,,UCH,,,"1. DHW-Support (stand alone), 2. CH-Support (stand alone), 3. +10K (stand alone), 4. SwimmingPool, 5.DHW-Support (with external control), 6. CH-Support (with external control), 7. +10K (with external control)"
+r,,,RunTimePump1Minutes,RunTimePump1_Minutes,,,b509,0d1a00,value,,UCH,,min,Runtime of solar pump in minutes
+r,,,RunTimePump1Hours,RunTimePump1_Hours,,,b509,0d1b00,value,,UIN,,h,Runtime of solar pump in hours
+r,,,ExternalHwcRequest,ExternalDHWRequest,,,b509,0d1c00,value,,UCH,0=off;1=on,,0: No request; 1: Request
+r,,,ExternalHcRequest,ExternalCHRequest,,,b509,0d1d00,value,,UCH,0=off;1=on,,0: No request; 1: Request
+r,,,ExternalHwcTempDesired,ExternalDHWSetpoint,,,b509,0d1e00,value,,UCH,,°C,Requested temperature for DHW
+r,,,ExternalHcTempDesired,ExternalCHSetpoint,,,b509,0d1f00,value,,UCH,,°C,Requested temperature for CH
+r,,,CurrentASCStateforExternals,CurrentASCStateforExternals,,,b509,0d2000,value,,UCH,,,1:OFF 2: Proofing 3:DHWLoading 4:CHLoading 5:Overtemperature
+r,,,CurrentASCStateforASI,CurrentASCStateforASI,,,b509,0d2100,value,,UCH,,,1: Standby 2:Proofing 3:StorageLoading 4:Error_System_blocked
+r,,,DateAndTimeIsSet,DateAndTimeIsSet,,,b509,0d2200,value,,UCH,0=off;1=on,,0: Date and Time is not set; 1: Date and Time is set
+r,,,Time,time,,,b509,0d2300,value,,HTI,,,time
+w,,install,Time,time,,,b509,0e2300,value,,HTI,,,time
+r,,,Date,date,,,b509,0d2400,value,,HDA,,,date
+w,,install,Date,date,,,b509,0e2400,value,,HDA,,,date
+r,,,BufferControlPress,P_BufferControl,,,b509,0d2500,value,,SIN,,,
+r,,,BufferControlInt,I_BufferControl,,,b509,0d2600,value,,SIN,,,
+r,,,BufferControlDiff,D_BufferControl,,,b509,0d2700,value,,SIN,,,
+r,,,SolControlPress,P_SolarControl,,,b509,0d2800,value,,SIN,,,
+r,,,SolControlInt,I_SolarControl,,,b509,0d2900,value,,SIN,,,
+r,,,SolControlDiff,D_SolarControl,,,b509,0d2a00,value,,SIN,,,
+r,,,MonitorBufferPIDValue,MonitorBufferPIDValue,,,b509,0d2b00,value,,SIN,,,
+r,,,MonitorSolPIDValue,MonitorSolarPIDValue,,,b509,0d2c00,value,,SIN,,,
+r,,,FlowSensorFrequency,FlowSensorFrequency,,,b509,0d2d00,value,,UIN,,,
+r,,,CurrentFlow,CurrentFlow,,,b509,0d2e00,value,,UIN,,ml / min,Flow thru buffer circuit if loading the storage
+r,,,Variante,Variante,,,b509,0d3000,value,,UCH,,,1: VMS 30 2: VPM 20 S 3: VPM 60 S (identified by resistor in harness)
+r,,,CurrentSystemMode,CurrentSystemMode,,,b509,0d3300,value,,UCH,,,"1: Standalone, 3: With external control"
+r,,,InternalHwcTempDesired,InternalDHWSetpoint,,,b509,0d3500,value,,UCH,,,Temperature target for DHW loading if solar module is in stand alone appliccation without external control
+r,,,InternalHcTempDesired,InternalCHSetpoint,,,b509,0d3600,value,,UCH,,,Temperature target for CW loading if solar module is in stand alone appliccation without external control
+r,,,ASIDetected,ASIDetected,,,b509,0d3800,value,,UCH,0=off;1=on,,
+r,,,CountryZone,CountryZone,,,b509,0d3900,value,,UCH,,,Location for calculation of sun calender. See list in control manual (default = 2: Germany)
+w,,install,CountryZone,CountryZone,,,b509,0e3900,value,,UCH,,,Location for calculation of sun calender. See list in control manual (default = 2: Germany)
+r,,,RequestForExternalDateTimeSetting,RequestForExternalDateTimeSetting,,,b509,0d3a00,value,,UCH,0=off;1=on,,0: Time and Date is set; 1: Time and Date is not set
+r,,,YieldCurrentDay,SolarYieldCurrentDay,,,b509,0d3b00,value,,UIN,,kWh,Accumulated solar gain from 00:00 to 24:00 if time is set
+w,,install,YieldCurrentDay,SolarYieldCurrentDay,,,b509,0e3b00,value,,UIN,,kWh,Accumulated solar gain from 00:00 to 24:00 if time is set
+r,,,PowerOnCounter,PowerOnCounter,,,b509,0d3f00,value,,UIN,,,
+r,,,RTCLowVoltageCounter,RTCLowVoltageCounter,,,b509,0d4000,value,,UIN,,,
+r,,,ForceStartSolPumpKick,ForceStartSolarPumpKick,,,b509,0d4700,value,,UCH,0=off;1=on,,"Start solar pump for max. 5min to check collector temperature 0: OFF, 1: ON"
+r,,,MonitorMatlabState,MonitorMatlabState,,,b509,0d4800,value,,UCH,,,main states: 201: Waiting; 209: Loading; 41: Night Modus
+r,,,CurrentBufferTempDesired,CurrentBufferSetpoint,,,b509,0d4900,value,,SIN,,,Temperature target in buffer circuit at sensor Ntc3Sensor
+r,,,RunTimeBufferPumpMinutes,RunTimeBufferPump_Minutes,,,b509,0d4b00,value,,UCH,,min,Runtime of buffer pump in minutes
+r,,,RunTimeBufferPumpHours,RunTimeBufferPump_Hours,,,b509,0d4c00,value,,UIN,,h,Runtime of buffer pump in hours
+r,,,MonitorOverheatState,MonitorOverheatState,,,b509,0d4f00,value,,UCH,,,111: Waiting; 112 and 113: Temperature to high; 220 and 221: In Overheat protection
+r,,,MonitorMatlabHwcCalculation,Monitor_Matlab_DHW_Calculation,,,b509,0d5300,value,,SIN,,,
+r,,,MonitorMatlabHcCalculation,Monitor_Matlab_CH_Calculation,,,b509,0d5400,value,,SIN,,,
+r,,,YieldTotal,SolarYieldTotal,,,b509,0d5600,value,,ULG,,kWh,Accumulated solar gain since installation
+w,,install,YieldTotal,SolarYieldTotal,,,b509,0e5600,value,,ULG,,kWh,Accumulated solar gain since installation
+r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

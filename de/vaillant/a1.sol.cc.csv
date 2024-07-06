@@ -1,13 +1,22 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,sol00,VR 68,sol 210 Circulation,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-# ##### CP: Zirkulationspumpe #####,,,,,,,,,,,,,
-r,,CirPump,Zirkulationspumpe,,,,"0500",,,onoff,,,Zirkulationspumpe
-# ##### CP: CP #####,,,,,,,,,,,,,
-r,,OperatingMode,Betriebsart,,,,"0F00",,,mcmode,,,"Operating mode of CP circuit (1 = auto, 2 = manual, 3 = off, 4 = on)"
-!include,yield3f40.inc,,,,,,,,,,,,
-!include,hwcmode.inc,,,,,,,,,,,,
-!include,timer.inc,,,,,,,,,,,,
-!include,errors.inc,,,,,,,,,,,,
-!include,iotestbsol.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,CirPump,ZP: = Status der Zirkulationspumpe (AN/AUS),,,b509,0d0500,value,,UCH,0=off;1=on,,Zirkulationspumpe
+r,,,OperatingMode,Betriebsart,,,b509,0d0f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,"Operating mode of CP circuit (1 = auto, 2 = manual, 3 = off, 4 = on)"
+r,,,YieldThisYear,Ertrag dieses Jahr,,,b509,0d3f00:2;0d3f08:2;0d3f10:2;0d3f18:2;0d3f20:2;0d3f28:2;0d3f30:2;0d3f38:2;0d3f40:2;0d3f48:2;0d3f50:2;0d3f58:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
+r,,,YieldLastYear,Ertrag letztes Jahr,,,b509,0d4000:2;0d4008:2;0d4010:2;0d4018:2;0d4020:2;0d4028:2;0d4030:2;0d4038:2;0d4040:2;0d4048:2;0d4050:2;0d4058:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+r,,,Params,Parameter,,,b504,09,temp,,UCH,,°C,Temperatur,ign,,IGN:3,,,,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,temps,,SCH,,°C,Temperatur,ign_1,,IGN,,,,temps_1,,SCH,,°C,Temperatur,temps_2,,SCH,,°C,Temperatur,ign_2,,IGN,,,
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Soll/Status/Ist/Soll,,,b504,0d,temp,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,temp_1,,D2C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,1=off;2=col1pump;4=legiopump;8=ma,,
+w,,install,Ioteststop,I/O Test stoppen,,,b506,01,

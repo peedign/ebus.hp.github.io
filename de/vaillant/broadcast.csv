@@ -1,8 +1,8 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m;s),type / templates,divider / values,unit,comment,field2,part (m;s),type / templates,divider / values,unit,comment,field3,part (m;s),type / templates,divider / values,unit,comment
-*b,broadcast,,,,"FE","B516",,,,,,,,,,,,,,,,,,,
-*wi,broadcast,,,,"FE","B516",,,,,,,,,,,,,,,,,,,
-b;wi,,vdatetime,Datum/Uhrzeit,,,,"00",time,,BTI,,,,date,,BDA,,,,,,,,,
-b,,outsidetemp,Außentemperatur,,,,"01",,,temp2,,,,,,,,,,,,,,,
-*b,broadcast,,,,"FE","B505",,,,,,,,,,,,,,,,,,,
-b,,hwcStatus,Status Warmwasser,,,,"27",,,onoff,,,,VF1,,temp0,,,,,,onoff,,,
-b,,load,Quick - WW Speicherladung,,,,"06",,,onoff,,,,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*u,
+*w,
+u,Broadcast,,Vdatetime,Datum Uhrzeit,,fe,b516,00,time,,BTI,,,,date,,BDA,,,
+w,Broadcast,,Vdatetime,Datum Uhrzeit,,fe,b516,00,time,,BTI,,,,date,,BDA,,,
+u,Broadcast,,Outsidetemp,Außentemperatur,,fe,b516,01,value,,D2B,,°C,Temperatur
+u,Broadcast,,HwcStatus,Status Warmwasser,,fe,b505,27,onoff,,UCH,0=off;1=on,,,vf1,,UCH,,°C,Temperatur,onoff_1,,UCH,0=off;1=on,,
+u,Broadcast,,Load,Quick - WW Speicherladung,,fe,b505,06,value,,UCH,0=off;1=on,,

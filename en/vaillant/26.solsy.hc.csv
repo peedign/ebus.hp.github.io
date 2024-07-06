@@ -1,48 +1,63 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
-#,SOLSY,auroMATIC 620/3,0020080463 163 Burner,,,,,,,,,,
-*r,,,,,,"B509","0D",,,,,,
-*w,,,,,,"B509","0E",,,,,,
-*wi,#install,,,,,"B509","0E",,,,,,
-*[SW],scan,,,SW,,,,,,,,,
-# ##### Statistics #####,,,,,,,,,,,,,
-r,,StatPowerOn,StatPowerOn,,,,"CC00",,,UIN,,,
-r,,StatOperatingHours,StatOperatingHours,,,,"CD00",,,UIN,,,
-r,,StatMonthOfInstallation,StatMonthOfInstallation,,,,"CE00",,,UCH,,,
-r,,StatYearOfInstallation,StatYearOfInstallation,,,,"CF00",,,UCH,,,
-r,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,,"D000",,,UCH,,,
-r,,StatRTOSErrorcode,StatRTOSErrorcode,,,,"D100",,,UIN,,,
-r,,StatRestarts,StatRestarts,,,,"D200",,,UIN,,,
-r,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,,"D300",,,UIN,,,
-# ##### BK1: Data #####,,,,,,,,,,,,,
-r,,SumFlowSensor,SumFlowSensor_DK,,,,"0400",,,tempsensor,,,Temperature measured on VF1
-r,,OutsideTemp,OutsideTempSensor_DK,,,,"0600",,,tempsensor,,,Outside temperature
-r,,FlowTempDesired,Flow setpoint,,,,"4600",,,temp1,,,Flow temperature BK1 want to have to fullfill the actual heat demand
-r,,TeleSwitch,TeleSwitch,,,,"0A00",,,onoff,,,State of the Teleswitch
-r,,IsInHoliday,Holiday function active,,,,"2700",,,UCH,,,Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit
-r,,IsInStorageFilling,IsInTankFilling,,,,"4700",,,yesno,,,burner circuit is locked because of ongoing tank loading
-r,,CleaningLady,CleaningLady,,,,"4B00",,,UCH,,,saving function is activated until read value * 1/2 h
-r,,IsInParty,IsInParty,,,,"4E00",,,UCH,,,Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC
-r,,Hc1PumpPort,Hk1P_Port,,,,"8E00",,,onoff,,,State of burner cicuit pump on HK1P
-# ##### BK1: Configuration #####,,,,,,,,,,,,,
-r,,OutsideTempCorrection,OutsideTempSensorCorrection,,,,"2D00",,,temps,,,Correction for outside temperature sensor
-r,,BoilerMaxPreShutdown,BoilerMaxPreShutdown,,,,"3900",,,minutes0,,,Maximal Boiler preshutdown time
-r,,HcFlowIncrease,HcFlowIncrease,,,,"3A00",,,calibration0,,,Offset added to flow temperature
-r,,FrostProtectDelay,FrostProtectDelay,,,,"4900",,,hours,,,Delay time of frost protection
-r,,HydraulicScheme,Hzdraulic plan,,,,"6000",,,UCH,,,
-[SW>=401]r,,EnergyDemandNotReachedDelay,EnergyDemandNotReachedDelay,,,,"7B00",,,hours,,,Delay time for not reached temperature
-r,,EnergyDemandPercentage,EnergyDemandPercentage,,,,"7E00",,,percent0,,,Flow temperature's maximum deviation from setpoint for set delay time
-r;w,,OtShutdownLimit,OtShutdownLimit,,,,"3600",,,desiredtemp,,,"For outside temperatures higher than this, there is no heat demand generated anymore"
-r;w,,FlowTempMin,MinFlowTemp,,,,"3000",,,temp0,,,For a heat demand the desired flow temperature will at least be this value
-r;w,,TempDesiredLow,DesiredLowTemperature,,,,"3300",,,temp1,,,Night temperature setpoint of the burner circuit
-r;wi,,BoilerCircuitDisabled,BurnerCircuitDisabled,,,,"AA00",,,yesno,,,Disable the burner circuit?
-r;w,,OperatingMode,OperatingMode,,,,"2B00",,,mcmode,,,Operating mode of burner circuit
-r;w,,FlowTempMax,MaxFlowTemp,,,,"3100",,,temp0,,,For a heat demand the desired flow temperature will maximal be this value
-r;w,,TempDesired,DesiredTemperature,,,,"3200",,,temp1,,,Day temperature setpoint of the burner circuit
-r;w,,HeatingCurve,Heating curve,,,,"3500",,,curve,,,Heating curve
-[SW<=400]r;w,,HcMaxPreHeating,HcMaxPreHeating,,,,"3800",,,hours,,,The heating start before a time window could shifted forwards maximal this time (related to the outside temperature)
-[SW>=401]r;wi,,HcMaxPreHeating,HcMaxPreHeating,,,,"3800",,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
-r;w,,TeleswitchOperatingMode,TeleswitchOperatingMode,,,,"3F00",,,mcmode,,,If the tele switch port is activated the burner circuit operates in this mode
-!include,hcmode.inc,,,,,,,,,,,,
-!include,timer.inc,,,,,,,,,,,,
-!include,iotest620.inc,,,,,,,,,,,,
-!include,errors.inc,,,,,,,,,,,,
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+*uw,
+*[id_sw],scan,,,,SW
+[id_sw>=401]r,,,EnergyDemandNotReachedDelay,EnergyDemandNotReachedDelay,,,b509,0d7b00,value,,UCH,,h,Delay time for not reached temperature
+[id_sw>=401]r,,,HcMaxPreHeating,HcMaxPreHeating,,,b509,0d3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
+[id_sw>=401]w,,install,HcMaxPreHeating,HcMaxPreHeating,,,b509,0e3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
+[id_sw<=400]r,,,HcMaxPreHeating,HcMaxPreHeating,,,b509,0d3800,value,,UCH,,h,The heating start before a time window could shifted forwards maximal this time (related to the outside temperature)
+[id_sw<=400]w,,,HcMaxPreHeating,HcMaxPreHeating,,,b509,0e3800,value,,UCH,,h,The heating start before a time window could shifted forwards maximal this time (related to the outside temperature)
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
+r,,,SumFlowSensor,SumFlowSensor_DK,,,b509,0d0400,temp,,D2C,,°C,Temperature measured on VF1,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,OutsideTemp,OutsideTempSensor_DK,,,b509,0d0600,temp,,D2C,,°C,outside temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,FlowTempDesired,Flow setpoint,,,b509,0d4600,value,,D1C,,°C,Flow temperature BK1 want to have to fullfill the actual heat demand
+r,,,TeleSwitch,TeleSwitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,State of the Teleswitch
+r,,,IsInHoliday,Holiday function active,,,b509,0d2700,value,,UCH,,,Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit
+r,,,IsInStorageFilling,IsInTankFilling,,,b509,0d4700,value,,UCH,0=no;1=yes,,burner circuit is locked because of ongoing tank loading
+r,,,CleaningLady,CleaningLady,,,b509,0d4b00,value,,UCH,,,saving function is activated until read value * 1/2 h
+r,,,IsInParty,IsInParty,,,b509,0d4e00,value,,UCH,,,Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC
+r,,,Hc1PumpPort,Hk1P_Port,,,b509,0d8e00,value,,UCH,0=off;1=on,,State of burner cicuit pump on HK1P
+r,,,OutsideTempCorrection,OutsideTempSensorCorrection,,,b509,0d2d00,value,,SCH,,°C,Correction for outside temperature sensor
+r,,,BoilerMaxPreShutdown,BoilerMaxPreShutdown,,,b509,0d3900,value,,UCH,,min,Maximal Boiler preshutdown time
+r,,,HcFlowIncrease,HcFlowIncrease,,,b509,0d3a00,value,,UCH,,K,Offset added to flow temperature
+r,,,FrostProtectDelay,FrostProtectDelay,,,b509,0d4900,value,,UCH,,h,Delay time of frost protection
+r,,,HydraulicScheme,Hzdraulic plan,,,b509,0d6000,value,,UCH,,,
+r,,,EnergyDemandPercentage,EnergyDemandPercentage,,,b509,0d7e00,value,,UCH,,%,Flow temperature's maximum deviation from setpoint for set delay time
+r,,,OtShutdownLimit,OtShutdownLimit,,,b509,0d3600,value,,UCH,,°C,"For outside temperatures higher than this, there is no heat demand generated anymore"
+w,,,OtShutdownLimit,OtShutdownLimit,,,b509,0e3600,value,,UCH,,°C,"For outside temperatures higher than this, there is no heat demand generated anymore"
+r,,,FlowTempMin,MinFlowTemp,,,b509,0d3000,value,,UCH,,°C,For a heat demand the desired flow temperature will at least be this value
+w,,,FlowTempMin,MinFlowTemp,,,b509,0e3000,value,,UCH,,°C,For a heat demand the desired flow temperature will at least be this value
+r,,,TempDesiredLow,DesiredLowTemperature,,,b509,0d3300,value,,D1C,,°C,Night temperature setpoint of the burner circuit
+w,,,TempDesiredLow,DesiredLowTemperature,,,b509,0e3300,value,,D1C,,°C,Night temperature setpoint of the burner circuit
+r,,,BoilerCircuitDisabled,BurnerCircuitDisabled,,,b509,0daa00,value,,UCH,0=no;1=yes,,Disable the burner circuit?
+w,,install,BoilerCircuitDisabled,BurnerCircuitDisabled,,,b509,0eaa00,value,,UCH,0=no;1=yes,,Disable the burner circuit?
+r,,,OperatingMode,OperatingMode,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of burner circuit
+w,,,OperatingMode,OperatingMode,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of burner circuit
+r,,,FlowTempMax,MaxFlowTemp,,,b509,0d3100,value,,UCH,,°C,For a heat demand the desired flow temperature will maximal be this value
+w,,,FlowTempMax,MaxFlowTemp,,,b509,0e3100,value,,UCH,,°C,For a heat demand the desired flow temperature will maximal be this value
+r,,,TempDesired,desired temperature,,,b509,0d3200,value,,D1C,,°C,Day temperature setpoint of the burner circuit
+w,,,TempDesired,desired temperature,,,b509,0e3200,value,,D1C,,°C,Day temperature setpoint of the burner circuit
+r,,,HeatingCurve,Heating curve,,,b509,0d3500,value,,UIN,100,,Heating curve
+w,,,HeatingCurve,Heating curve,,,b509,0e3500,value,,UIN,100,,Heating curve
+r,,,TeleswitchOperatingMode,TeleswitchOperatingMode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the burner circuit operates in this mode
+w,,,TeleswitchOperatingMode,TeleswitchOperatingMode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the burner circuit operates in this mode
+r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
+r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature
+uw,,,SetMode,Operation mode,,,b510,00,hcmode,,UCH,0=auto;1=off;2=heat;2=water,,boiler mode,flowtempdesired,,D1C,,°C,temperature,hwctempdesired,,D1C,,°C,temperature,hwcflowtempdesired,,UCH,,°C,temperature,ign,,IGN:1,,,,disablehc,,BI0,,,,disablehwctapping,,BI1,,,,disablehwcload,,BI2,,,,ign_1,,IGN:1,,,,remotecontrolhcpump,,BI0,,,,releasebackup,,BI1,,,,releasecooling,,BI2,,,
+r,,,Status01,Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus,,,b511,01,temp,,D1C,,°C,temperature,temp_1,,D1C,,°C,temperature,temp_2,,D2B,,°C,temperature,temp_3,,D1C,,°C,temperature,temp_4,,D1C,,°C,temperature,pumpstate,,UCH,0=off;1=on;2=overrun;4=hwc,,pump state
+r,,,Status02,Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp,,,b511,02,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode,temp,,UCH,,°C,temperature,temp_1,,D1C,,°C,temperature,temp_2,,UCH,,°C,temperature,temp_3,,D1C,,°C,temperature
+r,,,Status,Status,,,b511,03,temp,,D2C,,°C,temperature,press,,FLT,,bar,pressure,press_1,,FLT,,bar,pressure,hcmode,,UCH,0=off;3=heat;4=water,,boiler mode,hex,,HEX,,,
+uw,,,StatusCirPump,Status circulation pump,,,b512,00,value,,UCH,0=off;100=on,,
+w,,install,Iotest,I/O test,,,b506,02,value,,UCH,0=valve1;1=cirpump;2=pump1;3=hc2mixeropen;4=hc2mixerclose;5=hc2pump;6=col1pump;7=col2pump;8=valve2;9=valve3;10=legiopump;11=valve4;12=c1c2,,
+w,,install,Ioteststop,stop I/O test,,,b506,01,
+r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
