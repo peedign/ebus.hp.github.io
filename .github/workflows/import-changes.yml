@@ -56,6 +56,15 @@ jobs:
       run: |
         ./.github/workflows/genversions.sh en
         ./.github/workflows/genversions.sh de
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: conversion_result
+        path: |
+          mapping.md
+          en
+          de
+
     - name: Commit files
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
