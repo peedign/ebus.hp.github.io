@@ -31,15 +31,15 @@ jobs:
       run: |
         mv de/versions.json de-versions.json
         mv en/versions.json en-versions.json
-    - name: Generate index and move files
+    - name: Move files and generate index
       run: |
-        find ebusd-configuration/outcsv/@ebusd/ebus-typespec/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
-        find ebusd-configuration/outcsv.de/@ebusd/ebus-typespec/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
         rm -rf de en
         mkdir de en
         mv ebusd-configuration/outcsv/@ebusd/ebus-typespec/* en/
         mv ebusd-configuration/outcsv.de/@ebusd/ebus-typespec/* de/
         find ebusd-configuration/src -type l -exec ./.github/workflows/copylink.sh ebusd-configuration/src \{\} de en \;
+        find en/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
+        find de/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
     - name: Generate mapping
       run: |
         date=$(date +%Y-%m-%d)
