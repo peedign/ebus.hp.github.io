@@ -24,12 +24,12 @@ jobs:
     - name: Install packages
       run: npm install -omit=dev
       working-directory: ebusd-configuration/
-    # - name: Convert typespec files (en)
-    #   run: npm run compile
-    #   working-directory: ebusd-configuration/
-    # - name: Convert typespec files (de)
-    #   run: npm run compile-de
-    #   working-directory: ebusd-configuration/
+    - name: Convert typespec files (en)
+      run: npm run compile
+      working-directory: ebusd-configuration/
+    - name: Convert typespec files (de)
+      run: npm run compile-de
+      working-directory: ebusd-configuration/
     - name: Stash versions
       run: |
         mv de/versions.json de-versions.json || true
