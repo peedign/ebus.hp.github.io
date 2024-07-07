@@ -5,8 +5,8 @@ r,,,RoomTemp,Raumisttemp: Raumtemperatur,,,b509,0d0000,temp,,D2C,,°C,Temperatur
 r,,,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0d1f00,value,,D2C,,°C,Temperatur
 w,,install,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0e1f00,value,,D2C,,°C,Temperatur
 r,,,RoomTempOffsetSelfWarming,Offset Eigenerwärmung,,,b509,0d2000,value,,D2C,,°C,Temperatur
-r,,,HolidayPeriod,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA,,,Ferienzeitraum von,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
-w,,,HolidayPeriod,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA,,,Ferienzeitraum von,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
+r,,,HolidayPeriod,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+w,,,HolidayPeriod,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
 r,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0d2200,value,,D2C,,°C,Temperatur
 w,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0e2200,value,,D2C,,°C,Temperatur
 r,,,LcdContrastPwmValue,LCD Kontrast: Displaykontrast,,,b509,0d3600,value,,UCH,,,

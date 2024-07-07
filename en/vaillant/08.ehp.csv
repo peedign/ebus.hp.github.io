@@ -214,7 +214,7 @@ u,,,ActualEnvironmentPowerPercentage,ActualEnvironmentPowerPercentage: only for 
 r,,,SourcePort,Fan_Brine_Port: port feedback; only needed by UI in actuator test,,,b509,0d3701,value,,UCH,0=off;1=on,,
 r,,,Hc1PumpPort,CH1_P_Port: port feedback; only needed by UI in actuator test,,,b509,0d3801,value,,UCH,0=off;1=on,,
 r,,,Injection,Injection,,,b509,0d1f00,value,,UCH,0=off;1=on,,
-r,,,Date,Actual Date,,,b509,0d2900,value,,HDA,,,date
+r,,,Date,Actual Date,,,b509,0d2900,value,,HDA:3,,,date
 r,,,CompDemand,Compressor_Demand: shows that regulation wants to start the heat source,,,b509,0d5400,value,,UCH,0=no;1=yes,,
 r,,,Weekday,Actual Weekday,,,b509,0d2a00,value,,BDY,,,weekday
 r,,,Time,Actual Time,,,b509,0d2800,value,,HTI,,,time
@@ -317,7 +317,7 @@ w,,install,StorageTempTopOffset,T_HB_Top_Offset: Offset for calibrating temperat
 w,,install,Iotest,I/O test,,,b506,02,value,,UCH,0=off;1=coolvalve;2=sourcepump;3=hcpump;4=injector;5=caseheater;6=backup;7=hwchcvalve;8=cirpump;9=sc2pump;10=hc2pump;11=hc2mixeropen;12=hc2mixerclose,,
 w,,install,Ioteststop,stop I/O test,,,b506,01,
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
 r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature

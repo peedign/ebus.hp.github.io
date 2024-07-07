@@ -98,8 +98,8 @@ r,,,LastKnownEbusAddr,installer level register,,,b509,0d3200,value,,UCH,,,
 w,,install,LastKnownEbusAddr,installer level register,,,b509,0e3200,value,,UCH,,,
 r,,,Time,installer level register,,,b509,0d3300,value,,HTI,,,Uhrzeit
 w,,install,Time,installer level register,,,b509,0e3300,value,,HTI,,,Uhrzeit
-r,,,Date,installer level register,,,b509,0d3400,value,,HDA,,,Datum
-w,,install,Date,installer level register,,,b509,0e3400,value,,HDA,,,Datum
+r,,,Date,installer level register,,,b509,0d3400,value,,HDA:3,,,Datum
+w,,install,Date,installer level register,,,b509,0e3400,value,,HDA:3,,,Datum
 r,,,Weekday,installer level register,,,b509,0d3500,value,,BDY,,,Wochentag
 w,,install,Weekday,installer level register,,,b509,0e3500,value,,BDY,,,Wochentag
 r,,,CurrentPppProvider,default *r for register,,,b509,0d3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,

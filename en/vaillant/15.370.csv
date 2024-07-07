@@ -2,8 +2,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d5f00,value,,BDY,,,weekday
-r,,,Date,current date,,,b509,0d6100,value,,HDA,,,date
-w,,,Date,current date,,,b509,0e6100,value,,HDA,,,date
+r,,,Date,current date,,,b509,0d6100,value,,HDA:3,,,date
+w,,,Date,current date,,,b509,0e6100,value,,HDA:3,,,date
 r,,,Time,current time,,,b509,0d6000,value,,HTI,,,time
 w,,,Time,current time,,,b509,0e6000,value,,HTI,,,time
 r,,,RoomTemp,RaumtemperaturIst: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
@@ -20,14 +20,14 @@ r,,,Hc1QuickVetoTemp,HC1_QuickVetoTemp: manual override setpoint of the first he
 r,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0d4000,value,,D1C,,,
 w,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0e4000,value,,D1C,,,
 r,,,Hc1SFMode,HC1_SFMode,,,b509,0d5d00,value,,UCH,0=none;1=party;2=onedaybankholiday;3=onedayholiday;4=holiday;5=bankholiday;6=quickveto;7=onetimeventilation;8=onetimewater,,activated special function of first heating circuit
-r,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0d1100,value,,HDA,,,date
-w,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0e1100,value,,HDA,,,date
-r,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0d1200,value,,HDA,,,date
-w,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0e1200,value,,HDA,,,date
-r,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0d2100,value,,HDA,,,date
-w,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0e2100,value,,HDA,,,date
-r,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0d2200,value,,HDA,,,date
-w,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0e2200,value,,HDA,,,date
+r,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0d1100,value,,HDA:3,,,date
+w,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0e1100,value,,HDA:3,,,date
+r,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0d1200,value,,HDA:3,,,date
+w,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0e1200,value,,HDA:3,,,date
+r,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0d2100,value,,HDA:3,,,date
+w,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0e2100,value,,HDA:3,,,date
+r,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0d2200,value,,HDA:3,,,date
+w,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0e2200,value,,HDA:3,,,date
 r,,,HwcTempDesired,DHW_DesiredTemp: setpoint of domestic hot water circuit,,,b509,0d4400,value,,D1C,,°C,temperature
 w,,,HwcTempDesired,DHW_DesiredTemp: setpoint of domestic hot water circuit,,,b509,0e4400,value,,D1C,,°C,temperature
 r,,,HcName1,"aaucHcNames_HK1: labelling of the first heating circuit (only A-Z,0-9,blank)",,,b509,0d3f00,value,,STR:11,,,heat circuit name
@@ -36,8 +36,8 @@ r,,,ContactName,aucContactName,,,b509,0db400,value,,STR:13,,,"installer's name (
 w,,install,ContactName,aucContactName,,,b509,0eb400,value,,STR:13,,,"installer's name (only A-Z,0-9,blank)"
 r,,,PhoneNumber,aucPhoneNumber,,,b509,0d5400,value,,STR:13,,,"installer's telephone number (only 0-9,-,blank)"
 w,,install,PhoneNumber,aucPhoneNumber,,,b509,0e5400,value,,STR:13,,,"installer's telephone number (only 0-9,-,blank)"
-r,,,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0d5900,value,,HDA,,,date
-w,,install,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0e5900,value,,HDA,,,date
+r,,,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0d5900,value,,HDA:3,,,date
+w,,install,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0e5900,value,,HDA:3,,,date
 r,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0d5a00,value,,UCH,,,
 w,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0e5a00,value,,UCH,,,
 r,,,SummerWinterTimeAdjust,SummerWinterTimeAdjust,,,b509,0d5300,value,,UCH,0=off;1=auto,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
@@ -142,5 +142,5 @@ w,,,HcTimer_Saturday,Periods Saturday,,,b515,0500,from,,TTM,,,from,to,,TTM,,,to,
 r,,,HcTimer_Sunday,Periods Sunday,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HcTimer_Sunday,Periods Sunday,,,b515,0600,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

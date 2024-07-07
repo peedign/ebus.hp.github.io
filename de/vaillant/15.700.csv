@@ -25,10 +25,10 @@ r,,,CylinderChargeHyst,hystCylinderCharge,,,b524,020000002700,value,,IGN:4,,,,va
 w,,,CylinderChargeHyst,hystCylinderCharge,,,b524,020100002700,value,,EXP,,K,Hysterese Speicherladung
 r,,,CylinderChargeOffset,offsetCylinderCharge,,,b524,020000002900,value,,IGN:4,,,,value,,EXP,,K,Speicherlad. Offset
 w,,,CylinderChargeOffset,offsetCylinderCharge,,,b524,020100002900,value,,EXP,,K,Speicherlad. Offset
-r,,,MaintenanceDate,nächste Wartung,,,b524,020000002c00,value,,IGN:4,,,,value,,HDA,,,Datum nächste Wartung
-w,,,MaintenanceDate,nächste Wartung,,,b524,020100002c00,value,,HDA,,,Datum nächste Wartung
-r,,,Date,Datum,,,b524,020000003400,value,,IGN:4,,,,value,,HDA,,,Aktuelles Datum
-w,,,Date,Datum,,,b524,020100003400,value,,HDA,,,Aktuelles Datum
+r,,,MaintenanceDate,nächste Wartung,,,b524,020000002c00,value,,IGN:4,,,,value,,HDA:3,,,Datum nächste Wartung
+w,,,MaintenanceDate,nächste Wartung,,,b524,020100002c00,value,,HDA:3,,,Datum nächste Wartung
+r,,,Date,Datum,,,b524,020000003400,value,,IGN:4,,,,value,,HDA:3,,,Aktuelles Datum
+w,,,Date,Datum,,,b524,020100003400,value,,HDA:3,,,Aktuelles Datum
 r,,,Time,Uhrzeit,,,b524,020000003500,value,,IGN:4,,,,value,,HTI,,,Aktuelle Uhrzeit
 w,,,Time,Uhrzeit,,,b524,020100003500,value,,HTI,,,Aktuelle Uhrzeit
 r,,,HydraulicScheme,Systemschema,,,b524,020000003600,value,,IGN:4,,,,value,,UIN,,,Systemschema
@@ -85,10 +85,10 @@ r,,,PhoneNumber1,Telefonnummer,,,b524,020000006f00,value,,IGN:4,,,,value,,STR:6,
 w,,,PhoneNumber1,Telefonnummer,,,b524,020100006f00,value,,STR:6,,,installer's telephone number
 r,,,PhoneNumber2,Telefonnummer,,,b524,020000007000,value,,IGN:4,,,,value,,STR:6,,,installer's telephone number
 w,,,PhoneNumber2,Telefonnummer,,,b524,020100007000,value,,STR:6,,,installer's telephone number
-r,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020000007100,value,,IGN:4,,,,value,,HDA,,,start date of holidays
-w,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020100007100,value,,HDA,,,start date of holidays
-r,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020000007200,value,,IGN:4,,,,value,,HDA,,,Heizbetrieb und Speicherladung parallel
-w,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020100007200,value,,HDA,,,Heizbetrieb und Speicherladung parallel
+r,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020000007100,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays
+w,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020100007100,value,,HDA:3,,,start date of holidays
+r,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020000007200,value,,IGN:4,,,,value,,HDA:3,,,Heizbetrieb und Speicherladung parallel
+w,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020100007200,value,,HDA:3,,,Heizbetrieb und Speicherladung parallel
 r,,,DisplayedOutsideTemp,Außentemperatur,,,b524,020000007300,value,,IGN:4,,,,value,,EXP,,°C,Außentemperatur
 r,,,SFMode,SFMode,,,b524,020000007400,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,SFMode,SFMode,,,b524,020100007400,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
@@ -102,10 +102,10 @@ r,,,OpModeVentilation,operation mode for ventilation,,,b524,020000001600,value,,
 w,,,OpModeVentilation,operation mode for ventilation,,,b524,020100001600,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode for ventilation of all/configured zone(s)
 r,,,HolidayTemp,HolidayTemp,,,b524,020000008200,value,,IGN:4,,,,value,,EXP,,°C,holiday setpoint
 w,,,HolidayTemp,HolidayTemp,,,b524,020100008200,value,,EXP,,°C,holiday setpoint
-r,,,BankHolidayStartPeriod,BankHolidayStartPeriod,,,b524,020000008300,value,,IGN:4,,,,value,,HDA,,,start date of bank holidays
-w,,,BankHolidayStartPeriod,BankHolidayStartPeriod,,,b524,020100008300,value,,HDA,,,start date of bank holidays
-r,,,BankHolidayEndPeriod,BankHolidayEndPeriod,,,b524,020000008400,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays
-w,,,BankHolidayEndPeriod,BankHolidayEndPeriod,,,b524,020100008400,value,,HDA,,,end date of bank holidays
+r,,,BankHolidayStartPeriod,BankHolidayStartPeriod,,,b524,020000008300,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays
+w,,,BankHolidayStartPeriod,BankHolidayStartPeriod,,,b524,020100008300,value,,HDA:3,,,start date of bank holidays
+r,,,BankHolidayEndPeriod,BankHolidayEndPeriod,,,b524,020000008400,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays
+w,,,BankHolidayEndPeriod,BankHolidayEndPeriod,,,b524,020100008400,value,,HDA:3,,,end date of bank holidays
 r,,,OutsideTempAvg,mittlere Außentemperatur,,,b524,020000009500,value,,IGN:4,,,,value,,EXP,,°C,gerundete mittlere Außentemperatur (alle 3h aktualisiert)
 w,,,OutsideTempAvg,mittlere Außentemperatur,,,b524,020100009500,value,,EXP,,°C,gerundete mittlere Außentemperatur (alle 3h aktualisiert)
 r,,,MaintenanceDue,Wartung fällig,,,b524,020000009600,value,,IGN:4,,,,value,,UCH,0=no;1=yes,,zeigt an ob die Wartung fällig ist
@@ -119,14 +119,14 @@ r,,,HwcTempDesired,hwc temperature desired,,,b524,020001000400,value,,IGN:4,,,,v
 w,,,HwcTempDesired,hwc temperature desired,,,b524,020101000400,value,,EXP,,°C,setpoint of domestic hot water circuit
 r,,,HwcStorageTemp,hwc storage temperature,,,b524,020001000500,value,,IGN:4,,,,value,,EXP,,°C,Speicheristtemperatur
 r,,,HwcFlowTemp,hwc flow temperature,,,b524,020001000800,value,,IGN:4,,,,value,,EXP,,°C,desired flow temp for Hwc
-r,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020001000900,value,,IGN:4,,,,value,,HDA,,,start date of holidays
-w,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020101000900,value,,HDA,,,start date of holidays
-r,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020001000a00,value,,IGN:4,,,,value,,HDA,,,Heizbetrieb und Speicherladung parallel
-w,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020101000a00,value,,HDA,,,Heizbetrieb und Speicherladung parallel
-r,,,HwcBankHolidayStartPeriod,hwc bank holiday start period,,,b524,020001000b00,value,,IGN:4,,,,value,,HDA,,,start date of bank holidays
-w,,,HwcBankHolidayStartPeriod,hwc bank holiday start period,,,b524,020101000b00,value,,HDA,,,start date of bank holidays
-r,,,HwcBankHolidayEndPeriod,hwc bank holiday end period,,,b524,020001000c00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays
-w,,,HwcBankHolidayEndPeriod,hwc bank holiday end period,,,b524,020101000c00,value,,HDA,,,end date of bank holidays
+r,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020001000900,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays
+w,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020101000900,value,,HDA:3,,,start date of holidays
+r,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020001000a00,value,,IGN:4,,,,value,,HDA:3,,,Heizbetrieb und Speicherladung parallel
+w,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020101000a00,value,,HDA:3,,,Heizbetrieb und Speicherladung parallel
+r,,,HwcBankHolidayStartPeriod,hwc bank holiday start period,,,b524,020001000b00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays
+w,,,HwcBankHolidayStartPeriod,hwc bank holiday start period,,,b524,020101000b00,value,,HDA:3,,,start date of bank holidays
+r,,,HwcBankHolidayEndPeriod,hwc bank holiday end period,,,b524,020001000c00,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays
+w,,,HwcBankHolidayEndPeriod,hwc bank holiday end period,,,b524,020101000c00,value,,HDA:3,,,end date of bank holidays
 r,,,HwcSFMode,hwc SF mode,,,b524,020001000d00,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,HwcSFMode,hwc SF mode,,,b524,020101000d00,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 r,,,Hc1CircuitType,CircuitType heating circuit 1,,,b524,020002000200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Mischer Typ,ign,,IGN:1,,,
@@ -202,10 +202,10 @@ r,,,Z1OpModeCooling,cooling operation mode zone 1,,,b524,020003000100,value,,IGN
 w,,,Z1OpModeCooling,cooling operation mode zone 1,,,b524,020103000100,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode for cooling of zone 1
 r,,,Z1CoolingTemp,cooling setpoint zone 1,,,b524,020003000200,value,,IGN:4,,,,value,,EXP,,°C,desired cooling setpoint for zone 1
 w,,,Z1CoolingTemp,cooling setpoint zone 1,,,b524,020103000200,value,,EXP,,°C,desired cooling setpoint for zone 1
-r,,,Z1HolidayStartPeriod,holiday period start zone 1,,,b524,020003000300,value,,IGN:4,,,,value,,HDA,,,start date of holidays for zone 1
-w,,,Z1HolidayStartPeriod,holiday period start zone 1,,,b524,020103000300,value,,HDA,,,start date of holidays for zone 1
-r,,,Z1HolidayEndPeriod,holiday period end zone 1,,,b524,020003000400,value,,IGN:4,,,,value,,HDA,,,end date of holidays for zone 1
-w,,,Z1HolidayEndPeriod,holiday period end zone 1,,,b524,020103000400,value,,HDA,,,end date of holidays for zone 1
+r,,,Z1HolidayStartPeriod,holiday period start zone 1,,,b524,020003000300,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays for zone 1
+w,,,Z1HolidayStartPeriod,holiday period start zone 1,,,b524,020103000300,value,,HDA:3,,,start date of holidays for zone 1
+r,,,Z1HolidayEndPeriod,holiday period end zone 1,,,b524,020003000400,value,,IGN:4,,,,value,,HDA:3,,,end date of holidays for zone 1
+w,,,Z1HolidayEndPeriod,holiday period end zone 1,,,b524,020103000400,value,,HDA:3,,,end date of holidays for zone 1
 r,,,Z1HolidayTemp,room setpoint holiday period zone 1,,,b524,020003000500,value,,IGN:4,,,,value,,EXP,,°C,holiday setpoint for zone 1
 w,,,Z1HolidayTemp,room setpoint holiday period zone 1,,,b524,020103000500,value,,EXP,,°C,holiday setpoint for zone 1
 r,,,Z1OpMode,operation mode zone 1,,,b524,020003000600,value,,IGN:4,,,,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode of zone 1
@@ -216,10 +216,10 @@ r,,,Z1QuickVetoTemp,quick veto temperature zone 1,,,b524,020003000800,value,,IGN
 w,,,Z1QuickVetoTemp,quick veto temperature zone 1,,,b524,020103000800,value,,EXP,,°C,manual override setpoint for zone 1
 r,,,Z1NightTemp,night temperature zone 1,,,b524,020003000900,value,,IGN:4,,,,value,,EXP,,°C,night setpoint for zone 1
 w,,,Z1NightTemp,night temperature zone 1,,,b524,020103000900,value,,EXP,,°C,night setpoint for zone 1
-r,,,Z1BankHolidayStartPeriod,bank holiday start zone 1,,,b524,020003000c00,value,,IGN:4,,,,value,,HDA,,,start date of bank holidays for zone 1
-w,,,Z1BankHolidayStartPeriod,bank holiday start zone 1,,,b524,020103000c00,value,,HDA,,,start date of bank holidays for zone 1
-r,,,Z1BankHolidayEndPeriod,bank holiday end zone 1,,,b524,020003000d00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays for zone 1
-w,,,Z1BankHolidayEndPeriod,bank holiday end zone 1,,,b524,020103000d00,value,,HDA,,,end date of bank holidays for zone 1
+r,,,Z1BankHolidayStartPeriod,bank holiday start zone 1,,,b524,020003000c00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays for zone 1
+w,,,Z1BankHolidayStartPeriod,bank holiday start zone 1,,,b524,020103000c00,value,,HDA:3,,,start date of bank holidays for zone 1
+r,,,Z1BankHolidayEndPeriod,bank holiday end zone 1,,,b524,020003000d00,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays for zone 1
+w,,,Z1BankHolidayEndPeriod,bank holiday end zone 1,,,b524,020103000d00,value,,HDA:3,,,end date of bank holidays for zone 1
 r,,,Z1SFMode,SF mode zone 1,,,b524,020003000e00,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,Z1SFMode,SF mode zone 1,,,b524,020103000e00,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 r,,,Z1RoomTemp,room temperature zone 1,,,b524,020003000f00,value,,IGN:4,,,,value,,EXP,,°C,current room temperature in zone 1
@@ -239,10 +239,10 @@ r,,,Z2OpModeCooling,cooling operation mode zone 2,,,b524,020003010100,value,,IGN
 w,,,Z2OpModeCooling,cooling operation mode zone 2,,,b524,020103010100,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode for cooling of zone 2
 r,,,Z2CoolingTemp,cooling setpoint zone 2,,,b524,020003010200,value,,IGN:4,,,,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
 w,,,Z2CoolingTemp,cooling setpoint zone 2,,,b524,020103010200,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-r,,,Z2HolidayStartPeriod,holiday period start zone 2,,,b524,020003010300,value,,IGN:4,,,,value,,HDA,,,start date of holidays for zone 2
-w,,,Z2HolidayStartPeriod,holiday period start zone 2,,,b524,020103010300,value,,HDA,,,start date of holidays for zone 2
-r,,,Z2HolidayEndPeriod,holiday period end zone 2,,,b524,020003010400,value,,IGN:4,,,,value,,HDA,,,end date of holidays for zone 2
-w,,,Z2HolidayEndPeriod,holiday period end zone 2,,,b524,020103010400,value,,HDA,,,end date of holidays for zone 2
+r,,,Z2HolidayStartPeriod,holiday period start zone 2,,,b524,020003010300,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays for zone 2
+w,,,Z2HolidayStartPeriod,holiday period start zone 2,,,b524,020103010300,value,,HDA:3,,,start date of holidays for zone 2
+r,,,Z2HolidayEndPeriod,holiday period end zone 2,,,b524,020003010400,value,,IGN:4,,,,value,,HDA:3,,,end date of holidays for zone 2
+w,,,Z2HolidayEndPeriod,holiday period end zone 2,,,b524,020103010400,value,,HDA:3,,,end date of holidays for zone 2
 r,,,Z2HolidayTemp,room setpoint holiday period zone 2,,,b524,020003010500,value,,IGN:4,,,,value,,EXP,,°C,holiday setpoint for zone 2
 w,,,Z2HolidayTemp,room setpoint holiday period zone 2,,,b524,020103010500,value,,EXP,,°C,holiday setpoint for zone 2
 r,,,Z2OpMode,operation mode zone 2,,,b524,020003010600,value,,IGN:4,,,,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode of zone 2
@@ -253,10 +253,10 @@ r,,,Z2QuickVetoTemp,quick veto temperature zone 2,,,b524,020003010800,value,,IGN
 w,,,Z2QuickVetoTemp,quick veto temperature zone 2,,,b524,020103010800,value,,EXP,,°C,manual override setpoint for zone 2
 r,,,Z2NightTemp,night temperature zone 2,,,b524,020003010900,value,,IGN:4,,,,value,,EXP,,°C,night setpoint for zone 2
 w,,,Z2NightTemp,night temperature zone 2,,,b524,020103010900,value,,EXP,,°C,night setpoint for zone 2
-r,,,Z2BankHolidayStartPeriod,bank holiday start zone 2,,,b524,020003010c00,value,,IGN:4,,,,value,,HDA,,,start date of bank holidays for zone 2
-w,,,Z2BankHolidayStartPeriod,bank holiday start zone 2,,,b524,020103010c00,value,,HDA,,,start date of bank holidays for zone 2
-r,,,Z2BankHolidayEndPeriod,bank holiday end zone 2,,,b524,020003010d00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays for zone 2
-w,,,Z2BankHolidayEndPeriod,bank holiday end zone 2,,,b524,020103010d00,value,,HDA,,,end date of bank holidays for zone 2
+r,,,Z2BankHolidayStartPeriod,bank holiday start zone 2,,,b524,020003010c00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays for zone 2
+w,,,Z2BankHolidayStartPeriod,bank holiday start zone 2,,,b524,020103010c00,value,,HDA:3,,,start date of bank holidays for zone 2
+r,,,Z2BankHolidayEndPeriod,bank holiday end zone 2,,,b524,020003010d00,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays for zone 2
+w,,,Z2BankHolidayEndPeriod,bank holiday end zone 2,,,b524,020103010d00,value,,HDA:3,,,end date of bank holidays for zone 2
 r,,,Z2SFMode,SF mode zone 2,,,b524,020003010e00,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,Z2SFMode,SF mode zone 2,,,b524,020103010e00,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 r,,,Z2RoomTemp,room temperature zone 2,,,b524,020003010f00,value,,IGN:4,,,,value,,EXP,,°C,current room temperature in zone 2
@@ -276,10 +276,10 @@ r,,,Z3OpModeCooling,Betriebsart für Kühlung Zone 3,,,b524,020003020100,value,,
 w,,,Z3OpModeCooling,Betriebsart für Kühlung Zone 3,,,b524,020103020100,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode for cooling of zone 3
 r,,,Z3CoolingTemp,Durchgehendes Heizen,,,b524,020003020200,value,,IGN:4,,,,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
 w,,,Z3CoolingTemp,Durchgehendes Heizen,,,b524,020103020200,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-r,,,Z3HolidayStartPeriod,Frostschutz-Verzögerung,,,b524,020003020300,value,,IGN:4,,,,value,,HDA,,,delay before frost protection is activated
-w,,,Z3HolidayStartPeriod,Frostschutz-Verzögerung,,,b524,020103020300,value,,HDA,,,delay before frost protection is activated
-r,,,Z3HolidayEndPeriod,gewünschte Temperatur Warmwasserkreis,,,b524,020003020400,value,,IGN:4,,,,value,,HDA,,,setpoint of domestic hot water circuit
-w,,,Z3HolidayEndPeriod,gewünschte Temperatur Warmwasserkreis,,,b524,020103020400,value,,HDA,,,setpoint of domestic hot water circuit
+r,,,Z3HolidayStartPeriod,Frostschutz-Verzögerung,,,b524,020003020300,value,,IGN:4,,,,value,,HDA:3,,,delay before frost protection is activated
+w,,,Z3HolidayStartPeriod,Frostschutz-Verzögerung,,,b524,020103020300,value,,HDA:3,,,delay before frost protection is activated
+r,,,Z3HolidayEndPeriod,gewünschte Temperatur Warmwasserkreis,,,b524,020003020400,value,,IGN:4,,,,value,,HDA:3,,,setpoint of domestic hot water circuit
+w,,,Z3HolidayEndPeriod,gewünschte Temperatur Warmwasserkreis,,,b524,020103020400,value,,HDA:3,,,setpoint of domestic hot water circuit
 r,,,Z3HolidayTemp,HwcStorageTemp,,,b524,020003020500,value,,IGN:4,,,,value,,EXP,,°C,Speicheristtemperatur
 w,,,Z3HolidayTemp,HwcStorageTemp,,,b524,020103020500,value,,EXP,,°C,Speicheristtemperatur
 r,,,Z3OpMode,Manuell kühlen,,,b524,020003020600,value,,IGN:4,,,,value,,UIN,0=off;1=auto;2=day;3=night,,"Anzahl Tage manueller Kühlung (max. 99, 0=aus, Temperatur via z1CoolingTemp)"
@@ -290,10 +290,10 @@ r,,,Z3QuickVetoTemp,HwcFlowTemp,,,b524,020003020800,value,,IGN:4,,,,value,,EXP,,
 w,,,Z3QuickVetoTemp,HwcFlowTemp,,,b524,020103020800,value,,EXP,,°C,desired flow temp for Hwc
 r,,,Z3NightTemp,Absenktemperatur Zone 3,,,b524,020003020900,value,,IGN:4,,,,value,,EXP,,°C,start date of holidays
 w,,,Z3NightTemp,Absenktemperatur Zone 3,,,b524,020103020900,value,,EXP,,°C,start date of holidays
-r,,,Z3BankHolidayStartPeriod,HwcHolidayEndPeriod,,,b524,020003020c00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays
-w,,,Z3BankHolidayStartPeriod,HwcHolidayEndPeriod,,,b524,020103020c00,value,,HDA,,,end date of bank holidays
-r,,,Z3BankHolidayEndPeriod,HwcSFMode,,,b524,020003020d00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays for zone 3
-w,,,Z3BankHolidayEndPeriod,HwcSFMode,,,b524,020103020d00,value,,HDA,,,end date of bank holidays for zone 3
+r,,,Z3BankHolidayStartPeriod,HwcHolidayEndPeriod,,,b524,020003020c00,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays
+w,,,Z3BankHolidayStartPeriod,HwcHolidayEndPeriod,,,b524,020103020c00,value,,HDA:3,,,end date of bank holidays
+r,,,Z3BankHolidayEndPeriod,HwcSFMode,,,b524,020003020d00,value,,IGN:4,,,,value,,HDA:3,,,end date of bank holidays for zone 3
+w,,,Z3BankHolidayEndPeriod,HwcSFMode,,,b524,020103020d00,value,,HDA:3,,,end date of bank holidays for zone 3
 r,,,Z3SFMode,maxRoomHumidity,,,b524,020003020e00,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,Z3SFMode,maxRoomHumidity,,,b524,020103020e00,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 r,,,Z3RoomTemp,Heizkurve Heizkreis 3,,,b524,020003020f00,value,,IGN:4,,,,value,,EXP,,°C,heating curve of Hc3
@@ -464,5 +464,5 @@ w,,,Z3CoolingTimer_Saturday,Zeitfenster Lüftung Samstag,,,b524,0403020105,from,
 r,,,Z3CoolingTimer_Sunday,Zeitfenster Lüftung Sonntag,,,b524,0303020106,value,,IGN:1,,,whether timeslot is valid,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis
 w,,,Z3CoolingTimer_Sunday,Zeitfenster Lüftung Sonntag,,,b524,0403020106,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

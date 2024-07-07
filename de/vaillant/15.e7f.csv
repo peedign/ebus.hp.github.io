@@ -15,8 +15,8 @@ r,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0d0800,va
 w,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0e0800,value,,D2C,,°C,Temperatur
 r,,,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0d0b00,value,,UCH,0=off;1=on,,
 w,,install,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0e0b00,value,,UCH,0=off;1=on,,
-r,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0d0d00,value,,HDA,,,Datum
-w,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0e0d00,value,,HDA,,,Datum
+r,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0d0d00,value,,HDA:3,,,Datum
+w,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0e0d00,value,,HDA:3,,,Datum
 r,,,IsInHoliday,Ferienprogramm aktiv: Restliche Urlaubstage,,,b509,0d1100,value,,UCH,,,
 r,,,IsInQuickVeto,Quick Veto aktiv: Quick Veto Funktion aktiv,,,b509,0d1600,value,,UCH,0=off;1=on,,
 r,,,QuickVetoTemp,Quick Veto Temp: room temperature setpoint during activated quick veto function,,,b509,0d1700,value,,D2C,,°C,Temperatur
@@ -65,5 +65,5 @@ w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,b
 r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

@@ -2,8 +2,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d5f00,value,,BDY,,,Wochentag
-r,,,Date,Aktuelles Datum,,,b509,0d6100,value,,HDA,,,Datum
-w,,,Date,Aktuelles Datum,,,b509,0e6100,value,,HDA,,,Datum
+r,,,Date,Aktuelles Datum,,,b509,0d6100,value,,HDA:3,,,Datum
+w,,,Date,Aktuelles Datum,,,b509,0e6100,value,,HDA:3,,,Datum
 r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,HTI,,,Uhrzeit
 w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,HTI,,,Uhrzeit
 r,,,RoomTemp,Raumisttemp: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
@@ -20,14 +20,14 @@ r,,,Hc1QuickVetoTemp,Quick Veto Temperatur Heizkreis 1: manual override setpoint
 r,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0d4000,value,,D1C,,,
 w,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0e4000,value,,D1C,,,
 r,,,Hc1SFMode,HC1_SFMode,,,b509,0d5d00,value,,UCH,0=none;1=party;2=onedaybankholiday;3=onedayholiday;4=holiday;5=bankholiday;6=quickveto;7=onetimeventilation;8=onetimewater,,activated special function of first heating circuit
-r,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0d1100,value,,HDA,,,Datum
-w,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0e1100,value,,HDA,,,Datum
-r,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0d1200,value,,HDA,,,Datum
-w,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0e1200,value,,HDA,,,Datum
-r,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0d2100,value,,HDA,,,Datum
-w,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0e2100,value,,HDA,,,Datum
-r,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0d2200,value,,HDA,,,Datum
-w,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0e2200,value,,HDA,,,Datum
+r,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0d1100,value,,HDA:3,,,Datum
+w,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0e1100,value,,HDA:3,,,Datum
+r,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0d1200,value,,HDA:3,,,Datum
+w,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0e1200,value,,HDA:3,,,Datum
+r,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0d2100,value,,HDA:3,,,Datum
+w,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0e2100,value,,HDA:3,,,Datum
+r,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0d2200,value,,HDA:3,,,Datum
+w,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0e2200,value,,HDA:3,,,Datum
 r,,,HwcTempDesired,gewünschte Temperatur Warmwasserkreis: setpoint of domestic hot water circuit,,,b509,0d4400,value,,D1C,,°C,Temperatur
 w,,,HwcTempDesired,gewünschte Temperatur Warmwasserkreis: setpoint of domestic hot water circuit,,,b509,0e4400,value,,D1C,,°C,Temperatur
 r,,,HcName1,"Heizkreisname HK1: labelling of the first heating circuit (only A-Z,0-9,blank)",,,b509,0d3f00,value,,STR:11,,,Name des Heizkreises
@@ -36,8 +36,8 @@ r,,,ContactName,aucContactName,,,b509,0db400,value,,STR:13,,,"Fachhandwerker Nam
 w,,install,ContactName,aucContactName,,,b509,0eb400,value,,STR:13,,,"Fachhandwerker Name (nur A-Z,0-9 und Leerzeichen)"
 r,,,PhoneNumber,Telefonnummer Fachhandwerker,,,b509,0d5400,value,,STR:13,,,"Fachhandwerker Telefonnummer (nur 0-9,- und Leerzeichen)"
 w,,install,PhoneNumber,Telefonnummer Fachhandwerker,,,b509,0e5400,value,,STR:13,,,"Fachhandwerker Telefonnummer (nur 0-9,- und Leerzeichen)"
-r,,,MaintenanceDate,Datum nächste Wartung,,,b509,0d5900,value,,HDA,,,Datum
-w,,install,MaintenanceDate,Datum nächste Wartung,,,b509,0e5900,value,,HDA,,,Datum
+r,,,MaintenanceDate,Datum nächste Wartung,,,b509,0d5900,value,,HDA:3,,,Datum
+w,,install,MaintenanceDate,Datum nächste Wartung,,,b509,0e5900,value,,HDA:3,,,Datum
 r,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0d5a00,value,,UCH,,,
 w,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0e5a00,value,,UCH,,,
 r,,,SummerWinterTimeAdjust,Sommer/Winterzeit Umstellung,,,b509,0d5300,value,,UCH,0=off;1=auto,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
@@ -144,5 +144,5 @@ w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,b
 r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

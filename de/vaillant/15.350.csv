@@ -68,8 +68,8 @@ r,,,Yield,installer level register,,,b509,0d1e00,value,,UIN,,,
 w,,install,Yield,installer level register,,,b509,0e1e00,value,,UIN,,,
 r,,,CollPumpHRuntime,default *r for register,,,b509,0d1f00,uin,,UIN,,,,uin_1,,UIN,,,
 w,,install,CollPumpHRuntime,"default *wi for register with user level ""install""",,,b509,0e1f00,uin,,UIN,,,,uin_1,,UIN,,,
-r,,,Date,installer level register,,,b509,0d2000,value,,HDA,,,Datum
-w,,install,Date,installer level register,,,b509,0e2000,value,,HDA,,,Datum
+r,,,Date,installer level register,,,b509,0d2000,value,,HDA:3,,,Datum
+w,,install,Date,installer level register,,,b509,0e2000,value,,HDA:3,,,Datum
 r,,,RoomTempSwitchOn,default *r for register,,,b509,0d2100,value,,UCH,0=off;1=modulating;2=thermostat,,
 w,,install,RoomTempSwitchOn,"default *wi for register with user level ""install""",,,b509,0e2100,value,,UCH,0=off;1=modulating;2=thermostat,,
 r,,,ROCRoomSet,installer level register,,,b509,0d2200,value,,D2C,,°C,Temperatur

@@ -43,8 +43,8 @@ r1,,,Yield,Solarertrag,,,b509,0d1e00,value,,UIN,,,
 w,,install,Yield,Solarertrag,,,b509,0e1e00,value,,UIN,,,
 r1,,,CollPumpHRuntime,Laufzeit Solarpumpe,,,b509,0d1f00,uin,,UIN,,,,uin_1,,UIN,,,
 w,,install,CollPumpHRuntime,Laufzeit Solarpumpe,,,b509,0e1f00,uin,,UIN,,,,uin_1,,UIN,,,
-r,,,Date,Datum,,,b509,0d2000,value,,HDA,,,Datum
-w,,install,Date,Datum,,,b509,0e2000,value,,HDA,,,Datum
+r,,,Date,Datum,,,b509,0d2000,value,,HDA:3,,,Datum
+w,,install,Date,Datum,,,b509,0e2000,value,,HDA:3,,,Datum
 r,,,IsInHoliday,Urlaub,,,b509,0d2800,value,,UCH,,,
 w,,install,IsInHoliday,Urlaub,,,b509,0e2800,value,,UCH,,,
 r,,,IsInParty,Partyfunktion,,,b509,0d2900,value,,UCH,0=off;1=on,,

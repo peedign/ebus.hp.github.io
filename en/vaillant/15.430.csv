@@ -25,8 +25,8 @@ r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d5f00,value,,BDY,,,
 w,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0e5f00,value,,BDY,,,weekday
 r,,,Time,current time,,,b509,0d6000,value,,HTI,,,time
 w,,,Time,current time,,,b509,0e6000,value,,HTI,,,time
-r,,,Date,current date,,,b509,0d6100,value,,HDA,,,date
-w,,,Date,current date,,,b509,0e6100,value,,HDA,,,date
+r,,,Date,current date,,,b509,0d6100,value,,HDA:3,,,date
+w,,,Date,current date,,,b509,0e6100,value,,HDA:3,,,date
 r,,,StatusDcf,StatusDcf: status of the DCF signal (0x00 = no DCF-Signal detected / no RTC value; 0x01 = DCF-signal detected; 0x02 = DCF-signal is being interpreted; 0x03 = DCF-data valid; 0x04 = RTC-data is valid),,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state
 r,,,IsInHoliday,Holiday function active: holidays active,,,b509,0d0b00,value,,UCH,0=no;1=yes,,
 r,,,Hc1OPMode,HC1_OPMode,,,b509,0d2f00,value,,UCH,0=off;1=manual;2=auto,,operation mode of the first heating circuit
@@ -47,10 +47,10 @@ r,,,NameHwc,Circuits_Name_DHW,,,b509,0d3f78,value,,STR:10,,,labelling of the dom
 w,,,NameHwc,Circuits_Name_DHW,,,b509,0e3f78,value,,STR:10,,,labelling of the domestic hot water circuit
 r,,,HolidayRoomTemp,"HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0d4000,value,,D1C,,,
 w,,,HolidayRoomTemp,"HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0e4000,value,,D1C,,,
-r,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0d1100,value,,HDA,,,date
-w,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0e1100,value,,HDA,,,date
-r,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0d1200,value,,HDA,,,date
-w,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0e1200,value,,HDA,,,date
+r,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0d1100,value,,HDA:3,,,date
+w,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0e1100,value,,HDA:3,,,date
+r,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0d1200,value,,HDA:3,,,date
+w,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0e1200,value,,HDA:3,,,date
 r,,,HwcOPMode,DHW_OPMode,,,b509,0d4200,value,,UCH,0=off;1=manual;2=auto,,operation mode of the domestic hot water circuit
 w,,,HwcOPMode,DHW_OPMode,,,b509,0e4200,value,,UCH,0=off;1=manual;2=auto,,operation mode of the domestic hot water circuit
 r,,,HwcTempDesired,DHW_DesiredTemp: setpoint of domestic hot water circuit,,,b509,0d4400,value,,D1C,,°C,temperature
@@ -104,8 +104,8 @@ r,,,PhoneNumber1,aucPhoneNumber_1: first part of the installer's telephone numbe
 r,,,PhoneNumber2,aucPhoneNumber_2: second part of the installer's telephone number,,,b509,0d5408,value,,STR:9,,,phone number
 r,,,KeyCodeforConfigMenu,KeyCodeforConfigMenue,,,b509,0d5500,value,,HEX:4,,,code for the installer's menues
 w,,install,KeyCodeforConfigMenu,KeyCodeforConfigMenue,,,b509,0e5500,value,,HEX:4,,,code for the installer's menues
-r,,,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0d5900,value,,HDA,,,date
-w,,install,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0e5900,value,,HDA,,,date
+r,,,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0d5900,value,,HDA:3,,,date
+w,,install,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0e5900,value,,HDA:3,,,date
 r,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0d5a00,value,,UCH,,,
 w,,install,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0e5a00,value,,UCH,,,
 r,,,HcMc1ConfigCPLPAsLP,BKMK1ConfigCPLPAsLP,,,b509,0d7d00,value,,UCH,0=CP;1=LP,,configuration of the VR61 relay-output
@@ -190,7 +190,7 @@ w,,,HwcTimer_Saturday,Periods Saturday,,,b515,0501,from,,TTM,,,from,to,,TTM,,,to
 r,,,HwcTimer_Sunday,Periods Sunday,,,b515,0601,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HwcTimer_Sunday,Periods Sunday,,,b515,0601,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,HcTimer_Monday,Periods Monday,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HcTimer_Monday,Periods Monday,,,b515,0000,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days

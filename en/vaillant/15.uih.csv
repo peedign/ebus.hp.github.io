@@ -28,8 +28,8 @@ r,,,EhpBasicStatus,EhpBasicStatus: AMU basic state (copy from AMU),,,b509,0d5000
 r,,,StateEM,"StateEM: state of energie manager:0: EmOff,1: EmDhwRequest,2: EmDhw,3: EmTankPunmpOverrun,4: EmHeating,5: EmOverpressureFromDhw,6: EmOverpressureFromCh,7: EmWaitForChDemandOverpressure,8: EmWaitForChDemandHeating,9: EmWaitForChDemandEndOfDhw",,,b509,0d4b00,value,,UCH,,,
 r,,,LanguageVariant,LanguageVariant: language of the menue,,,b509,0d2600,value,,UCH,,,
 w,,,LanguageVariant,LanguageVariant: language of the menue,,,b509,0e2600,value,,UCH,,,
-r,,,HolidayPeriods,Holiday periods,,,b509,0d4300,hfrom,,HDA,,,Holiday periods,hto,,HDA,,,holiday period to,hfrom_1,,HDA,,,holiday period from,hto_1,,HDA,,,holiday period to
-w,,,HolidayPeriods,Holiday periods,,,b509,0e4300,hfrom,,HDA,,,Holiday periods,hto,,HDA,,,holiday period to,hfrom_1,,HDA,,,holiday period from,hto_1,,HDA,,,holiday period to
+r,,,HolidayPeriods,Holiday periods,,,b509,0d4300,hfrom,,HDA:3,,,Holiday periods,hto,,HDA:3,,,holiday period to,hfrom_1,,HDA:3,,,holiday period from,hto_1,,HDA:3,,,holiday period to
+w,,,HolidayPeriods,Holiday periods,,,b509,0e4300,hfrom,,HDA:3,,,Holiday periods,hto,,HDA:3,,,holiday period to,hfrom_1,,HDA:3,,,holiday period from,hto_1,,HDA:3,,,holiday period to
 r,,,RoomTempHoliday,RoomSetTempHoliday: desired room setpoint for holiday,,,b509,0d2200,value,,D2C,,°C,temperature
 w,,,RoomTempHoliday,RoomSetTempHoliday: desired room setpoint for holiday,,,b509,0e2200,value,,D2C,,°C,temperature
 r,,,KeyCodeforConfigMenu,KeyCodeforConfigMenue,,,b509,0d2c00,value,,HEX:4,,,key code for the config menue

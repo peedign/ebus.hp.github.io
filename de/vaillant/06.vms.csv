@@ -22,8 +22,8 @@ r,,,CurrentASCStateforASI,CurrentASCStateforASI: 1: Standby 2:Proofing 3:Storage
 r,,,DateAndTimeIsSet,DateAndTimeIsSet: 0: Date and Time is not set; 1: Date and Time is set,,,b509,0d2200,value,,UCH,0=off;1=on,,
 r,,,Time,Uhrzeit,,,b509,0d2300,value,,HTI,,,Uhrzeit
 w,,install,Time,Uhrzeit,,,b509,0e2300,value,,HTI,,,Uhrzeit
-r,,,Date,Datum,,,b509,0d2400,value,,HDA,,,Datum
-w,,install,Date,Datum,,,b509,0e2400,value,,HDA,,,Datum
+r,,,Date,Datum,,,b509,0d2400,value,,HDA:3,,,Datum
+w,,install,Date,Datum,,,b509,0e2400,value,,HDA:3,,,Datum
 r,,,FlowSensorFrequency,FlowSensorFrequency,,,b509,0d2d00,value,,UIN,,,
 r,,,CurrentFlow,Volumenstrom,,,b509,0d2e00,value,,UIN,,ml / min,Flow thru buffer circuit if loading the storage
 r,,,Variante,Variante: 1: VMS 302: VPM 20 S3: VPM 60 S,,,b509,0d3000,value,,UCH,,,
@@ -44,5 +44,5 @@ r,,,MonitorOverheatState,MonitorOverheatState: 111: Waiting; 112 and 113: Temper
 r,,,YieldTotal,Solarertrag gesamt: Kumulierter Solarertrag seit Installation,,,b509,0d5600,value,,ULG,,kWh,
 w,,install,YieldTotal,Solarertrag gesamt: Kumulierter Solarertrag seit Installation,,,b509,0e5600,value,,ULG,,kWh,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

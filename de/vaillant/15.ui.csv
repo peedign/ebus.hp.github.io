@@ -35,10 +35,10 @@ r,,,OutsideTempOffset,Außentemperatur-Abgleich,,,b509,0d2100,value,,D2C,,°C,Te
 w,,install,OutsideTempOffset,Außentemperatur-Abgleich,,,b509,0e2100,value,,D2C,,°C,Temperatur
 r,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0d2200,value,,D2C,,°C,Temperatur
 w,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0e2200,value,,D2C,,°C,Temperatur
-r,,,HolidayPeriod,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA,,,Ferienzeitraum von,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
-w,,,HolidayPeriod,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA,,,Ferienzeitraum von,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
-r,,,ServicePeriod,Wartung,,,b509,0d2b00,value,,HDA,,,Datum
-w,,install,ServicePeriod,Wartung,,,b509,0e2b00,value,,HDA,,,Datum
+r,,,HolidayPeriod,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+w,,,HolidayPeriod,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+r,,,ServicePeriod,Wartung,,,b509,0d2b00,value,,HDA:3,,,Datum
+w,,install,ServicePeriod,Wartung,,,b509,0e2b00,value,,HDA:3,,,Datum
 r,,,PhoneNumberPart1,Telefonnummer Teil 1,,,b509,0d4200,value,,STR:9,,,Telefonnummer
 w,,install,PhoneNumberPart1,Telefonnummer Teil 1,,,b509,0e4200,value,,STR:9,,,Telefonnummer
 r,,,PhoneNumberPart2,Telefonnummer Teil 2,,,b509,0d4208,value,,STR:9,,,Telefonnummer
@@ -51,7 +51,7 @@ r,,,LcdContrastPwmValue,LCD Kontrast: Displaykontrast,,,b509,0d3600,value,,UCH,,
 w,,install,LcdContrastPwmValue,LCD Kontrast: Displaykontrast,,,b509,0e3600,value,,UCH,,,
 r,,,Time,Uhrzeit,,,b509,0d5f00,value,,HTI,,,Uhrzeit
 r,,,Day,Wochentag,,,b509,0d6000,value,,BDY,,,Wochentag
-r,,,Date,Datum,,,b509,0d6100,value,,HDA,,,Datum
+r,,,Date,Datum,,,b509,0d6100,value,,HDA:3,,,Datum
 r,,,SummerWinterTimeAdjust,Sommer/Winterzeit Umstellung,,,b509,0d6700,value,,UCH,0=off;1=on,,
 w,,,SummerWinterTimeAdjust,Sommer/Winterzeit Umstellung,,,b509,0e6700,value,,UCH,0=off;1=on,,
 r,,,ClockSwitchSummerWinterDone,Umschaltung Sommer-Winterzeit erfolgt,,,b509,0d6800,value,,UCH,0=off;1=on,,
@@ -184,5 +184,5 @@ w,,,HcName15,Name HK15: Name für den 15. Heizkreis,,,b509,0e4170,value,,STR:11,
 [id_sw>=400]r9,,,YieldThisYear,Ertrag dieses Jahr,,,b509,0d4400:2;0d4408:2;0d4410:2;0d4418:2;0d4420:2;0d4428:2;0d4430:2;0d4438:2;0d4440:2;0d4448:2;0d4450:2;0d4458:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
 [id_sw>=400]r,,,YieldLastYear,Ertrag letztes Jahr,,,b509,0d4500:2;0d4508:2;0d4510:2;0d4518:2;0d4520:2;0d4528:2;0d4530:2;0d4538:2;0d4540:2;0d4548:2;0d4550:2;0d4558:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

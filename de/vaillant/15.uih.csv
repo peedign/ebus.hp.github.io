@@ -28,8 +28,8 @@ r,,,EhpBasicStatus,AMU Status,,,b509,0d5000,value,,UCH,,,
 r,,,StateEM,"Status Energiemanger: Status des Energie-Manager:0: Aus,1: WW Anforderungt,2: WW Betrieb3 WW Nachlauf4: Heizbetrieb5: Überdruck im WW Betrieb6: Überdruck im Heizbetrieb7: Wartezustand Überdruck8: Wartezustand Heizung9: Wartezustand WW",,,b509,0d4b00,value,,UCH,,,
 r,,,LanguageVariant,Sprachvariante: Sprache,,,b509,0d2600,value,,UCH,,,
 w,,,LanguageVariant,Sprachvariante: Sprache,,,b509,0e2600,value,,UCH,,,
-r,,,HolidayPeriods,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA,,,Ferienzeitraum,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
-w,,,HolidayPeriods,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA,,,Ferienzeitraum,hto,,HDA,,,Ferienzeitraum bis,hfrom_1,,HDA,,,Ferienzeitraum von,hto_1,,HDA,,,Ferienzeitraum bis
+r,,,HolidayPeriods,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA:3,,,Ferienzeitraum,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+w,,,HolidayPeriods,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA:3,,,Ferienzeitraum,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
 r,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb: Raumsolltemperatur für den Ferienbetrieb,,,b509,0d2200,value,,D2C,,°C,Temperatur
 w,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb: Raumsolltemperatur für den Ferienbetrieb,,,b509,0e2200,value,,D2C,,°C,Temperatur
 r,,,KeyCodeforConfigMenu,Passwort für das Konfigurationsmenü,,,b509,0d2c00,value,,HEX:4,,,Code für die Konfigurationsmenüs
