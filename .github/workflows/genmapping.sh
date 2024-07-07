@@ -1,9 +1,9 @@
 #!/bin/bash
 mapfile=$(realpath "$1")
-base=$(realpath "$2/$3")
+base=$(realpath "$2/$4")
 cd "$base" || exit 1
-branch="$4"
-mf=$(basename "$3")
+branch="$3"
+mf=$(basename "$4")
 indent=
 path=
 if [[ "x$mf" == "x." ]]; then
