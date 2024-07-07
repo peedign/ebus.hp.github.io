@@ -17,10 +17,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 20.x
-    - name: check
-      run: |
-        pwd
-        ls -lah
     - name: Install packages
       run: npm install -omit=dev
       working-directory: ebusd-configuration/
@@ -31,9 +27,10 @@ jobs:
       run: npm run compile-de
       working-directory: ebusd-configuration/
     - name: Stash versions
+      continue-on-error: true
       run: |
-        mv de/versions.json de-versions.json || true
-        mv en/versions.json en-versions.json || true
+        mv de/versions.json de-versions.json
+        mv en/versions.json en-versions.json
     - name: Generate index and move files
       run: |
         find ebusd-configuration/outcsv/@ebusd/ebus-typespec/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
@@ -47,21 +44,22 @@ jobs:
         cat mapping.md.tmpl > mapping.md
         ((cd ebusd-configuration/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md ebusd-configuration/src)
     - name: Unstash versions
+      continue-on-error: true
       run: |
-        mv de-versions.json de/versions.json || true
-        mv en-versions.json en/versions.json || true
+        mv de-versions.json de/versions.json
+        mv en-versions.json en/versions.json
     - name: Update versions
       run: |
         ./.github/workflows/genversions.sh en
         ./.github/workflows/genversions.sh de
-    # - name: Commit files
-    #   run: |
-    #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
-    #     git config --local user.name "github-actions[bot]"
-    #     git add de en mapping.md
-    #     git commit -a -m "import changes from ebusd-configuration"
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: ${{ github.ref }}
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add de en mapping.md
+        git commit -a -m "import changes from ebusd-configuration"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
