@@ -1,2 +1,6 @@
 title: eBUS configuration files
 description: Configuration files for [ebusd](https://github.com/john30/ebusd) on [github pages](https://ebus.github.io/).
+exclude:
+  - .github
+  - "*.tmpl"
+  - ebusd-configuration
