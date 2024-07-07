@@ -47,6 +47,10 @@ jobs:
       run: |
         cat mapping.md.tmpl > mapping.md
         ((cd repo/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md repo/src)
+    - name: Generate versions
+      run: |
+        ./.github/workflows/genversions.sh en
+        ./.github/workflows/genversions.sh de
     - name: Remove repo folders
       run: |
         rm -rf repo
