@@ -1,61 +1,61 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,HeatingScheduleEnable,Heizplan aktivieren,,,b509,0d0200,value,,UCH,0=off;1=on,,Heizplan aktivieren
-w,,,HeatingScheduleEnable,Heizplan aktivieren,,,b509,0e0200,value,,UCH,0=off;1=on,,Heizplan aktivieren
-r,,,HeatingEnable,Heizung aktivieren,,,b509,0d0300,value,,UCH,0=off;1=on,,Heizung aktivieren
-w,,,HeatingEnable,Heizung aktivieren,,,b509,0e0300,value,,UCH,0=off;1=on,,Heizung aktivieren
-r,,,HeatingTempSet,Manuelle Einstellung der Heiztemperatur,,,b509,0d2200,value,,D2C,,°C,Manuelle Einstellung der Heiztemperatur
-w,,,HeatingTempSet,Manuelle Einstellung der Heiztemperatur,,,b509,0e2200,value,,D2C,,°C,Manuelle Einstellung der Heiztemperatur
-r,,,HeatingOverrideEnable,Heizungsüberbrückung aktivieren,,,b509,0d2300,value,,UCH,0=off;1=on,,Heizungsüberbrückung aktivieren
-w,,,HeatingOverrideEnable,Heizungsüberbrückung aktivieren,,,b509,0e2300,value,,UCH,0=off;1=on,,Heizungsüberbrückung aktivieren
-r,,,HeatingOverrideTemp,Übersteuerungstemperatur der Heizung,,,b509,0d2400,value,,D2C,,°C,Übersteuerungstemperatur der Heizung
-w,,,HeatingOverrideTemp,Übersteuerungstemperatur der Heizung,,,b509,0e2400,value,,D2C,,°C,Übersteuerungstemperatur der Heizung
-r,,,HeatingOverrideEndTime,Endzeit Heizungsübersteuerung,,,b509,0d2500,value,,DTM,,,Endzeit Heizungsübersteuerung
-w,,,HeatingOverrideEndTime,Endzeit Heizungsübersteuerung,,,b509,0e2500,value,,DTM,,,Endzeit Heizungsübersteuerung
-r,,,KeyboardLockEnable,Tastatursperre aktivieren,,,b509,0d2a00,value,,UCH,0=off;1=on,,Tastatursperre aktivieren
-w,,,KeyboardLockEnable,Tastatursperre aktivieren,,,b509,0e2a00,value,,UCH,0=off;1=on,,Tastatursperre aktivieren
-r,,,Contrast,Contrast,,,b509,0d2b00,value,,UCH,,,Contrast
-w,,,Contrast,Contrast,,,b509,0e2b00,value,,UCH,,,Contrast
-r,,,Brightness,Brightness,,,b509,0d2c00,value,,UCH,,,Brightness
-w,,,Brightness,Brightness,,,b509,0e2c00,value,,UCH,,,Brightness
-r,,,Time_Date,Uhrzeit & Datum,,,b509,0d2e00,value,,DTM,,,Uhrzeit & Datum
-w,,,Time_Date,Uhrzeit & Datum,,,b509,0e2e00,value,,DTM,,,Uhrzeit & Datum
-r,,,DateFormat,Date Format,,,b509,0d2d00,value,,UCH,,,Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT
-w,,,DateFormat,Date Format,,,b509,0e2d00,value,,UCH,,,Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT
-r,,,Weekday,Wochentag,,,b509,0d2f00,value,,BDY,,,Wochentag
-w,,,Weekday,Wochentag,,,b509,0e2f00,value,,BDY,,,Wochentag
+r,,,HeatingScheduleEnable,Heating Shedule Enable: Heizplan aktivieren,,,b509,0d0200,value,,UCH,0=off;1=on,,register value
+w,,,HeatingScheduleEnable,Heating Shedule Enable: Heizplan aktivieren,,,b509,0e0200,value,,UCH,0=off;1=on,,register value
+r,,,HeatingEnable,Heating Enable: Heizung aktivieren,,,b509,0d0300,value,,UCH,0=off;1=on,,register value
+w,,,HeatingEnable,Heating Enable: Heizung aktivieren,,,b509,0e0300,value,,UCH,0=off;1=on,,register value
+r,,,HeatingTempSet,Heating Temp Manual Set: Manuelle Einstellung der Heiztemperatur,,,b509,0d2200,value,,D2C,,°C,register value
+w,,,HeatingTempSet,Heating Temp Manual Set: Manuelle Einstellung der Heiztemperatur,,,b509,0e2200,value,,D2C,,°C,register value
+r,,,HeatingOverrideEnable,Heating Override Enable: Heizungsüberbrückung aktivieren,,,b509,0d2300,value,,UCH,0=off;1=on,,register value
+w,,,HeatingOverrideEnable,Heating Override Enable: Heizungsüberbrückung aktivieren,,,b509,0e2300,value,,UCH,0=off;1=on,,register value
+r,,,HeatingOverrideTemp,Heating Override Temp: Übersteuerungstemperatur der Heizung,,,b509,0d2400,value,,D2C,,°C,register value
+w,,,HeatingOverrideTemp,Heating Override Temp: Übersteuerungstemperatur der Heizung,,,b509,0e2400,value,,D2C,,°C,register value
+r,,,HeatingOverrideEndTime,Heating Override End Time: Endzeit Heizungsübersteuerung,,,b509,0d2500,value,,DTM,,,register value
+w,,,HeatingOverrideEndTime,Heating Override End Time: Endzeit Heizungsübersteuerung,,,b509,0e2500,value,,DTM,,,register value
+r,,,KeyboardLockEnable,Keyboard Lock Enable: Tastatursperre aktivieren,,,b509,0d2a00,value,,UCH,0=off;1=on,,register value
+w,,,KeyboardLockEnable,Keyboard Lock Enable: Tastatursperre aktivieren,,,b509,0e2a00,value,,UCH,0=off;1=on,,register value
+r,,,Contrast,Contrast: Kontrast,,,b509,0d2b00,value,,UCH,,,register value
+w,,,Contrast,Contrast: Kontrast,,,b509,0e2b00,value,,UCH,,,register value
+r,,,Brightness,Brightness: Helligkeit,,,b509,0d2c00,value,,UCH,,,register value
+w,,,Brightness,Brightness: Helligkeit,,,b509,0e2c00,value,,UCH,,,register value
+r,,,Time_Date,Time & Date: Uhrzeit & Datum,,,b509,0d2e00,value,,DTM,,,register value
+w,,,Time_Date,Time & Date: Uhrzeit & Datum,,,b509,0e2e00,value,,DTM,,,register value
+r,,,DateFormat,Date Format: Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT,,,b509,0d2d00,value,,UCH,,,register value
+w,,,DateFormat,Date Format: Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT,,,b509,0e2d00,value,,UCH,,,register value
+r,,,Weekday,Wochentag,,,b509,0d2f00,value,,BDY,,,register value
+w,,,Weekday,Wochentag,,,b509,0e2f00,value,,BDY,,,register value
 r,,,RoomName,Room Name,,,b509,0d3000,value,,STR:14,,,Room Name
 w,,,RoomName,Room Name,,,b509,0e3000,value,,STR:14,,,Room Name
 r,,,Language,Sprache,,,b509,0d3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Sprache
 w,,,Language,Sprache,,,b509,0e3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Sprache
-r,,,RoomTemp,Zimmertemperatur,,,b509,0d3a00,temp,,D2C,,°C,Zimmertemperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d3b00,value,,D2C,,°C,Displayed Room Temp
-r,,,OutsideTemp,Außentemperatur,,,b509,0d3c00,temp,,D2C,,°C,Außentemperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,DHWTempSet,Manuelle Einstellung der Warmwassertemperatur,,,b509,0d4000,value,,D2C,,°C,Manuelle Einstellung der Warmwassertemperatur
-w,,,DHWTempSet,Manuelle Einstellung der Warmwassertemperatur,,,b509,0e4000,value,,D2C,,°C,Manuelle Einstellung der Warmwassertemperatur
-r,,,DHWEnable,DHW Aktivieren,,,b509,0d4100,value,,UCH,0=off;1=on,,DHW Aktivieren
-w,,,DHWEnable,DHW Aktivieren,,,b509,0e4100,value,,UCH,0=off;1=on,,DHW Aktivieren
-r,,,DHWScheduleEnable,DHW Zeitplan aktivieren,,,b509,0d4200,value,,UCH,0=off;1=on,,DHW Zeitplan aktivieren
-w,,,DHWScheduleEnable,DHW Zeitplan aktivieren,,,b509,0e4200,value,,UCH,0=off;1=on,,DHW Zeitplan aktivieren
-r,,,DHWOverrideEnable,DHW Überschreiben aktivieren,,,b509,0d5100,value,,UCH,0=off;1=on,,DHW Überschreiben aktivieren
-w,,,DHWOverrideEnable,DHW Überschreiben aktivieren,,,b509,0e5100,value,,UCH,0=off;1=on,,DHW Überschreiben aktivieren
-r,,,DHWOverrideState,DHW Status überschreiben,,,b509,0d5200,value,,UCH,0=off;1=on,,DHW Status überschreiben
-w,,,DHWOverrideState,DHW Status überschreiben,,,b509,0e5200,value,,UCH,0=off;1=on,,DHW Status überschreiben
-r,,,DHWOverrideEndTime,DHW Endzeit überschreiben,,,b509,0d5300,value,,DTM,,,DHW Endzeit überschreiben
-w,,,DHWOverrideEndTime,DHW Endzeit überschreiben,,,b509,0e5300,value,,DTM,,,DHW Endzeit überschreiben
-r,,,VacationEnable,Urlaub aktivieren,,,b509,0d5400,value,,UCH,0=off;1=on,,Urlaub aktivieren
-w,,,VacationEnable,Urlaub aktivieren,,,b509,0e5400,value,,UCH,0=off;1=on,,Urlaub aktivieren
-r,,,VacationStartTime,Urlaubsstartzeit,,,b509,0d5500,value,,DTM,,,Urlaubsstartzeit
-w,,,VacationStartTime,Urlaubsstartzeit,,,b509,0e5500,value,,DTM,,,Urlaubsstartzeit
-r,,,VacationEndTime,Urlaubsendzeit,,,b509,0d5700,value,,DTM,,,Urlaubsendzeit
-w,,,VacationEndTime,Urlaubsendzeit,,,b509,0e5700,value,,DTM,,,Urlaubsendzeit
-r,,,VacationTempSet,Urlaubstemperatur manuell eingestellt,,,b509,0d5800,value,,D2C,,°C,Urlaubstemperatur manuell eingestellt
-w,,,VacationTempSet,Urlaubstemperatur manuell eingestellt,,,b509,0e5800,value,,D2C,,°C,Urlaubstemperatur manuell eingestellt
-r,,,HeatingTemp1,Heiztemperatur 1,,,b509,0d7300,value,,D2C,,°C,Heiztemperatur 1
-w,,,HeatingTemp1,Heiztemperatur 1,,,b509,0e7300,value,,D2C,,°C,Heiztemperatur 1
-r,,,HeatingTemp2,Heiztemperatur 2,,,b509,0d7400,value,,D2C,,°C,Heiztemperatur 2
-w,,,HeatingTemp2,Heiztemperatur 2,,,b509,0e7400,value,,D2C,,°C,Heiztemperatur 2
+r,,,RoomTemp,Room Temp: Zimmertemperatur,,,b509,0d3a00,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,DisplayedRoomTemp,Displayed Room Temp: Angezeigte Raumtemperatur,,,b509,0d3b00,value,,D2C,,°C,register value
+r,,,OutsideTemp,Outside Temp: Außentemperatur,,,b509,0d3c00,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,DHWTempSet,DHW Temp Manual Set: Manuelle Einstellung der Warmwassertemperatur,,,b509,0d4000,value,,D2C,,°C,register value
+w,,,DHWTempSet,DHW Temp Manual Set: Manuelle Einstellung der Warmwassertemperatur,,,b509,0e4000,value,,D2C,,°C,register value
+r,,,DHWEnable,DHW Enable: DHW Aktivieren,,,b509,0d4100,value,,UCH,0=off;1=on,,register value
+w,,,DHWEnable,DHW Enable: DHW Aktivieren,,,b509,0e4100,value,,UCH,0=off;1=on,,register value
+r,,,DHWScheduleEnable,DHW Shedule Enable: DHW Zeitplan aktivieren,,,b509,0d4200,value,,UCH,0=off;1=on,,register value
+w,,,DHWScheduleEnable,DHW Shedule Enable: DHW Zeitplan aktivieren,,,b509,0e4200,value,,UCH,0=off;1=on,,register value
+r,,,DHWOverrideEnable,DHW Override Enable: DHW Überschreiben aktivieren,,,b509,0d5100,value,,UCH,0=off;1=on,,register value
+w,,,DHWOverrideEnable,DHW Override Enable: DHW Überschreiben aktivieren,,,b509,0e5100,value,,UCH,0=off;1=on,,register value
+r,,,DHWOverrideState,DHW Override State: DHW Status überschreiben,,,b509,0d5200,value,,UCH,0=off;1=on,,register value
+w,,,DHWOverrideState,DHW Override State: DHW Status überschreiben,,,b509,0e5200,value,,UCH,0=off;1=on,,register value
+r,,,DHWOverrideEndTime,DHW Override End Time: DHW Endzeit überschreiben,,,b509,0d5300,value,,DTM,,,register value
+w,,,DHWOverrideEndTime,DHW Override End Time: DHW Endzeit überschreiben,,,b509,0e5300,value,,DTM,,,register value
+r,,,VacationEnable,Vacation Enable: Urlaub aktivieren,,,b509,0d5400,value,,UCH,0=off;1=on,,register value
+w,,,VacationEnable,Vacation Enable: Urlaub aktivieren,,,b509,0e5400,value,,UCH,0=off;1=on,,register value
+r,,,VacationStartTime,Vacation Start Time: Urlaubsstartzeit,,,b509,0d5500,value,,DTM,,,register value
+w,,,VacationStartTime,Vacation Start Time: Urlaubsstartzeit,,,b509,0e5500,value,,DTM,,,register value
+r,,,VacationEndTime,Vacation End Time: Urlaubsendzeit,,,b509,0d5700,value,,DTM,,,register value
+w,,,VacationEndTime,Vacation End Time: Urlaubsendzeit,,,b509,0e5700,value,,DTM,,,register value
+r,,,VacationTempSet,Vacation Temp Manual Set: Urlaubstemperatur manuell eingestellt,,,b509,0d5800,value,,D2C,,°C,register value
+w,,,VacationTempSet,Vacation Temp Manual Set: Urlaubstemperatur manuell eingestellt,,,b509,0e5800,value,,D2C,,°C,register value
+r,,,HeatingTemp1,Heating Temp 1: Heiztemperatur 1,,,b509,0d7300,value,,D2C,,°C,register value
+w,,,HeatingTemp1,Heating Temp 1: Heiztemperatur 1,,,b509,0e7300,value,,D2C,,°C,register value
+r,,,HeatingTemp2,Heating Temp 2: Heiztemperatur 2,,,b509,0d7400,value,,D2C,,°C,register value
+w,,,HeatingTemp2,Heating Temp 2: Heiztemperatur 2,,,b509,0e7400,value,,D2C,,°C,register value
 r,,,MondayHeatingTime,Montag Heizzeit,,,b509,0d0500,ttm,,TTM,,,Montag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
 w,,,MondayHeatingTime,Montag Heizzeit,,,b509,0e0500,ttm,,TTM,,,Montag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
 r,,,TuesdayHeatingTime,Dienstag Heizzeit,,,b509,0d0600,ttm,,TTM,,,Dienstag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
@@ -140,39 +140,39 @@ r,,,SaturdayRecirculationState,Umluftzustand Samstag,,,b509,0d8600,onoff,,UCH,0=
 w,,install,SaturdayRecirculationState,Umluftzustand Samstag,,,b509,0e8600,onoff,,UCH,0=off;1=on,,Umluftzustand Samstag,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
 r,,,SundayRecirculationState,Sonntags-Umlaufzustand,,,b509,0d8700,onoff,,UCH,0=off;1=on,,Sonntags-Umlaufzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
 w,,install,SundayRecirculationState,Sonntags-Umlaufzustand,,,b509,0e8700,onoff,,UCH,0=off;1=on,,Sonntags-Umlaufzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
-r,,,RoomTempMaxAllowed,Max. zulässige Raumtemperatur,,,b509,0d3200,value,,D2C,,°C,Max. zulässige Raumtemperatur
-w,,install,RoomTempMaxAllowed,Max. zulässige Raumtemperatur,,,b509,0e3200,value,,D2C,,°C,Max. zulässige Raumtemperatur
-r,,,RoomTempCorr,Raumtemperatur-Abgleich,,,b509,0d3300,value,,D2C,,°C,Raumtemperatur-Abgleich
-w,,install,RoomTempCorr,Raumtemperatur-Abgleich,,,b509,0e3300,value,,D2C,,°C,Raumtemperatur-Abgleich
-r,,,OutsideTempCorr,Korrektur der Außentemperatur,,,b509,0d3600,value,,D2C,,°C,Korrektur der Außentemperatur
-w,,install,OutsideTempCorr,Korrektur der Außentemperatur,,,b509,0e3600,value,,D2C,,°C,Korrektur der Außentemperatur
-r,,,RoomTempCorrFact,Room Temp Factory Correction,,,b509,0d3900,value,,D2C,,°C,Raumtemperaturkorrektur (werkseitig kalibriert)
-w,,install,RoomTempCorrFact,Room Temp Factory Correction,,,b509,0e3900,value,,D2C,,°C,Raumtemperaturkorrektur (werkseitig kalibriert)
+r,,,RoomTempMaxAllowed,Max Allowed Room Temp: Max. zulässige Raumtemperatur,,,b509,0d3200,value,,D2C,,°C,register value
+w,,install,RoomTempMaxAllowed,Max Allowed Room Temp: Max. zulässige Raumtemperatur,,,b509,0e3200,value,,D2C,,°C,register value
+r,,,RoomTempCorr,Room Temp Correction: Korrektur der Raumtemperatur,,,b509,0d3300,value,,D2C,,°C,register value
+w,,install,RoomTempCorr,Room Temp Correction: Korrektur der Raumtemperatur,,,b509,0e3300,value,,D2C,,°C,register value
+r,,,OutsideTempCorr,Outside Temp Correction: Korrektur der Außentemperatur,,,b509,0d3600,value,,D2C,,°C,register value
+w,,install,OutsideTempCorr,Outside Temp Correction: Korrektur der Außentemperatur,,,b509,0e3600,value,,D2C,,°C,register value
+r,,,RoomTempCorrFact,Room Temp Factory Correction: Raumtemperaturkorrektur (werkseitig kalibriert),,,b509,0d3900,value,,D2C,,°C,register value
+w,,install,RoomTempCorrFact,Room Temp Factory Correction: Raumtemperaturkorrektur (werkseitig kalibriert),,,b509,0e3900,value,,D2C,,°C,register value
 r,,,HeatCurve,Heat Curve,,,b509,0d5c00,value,,UIN,100,,Wärmekurve
 w,,install,HeatCurve,Heat Curve,,,b509,0e5c00,value,,UIN,100,,Wärmekurve
-r,,,DHWTempMaxAllowed,Max. zulässige Warmwassertemperatur,,,b509,0d5e00,value,,D2C,,°C,Max. zulässige Warmwassertemperatur
-w,,install,DHWTempMaxAllowed,Max. zulässige Warmwassertemperatur,,,b509,0e5e00,value,,D2C,,°C,Max. zulässige Warmwassertemperatur
-r,,,DHWScheduleOptEnable,WW-Zeitplan-Otp-Aktivierung,,,b509,0d5f00,value,,UCH,0=off;1=on,,WW-Zeitplan-Otp-Aktivierung
-w,,install,DHWScheduleOptEnable,WW-Zeitplan-Otp-Aktivierung,,,b509,0e5f00,value,,UCH,0=off;1=on,,WW-Zeitplan-Otp-Aktivierung
-r,,,DHWOptEnable,WW-Option aktivieren,,,b509,0d6000,value,,UCH,0=off;1=on,,WW-Option aktivieren
-w,,install,DHWOptEnable,WW-Option aktivieren,,,b509,0e6000,value,,UCH,0=off;1=on,,WW-Option aktivieren
-r,,,AutoTimeCorr,Automatische Zeitkorrektur,,,b509,0d7200,value,,UCH,0=off;1=on,,Automatische Zeitkorrektur
-w,,install,AutoTimeCorr,Automatische Zeitkorrektur,,,b509,0e7200,value,,UCH,0=off;1=on,,Automatische Zeitkorrektur
+r,,,DHWTempMaxAllowed,Max Allowed DHW Temp: Max. zulässige Warmwassertemperatur,,,b509,0d5e00,value,,D2C,,°C,register value
+w,,install,DHWTempMaxAllowed,Max Allowed DHW Temp: Max. zulässige Warmwassertemperatur,,,b509,0e5e00,value,,D2C,,°C,register value
+r,,,DHWScheduleOptEnable,DHWScheduleOptEnable: WW-Zeitplan-Otp-Aktivierung,,,b509,0d5f00,value,,UCH,0=off;1=on,,register value
+w,,install,DHWScheduleOptEnable,DHWScheduleOptEnable: WW-Zeitplan-Otp-Aktivierung,,,b509,0e5f00,value,,UCH,0=off;1=on,,register value
+r,,,DHWOptEnable,DHW Option Enable: WW-Option aktivieren,,,b509,0d6000,value,,UCH,0=off;1=on,,register value
+w,,install,DHWOptEnable,DHW Option Enable: WW-Option aktivieren,,,b509,0e6000,value,,UCH,0=off;1=on,,register value
+r,,,AutoTimeCorr,Auto Time Correction: Automatische Zeitkorrektur,,,b509,0d7200,value,,UCH,0=off;1=on,,register value
+w,,install,AutoTimeCorr,Auto Time Correction: Automatische Zeitkorrektur,,,b509,0e7200,value,,UCH,0=off;1=on,,register value
 r,,,PrevHeatCurve,Prev Heat Curve,,,b509,0d7500,value,,UIN,100,,Vorherige Heizkurveneinstellung
-r,,,MaintenanceAlarm,Wartungsalarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,Wartungsalarm
-w,,install,MaintenanceAlarm,Wartungsalarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,Wartungsalarm
-r,,,MaintenanceAlarmDate,Maintenance Alarm Date,,,b509,0d7000,value,,ULG,,,Wartungsalarmdatum
-w,,install,MaintenanceAlarmDate,Maintenance Alarm Date,,,b509,0e7000,value,,ULG,,,Wartungsalarmdatum
-r,,,AutoHeatCurveRegulation,Automatische Heizkurvenregelung,,,b509,0d6e00,value,,UCH,0=off;1=on,,Automatische Heizkurvenregelung
-w,,install,AutoHeatCurveRegulation,Automatische Heizkurvenregelung,,,b509,0e6e00,value,,UCH,0=off;1=on,,Automatische Heizkurvenregelung
-r,,,Preheat,vorheizen,,,b509,0d6c00,value,,UCH,0=off;1=on,,vorheizen
-w,,install,Preheat,vorheizen,,,b509,0e6c00,value,,UCH,0=off;1=on,,vorheizen
-r,,,RecirculationOptEnable,Umluftoption aktivieren,,,b509,0d6d00,value,,UCH,0=off;1=on,,Umluftoption aktivieren
-w,,install,RecirculationOptEnable,Umluftoption aktivieren,,,b509,0e6d00,value,,UCH,0=off;1=on,,Umluftoption aktivieren
+r,,,MaintenanceAlarm,Maintenance Alarm: Wartungsalarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,register value
+w,,install,MaintenanceAlarm,Maintenance Alarm: Wartungsalarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,register value
+r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Wartungsalarmdatum,,,b509,0d7000,value,,ULG,,,register value
+w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Wartungsalarmdatum,,,b509,0e7000,value,,ULG,,,register value
+r,,,AutoHeatCurveRegulation,Auto Heat Curve Regulation: Automatische Heizkurvenregelung,,,b509,0d6e00,value,,UCH,0=off;1=on,,register value
+w,,install,AutoHeatCurveRegulation,Auto Heat Curve Regulation: Automatische Heizkurvenregelung,,,b509,0e6e00,value,,UCH,0=off;1=on,,register value
+r,,,Preheat,Preheat: vorheizen,,,b509,0d6c00,value,,UCH,0=off;1=on,,register value
+w,,install,Preheat,Preheat: vorheizen,,,b509,0e6c00,value,,UCH,0=off;1=on,,register value
+r,,,RecirculationOptEnable,Recirculation Option Enable: Umluftoption aktivieren,,,b509,0d6d00,value,,UCH,0=off;1=on,,register value
+w,,install,RecirculationOptEnable,Recirculation Option Enable: Umluftoption aktivieren,,,b509,0e6d00,value,,UCH,0=off;1=on,,register value
 r,,,MaintenanceTel,Wartungstelefon,,,b509,0d6100,value,,STR:13,,,Wartungstelefon
 w,,install,MaintenanceTel,Wartungstelefon,,,b509,0e6100,value,,STR:13,,,Wartungstelefon
-r,,,RoomTempOptEnable,Option Raumtemperatur aktivieren,,,b509,0d6b00,value,,UCH,0=off;1=on,,Option Raumtemperatur aktivieren
-w,,install,RoomTempOptEnable,Option Raumtemperatur aktivieren,,,b509,0e6b00,value,,UCH,0=off;1=on,,Option Raumtemperatur aktivieren
+r,,,RoomTempOptEnable,Room Temp Option Enable: Option Raumtemperatur aktivieren,,,b509,0d6b00,value,,UCH,0=off;1=on,,register value
+w,,install,RoomTempOptEnable,Room Temp Option Enable: Option Raumtemperatur aktivieren,,,b509,0e6b00,value,,UCH,0=off;1=on,,register value
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
 r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

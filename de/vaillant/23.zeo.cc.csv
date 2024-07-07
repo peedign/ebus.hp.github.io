@@ -1,15 +1,15 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,OperatingMode,Betriebsart,,,b509,0d0602,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
-r,,,FlowTempMin,Min. Vorlauftemp.,,,b509,0d0b02,value,,UCH,,°C,1 °C resolution
-r,,,FlowTempMax,Max. Vorlauftemp.,,,b509,0d0c02,value,,UCH,,°C,1 °C resolution
-r,,,TempDesired,Solltemperatur,,,b509,0d0d02,value,,D1C,,°C,1/2 °C resolution
-r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1802,value,,UCH,,,
-r,,,CircuitsStates,Zustand Wärmeabnehmer,,,b509,0d1e02,value,,UCH,,,
-r,,,FlowTempDesired,Vorlaufsolltemperatur,,,b509,0d1f02,value,,D1C,,°C,1/2 °C resolution
-r,,,CleaningLady,Sparfunktion,,,b509,0d2302,value,,UCH,,,"0,5h"
-r,,,ActualTempDesired,Akt. Solltemperatur,,,b509,0d3302,value,,D1C,,°C,1/2°C Auflösung
+r,,,OperatingMode,Betriebsart,,,b509,0d0602,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,FlowTempMin,Min. Vorlauftemp.: 1 °C resolution,,,b509,0d0b02,value,,UCH,,°C,register value
+r,,,FlowTempMax,Max. Vorlauftemp.: 1 °C resolution,,,b509,0d0c02,value,,UCH,,°C,register value
+r,,,TempDesired,Solltemperatur: 1/2 °C resolution,,,b509,0d0d02,value,,D1C,,°C,register value
+r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1802,value,,UCH,,,register value
+r,,,CircuitsStates,Zustand Wärmeabnehmer,,,b509,0d1e02,value,,UCH,,,register value
+r,,,FlowTempDesired,Vorlaufsolltemperatur: 1/2 °C resolution,,,b509,0d1f02,value,,D1C,,°C,register value
+r,,,CleaningLady,"Sparfunktion: 0,5h",,,b509,0d2302,value,,UCH,,,register value
+r,,,ActualTempDesired,Akt. Solltemperatur: 1/2°C Auflösung,,,b509,0d3302,value,,D1C,,°C,register value
 r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
 r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
 w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur

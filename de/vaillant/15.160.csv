@@ -1,22 +1,22 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,Date,System Date,,,b509,0d6100,value,,HDA,,,Aktuelles Datum
-w,,,Date,System Date,,,b509,0e6100,value,,HDA,,,Aktuelles Datum
-r,,,Time,System Time,,,b509,0d6000,value,,HTI,,,Aktuelle Uhrzeit
-w,,,Time,System Time,,,b509,0e6000,value,,HTI,,,Aktuelle Uhrzeit
+r,,,Date,System Date: Aktuelles Datum,,,b509,0d6100,value,,HDA,,,register value
+w,,,Date,System Date: Aktuelles Datum,,,b509,0e6100,value,,HDA,,,register value
+r,,,Time,System Time: Aktuelle Uhrzeit,,,b509,0d6000,value,,HTI,,,register value
+w,,,Time,System Time: Aktuelle Uhrzeit,,,b509,0e6000,value,,HTI,,,register value
 r,,,SystemOnOff,System OnOFF,,,b509,0d0100,value,,UCH,0=on;1=off,,
 w,,,SystemOnOff,System OnOFF,,,b509,0e0100,value,,UCH,0=on;1=off,,
 r,,,OperatingMode,Betriebsmodus,,,b509,0d2f00,value,,UCH,2=Auto;3=Comfort,,
 w,,,OperatingMode,Betriebsmodus,,,b509,0e2f00,value,,UCH,2=Auto;3=Comfort,,
 r,,,OverrideMode,Override-Modus,,,b509,0d5d00,value,,UCH,0=None;1=Party;4=Holiday,,
 w,,,OverrideMode,Override-Modus,,,b509,0e5d00,value,,UCH,0=None;1=Party;4=Holiday,,
-r,,,HolidayStartPeriod,Urlaub Startdatum,,,b509,0d1100,value,,HDA,,,Beginn des Urlaubs
-w,,,HolidayStartPeriod,Urlaub Startdatum,,,b509,0e1100,value,,HDA,,,Beginn des Urlaubs
-r,,,HolidayEndPeriod,Urlaub Enddatum,,,b509,0d1200,value,,HDA,,,Enddatum des Urlaubs
-w,,,HolidayEndPeriod,Urlaub Enddatum,,,b509,0e1200,value,,HDA,,,Enddatum des Urlaubs
-r,,,LcdContrastValue,Display Kontrastwert,,,b509,0d5a00,value,,UCH,,,Einstellung des LCD-Kontrasts
-w,,,LcdContrastValue,Display Kontrastwert,,,b509,0e5a00,value,,UCH,,,Einstellung des LCD-Kontrasts
+r,,,HolidayStartPeriod,Urlaub Startdatum: Beginn des Urlaubs,,,b509,0d1100,value,,HDA,,,register value
+w,,,HolidayStartPeriod,Urlaub Startdatum: Beginn des Urlaubs,,,b509,0e1100,value,,HDA,,,register value
+r,,,HolidayEndPeriod,Urlaub Enddatum: Enddatum des Urlaubs,,,b509,0d1200,value,,HDA,,,register value
+w,,,HolidayEndPeriod,Urlaub Enddatum: Enddatum des Urlaubs,,,b509,0e1200,value,,HDA,,,register value
+r,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0d5a00,value,,UCH,,,register value
+w,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0e5a00,value,,UCH,,,register value
 r,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,HwcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0101,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

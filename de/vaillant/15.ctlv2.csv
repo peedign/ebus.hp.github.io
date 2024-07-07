@@ -5,8 +5,8 @@ r,,,ContinuousHeating,continous heating,,,b524,020000000200,value,,IGN:4,,,,valu
 w,,,ContinuousHeating,continous heating,,,b524,020100000200,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
 r,,,FrostOverRideTime,frost delay time,,,b524,020000000300,value,,IGN:4,,,,value,,UIN,,h,delay before frost protection is activated
 w,,,FrostOverRideTime,frost delay time,,,b524,020100000300,value,,UIN,,h,delay before frost protection is activated
-r,,,HwcParallelLoading,hwc parallel loading,,,b524,020000000a00,value,,IGN:4,,,,value,,UCH,0=off;1=on,,Heizbetrieb und Speicherladung parallel
-w,,,HwcParallelLoading,hwc parallel loading,,,b524,020100000a00,value,,UCH,0=off;1=on,,Heizbetrieb und Speicherladung parallel
+r,,,HwcParallelLoading,hwc parallel loading,,,b524,020000000a00,value,,IGN:4,,,,value,,UCH,0=off;1=on,,heating and hot water parallel
+w,,,HwcParallelLoading,hwc parallel loading,,,b524,020100000a00,value,,UCH,0=off;1=on,,heating and hot water parallel
 r,,,MaxRoomHumidity,max room humidity,,,b524,020000000e00,value,,IGN:4,,,,value,,UIN,,,maximum room humidity
 w,,,MaxRoomHumidity,max room humidity,,,b524,020100000e00,value,,UIN,,,maximum room humidity
 r,,,AdaptHeatCurve,adaptive heat curve,,,b524,020000001400,value,,IGN:4,,,,value,,UCH,0=no;1=yes,,automatic correction of configured heat curve
@@ -93,8 +93,8 @@ r,,,HwcStorageTemp,HwcStorageTemp,,,b524,020001000500,value,,IGN:4,,,,value,,EXP
 r,,,HwcFlowTemp,HwcFlowTemp,,,b524,020001000800,value,,IGN:4,,,,value,,EXP,,°C,desired flow temp for Hwc
 r,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020001000900,value,,IGN:4,,,,value,,HDA,,,start date of holidays
 w,,,HwcHolidayStartPeriod,hwc holiday start period,,,b524,020101000900,value,,HDA,,,start date of holidays
-r,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020001000a00,value,,IGN:4,,,,value,,HDA,,,Datum Ferienende
-w,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020101000a00,value,,HDA,,,Datum Ferienende
+r,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020001000a00,value,,IGN:4,,,,value,,HDA,,,Heizbetrieb und Speicherladung parallel
+w,,,HwcHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020101000a00,value,,HDA,,,Heizbetrieb und Speicherladung parallel
 r,,,HwcBankHolidayStartPeriod,hwc holiday start period,,,b524,020001000b00,value,,IGN:4,,,,value,,HDA,,,start date of bank holidays
 w,,,HwcBankHolidayStartPeriod,hwc holiday start period,,,b524,020101000b00,value,,HDA,,,start date of bank holidays
 r,,,HwcBankHolidayEndPeriod,Parallele Ladung Warmwasserkreis,,,b524,020001000c00,value,,IGN:4,,,,value,,HDA,,,end date of bank holidays
@@ -116,8 +116,8 @@ r,,,Hc1MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 1,,,b524,0200020011
 w,,,Hc1MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 1,,,b524,020102001100,value,,EXP,,°C,minimum cooling temperature setpoint Hc1
 r,,,Hc1MinFlowTempDesired,MinFlowTempDesired Heizkreis 1,,,b524,020002001200,value,,IGN:4,,,,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc1
 w,,,Hc1MinFlowTempDesired,MinFlowTempDesired Heizkreis 1,,,b524,020102001200,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc1
-r,,,Hc1SummerTempLimit,AT-Abschaltgrenze Heizkreis 1,,,b524,020002001400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
-w,,,Hc1SummerTempLimit,AT-Abschaltgrenze Heizkreis 1,,,b524,020102001400,value,,EXP,,°C,automatic correction of configured heat curve
+r,,,Hc1SummerTempLimit,AT-Abschaltgrenze Heizkreis 1,,,b524,020002001400,value,,IGN:4,,,,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
+w,,,Hc1SummerTempLimit,AT-Abschaltgrenze Heizkreis 1,,,b524,020102001400,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r,,,Hc1RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 1,,,b524,020002001500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc1
 w,,,Hc1RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 1,,,b524,020102001500,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc1
 r,,,Hc1MixerMovement,MixerMovement Heizkreis 1,,,b524,020002001a00,value,,IGN:4,,,,value,,EXP,,,"status of mixer (<0 closing, >0 opening)"
@@ -141,8 +141,8 @@ r,,,Hc2MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 2,,,b524,0200020111
 w,,,Hc2MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 2,,,b524,020102011100,value,,EXP,,°C,minimum cooling temperature setpoint Hc2
 r,,,Hc2MinFlowTempDesired,MinFlowTempDesired Heizkreis 2,,,b524,020002011200,value,,IGN:4,,,,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc2
 w,,,Hc2MinFlowTempDesired,MinFlowTempDesired Heizkreis 2,,,b524,020102011200,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc2
-r,,,Hc2SummerTempLimit,AT-Abschaltgrenze Heizkreis 2,,,b524,020002011400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
-w,,,Hc2SummerTempLimit,AT-Abschaltgrenze Heizkreis 2,,,b524,020102011400,value,,EXP,,°C,automatic correction of configured heat curve
+r,,,Hc2SummerTempLimit,AT-Abschaltgrenze Heizkreis 2,,,b524,020002011400,value,,IGN:4,,,,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
+w,,,Hc2SummerTempLimit,AT-Abschaltgrenze Heizkreis 2,,,b524,020102011400,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r,,,Hc2RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 2,,,b524,020002011500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc2
 w,,,Hc2RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 2,,,b524,020102011500,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc2
 r,,,Hc2MixerMovement,MixerMovement Heizkreis 2,,,b524,020002011a00,value,,IGN:4,,,,value,,EXP,,,"status of mixer (<0 closing, >0 opening)"
@@ -166,8 +166,8 @@ r,,,Hc3MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 3,,,b524,0200020211
 w,,,Hc3MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 3,,,b524,020102021100,value,,EXP,,°C,minimum cooling temperature setpoint Hc3
 r,,,Hc3MinFlowTempDesired,MinFlowTempDesired Heizkreis 3,,,b524,020002021200,value,,IGN:4,,,,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc3
 w,,,Hc3MinFlowTempDesired,MinFlowTempDesired Heizkreis 3,,,b524,020102021200,value,,EXP,,°C,minimum flow temperature setpoint (end emphasis) of Hc3
-r,,,Hc3SummerTempLimit,AT-Abschaltgrenze Heizkreis 3,,,b524,020002021400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
-w,,,Hc3SummerTempLimit,AT-Abschaltgrenze Heizkreis 3,,,b524,020102021400,value,,EXP,,°C,automatic correction of configured heat curve
+r,,,Hc3SummerTempLimit,AT-Abschaltgrenze Heizkreis 3,,,b524,020002021400,value,,IGN:4,,,,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
+w,,,Hc3SummerTempLimit,AT-Abschaltgrenze Heizkreis 3,,,b524,020102021400,value,,EXP,,°C,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r,,,Hc3RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 3,,,b524,020002021500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc3
 w,,,Hc3RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 3,,,b524,020102021500,value,,UIN,0=off;1=modulating;2=thermostat,,room temperature modulation of Hc3
 r,,,Hc3MixerMovement,MixerMovement Heizkreis 3,,,b524,020002021a00,value,,IGN:4,,,,value,,EXP,,,"status of mixer (<0 closing, >0 opening)"
@@ -201,8 +201,8 @@ r,,,Z1ValveStatus,Ventilstatus Zone 1,,,b524,020003001200,value,,IGN:4,,,,value,
 w,,,Z1ValveStatus,Ventilstatus Zone 1,,,b524,020103001200,value,,UCH,,,valve status of zone 1
 r,,,Z1RoomZoneMapping,Raumregler Zuordnung Zone 1,,,b524,020003001300,value,,IGN:4,,,,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 1
 w,,,Z1RoomZoneMapping,Raumregler Zuordnung Zone 1,,,b524,020103001300,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 1
-r,,,Z1ActualRoomTempDesired,Raumsolltemperatur Zone 1,,,b524,020003001400,value,,IGN:4,,,,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
-w,,,Z1ActualRoomTempDesired,Raumsolltemperatur Zone 1,,,b524,020103001400,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
+r,,,Z1ActualRoomTempDesired,Raumsolltemperatur Zone 1,,,b524,020003001400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
+w,,,Z1ActualRoomTempDesired,Raumsolltemperatur Zone 1,,,b524,020103001400,value,,EXP,,°C,automatic correction of configured heat curve
 r,,,Z1Shortname,Kurzbezeichnung zone 1,,,b524,020003001600,value,,IGN:4,,,,value,,STR:6,,,short name of zone 1
 w,,,Z1Shortname,Kurzbezeichnung zone 1,,,b524,020103001600,value,,STR:6,,,short name of zone 1
 r,,,Z1Name1,Bezeichnung Zone 1 Teil 1,,,b524,020003001700,value,,IGN:4,,,,value,,STR:5,,,name of zone 1
@@ -236,8 +236,8 @@ r,,,Z2ValveStatus,Ventilstatus Zone 2,,,b524,020003011200,value,,IGN:4,,,,value,
 w,,,Z2ValveStatus,Ventilstatus Zone 2,,,b524,020103011200,value,,UCH,,,valve status of zone 2
 r,,,Z2RoomZoneMapping,Raumregler Zuordnung Zone 2,,,b524,020003011300,value,,IGN:4,,,,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 2
 w,,,Z2RoomZoneMapping,Raumregler Zuordnung Zone 2,,,b524,020103011300,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 2
-r,,,Z2ActualRoomTempDesired,Raumsolltemperatur Zone 2,,,b524,020003011400,value,,IGN:4,,,,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
-w,,,Z2ActualRoomTempDesired,Raumsolltemperatur Zone 2,,,b524,020103011400,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
+r,,,Z2ActualRoomTempDesired,Raumsolltemperatur Zone 2,,,b524,020003011400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
+w,,,Z2ActualRoomTempDesired,Raumsolltemperatur Zone 2,,,b524,020103011400,value,,EXP,,°C,automatic correction of configured heat curve
 r,,,Z2Shortname,Kurzbezeichnung zone 2,,,b524,020003011600,value,,IGN:4,,,,value,,STR:6,,,short name of zone 2
 w,,,Z2Shortname,Kurzbezeichnung zone 2,,,b524,020103011600,value,,STR:6,,,short name of zone 2
 r,,,Z2Name1,Bezeichnung Zone 2 Teil 1,,,b524,020003011700,value,,IGN:4,,,,value,,STR:5,,,name of zone 2
@@ -269,8 +269,8 @@ r,,,Z3ValveStatus,MinFlowTempDesired Heizkreis 3,,,b524,020003021200,value,,IGN:
 w,,,Z3ValveStatus,MinFlowTempDesired Heizkreis 3,,,b524,020103021200,value,,UCH,,,minimum flow temperature setpoint (end emphasis) of Hc3
 r,,,Z3RoomZoneMapping,Raumregler Zuordnung Zone 3,,,b524,020003021300,value,,IGN:4,,,,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 3
 w,,,Z3RoomZoneMapping,Raumregler Zuordnung Zone 3,,,b524,020103021300,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 3
-r,,,Z3ActualRoomTempDesired,Adaptive Heizkurve,,,b524,020003021400,value,,IGN:4,,,,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
-w,,,Z3ActualRoomTempDesired,Adaptive Heizkurve,,,b524,020103021400,value,,EXP,,°C,current room setpoint considering all basic conditions passed to the control algorithms
+r,,,Z3ActualRoomTempDesired,Adaptive Heizkurve,,,b524,020003021400,value,,IGN:4,,,,value,,EXP,,°C,automatic correction of configured heat curve
+w,,,Z3ActualRoomTempDesired,Adaptive Heizkurve,,,b524,020103021400,value,,EXP,,°C,automatic correction of configured heat curve
 r,,,Z3Shortname,Kurzbezeichnung Zone 3,,,b524,020003021600,value,,IGN:4,,,,value,,STR:6,,,Betriebsart für Lüftung aller/konfigurierter Zonen
 w,,,Z3Shortname,Kurzbezeichnung Zone 3,,,b524,020103021600,value,,STR:6,,,Betriebsart für Lüftung aller/konfigurierter Zonen
 r,,,Z3Name1,Bezeichnung Zone 3 Teil 1,,,b524,020003021700,value,,IGN:4,,,,value,,STR:5,,,maximum cylinder charging time

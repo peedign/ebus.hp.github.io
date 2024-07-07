@@ -1,26 +1,26 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,OperatingMode,Betriebsart,,,b509,0d0604,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,1=Heizen 2=Aus 3=Auto 4=Eco 5=Absenken
-r,,,FlowTempMin,Min. Vorlauftemp.,,,b509,0d0b04,value,,UCH,,°C,1 °C resolution
-r,,,FlowTempMax,Max. Vorlauftemp.,,,b509,0d0c04,value,,UCH,,°C,1 °C resolution
-r,,,TempDesired,Solltemperatur,,,b509,0d0d04,value,,D1C,,°C,1/2 °C resolution
-r,,,TempDesiredLow,Absenksollwert,,,b509,0d0e00,value,,D1C,,°C,1/2 °C resolution
-r,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0d1300,value,,UCH,,,"0,5h"
-r,,,FloorPavingDryingDay,Estrichtrocknung Tag,,,b509,0d1600,value,,UCH,,,
-r,,,Kreisart,Kreisart,,,b509,0d1700,value,,UCH,,,1=Brennerkreis 2=BrennerFestwert
-w,,service,Kreisart,Kreisart,,,b509,0e1700,value,,UCH,,,1=Brennerkreis 2=BrennerFestwert
-r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1804,value,,UCH,,,
-r,,,CleaningLady,Sparfunktion,,,b509,0d2304,value,,UCH,,,"0,5h"
-r,,,RemoteControlMode,Raumaufschaltung,,,b509,0d2400,value,,UCH,,,
-r,,,RemoteControlRtOffset,Offset Fernbedienung,,,b509,0d2500,value,,SCH,,,"0,5°C"
-r,,,ActualTempDesired,Akt. Solltemperatur,,,b509,0d3304,value,,D1C,,°C,1/2°C Auflösung
-r,,,Regelungsart,Regelungsart,,,b509,0d3500,value,,UCH,,,1 : Rücklaufregelung 2 : Vorlaufregelung
-w,,service,Regelungsart,Regelungsart,,,b509,0e3500,value,,UCH,,,1 : Rücklaufregelung 2 : Vorlaufregelung
-r,,,Konfiguration,Konfiguration,,,b509,0dc400,value,,UCH,,,
-w,,service,Konfiguration,Konfiguration,,,b509,0ec400,value,,UCH,,,
-r,,,HzTemp,T_Hz,,,b509,0dd800,value,,D2C,,°C,Vorlauf- oder Rücklauftemperatur je nach gewählter Regelungsart
-r,,,HTSoll,HT_Soll,,,b509,0dd900,value,,D2C,,°C,°C
+r,,,OperatingMode,Betriebsart: 1=Heizen 2=Aus 3=Auto 4=Eco 5=Absenken,,,b509,0d0604,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,FlowTempMin,Min. Vorlauftemp.: 1 °C resolution,,,b509,0d0b04,value,,UCH,,°C,register value
+r,,,FlowTempMax,Max. Vorlauftemp.: 1 °C resolution,,,b509,0d0c04,value,,UCH,,°C,register value
+r,,,TempDesired,Solltemperatur: 1/2 °C resolution,,,b509,0d0d04,value,,D1C,,°C,register value
+r,,,TempDesiredLow,Absenksollwert: 1/2 °C resolution,,,b509,0d0e00,value,,D1C,,°C,register value
+r,,,HcMaxPreHeating,Max. Voraufheizung: 0..5h,,,b509,0d1300,value,,UCH,,,register value
+r,,,FloorPavingDryingDay,Estrichtrocknung Tag,,,b509,0d1600,value,,UCH,,,register value
+r,,,Kreisart,Kreisart: 1=Brennerkreis 2=BrennerFestwert,,,b509,0d1700,value,,UCH,,,register value
+w,,service,Kreisart,Kreisart: 1=Brennerkreis 2=BrennerFestwert,,,b509,0e1700,value,,UCH,,,register value
+r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1804,value,,UCH,,,register value
+r,,,CleaningLady,"Sparfunktion: 0,5h",,,b509,0d2304,value,,UCH,,,register value
+r,,,RemoteControlMode,Raumaufschaltung,,,b509,0d2400,value,,UCH,,,register value
+r,,,RemoteControlRtOffset,"Offset Fernbedienung: 0,5°C",,,b509,0d2500,value,,SCH,,,register value
+r,,,ActualTempDesired,Akt. Solltemperatur: 1/2°C Auflösung,,,b509,0d3304,value,,D1C,,°C,register value
+r,,,Regelungsart,Regelungsart: 1 : Rücklaufregelung 2 : Vorlaufregelung,,,b509,0d3500,value,,UCH,,,register value
+w,,service,Regelungsart,Regelungsart: 1 : Rücklaufregelung 2 : Vorlaufregelung,,,b509,0e3500,value,,UCH,,,register value
+r,,,Konfiguration,Konfiguration,,,b509,0dc400,value,,UCH,,,register value
+w,,service,Konfiguration,Konfiguration,,,b509,0ec400,value,,UCH,,,register value
+r,,,HzTemp,T_Hz: Vorlauf- oder Rücklauftemperatur je nach gewählter Regelungsart,,,b509,0dd800,value,,D2C,,°C,register value
+r,,,HTSoll,HT_Soll: °C,,,b509,0dd900,value,,D2C,,°C,register value
 r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
 r,,,Mode,Betriebsmodus,,,b504,01,tempdesired,,UCH,,°C,Temperatur,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,floorpavingdryingday,,UCH,,,Tage,floorpavingdryingtemp,,UCH,,°C,Temperatur,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
 w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
@@ -29,13 +29,13 @@ w,,,SetFloorPavingDryingDay,Estrichtrocknungstag setzen,,,b505,03,value,,UCH,,,T
 w,,,SetFloorPavingDryingTemp,Estrichtrocknungstemperatur setzen,,,b505,04,value,,UCH,,°C,Temperatur
 w,,,SetType,Kreis Typ setzen,,,b505,08,value,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Mischer Typ
 w,,,SetTempDesiredLow,Absenksollwert setzen,,,b505,0a,value,,UCH,,°C,Temperatur
-w,,,SetHeatingCurve,Heizkurve setzen,,,b505,0b,value,,UIN,100,,Ferienprogramm aktiv
+w,,,SetHeatingCurve,Heizkurve setzen,,,b505,0b,value,,UIN,100,,Heizkurve: Heating curve
 w,,,SetShutdownTemp,Aussentemp. Abschaltgrenze setzen,,,b505,0c,value,,UCH,,°C,Temperatur
 w,,,SetPumpIdlePeriod,Pumpensperrzeit setzen,,,b505,0d,value,,UCH,,min,Minuten
 w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
 w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
 w,,,SetMaxPreHeating,Max. Voraufheizung setzen,,,b505,10,value,,UCH,-12,h,Stunden
-r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Ferienprogramm aktiv,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,-12,h,Stunden
+r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Heizkurve: Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,-12,h,Stunden
 r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
 r,,,Status,Status Vorlauf Soll/Ist,,,b504,0d,flowtempdesired,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,Temperatur,tempdesired,,UCH,,°C,Temperatur
 r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur

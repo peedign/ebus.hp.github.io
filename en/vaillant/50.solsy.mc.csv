@@ -4,46 +4,46 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *[id_sw],scan,,,,SW
 [id_sw>=401]r,,,HcMaxPreHeating,HcMaxPreHeating1,,,b509,0d3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
 [id_sw>=401]w,,install,HcMaxPreHeating,HcMaxPreHeating1,,,b509,0e3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
-[id_sw<=400]r,,,HcMaxPreHeating,HcMaxPreHeating1,,,b509,0d3800,value,,UCH,,h,The heating start before a time window could shifted forwards maximal this time (related to the outside temperature)
-[id_sw<=400]w,,,HcMaxPreHeating,HcMaxPreHeating1,,,b509,0e3800,value,,UCH,,h,The heating start before a time window could shifted forwards maximal this time (related to the outside temperature)
-r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
-r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
-r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
-r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
-r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
-r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
-r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
-r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
-r,,,FlowTemp,Flow2Sensor1,,,b509,0d0100,temp,,D2C,,°C,Temperature measured on VF2,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,FlowTempDesired,DesiredFlowTemperature1,,,b509,0d4600,value,,D1C,,°C,Desired flow temperature of MK1
-r,,,TeleSwitch,TeleSwitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,State of the Teleswitch
-r,,,IsInHoliday,Holiday function active,,,b509,0d2700,value,,UCH,,,Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit
-r,,,IsInStorageFilling,IsInTankFilling,,,b509,0d4700,value,,UCH,0=no;1=yes,,heating circuit is locked because of ongoing tank loading unless parallel loading has been activated
-r,,,CleaningLady,CleaningLady,,,b509,0d4b00,value,,UCH,,,saving function is activated until read value * 1/2 h
-r,,,IsInParty,IsInParty,,,b509,0d4e00,value,,UCH,,,Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC
-r,,,HcPumpPort,Hk2P_Port1,,,b509,0d9100,value,,UCH,0=off;1=on,,Status of mixer cicuit pump on MK1P
-r,,,OtShutdownLimit,OtShutdownLimit1,,,b509,0d3600,value,,UCH,,°C,"For outside temperatures higher than this, there is no heat demand generated anymore"
-w,,,OtShutdownLimit,OtShutdownLimit1,,,b509,0e3600,value,,UCH,,°C,"For outside temperatures higher than this, there is no heat demand generated anymore"
-r,,,FlowTempMin,MinFlowTemp1,,,b509,0d3000,value,,UCH,,°C,For a heat demand the desired flow temperature will at least be this value
-w,,,FlowTempMin,MinFlowTemp1,,,b509,0e3000,value,,UCH,,°C,For a heat demand the desired flow temperature will at least be this value
-r,,,TempDesiredLow,DesiredLowTemperature1,,,b509,0d3300,value,,D1C,,°C,Night temperature setpoint of the circuit
-w,,,TempDesiredLow,DesiredLowTemperature1,,,b509,0e3300,value,,D1C,,°C,Night temperature setpoint of the circuit
+[id_sw<=400]r,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,register value
+[id_sw<=400]w,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,register value
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,register value
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,register value
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,register value
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,register value
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,register value
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,register value
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,register value
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,register value
+r,,,FlowTemp,Flow2Sensor1: Temperature measured on VF2,,,b509,0d0100,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,FlowTempDesired,DesiredFlowTemperature1: Desired flow temperature of MK1,,,b509,0d4600,value,,D1C,,°C,register value
+r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,register value
+r,,,IsInHoliday,Holiday function active: Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit,,,b509,0d2700,value,,UCH,,,register value
+r,,,IsInStorageFilling,IsInTankFilling: heating circuit is locked because of ongoing tank loading unless parallel loading has been activated,,,b509,0d4700,value,,UCH,0=no;1=yes,,register value
+r,,,CleaningLady,CleaningLady: saving function is activated until read value * 1/2 h,,,b509,0d4b00,value,,UCH,,,register value
+r,,,IsInParty,IsInParty: Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC,,,b509,0d4e00,value,,UCH,,,register value
+r,,,HcPumpPort,Hk2P_Port1: Status of mixer cicuit pump on MK1P,,,b509,0d9100,value,,UCH,0=off;1=on,,register value
+r,,,OtShutdownLimit,"OtShutdownLimit1: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0d3600,value,,UCH,,°C,register value
+w,,,OtShutdownLimit,"OtShutdownLimit1: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0e3600,value,,UCH,,°C,register value
+r,,,FlowTempMin,MinFlowTemp1: For a heat demand the desired flow temperature will at least be this value,,,b509,0d3000,value,,UCH,,°C,register value
+w,,,FlowTempMin,MinFlowTemp1: For a heat demand the desired flow temperature will at least be this value,,,b509,0e3000,value,,UCH,,°C,register value
+r,,,TempDesiredLow,DesiredLowTemperature1: Night temperature setpoint of the circuit,,,b509,0d3300,value,,D1C,,°C,register value
+w,,,TempDesiredLow,DesiredLowTemperature1: Night temperature setpoint of the circuit,,,b509,0e3300,value,,D1C,,°C,register value
 r,,,CfgHeatSinkType,CfgHeatSinkType1,,,b509,0d3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,Type of the configurable mixer circuit
 w,,install,CfgHeatSinkType,CfgHeatSinkType1,,,b509,0e3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,Type of the configurable mixer circuit
-r,,,HcPumpIdlePeriod,HcPumpIdlePeriod1,,,b509,0d4f00,value,,UCH,,min,Time pump is not running in a pause at least
-w,,,HcPumpIdlePeriod,HcPumpIdlePeriod1,,,b509,0e4f00,value,,UCH,,min,Time pump is not running in a pause at least
-r,,,MixerDutyCycle,Mixer1DutyCycle1,,,b509,0d0e00,value,,SCH,,,"Telswitch,Pump,Circulation pump,DHW rewquest,DHW permittion"
-r,,,OperatingMode,OperatingMode,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of mixer circuit
-w,,,OperatingMode,OperatingMode,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Operating mode of mixer circuit
-r,,,FlowTempMax,MaxFlowTemp1,,,b509,0d3100,value,,UCH,,°C,For a heat demand the desired flow temperature will maximal be this value
-w,,,FlowTempMax,MaxFlowTemp1,,,b509,0e3100,value,,UCH,,°C,For a heat demand the desired flow temperature will maximal be this value
-r,,,TempDesired,DesiredTemperature1,,,b509,0d3200,value,,D1C,,°C,Day temperature setpoint of the circuit
-w,,,TempDesired,DesiredTemperature1,,,b509,0e3200,value,,D1C,,°C,Day temperature setpoint of the circuit
-r,,,HeatingCurve,Heating curve,,,b509,0d3500,value,,UIN,100,,Heating curve
-w,,,HeatingCurve,Heating curve,,,b509,0e3500,value,,UIN,100,,Heating curve
-r,,,FloorPavingDryingDay,FloorPavingDryingDay1,,,b509,0d3b00,value,,UCH,,,Current day of floor paving drying routine
-r,,,TeleswitchOperatingMode,TeleswitchOperatingMode1,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the mixer circuit operates in this mode
-w,,,TeleswitchOperatingMode,TeleswitchOperatingMode1,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,If the tele switch port is activated the mixer circuit operates in this mode
+r,,,HcPumpIdlePeriod,HcPumpIdlePeriod1: Time pump is not running in a pause at least,,,b509,0d4f00,value,,UCH,,min,register value
+w,,,HcPumpIdlePeriod,HcPumpIdlePeriod1: Time pump is not running in a pause at least,,,b509,0e4f00,value,,UCH,,min,register value
+r,,,MixerDutyCycle,"Mixer1DutyCycle1: Telswitch,Pump,Circulation pump,DHW rewquest,DHW permittion",,,b509,0d0e00,value,,SCH,,,register value
+r,,,OperatingMode,Operating mode of mixer circuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+w,,,OperatingMode,Operating mode of mixer circuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,FlowTempMax,MaxFlowTemp1: For a heat demand the desired flow temperature will maximal be this value,,,b509,0d3100,value,,UCH,,°C,register value
+w,,,FlowTempMax,MaxFlowTemp1: For a heat demand the desired flow temperature will maximal be this value,,,b509,0e3100,value,,UCH,,°C,register value
+r,,,TempDesired,DesiredTemperature1: Day temperature setpoint of the circuit,,,b509,0d3200,value,,D1C,,°C,register value
+w,,,TempDesired,DesiredTemperature1: Day temperature setpoint of the circuit,,,b509,0e3200,value,,D1C,,°C,register value
+r,,,HeatingCurve,Heating curve,,,b509,0d3500,value,,UIN,100,,register value
+w,,,HeatingCurve,Heating curve,,,b509,0e3500,value,,UIN,100,,register value
+r,,,FloorPavingDryingDay,FloorPavingDryingDay1: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,register value
+r,,,TeleswitchOperatingMode,TeleswitchOperatingMode1: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+w,,,TeleswitchOperatingMode,TeleswitchOperatingMode1: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
 r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
 r,,,Mode,Operation mode,,,b504,01,tempdesired,,UCH,,°C,temperature,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode,floorpavingdryingday,,UCH,,,days,floorpavingdryingtemp,,UCH,,°C,temperature,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,day/night mode
 w,,,SetTempDesired,Set desired temperature,,,b505,01,value,,UCH,,°C,temperature

@@ -2,54 +2,54 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 *[id_sw],scan,,,,SW
-[id_sw>=201]r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d3e00,value,,D2C,,°C,Aktuelle Raumtemperatur
-[id_sw=102-131]r,,,RoomTemp,Raumisttemp,,,b509,0d0000,temp,,D2C,,°C,Rohwert Raumtemperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,OutsideTemp,Außentemp. Sensor,,,b509,0d0300,temp,,D2C,,°C,Außentemperatur und Sensorstatus,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,OperatingMode,Betriebsart,,,b509,0d0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Betriebsart
-w,,,OperatingMode,Betriebsart,,,b509,0e0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Betriebsart
-r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d0600,value,,BDY,,,Aktueller Wochentag
-w,,,ActualWeekday,Aktueller Wochentag,,,b509,0e0600,value,,BDY,,,Aktueller Wochentag
-r,,,Time,Uhrzeit,,,b509,0d0700,value,,HTI,,,Aktuelle Uhrzeit
-w,,,Time,Uhrzeit,,,b509,0e0700,value,,HTI,,,Aktuelle Uhrzeit
-r,,,ReducedNightTemp,Nachttemperatur,,,b509,0d0800,value,,D2C,,°C,drop temperature setpoint
-w,,,ReducedNightTemp,Nachttemperatur,,,b509,0e0800,value,,D2C,,°C,drop temperature setpoint
-r,,,YearCalendarActive,Jahreskalender,,,b509,0d0b00,value,,UCH,0=off;1=on,,Automatische Umschaltung Sommer-Winterzeit
-w,,install,YearCalendarActive,Jahreskalender,,,b509,0e0b00,value,,UCH,0=off;1=on,,Automatische Umschaltung Sommer-Winterzeit
-r,,,Date,Datum,,,b509,0d0d00,value,,HDA,,,current date (calendar must be enabled previously!)
-w,,,Date,Datum,,,b509,0e0d00,value,,HDA,,,current date (calendar must be enabled previously!)
-r,,,IsInHoliday,Ferienprogramm aktiv,,,b509,0d1100,value,,UCH,,,Restliche Urlaubstage
-r,,,IsInQuickVeto,Quick Veto aktiv,,,b509,0d1600,value,,UCH,0=off;1=on,,Quick Veto Funktion aktiv
-r,,,QuickVetoTemp,Quick Veto Temp,,,b509,0d1700,value,,D2C,,°C,room temperature setpoint during activated quick veto function
-r,,,HwcTempDesired,WW Sollwert,,,b509,0d1e00,value,,D2C,,°C,WW Sollwert
-w,,,HwcTempDesired,WW Sollwert,,,b509,0e1e00,value,,D2C,,°C,WW Sollwert
+[id_sw>=201]r,,,DisplayedRoomTemp,Raumtemperatur Ist: Aktuelle Raumtemperatur,,,b509,0d3e00,value,,D2C,,°C,register value
+[id_sw=102-131]r,,,RoomTemp,Raumisttemp: Rohwert Raumtemperatur,,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,OutsideTemp,Außentemp. Sensor: Außentemperatur und Sensorstatus,,,b509,0d0300,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,OperatingMode,Betriebsart,,,b509,0d0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+w,,,OperatingMode,Betriebsart,,,b509,0e0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d0600,value,,BDY,,,register value
+w,,,ActualWeekday,Aktueller Wochentag,,,b509,0e0600,value,,BDY,,,register value
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d0700,value,,HTI,,,register value
+w,,,Time,Aktuelle Uhrzeit,,,b509,0e0700,value,,HTI,,,register value
+r,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0d0800,value,,D2C,,°C,register value
+w,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0e0800,value,,D2C,,°C,register value
+r,,,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0d0b00,value,,UCH,0=off;1=on,,register value
+w,,install,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0e0b00,value,,UCH,0=off;1=on,,register value
+r,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0d0d00,value,,HDA,,,register value
+w,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0e0d00,value,,HDA,,,register value
+r,,,IsInHoliday,Ferienprogramm aktiv: Restliche Urlaubstage,,,b509,0d1100,value,,UCH,,,register value
+r,,,IsInQuickVeto,Quick Veto aktiv: Quick Veto Funktion aktiv,,,b509,0d1600,value,,UCH,0=off;1=on,,register value
+r,,,QuickVetoTemp,Quick Veto Temp: room temperature setpoint during activated quick veto function,,,b509,0d1700,value,,D2C,,°C,register value
+r,,,HwcTempDesired,WW Sollwert,,,b509,0d1e00,value,,D2C,,°C,register value
+w,,,HwcTempDesired,WW Sollwert,,,b509,0e1e00,value,,D2C,,°C,register value
 r,,,ComfTempDesired,Komforttemp,,,b509,0d2000,temp,,D2C,,°C,Raumsollwert,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur
 w,,,ComfTempDesired,Komforttemp,,,b509,0e2000,temp,,D2C,,°C,Raumsollwert,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur
-r,,,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0d0200,value,,D2C,,°C,Korrekturwert der Raumtemperaturanzeige
-w,,install,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0e0200,value,,D2C,,°C,Korrekturwert der Raumtemperaturanzeige
-r,,,OutsideTempOffset,Außentemperatur-Abgleich,,,b509,0d0400,value,,D2C,,°C,Korrekturwert für die Außentemperatur
-w,,install,OutsideTempOffset,Außentemperatur-Abgleich,,,b509,0e0400,value,,D2C,,°C,Korrekturwert für die Außentemperatur
-r,,,HeatingCurve,Ferienprogramm aktiv,,,b509,0d2300,value,,UIN,100,,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist)
-w,,install,HeatingCurve,Ferienprogramm aktiv,,,b509,0e2300,value,,UIN,100,,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist)
+r,,,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0d0200,value,,D2C,,°C,register value
+w,,install,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0e0200,value,,D2C,,°C,register value
+r,,,OutsideTempOffset,Außentemperatur-Abgleich: Korrekturwert für die Außentemperatur,,,b509,0d0400,value,,D2C,,°C,register value
+w,,install,OutsideTempOffset,Außentemperatur-Abgleich: Korrekturwert für die Außentemperatur,,,b509,0e0400,value,,D2C,,°C,register value
+r,,,HeatingCurve,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist),,,b509,0d2300,value,,UIN,100,,register value
+w,,install,HeatingCurve,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist),,,b509,0e2300,value,,UIN,100,,register value
 r,,,ZweipunktAnalogSlct,Zweipunkt / Analogbetrieb,,,b509,0d2900,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
 w,,install,ZweipunktAnalogSlct,Zweipunkt / Analogbetrieb,,,b509,0e2900,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
 r,,,WeekDayProgSwitch,Wochenprogramm,,,b509,0d2b00,value,,UCH,1=daily;7=weekly,,Umschaltung von Tagesprogramm (die Zeitprogramme sind dann jeden Tag identisch) zum Wochenprogramm (jeder Tag kann idividuell programmiert werden)
 w,,install,WeekDayProgSwitch,Wochenprogramm,,,b509,0e2b00,value,,UCH,1=daily;7=weekly,,Umschaltung von Tagesprogramm (die Zeitprogramme sind dann jeden Tag identisch) zum Wochenprogramm (jeder Tag kann idividuell programmiert werden)
-r,,,StackeBUSTaskMax,MaxStackeBUSTask,,,b509,0d1800,value,,UCH,,,maximum number of bytes needed for the eBUS task stack
-r,,,StackMainTaskMax,MaxStackMainTask,,,b509,0d1900,value,,UCH,,,maximum number of bytes needed for the main task stack
-r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask,,,b509,0d1a00,value,,UCH,,,maximum number of bytes needed for the life check task stack
-r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax,,,b509,0d2800,value,,UCH,,,max. eBUS-Fifo Füllstand
-r,,,RTCAdjustment,RTC Abgleich,,,b509,0d2c00,value,,SIN,,,"Korrekturwert der Echtzeituhr.Anzahl der Minuten X nach deren Ablauf eine Korrektur durchgeführt wird. Ist der Wert negativ, dann wird alle X Minuten eine Sekunde abgezogen. Ist der Wert positiv, dann wird alle X Minuten eine Sekunde addiert."
-r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt,,,b509,0d2d00,value,,UIN,,,Zähler EEPROM Inkonsistenz
-r,,,POCResetCnt,Netz ein Zähler,,,b509,0d2e00,value,,UIN,,,Power-On-Resets
-r,,,WDResetCnt,Watchdog Zähler,,,b509,0d2f00,value,,UIN,,,Watchdog-Resets
-r,,,LVResetCnt,LVResetCnt,,,b509,0d3000,value,,UIN,,,counter of low voltage reset events
-r,,,CMResetCnt,CMResetCnt,,,b509,0d3100,value,,UIN,,,counter of clock monitor reset events
-r,,,COMErrorCnt,COMErrorCnt,,,b509,0d3200,value,,UIN,,,Fehler eBUS-Kommunikation
-r,,,VariantDKRefreshCnt,VariantDKRefreshCnt,,,b509,0d3300,value,,UCH,,,counts how often variant ID has been corrected
-r,,,RfCommErrorPending,Übertragungsfehler auf der Funkstrecke,,,b509,0d3500,value,,UCH,0=off;1=on,,Kommunikationsstörung auf der Funkstrecke
-r,,,BMUErrorStatus,Fehlerstatus Heizgerät,,,b509,0d3600,value,,UCH,,,Fehlerstatus des Heizgerätes
-r,,,BatteryError,Battriefehler,,,b509,0d3700,value,,UCH,0=off;1=on,,low battery
-r,,,EBUSCommErrorPending,eBUSCommErrorPending,,,b509,0d3900,value,,UCH,0=off;1=on,,eBUS Kommunikationsfehler
+r,,,StackeBUSTaskMax,MaxStackeBUSTask: maximum number of bytes needed for the eBUS task stack,,,b509,0d1800,value,,UCH,,,register value
+r,,,StackMainTaskMax,MaxStackMainTask: maximum number of bytes needed for the main task stack,,,b509,0d1900,value,,UCH,,,register value
+r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask: maximum number of bytes needed for the life check task stack,,,b509,0d1a00,value,,UCH,,,register value
+r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax: max. eBUS-Fifo Füllstand,,,b509,0d2800,value,,UCH,,,register value
+r,,,RTCAdjustment,"RTC Abgleich: Korrekturwert der Echtzeituhr.Anzahl der Minuten X nach deren Ablauf eine Korrektur durchgeführt wird. Ist der Wert negativ, dann wird alle X Minuten eine Sekunde abgezogen. Ist der Wert positiv, dann wird alle X Minuten eine Sekunde addiert.",,,b509,0d2c00,value,,SIN,,,register value
+r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt: Zähler EEPROM Inkonsistenz,,,b509,0d2d00,value,,UIN,,,register value
+r,,,POCResetCnt,Netz ein Zähler: Power-On-Resets,,,b509,0d2e00,value,,UIN,,,register value
+r,,,WDResetCnt,Watchdog Zähler: Watchdog-Resets,,,b509,0d2f00,value,,UIN,,,register value
+r,,,LVResetCnt,LVResetCnt: counter of low voltage reset events,,,b509,0d3000,value,,UIN,,,register value
+r,,,CMResetCnt,CMResetCnt: counter of clock monitor reset events,,,b509,0d3100,value,,UIN,,,register value
+r,,,COMErrorCnt,COMErrorCnt: Fehler eBUS-Kommunikation,,,b509,0d3200,value,,UIN,,,register value
+r,,,VariantDKRefreshCnt,VariantDKRefreshCnt: counts how often variant ID has been corrected,,,b509,0d3300,value,,UCH,,,register value
+r,,,RfCommErrorPending,Übertragungsfehler auf der Funkstrecke: Kommunikationsstörung auf der Funkstrecke,,,b509,0d3500,value,,UCH,0=off;1=on,,register value
+r,,,BMUErrorStatus,Fehlerstatus Heizgerät: Fehlerstatus des Heizgerätes,,,b509,0d3600,value,,UCH,,,register value
+r,,,BatteryError,Battriefehler: low battery,,,b509,0d3700,value,,UCH,0=off;1=on,,register value
+r,,,EBUSCommErrorPending,eBUSCommErrorPending: eBUS Kommunikationsfehler,,,b509,0d3900,value,,UCH,0=off;1=on,,register value
 r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

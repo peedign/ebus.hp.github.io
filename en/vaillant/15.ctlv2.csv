@@ -30,8 +30,8 @@ w,,,Time,time,,,b524,020100003500,value,,HTI,,,current time
 r,,,HydraulicScheme,Systemschema,,,b524,020000003600,value,,IGN:4,,,,value,,UIN,,,system scheme
 w,,,HydraulicScheme,Systemschema,,,b524,020100003600,value,,UIN,,,system scheme
 r,,,WaterPressure,water pressure,,,b524,020000003900,value,,IGN:4,,,,value,,EXP,,bar,water pressure
-r,,,SolarYieldTotal,total solar yield,,,b524,020000003d00,value,,IGN:4,,,,value,,ULG,,kWh,SolarYieldTotal
-w,,,SolarYieldTotal,total solar yield,,,b524,020100003d00,value,,ULG,,kWh,SolarYieldTotal
+r,,,SolarYieldTotal,total solar yield,,,b524,020000003d00,value,,IGN:4,,,,value,,ULG,,kWh,solar yield total
+w,,,SolarYieldTotal,total solar yield,,,b524,020100003d00,value,,ULG,,kWh,solar yield total
 r,,,YieldTotal,total environmental yield,,,b524,020000003e00,value,,IGN:4,,,,value,,ULG,,kWh,envrionment yield total
 w,,,YieldTotal,total environmental yield,,,b524,020100003e00,value,,ULG,,kWh,envrionment yield total
 r,,,HwcMaxFlowTempDesired,hwc max flow temp desired,,,b524,020000004600,value,,IGN:4,,,,value,,EXP,,°C,maximum flow temperature setpoint of Hwc

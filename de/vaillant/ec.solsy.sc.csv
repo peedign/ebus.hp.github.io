@@ -1,74 +1,74 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
-r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
-r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
-r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
-r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
-r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
-r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
-r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
-r,,,Storage1Sensor3,SP1 Sensor,,,b509,0d0000,temp,,D2C,,°C,Temperature of SP1 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,Storage2Sensor3,SP2 Sensor,,,b509,0d0200,temp,,D2C,,°C,Temperature of SP2 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,Storage3Sensor3,SP3 Sensor,,,b509,0d0500,temp,,D2C,,°C,Temperature of SP3 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,CollPumpHRuntime1,Laufzeit KOL1-P,,,b509,0d6e00,value,,UIN,,h,Overall runtime of COL1 pump
-r,,,CollPumpHRuntime2,Laufzeit KOL2-P,,,b509,0d6e08,value,,UIN,,h,Overall runtime of COL2 pump
-r,,,YieldSensor,ERTRAG Sensor,,,b509,0d0800,temp,,D2C,,°C,"Temperature of ""Ertrag"" sensor",sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-w,,,YieldSensor,ERTRAG Sensor,,,b509,0e0800,temp,,D2C,,°C,"Temperature of ""Ertrag"" sensor",sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,Coll1Sensor,KOL1 Sensor,,,b509,0d0900,temp,,D2C,,°C,Temperature of COL1 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,Storage4Sensor3,TD1 Sensor,,,b509,0d1400,temp,,D2C,,°C,Temperature of SP4 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,SumBackflowSensor,TD2 Sensor,,,b509,0d0700,temp,,D2C,,°C,Temperature of TD2 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,Coll2Sensor,KOL2 Sensor,,,b509,0d1500,temp,,D2C,,°C,Temperature of COL2 sensor,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,SolCollPumpED1,KOL1-P PWM,,,b509,0d6700,value,,UCH,,%,Percantage of power COL1 pump is running actually
-r,,,SolCollPumpED2,KOL2-P PWM,,,b509,0d6708,value,,UCH,,%,Percantage of power COL2 pump is running actually
-r,,,TeleSwitch,TeleSWITCH,,,b509,0d0a00,value,,UCH,0=off;1=on,,State of the Teleswitch
-r,,,HasSolCollVolumeSensor,Volumenstrommeßteil erkannt,,,b509,0d9a00,value,,UCH,0=no;1=yes,,
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,register value
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,register value
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,register value
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,register value
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,register value
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,register value
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,register value
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,register value
+r,,,Storage1Sensor3,Temperature of SP1 sensor,,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Storage2Sensor3,Temperature of SP2 sensor,,,b509,0d0200,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Storage3Sensor3,Temperature of SP3 sensor,,,b509,0d0500,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,CollPumpHRuntime1,Laufzeit KOL1-P: Overall runtime of COL1 pump,,,b509,0d6e00,value,,UIN,,h,register value
+r,,,CollPumpHRuntime2,Laufzeit KOL2-P: Overall runtime of COL2 pump,,,b509,0d6e08,value,,UIN,,h,register value
+r,,,YieldSensor,"ERTRAG Sensor: Temperature of ""Ertrag"" sensor",,,b509,0d0800,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+w,,,YieldSensor,"ERTRAG Sensor: Temperature of ""Ertrag"" sensor",,,b509,0e0800,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Coll1Sensor,KOL1 Sensor: Temperature of COL1 sensor,,,b509,0d0900,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Storage4Sensor3,TD1 Sensor: Temperature of SP4 sensor,,,b509,0d1400,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,SumBackflowSensor,Temperature of TD2 sensor,,,b509,0d0700,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Coll2Sensor,KOL2 Sensor: Temperature of COL2 sensor,,,b509,0d1500,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,SolCollPumpED1,KOL1-P PWM: Percantage of power COL1 pump is running actually,,,b509,0d6700,value,,UCH,,%,register value
+r,,,SolCollPumpED2,KOL2-P PWM: Percantage of power COL2 pump is running actually,,,b509,0d6708,value,,UCH,,%,register value
+r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,register value
+r,,,HasSolCollVolumeSensor,Volumenstrommeßteil erkannt: -,,,b509,0d9a00,value,,UCH,0=no;1=yes,,register value
 r,,,SolCollVolumeSensorPowerLastMinut,Gemessener Volumenstrom der letzten Minute,,,b509,0d9b00,value,,UIN,,l/h,
-r,,,OutputMA,Multifunktionsausgang MA,,,b509,0d1c00,value,,UCH,0=off;1=on,,Status Multifunktionsausgang
-r,,,SolEnableDiffTemp1,Einschaltdifferenz 1,,,b509,0d6300,value,,UCH,,°C,Temperaturdifferenz zwischen KOL1 und Speicher unten ab der die Kollektorpumpe gestartet wird
-w,,,SolEnableDiffTemp1,Einschaltdifferenz 1,,,b509,0e6300,value,,UCH,,°C,Temperaturdifferenz zwischen KOL1 und Speicher unten ab der die Kollektorpumpe gestartet wird
-r,,,DeltaTOnFlexDtController,Einschaltdifferenz TD1/TD2,,,b509,0da600,value,,UCH,,K,Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA angesteuert wird
-w,,,DeltaTOnFlexDtController,Einschaltdifferenz TD1/TD2,,,b509,0ea600,value,,UCH,,K,Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA angesteuert wird
-r,,,DeltaTOffFlexDtController,Ausschaltdifferenz TD1/TD2,,,b509,0da700,value,,UCH,,K,Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA wieder abgeschaltet wird
-w,,,DeltaTOffFlexDtController,Ausschaltdifferenz TD1/TD2,,,b509,0ea700,value,,UCH,,K,Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA wieder abgeschaltet wird
-r,,,SolEnableDiffTemp2,Einschaltdifferenz 2,,,b509,0d6308,value,,UCH,,°C,Temperaturdifferenz zwischen KOL2 und Speicher ab der die Kollektorpumpe gestartet wird
-w,,,SolEnableDiffTemp2,Einschaltdifferenz 2,,,b509,0e6308,value,,UCH,,°C,Temperaturdifferenz zwischen KOL2 und Speicher ab der die Kollektorpumpe gestartet wird
-r,,,SolDisableDiffTemp1,Ausschaltdifferenz 1,,,b509,0d6400,value,,UCH,,°C,Temperaturdifferenz zwischen KOL1 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird
-w,,,SolDisableDiffTemp1,Ausschaltdifferenz 1,,,b509,0e6400,value,,UCH,,°C,Temperaturdifferenz zwischen KOL1 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird
-r,,,SolDisableDiffTemp2,Ausschaltdifferenz 2,,,b509,0d6408,value,,UCH,,°C,Temperaturdifferenz zwischen KOL2 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird
-w,,,SolDisableDiffTemp2,Ausschaltdifferenz 2,,,b509,0e6408,value,,UCH,,°C,Temperaturdifferenz zwischen KOL2 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird
-r,,,SolHwcMaxLoadTemp1,Maximaltemperatur 1,,,b509,0d6500,value,,UCH,,°C,"Maximaltemperatur für den 1. Solarspeicher an SP3 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden."
-w,,,SolHwcMaxLoadTemp1,Maximaltemperatur 1,,,b509,0e6500,value,,UCH,,°C,"Maximaltemperatur für den 1. Solarspeicher an SP3 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden."
-r,,,SolHwcMaxLoadTemp2,Maximaltemperatur 2,,,b509,0d6508,value,,UCH,,°C,"Maximaltemperatur für den 2. Solarspeicher bzw Schwimmbad an SP1 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden."
-w,,,SolHwcMaxLoadTemp2,Maximaltemperatur 2,,,b509,0e6508,value,,UCH,,°C,"Maximaltemperatur für den 2. Solarspeicher bzw Schwimmbad an SP1 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden."
-r,,,SolProtection,Solarkreisschutzfunktion,,,b509,0d8100,value,,UCH,0=off;1=on,,"Wird der hier eingestellte Wert überschritten, dann wird die Kollektorpumpe des betroffenen Kreises zum Schutz vor Überhitzung der Komponenten abgeschaltet. Die Kollektortemperatur muß 30K unter diesen Wert sinken um die Schutzfunktion zu verlassen."
-w,,,SolProtection,Solarkreisschutzfunktion,,,b509,0e8100,value,,UCH,0=off;1=on,,"Wird der hier eingestellte Wert überschritten, dann wird die Kollektorpumpe des betroffenen Kreises zum Schutz vor Überhitzung der Komponenten abgeschaltet. Die Kollektortemperatur muß 30K unter diesen Wert sinken um die Schutzfunktion zu verlassen."
-r,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion,,,b509,0d8200,value,,UCH,,°C,Temperature for collector pump protection in case of high temperatures
-w,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion,,,b509,0e8200,value,,UCH,,°C,Temperature for collector pump protection in case of high temperatures
+r,,,OutputMA,Multifunktionsausgang MA: Status Multifunktionsausgang,,,b509,0d1c00,value,,UCH,0=off;1=on,,register value
+r,,,SolEnableDiffTemp1,Einschaltdifferenz 1: Temperaturdifferenz zwischen KOL1 und Speicher unten ab der die Kollektorpumpe gestartet wird,,,b509,0d6300,value,,UCH,,°C,register value
+w,,,SolEnableDiffTemp1,Einschaltdifferenz 1: Temperaturdifferenz zwischen KOL1 und Speicher unten ab der die Kollektorpumpe gestartet wird,,,b509,0e6300,value,,UCH,,°C,register value
+r,,,DeltaTOnFlexDtController,Einschaltdifferenz TD1/TD2: Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA angesteuert wird,,,b509,0da600,value,,UCH,,K,register value
+w,,,DeltaTOnFlexDtController,Einschaltdifferenz TD1/TD2: Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA angesteuert wird,,,b509,0ea600,value,,UCH,,K,register value
+r,,,DeltaTOffFlexDtController,Ausschaltdifferenz TD1/TD2: Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA wieder abgeschaltet wird,,,b509,0da700,value,,UCH,,K,register value
+w,,,DeltaTOffFlexDtController,Ausschaltdifferenz TD1/TD2: Temperaturdifferenz zwischen TD1 und TD2 ab der der Ausgang MA wieder abgeschaltet wird,,,b509,0ea700,value,,UCH,,K,register value
+r,,,SolEnableDiffTemp2,Einschaltdifferenz 2: Temperaturdifferenz zwischen KOL2 und Speicher ab der die Kollektorpumpe gestartet wird,,,b509,0d6308,value,,UCH,,°C,register value
+w,,,SolEnableDiffTemp2,Einschaltdifferenz 2: Temperaturdifferenz zwischen KOL2 und Speicher ab der die Kollektorpumpe gestartet wird,,,b509,0e6308,value,,UCH,,°C,register value
+r,,,SolDisableDiffTemp1,Ausschaltdifferenz 1: Temperaturdifferenz zwischen KOL1 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird,,,b509,0d6400,value,,UCH,,°C,register value
+w,,,SolDisableDiffTemp1,Ausschaltdifferenz 1: Temperaturdifferenz zwischen KOL1 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird,,,b509,0e6400,value,,UCH,,°C,register value
+r,,,SolDisableDiffTemp2,Ausschaltdifferenz 2: Temperaturdifferenz zwischen KOL2 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird,,,b509,0d6408,value,,UCH,,°C,register value
+w,,,SolDisableDiffTemp2,Ausschaltdifferenz 2: Temperaturdifferenz zwischen KOL2 und Speicher unten unterhalb der die Kollektorpumpe gestoppt wird,,,b509,0e6408,value,,UCH,,°C,register value
+r,,,SolHwcMaxLoadTemp1,"Maximaltemperatur 1: Maximaltemperatur für den 1. Solarspeicher an SP3 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden.",,,b509,0d6500,value,,UCH,,°C,register value
+w,,,SolHwcMaxLoadTemp1,"Maximaltemperatur 1: Maximaltemperatur für den 1. Solarspeicher an SP3 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden.",,,b509,0e6500,value,,UCH,,°C,register value
+r,,,SolHwcMaxLoadTemp2,"Maximaltemperatur 2: Maximaltemperatur für den 2. Solarspeicher bzw Schwimmbad an SP1 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden.",,,b509,0d6508,value,,UCH,,°C,register value
+w,,,SolHwcMaxLoadTemp2,"Maximaltemperatur 2: Maximaltemperatur für den 2. Solarspeicher bzw Schwimmbad an SP1 bei deren erreichen KOL1-P abgeschaltet wird. Erst 1,5K unterhalb dieser Temperatur kann der Speicher wieder beladen werden.",,,b509,0e6508,value,,UCH,,°C,register value
+r,,,SolProtection,"Solarkreisschutzfunktion: Wird der hier eingestellte Wert überschritten, dann wird die Kollektorpumpe des betroffenen Kreises zum Schutz vor Überhitzung der Komponenten abgeschaltet. Die Kollektortemperatur muß 30K unter diesen Wert sinken um die Schutzfunktion zu verlassen.",,,b509,0d8100,value,,UCH,0=off;1=on,,register value
+w,,,SolProtection,"Solarkreisschutzfunktion: Wird der hier eingestellte Wert überschritten, dann wird die Kollektorpumpe des betroffenen Kreises zum Schutz vor Überhitzung der Komponenten abgeschaltet. Die Kollektortemperatur muß 30K unter diesen Wert sinken um die Schutzfunktion zu verlassen.",,,b509,0e8100,value,,UCH,0=off;1=on,,register value
+r,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion: Temperature for collector pump protection in case of high temperatures,,,b509,0d8200,value,,UCH,,°C,register value
+w,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion: Temperature for collector pump protection in case of high temperatures,,,b509,0e8200,value,,UCH,,°C,register value
 r,,,ColKickGradient,Gradient Kollektorkick,,,b509,0d9d00,value,,UCH,,0.1 K / 30 min,
 w,,service,ColKickGradient,Gradient Kollektorkick,,,b509,0e9d00,value,,UCH,,0.1 K / 30 min,
-r,,,ColKickPumpTime,Länge Kollektorkick,,,b509,0d9e00,value,,UCH,,s,Sekunden
-w,,service,ColKickPumpTime,Länge Kollektorkick,,,b509,0e9e00,value,,UCH,,s,Sekunden
-r,,,ScProtectionHysteresis,Hysterese Schutzfunktion,,,b509,0d9f00,value,,UCH,,°C,Hysterese für die Kollektorkreisschutzfunktion
-w,,,ScProtectionHysteresis,Hysterese Schutzfunktion,,,b509,0e9f00,value,,UCH,,°C,Hysterese für die Kollektorkreisschutzfunktion
-r,,,FrostProtectionLimit,Grenze für Solarkreisschutzfunktion,,,b509,0da200,value,,SCH,,K,limits for the solar collector frost protection
-r,,,FrostProtectionEnabled,Solarkreis Frostschutzfunktion,,,b509,0da300,value,,UCH,0=off;1=on,,Frostschutzfunktion für den Solarkreis. In einigen Ländern gesetzlich vorgeschrieben. Bitte nin Deutschland nicht aktivieren
+r,,,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0d9e00,value,,UCH,,s,register value
+w,,service,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0e9e00,value,,UCH,,s,register value
+r,,,ScProtectionHysteresis,Hysterese Schutzfunktion: Hysterese für die Kollektorkreisschutzfunktion,,,b509,0d9f00,value,,UCH,,°C,register value
+w,,,ScProtectionHysteresis,Hysterese Schutzfunktion: Hysterese für die Kollektorkreisschutzfunktion,,,b509,0e9f00,value,,UCH,,°C,register value
+r,,,FrostProtectionLimit,Grenze für Solarkreis Frostschutz,,,b509,0da200,value,,SCH,,K,limits for the solar collector frost protection
+r,,,FrostProtectionEnabled,Solarkreis Frostschutzfunktion: Frostschutzfunktion für den Solarkreis. In einigen Ländern gesetzlich vorgeschrieben. Bitte nin Deutschland nicht aktivieren,,,b509,0da300,value,,UCH,0=off;1=on,,register value
 r,,,SolCollVolumeSensorTicksPer10Lite,Anzahl Impule für 10 Liter,,,b509,0db000,value,,UCH,,ticks,How often the volume sensor has to pulse for the detection of 10 liters
 r,,,SolFlowRate,Volumenstrom Solarkreis,,,b509,0d7400,value,,UIN,60,l/min,Flow rate the collector pumps are able to deliver for 100% power
 w,,,SolFlowRate,Volumenstrom Solarkreis,,,b509,0e7400,value,,UIN,60,l/min,Flow rate the collector pumps are able to deliver for 100% power
-r,,,SolEnablePumpPWM,ED-Steuerung,,,b509,0dae00,value,,UCH,0=off;1=on,,Collector pumps should be driven by a slow pulse width modulation
-w,,,SolEnablePumpPWM,ED-Steuerung,,,b509,0eae00,value,,UCH,0=off;1=on,,Collector pumps should be driven by a slow pulse width modulation
-r,,,ExtendedYieldCalculation,Erweiterter Solarertrag,,,b509,0d7f00,value,,UCH,0=off;1=on,,calculate solar yield like specified by austrian regulation. Uses SP3 or this purpose!
-w,,,ExtendedYieldCalculation,Erweiterter Solarertrag,,,b509,0e7f00,value,,UCH,0=off;1=on,,calculate solar yield like specified by austrian regulation. Uses SP3 or this purpose!
+r,,,SolEnablePumpPWM,ED-Steuerung: Collector pumps should be driven by a slow pulse width modulation,,,b509,0dae00,value,,UCH,0=off;1=on,,register value
+w,,,SolEnablePumpPWM,ED-Steuerung: Collector pumps should be driven by a slow pulse width modulation,,,b509,0eae00,value,,UCH,0=off;1=on,,register value
+r,,,ExtendedYieldCalculation,Erweiterter Solarertrag: calculate solar yield like specified by austrian regulation. Uses SP3 or this purpose!,,,b509,0d7f00,value,,UCH,0=off;1=on,,register value
+w,,,ExtendedYieldCalculation,Erweiterter Solarertrag: calculate solar yield like specified by austrian regulation. Uses SP3 or this purpose!,,,b509,0e7f00,value,,UCH,0=off;1=on,,register value
 r,,,SolPriority,Priorität Solarspeicher,,,b509,0d9900,value,,UCH,16=_1_2;4=_2_1,,Priority of water tanks for solar loading algorithms. 1 = SP2 2 = SP3
 w,,,SolPriority,Priorität Solarspeicher,,,b509,0e9900,value,,UCH,16=_1_2;4=_2_1,,Priority of water tanks for solar loading algorithms. 1 = SP2 2 = SP3
-r,,,SolOperatingMode,Betriebsart,,,b509,0dac00,value,,UCH,,,Operating mode solar
-r,,,SolTeleswitchOperatingMode,Teleswitch Betriebsart,,,b509,0dad00,value,,UCH,,,Teleswitch operating mode solar
-r,,,KolTempMin1,Minimaltemperatur 1,,,b509,0da000,value,,UCH,,°C,Temperature COL1 sensor has to reach before starting pumps at least
-w,,,KolTempMin1,Minimaltemperatur 1,,,b509,0ea000,value,,UCH,,°C,Temperature COL1 sensor has to reach before starting pumps at least
-r,,,KolTempMin2,Minimaltemperatur 2,,,b509,0da008,value,,UCH,,°C,Temperature COL2 sensor has to reach before starting pumps at least
-w,,,KolTempMin2,Minimaltemperatur 2,,,b509,0ea008,value,,UCH,,°C,Temperature COL2 sensor has to reach before starting pumps at least
+r,,,SolOperatingMode,Betriebsart: Operating mode solar,,,b509,0dac00,value,,UCH,,,register value
+r,,,SolTeleswitchOperatingMode,Teleswitch Betriebsart: Teleswitch operating mode solar,,,b509,0dad00,value,,UCH,,,register value
+r,,,KolTempMin1,Minimaltemperatur 1: Temperature COL1 sensor has to reach before starting pumps at least,,,b509,0da000,value,,UCH,,°C,register value
+w,,,KolTempMin1,Minimaltemperatur 1: Temperature COL1 sensor has to reach before starting pumps at least,,,b509,0ea000,value,,UCH,,°C,register value
+r,,,KolTempMin2,Minimaltemperatur 2: Temperature COL2 sensor has to reach before starting pumps at least,,,b509,0da008,value,,UCH,,°C,register value
+w,,,KolTempMin2,Minimaltemperatur 2: Temperature COL2 sensor has to reach before starting pumps at least,,,b509,0ea008,value,,UCH,,°C,register value
 w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,0=valve1;1=cirpump;2=pump1;3=hc2mixeropen;4=hc2mixerclose;5=hc2pump;6=col1pump;7=col2pump;8=valve2;9=valve3;10=legiopump;11=valve4;12=c1c2,,
 w,,install,Ioteststop,I/O Test stoppen,,,b506,01,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer

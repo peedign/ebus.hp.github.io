@@ -2,54 +2,54 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 *[id_sw],scan,,,,SW
-[id_sw>=201]r,,,DisplayedRoomTemp,DisplayedRoomTemp,,,b509,0d3e00,value,,D2C,,°C,displayed room temperature
-[id_sw=102-131]r,,,RoomTemp,RaumtemperaturIst,,,b509,0d0000,temp,,D2C,,°C,raw value current room temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,OutsideTemp,OutsideTempSensor,,,b509,0d0300,temp,,D2C,,°C,current outdoor temperature and sensorstate,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,OperatingMode,OperatingMode,,,b509,0d0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,OperatingMode
-w,,,OperatingMode,OperatingMode,,,b509,0e0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,OperatingMode
-r,,,ActualWeekday,Actual Weekday,,,b509,0d0600,value,,BDY,,,current day of week
-w,,,ActualWeekday,Actual Weekday,,,b509,0e0600,value,,BDY,,,current day of week
-r,,,Time,time,,,b509,0d0700,value,,HTI,,,current time
-w,,,Time,time,,,b509,0e0700,value,,HTI,,,current time
-r,,,ReducedNightTemp,ReducedNightTemp,,,b509,0d0800,value,,D2C,,°C,drop temperature setpoint
-w,,,ReducedNightTemp,ReducedNightTemp,,,b509,0e0800,value,,D2C,,°C,drop temperature setpoint
-r,,,YearCalendarActive,YearCalendarActive,,,b509,0d0b00,value,,UCH,0=off;1=on,,enable calendar (=> automatic switching to and fro daylight savings time)
-w,,install,YearCalendarActive,YearCalendarActive,,,b509,0e0b00,value,,UCH,0=off;1=on,,enable calendar (=> automatic switching to and fro daylight savings time)
-r,,,Date,date,,,b509,0d0d00,value,,HDA,,,current date (calendar must be enabled previously!)
-w,,,Date,date,,,b509,0e0d00,value,,HDA,,,current date (calendar must be enabled previously!)
-r,,,IsInHoliday,Heating curve,,,b509,0d1100,value,,UCH,,,holiday function - remaining days
-r,,,IsInQuickVeto,IsInQuickVeto,,,b509,0d1600,value,,UCH,0=off;1=on,,temperature override (quick veto)
-r,,,QuickVetoTemp,QuickVetoTemp,,,b509,0d1700,value,,D2C,,°C,room temperature setpoint during activated quick veto function
-r,,,HwcTempDesired,DesiredDHWTemp,,,b509,0d1e00,value,,D2C,,°C,DHW setpoint
-w,,,HwcTempDesired,DesiredDHWTemp,,,b509,0e1e00,value,,D2C,,°C,DHW setpoint
+[id_sw>=201]r,,,DisplayedRoomTemp,DisplayedRoomTemp: displayed room temperature,,,b509,0d3e00,value,,D2C,,°C,register value
+[id_sw=102-131]r,,,RoomTemp,RaumtemperaturIst: raw value current room temperature,,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,OutsideTemp,OutsideTempSensor: current outdoor temperature and sensorstate,,,b509,0d0300,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,OperatingMode,OperatingMode: operating mode,,,b509,0d0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+w,,,OperatingMode,OperatingMode: operating mode,,,b509,0e0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d0600,value,,BDY,,,register value
+w,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0e0600,value,,BDY,,,register value
+r,,,Time,current time,,,b509,0d0700,value,,HTI,,,register value
+w,,,Time,current time,,,b509,0e0700,value,,HTI,,,register value
+r,,,ReducedNightTemp,ReducedNightTemp: drop temperature setpoint,,,b509,0d0800,value,,D2C,,°C,register value
+w,,,ReducedNightTemp,ReducedNightTemp: drop temperature setpoint,,,b509,0e0800,value,,D2C,,°C,register value
+r,,,YearCalendarActive,YearCalendarActive: enable calendar (=> automatic switching to and fro daylight savings time),,,b509,0d0b00,value,,UCH,0=off;1=on,,register value
+w,,install,YearCalendarActive,YearCalendarActive: enable calendar (=> automatic switching to and fro daylight savings time),,,b509,0e0b00,value,,UCH,0=off;1=on,,register value
+r,,,Date,current date (calendar must be enabled previously!),,,b509,0d0d00,value,,HDA,,,register value
+w,,,Date,current date (calendar must be enabled previously!),,,b509,0e0d00,value,,HDA,,,register value
+r,,,IsInHoliday,Heating curve: holiday function - remaining days,,,b509,0d1100,value,,UCH,,,register value
+r,,,IsInQuickVeto,IsInQuickVeto: temperature override (quick veto),,,b509,0d1600,value,,UCH,0=off;1=on,,register value
+r,,,QuickVetoTemp,QuickVetoTemp: room temperature setpoint during activated quick veto function,,,b509,0d1700,value,,D2C,,°C,register value
+r,,,HwcTempDesired,DesiredDHWTemp: DHW setpoint,,,b509,0d1e00,value,,D2C,,°C,register value
+w,,,HwcTempDesired,DesiredDHWTemp: DHW setpoint,,,b509,0e1e00,value,,D2C,,°C,register value
 r,,,ComfTempDesired,DesiredComfTemp,,,b509,0d2000,temp,,D2C,,°C,room temperature setpoint,temp_1,,D2C,,°C,temperature,temp_2,,D2C,,°C,temperature,temp_3,,D2C,,°C,temperature
 w,,,ComfTempDesired,DesiredComfTemp,,,b509,0e2000,temp,,D2C,,°C,room temperature setpoint,temp_1,,D2C,,°C,temperature,temp_2,,D2C,,°C,temperature,temp_3,,D2C,,°C,temperature
-r,,,RoomTempOffset,RaumtemperaturIstOffset,,,b509,0d0200,value,,D2C,,°C,room temperature correction
-w,,install,RoomTempOffset,RaumtemperaturIstOffset,,,b509,0e0200,value,,D2C,,°C,room temperature correction
-r,,,OutsideTempOffset,OutDoorTempCorr,,,b509,0d0400,value,,D2C,,°C,outside temperature correction
-w,,install,OutsideTempOffset,OutDoorTempCorr,,,b509,0e0400,value,,D2C,,°C,outside temperature correction
-r,,,HeatingCurve,Heating curve,,,b509,0d2300,value,,UIN,100,,heating curve (only relevant if an outside temperature sensor is connected to the BMU)
-w,,install,HeatingCurve,Heating curve,,,b509,0e2300,value,,UIN,100,,heating curve (only relevant if an outside temperature sensor is connected to the BMU)
+r,,,RoomTempOffset,RaumtemperaturIstOffset: room temperature correction,,,b509,0d0200,value,,D2C,,°C,register value
+w,,install,RoomTempOffset,RaumtemperaturIstOffset: room temperature correction,,,b509,0e0200,value,,D2C,,°C,register value
+r,,,OutsideTempOffset,OutDoorTempCorr: outside temperature correction,,,b509,0d0400,value,,D2C,,°C,register value
+w,,install,OutsideTempOffset,OutDoorTempCorr: outside temperature correction,,,b509,0e0400,value,,D2C,,°C,register value
+r,,,HeatingCurve,heating curve (only relevant if an outside temperature sensor is connected to the BMU),,,b509,0d2300,value,,UIN,100,,register value
+w,,install,HeatingCurve,heating curve (only relevant if an outside temperature sensor is connected to the BMU),,,b509,0e2300,value,,UIN,100,,register value
 r,,,ZweipunktAnalogSlct,ZweipunktAnalogSlct,,,b509,0d2900,value,,UCH,0=two_point_control;1=analogue_control,,two-point / analogue control
 w,,install,ZweipunktAnalogSlct,ZweipunktAnalogSlct,,,b509,0e2900,value,,UCH,0=two_point_control;1=analogue_control,,two-point / analogue control
 r,,,WeekDayProgSwitch,WeekDayProgSwitch,,,b509,0d2b00,value,,UCH,1=daily;7=weekly,,switch from weekly program over to a daily one
 w,,install,WeekDayProgSwitch,WeekDayProgSwitch,,,b509,0e2b00,value,,UCH,1=daily;7=weekly,,switch from weekly program over to a daily one
-r,,,StackeBUSTaskMax,MaxStackeBUSTask,,,b509,0d1800,value,,UCH,,,maximum number of bytes needed for the eBUS task stack
-r,,,StackMainTaskMax,MaxStackMainTask,,,b509,0d1900,value,,UCH,,,maximum number of bytes needed for the main task stack
-r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask,,,b509,0d1a00,value,,UCH,,,maximum number of bytes needed for the life check task stack
-r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax,,,b509,0d2800,value,,UCH,,,max. eBUS-fifo level
-r,,,RTCAdjustment,RTCAdjustment,,,b509,0d2c00,value,,SIN,,,adjustment value for RTC-timer (add or subtract 1sec in RTC-synchronisation time every x minute(s); add: positive value; sub: negative value)
-r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt,,,b509,0d2d00,value,,UIN,,,EEPROM inconsistency counter
-r,,,POCResetCnt,POCResetCnt,,,b509,0d2e00,value,,UIN,,,power on resets
-r,,,WDResetCnt,WDResetCnt,,,b509,0d2f00,value,,UIN,,,watchdog resets
-r,,,LVResetCnt,LVResetCnt,,,b509,0d3000,value,,UIN,,,low voltage resets
-r,,,CMResetCnt,CMResetCnt,,,b509,0d3100,value,,UIN,,,clock monitor resets
-r,,,COMErrorCnt,COMErrorCnt,,,b509,0d3200,value,,UIN,,,eBUS-communication errors
-r,,,VariantDKRefreshCnt,VariantDKRefreshCnt,,,b509,0d3300,value,,UCH,,,counts how often variant ID has been corrected
-r,,,RfCommErrorPending,RfCommErrorPending,,,b509,0d3500,value,,UCH,0=off;1=on,,radio communication fails
-r,,,BMUErrorStatus,BMU_ErrorStatus_DK,,,b509,0d3600,value,,UCH,,,error status of the BMU
-r,,,BatteryError,BatteryError,,,b509,0d3700,value,,UCH,0=off;1=on,,low battery
-r,,,EBUSCommErrorPending,eBUSCommErrorPending,,,b509,0d3900,value,,UCH,0=off;1=on,,eBUS communication fails
+r,,,StackeBUSTaskMax,MaxStackeBUSTask: maximum number of bytes needed for the eBUS task stack,,,b509,0d1800,value,,UCH,,,register value
+r,,,StackMainTaskMax,MaxStackMainTask: maximum number of bytes needed for the main task stack,,,b509,0d1900,value,,UCH,,,register value
+r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask: maximum number of bytes needed for the life check task stack,,,b509,0d1a00,value,,UCH,,,register value
+r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax: max. eBUS-fifo level,,,b509,0d2800,value,,UCH,,,register value
+r,,,RTCAdjustment,RTCAdjustment: adjustment value for RTC-timer (add or subtract 1sec in RTC-synchronisation time every x minute(s); add: positive value; sub: negative value),,,b509,0d2c00,value,,SIN,,,register value
+r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt: EEPROM inconsistency counter,,,b509,0d2d00,value,,UIN,,,register value
+r,,,POCResetCnt,POCResetCnt: power on resets,,,b509,0d2e00,value,,UIN,,,register value
+r,,,WDResetCnt,WDResetCnt: watchdog resets,,,b509,0d2f00,value,,UIN,,,register value
+r,,,LVResetCnt,LVResetCnt: low voltage resets,,,b509,0d3000,value,,UIN,,,register value
+r,,,CMResetCnt,CMResetCnt: clock monitor resets,,,b509,0d3100,value,,UIN,,,register value
+r,,,COMErrorCnt,COMErrorCnt: eBUS-communication errors,,,b509,0d3200,value,,UIN,,,register value
+r,,,VariantDKRefreshCnt,VariantDKRefreshCnt: counts how often variant ID has been corrected,,,b509,0d3300,value,,UCH,,,register value
+r,,,RfCommErrorPending,RfCommErrorPending: radio communication fails,,,b509,0d3500,value,,UCH,0=off;1=on,,register value
+r,,,BMUErrorStatus,BMU_ErrorStatus_DK: error status of the BMU,,,b509,0d3600,value,,UCH,,,register value
+r,,,BatteryError,BatteryError: low battery,,,b509,0d3700,value,,UCH,0=off;1=on,,register value
+r,,,EBUSCommErrorPending,eBUSCommErrorPending: eBUS communication fails,,,b509,0d3900,value,,UCH,0=off;1=on,,register value
 r,,,HcTimer_Monday,Periods Monday,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HcTimer_Monday,Periods Monday,,,b515,0000,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,HcTimer_Tuesday,Periods Tuesday,,,b515,0100,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days

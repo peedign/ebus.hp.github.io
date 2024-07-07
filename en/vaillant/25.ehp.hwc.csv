@@ -2,26 +2,26 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 *[id_sw],scan,,,,SW
-[id_sw>=337]r,,,LegioProtectionDay,LegioProtectionDay,,,b509,0d7c01,value,,BDY,,,"Legionella protection day (0-6:mo-so, 7:off). Displayed as abbreviations. Additional parameter has to be set for activation or deactivation."
-[id_sw>=337]w,,install,LegioProtectionDay,LegioProtectionDay,,,b509,0e7c01,value,,BDY,,,"Legionella protection day (0-6:mo-so, 7:off). Displayed as abbreviations. Additional parameter has to be set for activation or deactivation."
-[id_sw>=407]r,,,Hc1PumpSpeedLayeredStorage,CH1P_PumpSpeed_layered_tank,,,b509,0dc101,value,,UCH,,%,CH pump speed setpoint while shiftloading DHW tank [%]
-[id_sw>=407]w,,install,Hc1PumpSpeedLayeredStorage,CH1P_PumpSpeed_layered_tank,,,b509,0ec101,value,,UCH,,%,CH pump speed setpoint while shiftloading DHW tank [%]
-[id_sw>=407]r,,,Hc1PumpSpeedCoilStorage,CH1P_PumpSpeed_coil_tank,,,b509,0dc201,value,,UCH,,%,CH pump speed setpoint while loading DHW tank with coils [%]
-[id_sw>=407]w,,install,Hc1PumpSpeedCoilStorage,CH1P_PumpSpeed_coil_tank,,,b509,0ec201,value,,UCH,,%,CH pump speed setpoint while loading DHW tank with coils [%]
-[id_sw>=407]r,,,HwcStorageIsCoil,DHW_Tank_is_coil,,,b509,0dcd01,value,,UCH,0=no;1=yes,,DHW tank is shift loading type if no
-[id_sw>=407]w,,install,HwcStorageIsCoil,DHW_Tank_is_coil,,,b509,0ecd01,value,,UCH,0=no;1=yes,,DHW tank is shift loading type if no
-[id_sw>=415]r,,,TappingDetectionLimit,TappingDetectionLimit,,,b509,0de801,value,,UCH,,,"turns on backup heater, if temperature drops below this value; 0=function is off"
-[id_sw>=415]w,,install,TappingDetectionLimit,TappingDetectionLimit,,,b509,0ee801,value,,UCH,,,"turns on backup heater, if temperature drops below this value; 0=function is off"
-r,,,OperatingMode,OperatingMode,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto,,Operating mode for the DHWcircuit
-w,,,OperatingMode,OperatingMode,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto,,Operating mode for the DHWcircuit
-r,,,StorageTempDesiredStop,Tank_Setpoint_Stop,,,b509,0d8200,value,,D2C,,°C,DHW temperature at which loading stops
-w,,install,StorageTempDesiredStop,Tank_Setpoint_Stop,,,b509,0e8200,value,,D2C,,°C,DHW temperature at which loading stops
-r,,,StorageTempDesiredStart,Tank_Setpoint_Start,,,b509,0d8300,value,,D2C,,°C,DHW temperature at which loading starts
-w,,install,StorageTempDesiredStart,Tank_Setpoint_Start,,,b509,0e8300,value,,D2C,,°C,DHW temperature at which loading starts
-r,,,LegioProtectionEnabled,LegioProtectionEnabled,,,b509,0d4000,value,,UCH,0=no;1=yes,,BMR:enables/disables the anti-legionella feature
-w,,install,LegioProtectionEnabled,LegioProtectionEnabled,,,b509,0e4000,value,,UCH,0=no;1=yes,,BMR:enables/disables the anti-legionella feature
-r,,,LegionellaStartTime,Legionella_Start_Time,,,b509,0d6700,value,,BTM,,,start time for legionella protection (different from BMR)
-w,,install,LegionellaStartTime,Legionella_Start_Time,,,b509,0e6700,value,,BTM,,,start time for legionella protection (different from BMR)
+[id_sw>=337]r,,,LegioProtectionDay,"LegioProtectionDay: Legionella protection day (0-6:mo-so, 7:off). Displayed as abbreviations. Additional parameter has to be set for activation or deactivation.",,,b509,0d7c01,value,,BDY,,,register value
+[id_sw>=337]w,,install,LegioProtectionDay,"LegioProtectionDay: Legionella protection day (0-6:mo-so, 7:off). Displayed as abbreviations. Additional parameter has to be set for activation or deactivation.",,,b509,0e7c01,value,,BDY,,,register value
+[id_sw>=407]r,,,Hc1PumpSpeedLayeredStorage,CH1P_PumpSpeed_layered_tank: CH pump speed setpoint while shiftloading DHW tank [%],,,b509,0dc101,value,,UCH,,%,register value
+[id_sw>=407]w,,install,Hc1PumpSpeedLayeredStorage,CH1P_PumpSpeed_layered_tank: CH pump speed setpoint while shiftloading DHW tank [%],,,b509,0ec101,value,,UCH,,%,register value
+[id_sw>=407]r,,,Hc1PumpSpeedCoilStorage,CH1P_PumpSpeed_coil_tank: CH pump speed setpoint while loading DHW tank with coils [%],,,b509,0dc201,value,,UCH,,%,register value
+[id_sw>=407]w,,install,Hc1PumpSpeedCoilStorage,CH1P_PumpSpeed_coil_tank: CH pump speed setpoint while loading DHW tank with coils [%],,,b509,0ec201,value,,UCH,,%,register value
+[id_sw>=407]r,,,HwcStorageIsCoil,DHW_Tank_is_coil: DHW tank is shift loading type if no,,,b509,0dcd01,value,,UCH,0=no;1=yes,,register value
+[id_sw>=407]w,,install,HwcStorageIsCoil,DHW_Tank_is_coil: DHW tank is shift loading type if no,,,b509,0ecd01,value,,UCH,0=no;1=yes,,register value
+[id_sw>=415]r,,,TappingDetectionLimit,"TappingDetectionLimit: turns on backup heater, if temperature drops below this value; 0=function is off",,,b509,0de801,value,,UCH,,,register value
+[id_sw>=415]w,,install,TappingDetectionLimit,"TappingDetectionLimit: turns on backup heater, if temperature drops below this value; 0=function is off",,,b509,0ee801,value,,UCH,,,register value
+r,,,OperatingMode,OperatingMode: Operating mode for the DHWcircuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto,,register value
+w,,,OperatingMode,OperatingMode: Operating mode for the DHWcircuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto,,register value
+r,,,StorageTempDesiredStop,Tank_Setpoint_Stop: DHW temperature at which loading stops,,,b509,0d8200,value,,D2C,,°C,register value
+w,,install,StorageTempDesiredStop,Tank_Setpoint_Stop: DHW temperature at which loading stops,,,b509,0e8200,value,,D2C,,°C,register value
+r,,,StorageTempDesiredStart,Tank_Setpoint_Start: DHW temperature at which loading starts,,,b509,0d8300,value,,D2C,,°C,register value
+w,,install,StorageTempDesiredStart,Tank_Setpoint_Start: DHW temperature at which loading starts,,,b509,0e8300,value,,D2C,,°C,register value
+r,,,LegioProtectionEnabled,LegioProtectionEnabled: BMR:enables/disables the anti-legionella feature,,,b509,0d4000,value,,UCH,0=no;1=yes,,register value
+w,,install,LegioProtectionEnabled,LegioProtectionEnabled: BMR:enables/disables the anti-legionella feature,,,b509,0e4000,value,,UCH,0=no;1=yes,,register value
+r,,,LegionellaStartTime,Legionella_Start_Time: start time for legionella protection (different from BMR),,,b509,0d6700,value,,BTM,,,register value
+w,,install,LegionellaStartTime,Legionella_Start_Time: start time for legionella protection (different from BMR),,,b509,0e6700,value,,BTM,,,register value
 r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
 r,,,Mode,Operation mode,,,b504,01,temp,,UCH,,°C,temperature,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,hot water mode,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,day/night mode
 w,,,SetTempDesired,Set desired temperature,,,b505,01,value,,UCH,,°C,temperature

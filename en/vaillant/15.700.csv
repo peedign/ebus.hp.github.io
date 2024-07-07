@@ -1,14 +1,14 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,ContinuosHeating,ContinuosHeating,,,b524,020000000200,value,,IGN:4,,,,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-w,,,ContinuosHeating,ContinuosHeating,,,b524,020100000200,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
+r,,,ContinuosHeating,continuos heating,,,b524,020000000200,value,,IGN:4,,,,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
+w,,,ContinuosHeating,continuos heating,,,b524,020100000200,value,,EXP,,°C,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
 r,,,FrostOverRideTime,frost delay time,,,b524,020000000300,value,,IGN:4,,,,value,,UIN,,h,delay before frost protection is activated
 w,,,FrostOverRideTime,frost delay time,,,b524,020100000300,value,,UIN,,h,delay before frost protection is activated
 r,,,ManualCooling,Manual cooling,,,b524,020000000600,value,,IGN:4,,,,value,,UIN,,,"number of days of manual cooling (max. 99, 0=off, set temp via z1CoolingTemp)"
 w,,,ManualCooling,Manual cooling,,,b524,020100000600,value,,UIN,,,"number of days of manual cooling (max. 99, 0=off, set temp via z1CoolingTemp)"
-r,,,GlobalSystemOff,GlobalSystemOFF,,,b524,020000000700,value,,IGN:4,,,,value,,UCH,0=no;1=yes,,For switching system off
-w,,install,GlobalSystemOff,GlobalSystemOFF,,,b524,020100000700,value,,UCH,0=no;1=yes,,For switching system off
+r,,,GlobalSystemOff,Global System OFF,,,b524,020000000700,value,,IGN:4,,,,value,,UCH,0=no;1=yes,,For switching system off
+w,,install,GlobalSystemOff,Global System OFF,,,b524,020100000700,value,,UCH,0=no;1=yes,,For switching system off
 r,,,HwcParallelLoading,hwc parallel loading,,,b524,020000000a00,value,,IGN:4,,,,value,,UCH,0=off;1=on,,heating and hot water parallel
 w,,,HwcParallelLoading,hwc parallel loading,,,b524,020100000a00,value,,UCH,0=off;1=on,,heating and hot water parallel
 r,,,MaxRoomHumidity,max room humidity,,,b524,020000000e00,value,,IGN:4,,,,value,,UIN,,,maximum room humidity
@@ -85,10 +85,10 @@ r,,,PhoneNumber1,phone number 1,,,b524,020000006f00,value,,IGN:4,,,,value,,STR:6
 w,,,PhoneNumber1,phone number 1,,,b524,020100006f00,value,,STR:6,,,installer's telephone number
 r,,,PhoneNumber2,phone number 2,,,b524,020000007000,value,,IGN:4,,,,value,,STR:6,,,installer's telephone number
 w,,,PhoneNumber2,phone number 2,,,b524,020100007000,value,,STR:6,,,installer's telephone number
-r,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020000007100,value,,IGN:4,,,,value,,HDA,,,start date of holidays
-w,,,HolidayStartPeriod,HolidayStartPeriod,,,b524,020100007100,value,,HDA,,,start date of holidays
-r,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020000007200,value,,IGN:4,,,,value,,HDA,,,end date of holidays
-w,,,HolidayEndPeriod,HolidayEndPeriod,,,b524,020100007200,value,,HDA,,,end date of holidays
+r,,,HolidayStartPeriod,holiday start period,,,b524,020000007100,value,,IGN:4,,,,value,,HDA,,,start date of holidays
+w,,,HolidayStartPeriod,holiday start period,,,b524,020100007100,value,,HDA,,,start date of holidays
+r,,,HolidayEndPeriod,holiday end period,,,b524,020000007200,value,,IGN:4,,,,value,,HDA,,,end date of holidays
+w,,,HolidayEndPeriod,holiday end period,,,b524,020100007200,value,,HDA,,,end date of holidays
 r,,,DisplayedOutsideTemp,outside temperature,,,b524,020000007300,value,,IGN:4,,,,value,,EXP,,°C,Außentemperatur
 r,,,SFMode,SF mode,,,b524,020000007400,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,SFMode,SF mode,,,b524,020100007400,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,

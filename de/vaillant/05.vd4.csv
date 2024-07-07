@@ -2,48 +2,48 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 *[id_sw],scan,,,,SW
-[id_sw>=200]r,,,ComErrorDelay,default *r,,,b509,0d4300,value,,UIN,,Control interface,
-[id_sw>=200]w,,service,ComErrorDelay,"default *ws for user level ""service""",,,b509,0e4300,value,,UIN,,Control interface,
-r,,,SoftwareVersion,default *r,,,b509,0d0000,value,,HEX:4,,,
-w,,install,SoftwareVersion,"default *wi for user level ""install""",,,b509,0e0000,value,,HEX:4,,,
-r,,,EnableMonitoring,default *r,,,b509,0d0100,value,,HEX:5,,,
-w,,install,EnableMonitoring,"default *wi for user level ""install""",,,b509,0e0100,value,,HEX:5,,,
-r,,,FlexibleMonitoring,default *r,,,b509,0d0200,value,,HEX:8,,,
-w,,install,FlexibleMonitoring,"default *wi for user level ""install""",,,b509,0e0200,value,,HEX:8,,,
-r,,,DataCollectionRequest,default *r,,,b509,0d0300,value,,UCH,,,
-w,,install,DataCollectionRequest,"default *wi for user level ""install""",,,b509,0e0300,value,,UCH,,,
-r,,,DataCollectionBuffer,default *r,,,b509,0d0400,value,,UCH,,,
-w,,install,DataCollectionBuffer,"default *wi for user level ""install""",,,b509,0e0400,value,,UCH,,,
-r,,,DataCollCycle,default *r,,,b509,0d0500,value,,ULG,,,
-w,,install,DataCollCycle,"default *wi for user level ""install""",,,b509,0e0500,value,,ULG,,,
-r,,,DataCollBufSize,default *r,,,b509,0d0600,value,,ULG,,,
-w,,install,DataCollBufSize,"default *wi for user level ""install""",,,b509,0e0600,value,,ULG,,,
-r,,,EnableBcErrMsg,Broadcast Fehlermeldungen senden,,,b509,0d0700,value,,UCH,0=no;1=yes,,Rundruf Fehlermeldungen vom eBUS an den Server senden
-w,,install,EnableBcErrMsg,Broadcast Fehlermeldungen senden,,,b509,0e0700,value,,UCH,0=no;1=yes,,Rundruf Fehlermeldungen vom eBUS an den Server senden
-r,,,BoxSerialNumber1,default *r,,,b509,0d0800,value,,HEX:9,,,
-w,,install,BoxSerialNumber1,"default *wi for user level ""install""",,,b509,0e0800,value,,HEX:9,,,
-r,,,BoxSerialNumber2,default *r,,,b509,0d0900,value,,HEX:9,,,
-w,,install,BoxSerialNumber2,"default *wi for user level ""install""",,,b509,0e0900,value,,HEX:9,,,
-r,,,BoxSerialNumber3,default *r,,,b509,0d0a00,value,,HEX:9,,,
-w,,install,BoxSerialNumber3,"default *wi for user level ""install""",,,b509,0e0a00,value,,HEX:9,,,
-r,,,BoxSerialNumber4,default *r,,,b509,0d0b00,value,,HEX:9,,,
-w,,install,BoxSerialNumber4,"default *wi for user level ""install""",,,b509,0e0b00,value,,HEX:9,,,
+[id_sw>=200]r,,,ComErrorDelay,default *r for register,,,b509,0d4300,value,,UIN,,Control interface,
+[id_sw>=200]w,,service,ComErrorDelay,"default *ws for register with user level ""service""",,,b509,0e4300,value,,UIN,,Control interface,
+r,,,SoftwareVersion,default *r for register,,,b509,0d0000,value,,HEX:4,,,
+w,,install,SoftwareVersion,"default *wi for register with user level ""install""",,,b509,0e0000,value,,HEX:4,,,
+r,,,EnableMonitoring,default *r for register,,,b509,0d0100,value,,HEX:5,,,
+w,,install,EnableMonitoring,"default *wi for register with user level ""install""",,,b509,0e0100,value,,HEX:5,,,
+r,,,FlexibleMonitoring,default *r for register,,,b509,0d0200,value,,HEX:8,,,
+w,,install,FlexibleMonitoring,"default *wi for register with user level ""install""",,,b509,0e0200,value,,HEX:8,,,
+r,,,DataCollectionRequest,installer level register,,,b509,0d0300,value,,UCH,,,register value
+w,,install,DataCollectionRequest,installer level register,,,b509,0e0300,value,,UCH,,,register value
+r,,,DataCollectionBuffer,installer level register,,,b509,0d0400,value,,UCH,,,register value
+w,,install,DataCollectionBuffer,installer level register,,,b509,0e0400,value,,UCH,,,register value
+r,,,DataCollCycle,installer level register,,,b509,0d0500,value,,ULG,,,register value
+w,,install,DataCollCycle,installer level register,,,b509,0e0500,value,,ULG,,,register value
+r,,,DataCollBufSize,installer level register,,,b509,0d0600,value,,ULG,,,register value
+w,,install,DataCollBufSize,installer level register,,,b509,0e0600,value,,ULG,,,register value
+r,,,EnableBcErrMsg,Broadcast Fehlermeldungen senden: Rundruf Fehlermeldungen vom eBUS an den Server senden,,,b509,0d0700,value,,UCH,0=no;1=yes,,register value
+w,,install,EnableBcErrMsg,Broadcast Fehlermeldungen senden: Rundruf Fehlermeldungen vom eBUS an den Server senden,,,b509,0e0700,value,,UCH,0=no;1=yes,,register value
+r,,,BoxSerialNumber1,default *r for register,,,b509,0d0800,value,,HEX:9,,,
+w,,install,BoxSerialNumber1,"default *wi for register with user level ""install""",,,b509,0e0800,value,,HEX:9,,,
+r,,,BoxSerialNumber2,default *r for register,,,b509,0d0900,value,,HEX:9,,,
+w,,install,BoxSerialNumber2,"default *wi for register with user level ""install""",,,b509,0e0900,value,,HEX:9,,,
+r,,,BoxSerialNumber3,default *r for register,,,b509,0d0a00,value,,HEX:9,,,
+w,,install,BoxSerialNumber3,"default *wi for register with user level ""install""",,,b509,0e0a00,value,,HEX:9,,,
+r,,,BoxSerialNumber4,default *r for register,,,b509,0d0b00,value,,HEX:9,,,
+w,,install,BoxSerialNumber4,"default *wi for register with user level ""install""",,,b509,0e0b00,value,,HEX:9,,,
 r,,,DeviceLayout,Anlagenkonfiguration,,,b509,0d0c00,value,,UCH,0=_unknown;1=JV_PC;2=H2B;3=_1_16;4=complex;5=eBUSheater,,Type of Interface which will be used and definition of appliance
 w,,install,DeviceLayout,Anlagenkonfiguration,,,b509,0e0c00,value,,UCH,0=_unknown;1=JV_PC;2=H2B;3=_1_16;4=complex;5=eBUSheater,,Type of Interface which will be used and definition of appliance
-r,,,DeviceLayoutCRC,Prüfsumme Anlagenlayout,,,b509,0d0d00,value,,UCH,,,"Prüfsumme über alle angeschlossenen Geräte. Wird verwendet, um zu erkennen ob neue Geräte an den Bus angeschlossen wurden oder ob Geräte vom Bus entfernt"
-w,,install,DeviceLayoutCRC,Prüfsumme Anlagenlayout,,,b509,0e0d00,value,,UCH,,,"Prüfsumme über alle angeschlossenen Geräte. Wird verwendet, um zu erkennen ob neue Geräte an den Bus angeschlossen wurden oder ob Geräte vom Bus entfernt"
-r,,,AutoSyncEnable,AutoSync einschalten,,,b509,0d0e00,value,,UCH,0=off;1=on,,"Die Abschaltung des AutoSync auf dem eBUS sollte nur vorgenommen werden, wenn es zu Kollisionen mit anderen Geräten auf dem eBUS kommt, die einen Auto"
-w,,install,AutoSyncEnable,AutoSync einschalten,,,b509,0e0e00,value,,UCH,0=off;1=on,,"Die Abschaltung des AutoSync auf dem eBUS sollte nur vorgenommen werden, wenn es zu Kollisionen mit anderen Geräten auf dem eBUS kommt, die einen Auto"
+r,,,DeviceLayoutCRC,"Prüfsumme Anlagenlayout: Prüfsumme über alle angeschlossenen Geräte. Wird verwendet, um zu erkennen ob neue Geräte an den Bus angeschlossen wurden oder ob Geräte vom Bus entfernt",,,b509,0d0d00,value,,UCH,,,register value
+w,,install,DeviceLayoutCRC,"Prüfsumme Anlagenlayout: Prüfsumme über alle angeschlossenen Geräte. Wird verwendet, um zu erkennen ob neue Geräte an den Bus angeschlossen wurden oder ob Geräte vom Bus entfernt",,,b509,0e0d00,value,,UCH,,,register value
+r,,,AutoSyncEnable,"AutoSync einschalten: Die Abschaltung des AutoSync auf dem eBUS sollte nur vorgenommen werden, wenn es zu Kollisionen mit anderen Geräten auf dem eBUS kommt, die einen Auto",,,b509,0d0e00,value,,UCH,0=off;1=on,,register value
+w,,install,AutoSyncEnable,"AutoSync einschalten: Die Abschaltung des AutoSync auf dem eBUS sollte nur vorgenommen werden, wenn es zu Kollisionen mit anderen Geräten auf dem eBUS kommt, die einen Auto",,,b509,0e0e00,value,,UCH,0=off;1=on,,register value
 r,,,LastConnectionError,Letzter Verbindungsfehler,,,b509,0d0f00,value,,UCH,0=none;1=connection;2=PPP;3=TCPopen;4=TCPauth;5=TCPsend,,"Zustand bei dem sich ein Verbindungsfehler ereignet hat. ""Verbunden"" bedeutet kein Fehler"
 w,,install,LastConnectionError,Letzter Verbindungsfehler,,,b509,0e0f00,value,,UCH,0=none;1=connection;2=PPP;3=TCPopen;4=TCPauth;5=TCPsend,,"Zustand bei dem sich ein Verbindungsfehler ereignet hat. ""Verbunden"" bedeutet kein Fehler"
-r,,,ConnErrorRetryDelay,Verzögerungszeit nach Verbindungsfehler [min],,,b509,0d1000,value,,UCH,,,"Wartezeit zwischen zwei Verbindungsversuchen, wenn der Verbindungsversuch fehlgeschlagen ist"
-w,,install,ConnErrorRetryDelay,Verzögerungszeit nach Verbindungsfehler [min],,,b509,0e1000,value,,UCH,,,"Wartezeit zwischen zwei Verbindungsversuchen, wenn der Verbindungsversuch fehlgeschlagen ist"
-r,,,ConnectionDelay,Verzögerungszeit Verbindung [min],,,b509,0d1100,value,,UCH,,,Minimal Verzögerungszeit zwischen zwei Verbindungen zum Servr. Nur Wirksam für Verbindungen die von der kommunikationseinheit initiert werden (wie z.B
-w,,install,ConnectionDelay,Verzögerungszeit Verbindung [min],,,b509,0e1100,value,,UCH,,,Minimal Verzögerungszeit zwischen zwei Verbindungen zum Servr. Nur Wirksam für Verbindungen die von der kommunikationseinheit initiert werden (wie z.B
-r,,,ErrorMessage,default *r,,,b509,0d1200,value,,UCH,,,
-w,,install,ErrorMessage,"default *wi for user level ""install""",,,b509,0e1200,value,,UCH,,,
-r,,,ConnErrorCnt,Zähler fehlerhafte Verbindungen,,,b509,0d1300,value,,UCH,,,Anzahl der fehlgeschlagenen Kommunikationsversuchen. Wird bei einem erfolgreichen Kommunikationsversuch auf Null zurückgesetzt.
-w,,install,ConnErrorCnt,Zähler fehlerhafte Verbindungen,,,b509,0e1300,value,,UCH,,,Anzahl der fehlgeschlagenen Kommunikationsversuchen. Wird bei einem erfolgreichen Kommunikationsversuch auf Null zurückgesetzt.
+r,,,ConnErrorRetryDelay,"Verzögerungszeit nach Verbindungsfehler [min]: Wartezeit zwischen zwei Verbindungsversuchen, wenn der Verbindungsversuch fehlgeschlagen ist",,,b509,0d1000,value,,UCH,,,register value
+w,,install,ConnErrorRetryDelay,"Verzögerungszeit nach Verbindungsfehler [min]: Wartezeit zwischen zwei Verbindungsversuchen, wenn der Verbindungsversuch fehlgeschlagen ist",,,b509,0e1000,value,,UCH,,,register value
+r,,,ConnectionDelay,Verzögerungszeit Verbindung [min]: Minimal Verzögerungszeit zwischen zwei Verbindungen zum Servr. Nur Wirksam für Verbindungen die von der kommunikationseinheit initiert werden (wie z.B,,,b509,0d1100,value,,UCH,,,register value
+w,,install,ConnectionDelay,Verzögerungszeit Verbindung [min]: Minimal Verzögerungszeit zwischen zwei Verbindungen zum Servr. Nur Wirksam für Verbindungen die von der kommunikationseinheit initiert werden (wie z.B,,,b509,0e1100,value,,UCH,,,register value
+r,,,ErrorMessage,installer level register,,,b509,0d1200,value,,UCH,,,register value
+w,,install,ErrorMessage,installer level register,,,b509,0e1200,value,,UCH,,,register value
+r,,,ConnErrorCnt,Zähler fehlerhafte Verbindungen: Anzahl der fehlgeschlagenen Kommunikationsversuchen. Wird bei einem erfolgreichen Kommunikationsversuch auf Null zurückgesetzt.,,,b509,0d1300,value,,UCH,,,register value
+w,,install,ConnErrorCnt,Zähler fehlerhafte Verbindungen: Anzahl der fehlgeschlagenen Kommunikationsversuchen. Wird bei einem erfolgreichen Kommunikationsversuch auf Null zurückgesetzt.,,,b509,0e1300,value,,UCH,,,register value
 r,,,PppPhoneNumber1,PPP Telefonnummer 1,,,b509,0d1400,value,,STR:21,,,"Telefonnummer des Internetproviders bei GSM oder analoger Anwendung, bzw. ATN bei GPRS Providern"
 w,,install,PppPhoneNumber1,PPP Telefonnummer 1,,,b509,0e1400,value,,STR:21,,,"Telefonnummer des Internetproviders bei GSM oder analoger Anwendung, bzw. ATN bei GPRS Providern"
 r,,,PppLogin1,PPP Login 1,,,b509,0d1500,value,,STR:21,,,Login für den ersten Internetprovider
@@ -62,54 +62,54 @@ r,,,ActualGsmProvider,Aktueller GSM/GPRS Provider,,,b509,0d1b00,value,,STR:5,,,A
 w,,install,ActualGsmProvider,Aktueller GSM/GPRS Provider,,,b509,0e1b00,value,,STR:5,,,Aktuell verwendeter GSM/GPRS Provider
 r,,,ModemInitString,Modem Initialisierungs Zeichenkette,,,b509,0d1c00,value,,STR:21,,,"Initialisierungszichenkette für das Modem. Achtung ! Ein falscher Wert kann dazu führen, daß die Kommunikatioseinheit nichtmehr erreichbar ist."
 w,,install,ModemInitString,Modem Initialisierungs Zeichenkette,,,b509,0e1c00,value,,STR:21,,,"Initialisierungszichenkette für das Modem. Achtung ! Ein falscher Wert kann dazu führen, daß die Kommunikatioseinheit nichtmehr erreichbar ist."
-r,,,RingTimeGsmCB,Verzögerungszeit Rückruf GSM/GPRS [s],,,b509,0d1e00,value,,UCH,,,Zeit zwischen dem letzten eingehenden Klingelzeichen und dem Rückruf beim Server (nur GSM/GPRS).
-w,,install,RingTimeGsmCB,Verzögerungszeit Rückruf GSM/GPRS [s],,,b509,0e1e00,value,,UCH,,,Zeit zwischen dem letzten eingehenden Klingelzeichen und dem Rückruf beim Server (nur GSM/GPRS).
-r,,,RingsBeforePickup,Klingelzeichen bis zum Aufheben,,,b509,0d1f00,value,,UCH,,,"Wird nur für das analoge Modem verwendet. Null bedeutet, das Modem nimmt nie an."
-w,,install,RingsBeforePickup,Klingelzeichen bis zum Aufheben,,,b509,0e1f00,value,,UCH,,,"Wird nur für das analoge Modem verwendet. Null bedeutet, das Modem nimmt nie an."
-r,,,RingTimeTSM1,default *r,,,b509,0d2000,value,,UCH,,,
-w,,install,RingTimeTSM1,"default *wi for user level ""install""",,,b509,0e2000,value,,UCH,,,
-r,,,RingTimeTSM2,default *r,,,b509,0d2100,value,,UCH,,,
-w,,install,RingTimeTSM2,"default *wi for user level ""install""",,,b509,0e2100,value,,UCH,,,
-r,,,MessageThreshold,default *r,,,b509,0d2200,value,,UCH,,,
-w,,install,MessageThreshold,"default *wi for user level ""install""",,,b509,0e2200,value,,UCH,,,
-r,,,ConnectionCycle,default *r,,,b509,0d2300,value,,UCH,,,
-w,,install,ConnectionCycle,"default *wi for user level ""install""",,,b509,0e2300,value,,UCH,,,
-r,,,FieldStrengthMax,Max. Signalstärke GSM/GPRS,,,b509,0d2400,value,,UCH,,,Max. Wert seit dem letzten Netz ein (0..31)
-w,,install,FieldStrengthMax,Max. Signalstärke GSM/GPRS,,,b509,0e2400,value,,UCH,,,Max. Wert seit dem letzten Netz ein (0..31)
-r,,,FieldStrengthMin,Min. Signalstärke GSM/GPRS,,,b509,0d2500,value,,UCH,,,Min. Wert seit dem letzten Netz ein (0..31)
-w,,install,FieldStrengthMin,Min. Signalstärke GSM/GPRS,,,b509,0e2500,value,,UCH,,,Min. Wert seit dem letzten Netz ein (0..31)
-r,,,EnableDisErrorMsg,Fehlerfreiheit melden,,,b509,0d2600,value,,UCH,0=off;1=on,,"Wenn diese Funktion aktiviert ist, dann wird nach der Beseitigung aller Fehler eine ""Fehler frei"" Meldung gesendet"
-w,,install,EnableDisErrorMsg,Fehlerfreiheit melden,,,b509,0e2600,value,,UCH,0=off;1=on,,"Wenn diese Funktion aktiviert ist, dann wird nach der Beseitigung aller Fehler eine ""Fehler frei"" Meldung gesendet"
+r,,,RingTimeGsmCB,Verzögerungszeit Rückruf GSM/GPRS [s]: Zeit zwischen dem letzten eingehenden Klingelzeichen und dem Rückruf beim Server (nur GSM/GPRS).,,,b509,0d1e00,value,,UCH,,,register value
+w,,install,RingTimeGsmCB,Verzögerungszeit Rückruf GSM/GPRS [s]: Zeit zwischen dem letzten eingehenden Klingelzeichen und dem Rückruf beim Server (nur GSM/GPRS).,,,b509,0e1e00,value,,UCH,,,register value
+r,,,RingsBeforePickup,"Klingelzeichen bis zum Aufheben: Wird nur für das analoge Modem verwendet. Null bedeutet, das Modem nimmt nie an.",,,b509,0d1f00,value,,UCH,,,register value
+w,,install,RingsBeforePickup,"Klingelzeichen bis zum Aufheben: Wird nur für das analoge Modem verwendet. Null bedeutet, das Modem nimmt nie an.",,,b509,0e1f00,value,,UCH,,,register value
+r,,,RingTimeTSM1,installer level register,,,b509,0d2000,value,,UCH,,,register value
+w,,install,RingTimeTSM1,installer level register,,,b509,0e2000,value,,UCH,,,register value
+r,,,RingTimeTSM2,installer level register,,,b509,0d2100,value,,UCH,,,register value
+w,,install,RingTimeTSM2,installer level register,,,b509,0e2100,value,,UCH,,,register value
+r,,,MessageThreshold,installer level register,,,b509,0d2200,value,,UCH,,,register value
+w,,install,MessageThreshold,installer level register,,,b509,0e2200,value,,UCH,,,register value
+r,,,ConnectionCycle,installer level register,,,b509,0d2300,value,,UCH,,,register value
+w,,install,ConnectionCycle,installer level register,,,b509,0e2300,value,,UCH,,,register value
+r,,,FieldStrengthMax,Max. Signalstärke GSM/GPRS: Max. Wert seit dem letzten Netz ein (0..31),,,b509,0d2400,value,,UCH,,,register value
+w,,install,FieldStrengthMax,Max. Signalstärke GSM/GPRS: Max. Wert seit dem letzten Netz ein (0..31),,,b509,0e2400,value,,UCH,,,register value
+r,,,FieldStrengthMin,Min. Signalstärke GSM/GPRS: Min. Wert seit dem letzten Netz ein (0..31),,,b509,0d2500,value,,UCH,,,register value
+w,,install,FieldStrengthMin,Min. Signalstärke GSM/GPRS: Min. Wert seit dem letzten Netz ein (0..31),,,b509,0e2500,value,,UCH,,,register value
+r,,,EnableDisErrorMsg,"Fehlerfreiheit melden: Wenn diese Funktion aktiviert ist, dann wird nach der Beseitigung aller Fehler eine ""Fehler frei"" Meldung gesendet",,,b509,0d2600,value,,UCH,0=off;1=on,,register value
+w,,install,EnableDisErrorMsg,"Fehlerfreiheit melden: Wenn diese Funktion aktiviert ist, dann wird nach der Beseitigung aller Fehler eine ""Fehler frei"" Meldung gesendet",,,b509,0e2600,value,,UCH,0=off;1=on,,register value
 r,,,SwitchRelays,Relaisausgänge,,,b509,0d2700,bi,,BI0,,,,bi_1,,BI1,,,
 w,,install,SwitchRelays,Relaisausgänge,,,b509,0e2700,bi,,BI0,,,,bi_1,,BI1,,,
-r,,,StandbySignal,default *r,,,b509,0d2b00,value,,UCH,,,
-w,,install,StandbySignal,"default *wi for user level ""install""",,,b509,0e2b00,value,,UCH,,,
-r,,,PowerOnMessage,Netz ein Alarm,,,b509,0d2c00,value,,UCH,0=off;1=on,,Ein = Alarmmeldung nach Netz ein
-w,,install,PowerOnMessage,Netz ein Alarm,,,b509,0e2c00,value,,UCH,0=off;1=on,,Ein = Alarmmeldung nach Netz ein
-r,,,AlarmOnDelay,default *r,,,b509,0d2e00,uin,,UIN,,,,uin_1,,UIN,,,
-w,,install,AlarmOnDelay,"default *wi for user level ""install""",,,b509,0e2e00,uin,,UIN,,,,uin_1,,UIN,,,
-r,,,AlarmOffDelay,default *r,,,b509,0d2f00,uin,,UIN,,,,uin_1,,UIN,,,
-w,,install,AlarmOffDelay,"default *wi for user level ""install""",,,b509,0e2f00,uin,,UIN,,,,uin_1,,UIN,,,
-r,,,ScanLayoutCycle,default *r,,,b509,0d3000,value,,UCH,,,
-w,,install,ScanLayoutCycle,"default *wi for user level ""install""",,,b509,0e3000,value,,UCH,,,
-r,,,PredMaintConnectionCycle,default *r,,,b509,0d3100,value,,UCH,,,
-w,,install,PredMaintConnectionCycle,"default *wi for user level ""install""",,,b509,0e3100,value,,UCH,,,
-r,,,LastKnownEbusAddr,default *r,,,b509,0d3200,value,,UCH,,,
-w,,install,LastKnownEbusAddr,"default *wi for user level ""install""",,,b509,0e3200,value,,UCH,,,
-r,,,Time,default *r,,,b509,0d3300,value,,HTI,,,Uhrzeit
-w,,install,Time,"default *wi for user level ""install""",,,b509,0e3300,value,,HTI,,,Uhrzeit
-r,,,Date,default *r,,,b509,0d3400,value,,HDA,,,Datum
-w,,install,Date,"default *wi for user level ""install""",,,b509,0e3400,value,,HDA,,,Datum
-r,,,Weekday,default *r,,,b509,0d3500,value,,BDY,,,Wochentag
-w,,install,Weekday,"default *wi for user level ""install""",,,b509,0e3500,value,,BDY,,,Wochentag
-r,,,CurrentPppProvider,default *r,,,b509,0d3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
-w,,install,CurrentPppProvider,"default *wi for user level ""install""",,,b509,0e3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
+r,,,StandbySignal,installer level register,,,b509,0d2b00,value,,UCH,,,register value
+w,,install,StandbySignal,installer level register,,,b509,0e2b00,value,,UCH,,,register value
+r,,,PowerOnMessage,Netz ein Alarm: Ein = Alarmmeldung nach Netz ein,,,b509,0d2c00,value,,UCH,0=off;1=on,,register value
+w,,install,PowerOnMessage,Netz ein Alarm: Ein = Alarmmeldung nach Netz ein,,,b509,0e2c00,value,,UCH,0=off;1=on,,register value
+r,,,AlarmOnDelay,default *r for register,,,b509,0d2e00,uin,,UIN,,,,uin_1,,UIN,,,
+w,,install,AlarmOnDelay,"default *wi for register with user level ""install""",,,b509,0e2e00,uin,,UIN,,,,uin_1,,UIN,,,
+r,,,AlarmOffDelay,default *r for register,,,b509,0d2f00,uin,,UIN,,,,uin_1,,UIN,,,
+w,,install,AlarmOffDelay,"default *wi for register with user level ""install""",,,b509,0e2f00,uin,,UIN,,,,uin_1,,UIN,,,
+r,,,ScanLayoutCycle,installer level register,,,b509,0d3000,value,,UCH,,,register value
+w,,install,ScanLayoutCycle,installer level register,,,b509,0e3000,value,,UCH,,,register value
+r,,,PredMaintConnectionCycle,installer level register,,,b509,0d3100,value,,UCH,,,register value
+w,,install,PredMaintConnectionCycle,installer level register,,,b509,0e3100,value,,UCH,,,register value
+r,,,LastKnownEbusAddr,installer level register,,,b509,0d3200,value,,UCH,,,register value
+w,,install,LastKnownEbusAddr,installer level register,,,b509,0e3200,value,,UCH,,,register value
+r,,,Time,installer level register,,,b509,0d3300,value,,HTI,,,register value
+w,,install,Time,installer level register,,,b509,0e3300,value,,HTI,,,register value
+r,,,Date,installer level register,,,b509,0d3400,value,,HDA,,,register value
+w,,install,Date,installer level register,,,b509,0e3400,value,,HDA,,,register value
+r,,,Weekday,installer level register,,,b509,0d3500,value,,BDY,,,register value
+w,,install,Weekday,installer level register,,,b509,0e3500,value,,BDY,,,register value
+r,,,CurrentPppProvider,default *r for register,,,b509,0d3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
+w,,install,CurrentPppProvider,"default *wi for register with user level ""install""",,,b509,0e3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
 r,,,GsmGprsPin,GSM SIM Pin,,,b509,0d3700,value,,STR:4,,,Achtung ! Die falsche PIN macht die Kommunikationseinheit unbrauchbar
 w,,install,GsmGprsPin,GSM SIM Pin,,,b509,0e3700,value,,STR:4,,,Achtung ! Die falsche PIN macht die Kommunikationseinheit unbrauchbar
-r,,,ModemType,default *r,,,b509,0d3800,value,,UCH,0=analogue;1=GSM;2=GPRS,,
-w,,install,ModemType,"default *wi for user level ""install""",,,b509,0e3800,value,,UCH,0=analogue;1=GSM;2=GPRS,,
-r,,,H2BusLayout,default *r,,,b509,0d3900,value,,UCH,,,
-w,,install,H2BusLayout,"default *wi for user level ""install""",,,b509,0e3900,value,,UCH,,,
+r,,,ModemType,default *r for register,,,b509,0d3800,value,,UCH,0=analogue;1=GSM;2=GPRS,,
+w,,install,ModemType,"default *wi for register with user level ""install""",,,b509,0e3800,value,,UCH,0=analogue;1=GSM;2=GPRS,,
+r,,,H2BusLayout,installer level register,,,b509,0d3900,value,,UCH,,,register value
+w,,install,H2BusLayout,installer level register,,,b509,0e3900,value,,UCH,,,register value
 r,,,ActualDigitalInputs,Aktueller Wert 230V Alarmeingänge,,,b509,0d3a00,bi,,BI0,,,,bi_1,,BI1,,,
 w,,install,ActualDigitalInputs,Aktueller Wert 230V Alarmeingänge,,,b509,0e3a00,bi,,BI0,,,,bi_1,,BI1,,,
 r,,,ActualAnalogInputs,Aktueller Wert 24V Eingänge,,,b509,0d3b00,uin,,UIN,,,,uin_1,,UIN,,,
@@ -118,15 +118,15 @@ r,,,ActualCounterValue,Zählerstand 24V Zählereingänge,,,b509,0d3c00,uin,,UIN,
 w,,install,ActualCounterValue,Zählerstand 24V Zählereingänge,,,b509,0e3c00,uin,,UIN,,,,uin_1,,UIN,,,
 r,,,ModemDialPrefix,Modem Wahlprefix,,,b509,0d3d00,value,,STR:4,,,Diese Zeichenkette wird vor dem Wählen an das Modem gesendet
 w,,install,ModemDialPrefix,Modem Wahlprefix,,,b509,0e3d00,value,,STR:4,,,Diese Zeichenkette wird vor dem Wählen an das Modem gesendet
-r,,,DebugFlags,default *r,,,b509,0d3e00,value,,ULG,,,
-w,,install,DebugFlags,"default *wi for user level ""install""",,,b509,0e3e00,value,,ULG,,,
-r,,,ModemCountryCode,Modem Landescode,,,b509,0d3f00,value,,UCH,,,
-w,,install,ModemCountryCode,Modem Landescode,,,b509,0e3f00,value,,UCH,,,
-r,,,DoReset,default *r,,,b509,0d4000,value,,UCH,,,
-w,,install,DoReset,"default *wi for user level ""install""",,,b509,0e4000,value,,UCH,,,
-r,,,DataCollectionLimit,default *r,,,b509,0d4100,value,,ULG,,,
-w,,install,DataCollectionLimit,"default *wi for user level ""install""",,,b509,0e4100,value,,ULG,,,
-r,,,Temp3WayValve,default *r,,,b509,0d4200,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-w,,install,Temp3WayValve,"default *wi for user level ""install""",,,b509,0e4200,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,RfWakeupCycle,default *r,,,b509,0d4600,value,,UIN,,,
-w,,service,RfWakeupCycle,"default *ws for user level ""service""",,,b509,0e4600,value,,UIN,,,
+r,,,DebugFlags,installer level register,,,b509,0d3e00,value,,ULG,,,register value
+w,,install,DebugFlags,installer level register,,,b509,0e3e00,value,,ULG,,,register value
+r,,,ModemCountryCode,Modem Landescode,,,b509,0d3f00,value,,UCH,,,register value
+w,,install,ModemCountryCode,Modem Landescode,,,b509,0e3f00,value,,UCH,,,register value
+r,,,DoReset,installer level register,,,b509,0d4000,value,,UCH,,,register value
+w,,install,DoReset,installer level register,,,b509,0e4000,value,,UCH,,,register value
+r,,,DataCollectionLimit,installer level register,,,b509,0d4100,value,,ULG,,,register value
+w,,install,DataCollectionLimit,installer level register,,,b509,0e4100,value,,ULG,,,register value
+r,,,Temp3WayValve,installer level register,,,b509,0d4200,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+w,,install,Temp3WayValve,installer level register,,,b509,0e4200,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,RfWakeupCycle,service level register,,,b509,0d4600,value,,UIN,,,register value
+w,,service,RfWakeupCycle,service level register,,,b509,0e4600,value,,UIN,,,register value

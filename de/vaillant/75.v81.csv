@@ -1,28 +1,28 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d1b00,value,,D2C,,°C,Aktuelle Raumtemperatur
-r,,,RoomTemp,Raumisttemp,,,b509,0d0000,temp,,D2C,,°C,raw value current room temperature and sensorstate (without any correction),sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,DesiredHcRoomTempDesired,Raumsollwert,,,b509,0d1d00,value,,D2C,,°C,Aktueller Raumsollwert
-r,,,HcRoomTempDesiredAdjustable,HCRoomSetPointAdjustable,,,b509,0d1e00,value,,UCH,0=no;1=yes,,room temperature setpoint is currently adjustable
-r,,,HcActiveSpecialFunction,HCActiveSpecialFunction,,,b509,0d1f00,value,,UCH,,,"if unequal zero a special function (e.g. holidays, floor pavement drying …) has been activated"
+r,,,DisplayedRoomTemp,Raumtemperatur Ist: Aktuelle Raumtemperatur,,,b509,0d1b00,value,,D2C,,°C,register value
+r,,,RoomTemp,Raumisttemp: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,DesiredHcRoomTempDesired,Aktueller Raumsollwert,,,b509,0d1d00,value,,D2C,,°C,register value
+r,,,HcRoomTempDesiredAdjustable,HCRoomSetPointAdjustable: room temperature setpoint is currently adjustable,,,b509,0d1e00,value,,UCH,0=no;1=yes,,register value
+r,,,HcActiveSpecialFunction,"HCActiveSpecialFunction: if unequal zero a special function (e.g. holidays, floor pavement drying …) has been activated",,,b509,0d1f00,value,,UCH,,,register value
 r,,,OperatingMode430,OperatingMode430,,,b509,0d0400,value,,UCH,0=off;1=manual;2=auto,,operation mode of the heating circuit for 430
 w,,,OperatingMode430,OperatingMode430,,,b509,0e0400,value,,UCH,0=off;1=manual;2=auto,,operation mode of the heating circuit for 430
-r,,,SelectedHc,SelectedHeatCircuit,,,b509,0d1c00,value,,UCH,,,number of heating circuit to which this remote control is assigned
-r,,,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0d0200,value,,D2C,,°C,Korrekturwert der Raumtemperaturanzeige
-w,,,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0e0200,value,,D2C,,°C,Korrekturwert der Raumtemperaturanzeige
-r,,,RoomTempOffsetSelfWarming,Offset Eigenerwärmung,,,b509,0d0100,value,,D2C,,°C,room temperature intrinsic heating offset
-r,,,StackeBUSTaskMax,MaxStackeBUSTask,,,b509,0d0c00,value,,UCH,,,maximum number of bytes needed for the eBUS task stack
-r,,,StackMainTaskMax,MaxStackMainTask,,,b509,0d0d00,value,,UCH,,,maximum number of bytes needed for the main task stack
-r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask,,,b509,0d0e00,value,,UCH,,,maximum number of bytes needed for the life check task stack
+r,,,SelectedHc,SelectedHeatCircuit: number of heating circuit to which this remote control is assigned,,,b509,0d1c00,value,,UCH,,,register value
+r,,,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0d0200,value,,D2C,,°C,register value
+w,,,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0e0200,value,,D2C,,°C,register value
+r,,,RoomTempOffsetSelfWarming,Offset Eigenerwärmung: room temperature intrinsic heating offset,,,b509,0d0100,value,,D2C,,°C,register value
+r,,,StackeBUSTaskMax,MaxStackeBUSTask: maximum number of bytes needed for the eBUS task stack,,,b509,0d0c00,value,,UCH,,,register value
+r,,,StackMainTaskMax,MaxStackMainTask: maximum number of bytes needed for the main task stack,,,b509,0d0d00,value,,UCH,,,register value
+r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask: maximum number of bytes needed for the life check task stack,,,b509,0d0e00,value,,UCH,,,register value
 r,,,Variant,Variante,,,b509,0d0f00,uin,,UIN,,,Identifikator zur Variantenerkennung,uin_1,,UIN,,,
-r,,,EBUSCRC,eBUS_CRC,,,b509,0d1000,value,,UCH,,,last calculated eBUS CRC
-r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax,,,b509,0d1100,value,,UCH,,,max. eBUS-Fifo Füllstand
-r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt,,,b509,0d1300,value,,UIN,,,Zähler EEPROM Inkonsistenz
-r,,,POCResetCnt,Netz ein Zähler,,,b509,0d1400,value,,UIN,,,Power-On-Resets
-r,,,WDResetCnt,Watchdog Zähler,,,b509,0d1500,value,,UIN,,,Watchdog-Resets
-r,,,LVResetCnt,LVResetCnt,,,b509,0d1600,value,,UIN,,,counter of low voltage reset events
-r,,,CMResetCnt,CMResetCnt,,,b509,0d1700,value,,UIN,,,counter of clock monitor reset events
-r,,,COMErrorCnt,COMErrorCnt,,,b509,0d1800,value,,UIN,,,Fehler eBUS-Kommunikation
-r,,,VariantDKRefreshCnt,VariantDKRefreshCnt,,,b509,0d1900,value,,UCH,,,counts how often variant ID has been corrected
-r,,,FiFoResetCnt,FiFoResetCnt,,,b509,0d1a00,value,,UCH,,,counter how often eBUS Fifo was cleared
+r,,,EBUSCRC,eBUS_CRC: last calculated eBUS CRC,,,b509,0d1000,value,,UCH,,,register value
+r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax: max. eBUS-Fifo Füllstand,,,b509,0d1100,value,,UCH,,,register value
+r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt: Zähler EEPROM Inkonsistenz,,,b509,0d1300,value,,UIN,,,register value
+r,,,POCResetCnt,Netz ein Zähler: Power-On-Resets,,,b509,0d1400,value,,UIN,,,register value
+r,,,WDResetCnt,Watchdog Zähler: Watchdog-Resets,,,b509,0d1500,value,,UIN,,,register value
+r,,,LVResetCnt,LVResetCnt: counter of low voltage reset events,,,b509,0d1600,value,,UIN,,,register value
+r,,,CMResetCnt,CMResetCnt: counter of clock monitor reset events,,,b509,0d1700,value,,UIN,,,register value
+r,,,COMErrorCnt,COMErrorCnt: Fehler eBUS-Kommunikation,,,b509,0d1800,value,,UIN,,,register value
+r,,,VariantDKRefreshCnt,VariantDKRefreshCnt: counts how often variant ID has been corrected,,,b509,0d1900,value,,UCH,,,register value
+r,,,FiFoResetCnt,FiFoResetCnt: counter how often eBUS Fifo was cleared,,,b509,0d1a00,value,,UCH,,,register value

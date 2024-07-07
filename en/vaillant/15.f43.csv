@@ -2,155 +2,155 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *r,
 *w,
 *[id_sw],scan,,,,SW
-[id_sw>=119]r,,,Hc1FloorPavementDryingTemp,HC1_FloorPavementDryingTemperature,,,b509,0d2a00,value,,D1C,,°C,HC1's current flow temperature setpoint with activated floor pavement drying
-[id_sw>=119]r,,,Hc1FloorPavementDryingDay,HC1_FloorPavementDryingDay,,,b509,0d3800,value,,UCH,,,HC1's current day of floor pavement drying
-[id_sw>=121]r,,,B51000M7OpModeMonitor,B51000M7OpModeMonitor,,,b509,0d6500,value,,UCH,,,"operation mode sent via B5 10 00 (0 = auto, 1 = forced off, 2 = forced CH, 3 = forced DHW)"
-[id_sw>=121]r,,,B51000M10HwcFlowSetMon,B51000M10DHWFlowSetMon,,,b509,0d6600,value,,UCH,,,flow setpoint DHW sent via B5 10 00
-[id_sw>=121]r,,,B51000M12DisableBitsMon,B51000M12DisableBitsMon,,,b509,0d6700,value,,UCH,,,"bits 0-7: disable CH/disable DHW tapping/disable DHW tank loading/not used/clear burner blocking DHW/dis, disable bits sent via B5 10 00 (leftmost bit 0, rightmost bit 7)"
-[id_sw>=121]r,,,B51000M14Monitor,B51000M14Monitor,,,b509,0d6800,value,,UCH,,,"bits 0-7: remote control CH pump/release backup heater/release cooling/not used/left stop position DHW o, bits sent in M14 of B5 10 00 (leftmost bit 0, rightmost bit 7; relevant is bit 0: remote control of CH pump)"
-[id_sw<=120]r,,,B51000HcDisableMonitor,B51000CHDisableMonitor,,,b509,0d8e00,value,,UCH,,,copy of the M12 byte of the B5 10 00 service containing the disable bits
-r,,,DisplayedRoomTemp,DisplayedRoomTemp,,,b509,0d8000,value,,D2C,,°C,displayed room temperature
-r,,,RoomTemp,RaumtemperaturIst,,,b509,0d0000,temp,,D2C,,°C,raw value current room temperature and sensorstate (without any correction),sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,OutsideTemp,OutsideTempSensor,,,b509,0d6200,temp,,D2C,,°C,current outdoor temperature and sensorstate,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,ActualWeekday,Actual Weekday,,,b509,0d5f00,value,,BDY,,,current day of week
-w,,,ActualWeekday,Actual Weekday,,,b509,0e5f00,value,,BDY,,,current day of week
-r,,,Time,time,,,b509,0d6000,value,,HTI,,,current time
-w,,,Time,time,,,b509,0e6000,value,,HTI,,,current time
-r,,,Date,date,,,b509,0d6100,value,,HDA,,,current date
-w,,,Date,date,,,b509,0e6100,value,,HDA,,,current date
-r,,,StatusDcf,StatusDcf,,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,status of the DCF signal (0x00 = no DCF-Signal detected / no RTC value; 0x01 = DCF-signal detected; 0x02 = DCF-signal is being interpreted; 0x03 = DCF-data valid; 0x04 = RTC-data is valid)
-r,,,IsInHoliday,Holiday function active,,,b509,0d0b00,value,,UCH,0=no;1=yes,,holidays active
+[id_sw>=119]r,,,Hc1FloorPavementDryingTemp,HC1_FloorPavementDryingTemperature: HC1's current flow temperature setpoint with activated floor pavement drying,,,b509,0d2a00,value,,D1C,,°C,register value
+[id_sw>=119]r,,,Hc1FloorPavementDryingDay,HC1_FloorPavementDryingDay: HC1's current day of floor pavement drying,,,b509,0d3800,value,,UCH,,,register value
+[id_sw>=121]r,,,B51000M7OpModeMonitor,"B51000M7OpModeMonitor: operation mode sent via B5 10 00 (0 = auto, 1 = forced off, 2 = forced CH, 3 = forced DHW)",,,b509,0d6500,value,,UCH,,,register value
+[id_sw>=121]r,,,B51000M10HwcFlowSetMon,B51000M10DHWFlowSetMon: flow setpoint DHW sent via B5 10 00,,,b509,0d6600,value,,UCH,,,register value
+[id_sw>=121]r,,,B51000M12DisableBitsMon,"B51000M12DisableBitsMon: bits 0-7: disable CH/disable DHW tapping/disable DHW tank loading/not used/clear burner blocking DHW/dis, disable bits sent via B5 10 00 (leftmost bit 0, rightmost bit 7)",,,b509,0d6700,value,,UCH,,,register value
+[id_sw>=121]r,,,B51000M14Monitor,"B51000M14Monitor: bits 0-7: remote control CH pump/release backup heater/release cooling/not used/left stop position DHW o, bits sent in M14 of B5 10 00 (leftmost bit 0, rightmost bit 7; relevant is bit 0: remote control of CH pump)",,,b509,0d6800,value,,UCH,,,register value
+[id_sw<=120]r,,,B51000HcDisableMonitor,B51000CHDisableMonitor: copy of the M12 byte of the B5 10 00 service containing the disable bits,,,b509,0d8e00,value,,UCH,,,register value
+r,,,DisplayedRoomTemp,DisplayedRoomTemp: displayed room temperature,,,b509,0d8000,value,,D2C,,°C,register value
+r,,,RoomTemp,RaumtemperaturIst: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,OutsideTemp,OutsideTempSensor: current outdoor temperature and sensorstate,,,b509,0d6200,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d5f00,value,,BDY,,,register value
+w,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0e5f00,value,,BDY,,,register value
+r,,,Time,current time,,,b509,0d6000,value,,HTI,,,register value
+w,,,Time,current time,,,b509,0e6000,value,,HTI,,,register value
+r,,,Date,current date,,,b509,0d6100,value,,HDA,,,register value
+w,,,Date,current date,,,b509,0e6100,value,,HDA,,,register value
+r,,,StatusDcf,StatusDcf: status of the DCF signal (0x00 = no DCF-Signal detected / no RTC value; 0x01 = DCF-signal detected; 0x02 = DCF-signal is being interpreted; 0x03 = DCF-data valid; 0x04 = RTC-data is valid),,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,register value
+r,,,IsInHoliday,Holiday function active: holidays active,,,b509,0d0b00,value,,UCH,0=no;1=yes,,register value
 r,,,Hc1OPMode,HC1_OPMode,,,b509,0d2f00,value,,UCH,0=off;1=manual;2=auto,,operation mode of the first heating circuit
 w,,,Hc1OPMode,HC1_OPMode,,,b509,0e2f00,value,,UCH,0=off;1=manual;2=auto,,operation mode of the first heating circuit
-r,,,Hc1NightTemp,HC1_NightSetTemp,,,b509,0d3000,value,,D1C,,°C,lowering temperature setpoint of the first heating circuit
-w,,,Hc1NightTemp,HC1_NightSetTemp,,,b509,0e3000,value,,D1C,,°C,lowering temperature setpoint of the first heating circuit
-r,,,Hc1HeatCurve,HC1_HeatCurve,,,b509,0d3100,value,,UIN,100,,heating curve of the first heating circuit
-w,,,Hc1HeatCurve,HC1_HeatCurve,,,b509,0e3100,value,,UIN,100,,heating curve of the first heating circuit
-r,,,Hc1ManualOPRoomTempDesired,HC1_ManualOPRoomSetpoint,,,b509,0d3200,value,,D1C,,°C,room setpoint in operation mode manual of the first heating circuit
-w,,,Hc1ManualOPRoomTempDesired,HC1_ManualOPRoomSetpoint,,,b509,0e3200,value,,D1C,,°C,room setpoint in operation mode manual of the first heating circuit
-r,,,Hc1QuickVetoTemp,HC1_QuickVetoTemp,,,b509,0d3c00,value,,D1C,,°C,manual override setpoint of the first heating circuit
-r,,,Hc1QuickVetoActive,HC1_QuickVetoActive,,,b509,0d3d00,value,,UCH,0=no;1=yes,,manual override of the first heating circuit enabled
+r,,,Hc1NightTemp,HC1_NightSetTemp: lowering temperature setpoint of the first heating circuit,,,b509,0d3000,value,,D1C,,°C,register value
+w,,,Hc1NightTemp,HC1_NightSetTemp: lowering temperature setpoint of the first heating circuit,,,b509,0e3000,value,,D1C,,°C,register value
+r,,,Hc1HeatCurve,HC1_HeatCurve: heating curve of the first heating circuit,,,b509,0d3100,value,,UIN,100,,register value
+w,,,Hc1HeatCurve,HC1_HeatCurve: heating curve of the first heating circuit,,,b509,0e3100,value,,UIN,100,,register value
+r,,,Hc1ManualOPRoomTempDesired,HC1_ManualOPRoomSetpoint: room setpoint in operation mode manual of the first heating circuit,,,b509,0d3200,value,,D1C,,°C,register value
+w,,,Hc1ManualOPRoomTempDesired,HC1_ManualOPRoomSetpoint: room setpoint in operation mode manual of the first heating circuit,,,b509,0e3200,value,,D1C,,°C,register value
+r,,,Hc1QuickVetoTemp,HC1_QuickVetoTemp: manual override setpoint of the first heating circuit,,,b509,0d3c00,value,,D1C,,°C,register value
+r,,,Hc1QuickVetoActive,HC1_QuickVetoActive: manual override of the first heating circuit enabled,,,b509,0d3d00,value,,UCH,0=no;1=yes,,register value
 r,,,NameHc1,Circuits_Name_HC1,,,b509,0d3f00,value,,STR:10,,,labelling of the first heating circuit
 w,,,NameHc1,Circuits_Name_HC1,,,b509,0e3f00,value,,STR:10,,,labelling of the first heating circuit
 r,,,NameHc2,Circuits_Name_HC2,,,b509,0d3f08,value,,STR:10,,,labelling of the second heating circuit
 w,,,NameHc2,Circuits_Name_HC2,,,b509,0e3f08,value,,STR:10,,,labelling of the second heating circuit
 r,,,NameHwc,Circuits_Name_DHW,,,b509,0d3f78,value,,STR:10,,,labelling of the domestic hot water circuit
 w,,,NameHwc,Circuits_Name_DHW,,,b509,0e3f78,value,,STR:10,,,labelling of the domestic hot water circuit
-r,,,HolidayRoomTemp,HolidayRoomSetTemp,,,b509,0d4000,value,,D1C,,,"4.5=frostprotect, room setpoint during holidays"
-w,,,HolidayRoomTemp,HolidayRoomSetTemp,,,b509,0e4000,value,,D1C,,,"4.5=frostprotect, room setpoint during holidays"
-r,,,HolidayStartPeriod,HolidayStartPeriod,,,b509,0d1100,value,,HDA,,,start date of holidays
-w,,,HolidayStartPeriod,HolidayStartPeriod,,,b509,0e1100,value,,HDA,,,start date of holidays
-r,,,HolidayEndPeriod,HolidayEndPeriod,,,b509,0d1200,value,,HDA,,,end date of holidays
-w,,,HolidayEndPeriod,HolidayEndPeriod,,,b509,0e1200,value,,HDA,,,end date of holidays
+r,,,HolidayRoomTemp,"HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0d4000,value,,D1C,,,register value
+w,,,HolidayRoomTemp,"HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0e4000,value,,D1C,,,register value
+r,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0d1100,value,,HDA,,,register value
+w,,,HolidayStartPeriod,HolidayStartPeriod: start date of holidays,,,b509,0e1100,value,,HDA,,,register value
+r,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0d1200,value,,HDA,,,register value
+w,,,HolidayEndPeriod,HolidayEndPeriod: end date of holidays,,,b509,0e1200,value,,HDA,,,register value
 r,,,HwcOPMode,DHW_OPMode,,,b509,0d4200,value,,UCH,0=off;1=manual;2=auto,,operation mode of the domestic hot water circuit
 w,,,HwcOPMode,DHW_OPMode,,,b509,0e4200,value,,UCH,0=off;1=manual;2=auto,,operation mode of the domestic hot water circuit
-r,,,HwcTempDesired,DHW_DesiredTemp,,,b509,0d4400,value,,D1C,,°C,setpoint of domestic hot water circuit
-w,,,HwcTempDesired,DHW_DesiredTemp,,,b509,0e4400,value,,D1C,,°C,setpoint of domestic hot water circuit
-r,,,HwcQuickVetoTemp,DHW_QuickVetoTemp,,,b509,0d4500,value,,D1C,,°C,manual override setpoint for the domestic hot water circuit
-r,,,HwcQuickVetoActive,DHW_QuickVetoActive,,,b509,0d4300,value,,UCH,0=no;1=yes,,manual override of the domestic hot water circuit enabled
-r,,,HwcManualOPTempDesired,DHW_ManualOPSetpoint,,,b509,0d4c00,value,,D1C,,°C,setpoint of domestic hot water circuit in manual operation mode
-w,,,HwcManualOPTempDesired,DHW_ManualOPSetpoint,,,b509,0e4c00,value,,D1C,,°C,setpoint of domestic hot water circuit in manual operation mode
-r,,,SummerWinterTimeAdjust,SummerWinterTimeAdjust,,,b509,0d5300,value,,UCH,0=off;1=on,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
-w,,,SummerWinterTimeAdjust,SummerWinterTimeAdjust,,,b509,0e5300,value,,UCH,0=off;1=on,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
-r,,,DisplayedHwcStorageTemp,DisplayedDHWTankTemperature,,,b509,0d9e00,value,,D1C,,°C,display of the storage's temperature in C4 (also in case of an SP1 error)
-r,,,DisplayedHc1RoomTempDesired,DisplayedHK1RoomSetpoint,,,b509,0d9600,value,,D1C,,°C,"0= >5°C, currently displayed room temperature setpoint"
-r,,,RoomTempCorrection,RoomTempCorrection,,,b509,0d5700,value,,SCH,2,K,room temperature correction
-r,,,OutsideTempOffset,OutDoorTempCorr,,,b509,0d5800,value,,SCH,2,K,outside temperature correction
-w,,install,OutsideTempOffset,OutDoorTempCorr,,,b509,0e5800,value,,SCH,2,K,outside temperature correction
-r,,,FrostOverRideTime,FrostOverRideTime,,,b509,0d1a00,value,,UCH,,h,delay before frost protection is activated
-w,,install,FrostOverRideTime,FrostOverRideTime,,,b509,0e1a00,value,,UCH,,h,delay before frost protection is activated
+r,,,HwcTempDesired,DHW_DesiredTemp: setpoint of domestic hot water circuit,,,b509,0d4400,value,,D1C,,°C,register value
+w,,,HwcTempDesired,DHW_DesiredTemp: setpoint of domestic hot water circuit,,,b509,0e4400,value,,D1C,,°C,register value
+r,,,HwcQuickVetoTemp,DHW_QuickVetoTemp: manual override setpoint for the domestic hot water circuit,,,b509,0d4500,value,,D1C,,°C,register value
+r,,,HwcQuickVetoActive,DHW_QuickVetoActive: manual override of the domestic hot water circuit enabled,,,b509,0d4300,value,,UCH,0=no;1=yes,,register value
+r,,,HwcManualOPTempDesired,DHW_ManualOPSetpoint: setpoint of domestic hot water circuit in manual operation mode,,,b509,0d4c00,value,,D1C,,°C,register value
+w,,,HwcManualOPTempDesired,DHW_ManualOPSetpoint: setpoint of domestic hot water circuit in manual operation mode,,,b509,0e4c00,value,,D1C,,°C,register value
+r,,,SummerWinterTimeAdjust,SummerWinterTimeAdjust: enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON),,,b509,0d5300,value,,UCH,0=off;1=on,,register value
+w,,,SummerWinterTimeAdjust,SummerWinterTimeAdjust: enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON),,,b509,0e5300,value,,UCH,0=off;1=on,,register value
+r,,,DisplayedHwcStorageTemp,DisplayedDHWTankTemperature: display of the storage's temperature in C4 (also in case of an SP1 error),,,b509,0d9e00,value,,D1C,,°C,register value
+r,,,DisplayedHc1RoomTempDesired,"DisplayedHK1RoomSetpoint: 0= >5°C, currently displayed room temperature setpoint",,,b509,0d9600,value,,D1C,,°C,register value
+r,,,RoomTempCorrection,RoomTempCorrection: room temperature correction,,,b509,0d5700,value,,SCH,2,K,register value
+r,,,OutsideTempOffset,OutDoorTempCorr: outside temperature correction,,,b509,0d5800,value,,SCH,2,K,register value
+w,,install,OutsideTempOffset,OutDoorTempCorr: outside temperature correction,,,b509,0e5800,value,,SCH,2,K,register value
+r,,,FrostOverRideTime,FrostOverRideTime: delay before frost protection is activated,,,b509,0d1a00,value,,UCH,,h,register value
+w,,install,FrostOverRideTime,FrostOverRideTime: delay before frost protection is activated,,,b509,0e1a00,value,,UCH,,h,register value
 r,,,BaseDisplay,BaseDisplay,,,b509,0d2e00,value,,UCH,0=off;1=HC1;2=HC2,,selection which heating circuit's parameters are shown in the basic display
 r,,,Hc1RoomTempSwitchOn,HC1_RoomTempSwitchOn,,,b509,0d3400,value,,UCH,0=off;1=modulating;2=thermostat,,room temperature modulation of the first heating circuit
 w,,install,Hc1RoomTempSwitchOn,HC1_RoomTempSwitchOn,,,b509,0e3400,value,,UCH,0=off;1=modulating;2=thermostat,,room temperature modulation of the first heating circuit
-r,,,Hc1MinimalFlowTempDesired,HC1_MinimalFlowSetpoint,,,b509,0d3500,value,,D1C,,°C,minimum flow temperature setpoint (end emphasis) of the first heating circuit
-w,,install,Hc1MinimalFlowTempDesired,HC1_MinimalFlowSetpoint,,,b509,0e3500,value,,D1C,,°C,minimum flow temperature setpoint (end emphasis) of the first heating circuit
+r,,,Hc1MinimalFlowTempDesired,HC1_MinimalFlowSetpoint: minimum flow temperature setpoint (end emphasis) of the first heating circuit,,,b509,0d3500,value,,D1C,,°C,register value
+w,,install,Hc1MinimalFlowTempDesired,HC1_MinimalFlowSetpoint: minimum flow temperature setpoint (end emphasis) of the first heating circuit,,,b509,0e3500,value,,D1C,,°C,register value
 r,,,Hc1HcType,HC1_HCType,,,b509,0d3a00,value,,UCH,0=disabled;1=burnercircuit,,type of the first heating circuit
 w,,install,Hc1HcType,HC1_HCType,,,b509,0e3a00,value,,UCH,0=disabled;1=burnercircuit,,type of the first heating circuit
-r,,,Hc1SummerOffset,HC1_SummerOffset,,,b509,0d3b00,value,,D1C,,K,"summer offset of the first heating circuit (if outside temperature > room setpoint + summer offset => heating is OFF;applies to comfort and night setback setpoint; no influence if room temperature modulation is set to ""thermostat"")"
-w,,install,Hc1SummerOffset,HC1_SummerOffset,,,b509,0e3b00,value,,D1C,,K,"summer offset of the first heating circuit (if outside temperature > room setpoint + summer offset => heating is OFF;applies to comfort and night setback setpoint; no influence if room temperature modulation is set to ""thermostat"")"
-r,,,Hc1ActualFlowTempDesired,HC1ActualFlowSetPoint,,,b509,0d3e00,value,,D1C,,°C,calculated flow temperature setpoint of the first heating circuit
-r,,,HwcLoadingOffset,DHW_LoadingOffset,,,b509,0d4600,value,,D1C,,K,flow temperature's tank loading offset (flow setpoint of the DHW circuit = DHW setpoint + flow temperature's tank loading offset; only relevant if DHW control is done by control)
-w,,install,HwcLoadingOffset,DHW_LoadingOffset,,,b509,0e4600,value,,D1C,,K,flow temperature's tank loading offset (flow setpoint of the DHW circuit = DHW setpoint + flow temperature's tank loading offset; only relevant if DHW control is done by control)
-r,,,HwcPressLowpostrunningtime,DHW_LP_postrunningtime,,,b509,0d4700,value,,UCH,,min,duration of the tank loading pump's lag (only relevant if DHW control is done by control)
-w,,install,HwcPressLowpostrunningtime,DHW_LP_postrunningtime,,,b509,0e4700,value,,UCH,,min,duration of the tank loading pump's lag (only relevant if DHW control is done by control)
-r,,,HwcParallelLoading,DHW_Parallel_Loading,,,b509,0d4800,value,,UCH,0=off;1=on,,enable parallel tank loading
-w,,install,HwcParallelLoading,DHW_Parallel_Loading,,,b509,0e4800,value,,UCH,0=off;1=on,,enable parallel tank loading
+r,,,Hc1SummerOffset,"HC1_SummerOffset: summer offset of the first heating circuit (if outside temperature > room setpoint + summer offset => heating is OFF;applies to comfort and night setback setpoint; no influence if room temperature modulation is set to ""thermostat"")",,,b509,0d3b00,value,,D1C,,K,register value
+w,,install,Hc1SummerOffset,"HC1_SummerOffset: summer offset of the first heating circuit (if outside temperature > room setpoint + summer offset => heating is OFF;applies to comfort and night setback setpoint; no influence if room temperature modulation is set to ""thermostat"")",,,b509,0e3b00,value,,D1C,,K,register value
+r,,,Hc1ActualFlowTempDesired,HC1ActualFlowSetPoint: calculated flow temperature setpoint of the first heating circuit,,,b509,0d3e00,value,,D1C,,°C,register value
+r,,,HwcLoadingOffset,DHW_LoadingOffset: flow temperature's tank loading offset (flow setpoint of the DHW circuit = DHW setpoint + flow temperature's tank loading offset; only relevant if DHW control is done by control),,,b509,0d4600,value,,D1C,,K,register value
+w,,install,HwcLoadingOffset,DHW_LoadingOffset: flow temperature's tank loading offset (flow setpoint of the DHW circuit = DHW setpoint + flow temperature's tank loading offset; only relevant if DHW control is done by control),,,b509,0e4600,value,,D1C,,K,register value
+r,,,HwcPressLowpostrunningtime,DHW_LP_postrunningtime: duration of the tank loading pump's lag (only relevant if DHW control is done by control),,,b509,0d4700,value,,UCH,,min,register value
+w,,install,HwcPressLowpostrunningtime,DHW_LP_postrunningtime: duration of the tank loading pump's lag (only relevant if DHW control is done by control),,,b509,0e4700,value,,UCH,,min,register value
+r,,,HwcParallelLoading,DHW_Parallel_Loading: enable parallel tank loading,,,b509,0d4800,value,,UCH,0=off;1=on,,register value
+w,,install,HwcParallelLoading,DHW_Parallel_Loading: enable parallel tank loading,,,b509,0e4800,value,,UCH,0=off;1=on,,register value
 r,,,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
 w,,install,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
-r,,,HwcLegioStartTime,DHW_LegioStartTime,,,b509,0d4a00,value,,HTI,,,time on which legionella protection is started
-w,,install,HwcLegioStartTime,DHW_LegioStartTime,,,b509,0e4a00,value,,HTI,,,time on which legionella protection is started
-r,,,HwcCircuitActive,DHW_CircuitActive,,,b509,0d4b00,value,,UCH,0=no;1=yes,,domestic hot water circuit is enabled
-w,,install,HwcCircuitActive,DHW_CircuitActive,,,b509,0e4b00,value,,UCH,0=no;1=yes,,domestic hot water circuit is enabled
+r,,,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0d4a00,value,,HTI,,,register value
+w,,install,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0e4a00,value,,HTI,,,register value
+r,,,HwcCircuitActive,DHW_CircuitActive: domestic hot water circuit is enabled,,,b509,0d4b00,value,,UCH,0=no;1=yes,,register value
+w,,install,HwcCircuitActive,DHW_CircuitActive: domestic hot water circuit is enabled,,,b509,0e4b00,value,,UCH,0=no;1=yes,,register value
 r,,,AutoOffMode,AutoOFF_Mode,,,b509,0d4d00,value,,UCH,0=frostprotection;1=lowering;2=eco,,operation during the lowering time
 w,,install,AutoOffMode,AutoOFF_Mode,,,b509,0e4d00,value,,UCH,0=frostprotection;1=lowering;2=eco,,operation during the lowering time
-r,,,ContinuosHeating,ContinuosHeating,,,b509,0d4f00,value,,SCH,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-w,,install,ContinuosHeating,ContinuosHeating,,,b509,0e4f00,value,,SCH,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-r,,,PreheatingTime,PreheatingTime,,,b509,0d5000,value,,UIN,,,"in steps of 10, maximum time of enabling the heating before the heating time window starts"
-w,,install,PreheatingTime,PreheatingTime,,,b509,0e5000,value,,UIN,,,"in steps of 10, maximum time of enabling the heating before the heating time window starts"
-r,,,PreStopTime,PreStopTime,,,b509,0d5100,value,,UCH,,,"in steps of 10, maximum time of starting the lowering operation before the heating time window ends"
-w,,install,PreStopTime,PreStopTime,,,b509,0e5100,value,,UCH,,,"in steps of 10, maximum time of starting the lowering operation before the heating time window ends"
-r,,,ExcessTemp,ExcessTemperature,,,b509,0d5200,value,,D1C,,K,excess temperature (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range)
-w,,install,ExcessTemp,ExcessTemperature,,,b509,0e5200,value,,D1C,,K,excess temperature (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range)
+r,,,ContinuosHeating,"ContinuosHeating: -26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)",,,b509,0d4f00,value,,SCH,,,register value
+w,,install,ContinuosHeating,"ContinuosHeating: -26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)",,,b509,0e4f00,value,,SCH,,,register value
+r,,,PreheatingTime,"PreheatingTime: in steps of 10, maximum time of enabling the heating before the heating time window starts",,,b509,0d5000,value,,UIN,,,register value
+w,,install,PreheatingTime,"PreheatingTime: in steps of 10, maximum time of enabling the heating before the heating time window starts",,,b509,0e5000,value,,UIN,,,register value
+r,,,PreStopTime,"PreStopTime: in steps of 10, maximum time of starting the lowering operation before the heating time window ends",,,b509,0d5100,value,,UCH,,,register value
+w,,install,PreStopTime,"PreStopTime: in steps of 10, maximum time of starting the lowering operation before the heating time window ends",,,b509,0e5100,value,,UCH,,,register value
+r,,,ExcessTemp,ExcessTemperature: excess temperature (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range),,,b509,0d5200,value,,D1C,,K,register value
+w,,install,ExcessTemp,ExcessTemperature: excess temperature (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range),,,b509,0e5200,value,,D1C,,K,register value
 r,,,PhoneNumber1,aucPhoneNumber_1,,,b509,0d5400,value,,STR:10,,,first part of the installer's telephone number
-r,,,PhoneNumber2,aucPhoneNumber_2,,,b509,0d5408,value,,STR:9,,,second part of the installer's telephone number
+r,,,PhoneNumber2,aucPhoneNumber_2: second part of the installer's telephone number,,,b509,0d5408,value,,STR:9,,,register value
 r,,,KeyCodeforConfigMenu,KeyCodeforConfigMenue,,,b509,0d5500,value,,HEX:4,,,code for the installer's menues
 w,,install,KeyCodeforConfigMenu,KeyCodeforConfigMenue,,,b509,0e5500,value,,HEX:4,,,code for the installer's menues
-r,,,MaintenanceDate,MaintenanceDate,,,b509,0d5900,value,,HDA,,,date of the next maintenance service
-w,,install,MaintenanceDate,MaintenanceDate,,,b509,0e5900,value,,HDA,,,date of the next maintenance service
-r,,,LcdContrastValue,LcdContrastValue,,,b509,0d5a00,value,,UCH,,,setting of the LCD contrast
-w,,install,LcdContrastValue,LcdContrastValue,,,b509,0e5a00,value,,UCH,,,setting of the LCD contrast
+r,,,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0d5900,value,,HDA,,,register value
+w,,install,MaintenanceDate,MaintenanceDate: date of the next maintenance service,,,b509,0e5900,value,,HDA,,,register value
+r,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0d5a00,value,,UCH,,,register value
+w,,install,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0e5a00,value,,UCH,,,register value
 r,,,HcMc1ConfigCPLPAsLP,BKMK1ConfigCPLPAsLP,,,b509,0d7d00,value,,UCH,0=CP;1=LP,,configuration of the VR61 relay-output
 w,,install,HcMc1ConfigCPLPAsLP,BKMK1ConfigCPLPAsLP,,,b509,0e7d00,value,,UCH,0=CP;1=LP,,configuration of the VR61 relay-output
-r,,,PumpBlockingTimeMax,MaxPumpBlockingTime,,,b509,0d7e00,value,,UCH,,,"0=off, heating circuit pump's maximum blocking time for pump's energy saving function"
-w,,install,PumpBlockingTimeMax,MaxPumpBlockingTime,,,b509,0e7e00,value,,UCH,,,"0=off, heating circuit pump's maximum blocking time for pump's energy saving function"
-r,,,CirPump,CircuPumpRunning,,,b509,0d8100,value,,UCH,0=off;1=on,,circulation pump's state
-r,,,Hc1Pump,HK1PumpState,,,b509,0d8200,value,,UCH,0=off;1=on,,first heating circuit pump's state
+r,,,PumpBlockingTimeMax,"MaxPumpBlockingTime: 0=off, heating circuit pump's maximum blocking time for pump's energy saving function",,,b509,0d7e00,value,,UCH,,,register value
+w,,install,PumpBlockingTimeMax,"MaxPumpBlockingTime: 0=off, heating circuit pump's maximum blocking time for pump's energy saving function",,,b509,0e7e00,value,,UCH,,,register value
+r,,,CirPump,CircuPumpRunning: circulation pump's state,,,b509,0d8100,value,,UCH,0=off;1=on,,register value
+r,,,Hc1Pump,HK1PumpState: first heating circuit pump's state,,,b509,0d8200,value,,UCH,0=off;1=on,,register value
 r,,,Hc2HcType,HC2_HCType,,,b509,0d8500,value,,UCH,0=disabled;1=mixing;2=zone,,type of the second heating circuit
 w,,install,Hc2HcType,HC2_HCType,,,b509,0e8500,value,,UCH,0=disabled;1=mixing;2=zone,,type of the second heating circuit
-r,,,HwcActualTempDesired,DHW_ActualDesired_Setpoint,,,b509,0d8600,value,,D1C,,°C,current domestic hot water setpoint
-r,,,BMUFlowTempOrVF1,BMU_FlowTempOrVF_1,,,b509,0d8700,temp,,D2C,,°C,value of either an externally connected flow temperature sensor or the BMU's internal flow sensor if an external sensor is missing,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,RFQualityOTDCF,RF_Quality_OT_DCF,,,b509,0dba00,value,,UCH,,,RF quality of the connection between VR20/21 and base station
-r,,,RFQualityCI,RF_Quality_CI,,,b509,0dbb00,value,,UCH,,,RF quality of the connection between CI and base station
-r,,,StartEepromUpdate,StarteEepromAktualisierung,,,b509,0d0e00,value,,UCH,0=off;1=on,,update of the EEPROM is to be started
-r,,,EepromUpdateActive,EepromAktualisierungAktiv,,,b509,0d0f00,value,,UCH,0=off;1=on,,update of the EEPROM has been started
-r,,,RoomTempOffsetSelfWarming,RaumTempOffsetEigenErwaerm,,,b509,0d1500,value,,D2C,,°C,room temperature intrinsic heating offset
-r,,,CountryVariant,CountryVariant,,,b509,0d1700,value,,UCH,,,"country variant (0 = west, 1 = east)"
-r,,,ActualRoomTempDesiredHc1,ActualRoomTempSetpointHC1,,,b509,0d6300,value,,D2C,,°C,current room setpoint considering all basic conditions passed to the control algorithms
-r,,,SolModuleDetected,SolarModuleDetected,,,b509,0d6c00,value,,UCH,0=no;1=yes,,indicates that a VR68 has been detected
-r,,,HcMc1Detected,BKMK1Detected,,,b509,0d6d00,value,,UCH,0=no;1=yes,,indicates that a VR61 has been detected
-r,,,HRUDetected,HRUDetected,,,b509,0d6e00,value,,UCH,0=no;1=yes,,indicates that an airvent module / a heat recovery unit has been detected
-r,,,ACTOstorDetected,ACTOstorDetected,,,b509,0d6f00,value,,UCH,0=no;1=yes,,indicates that an ACTOstor has been detected
-r,,,BMUB51101ErrorStatus,BMUB51101_ErrorStatus,,,b509,0d7000,value,,UCH,,,error state of BMU received via eBUS service B51101
-r,,,BMUB51101StorageTemp,BMUB51101_TankTemp,,,b509,0d7100,value,,D1C,,°C,hot water storage temperature received via eBUS service B5 11 01
-r,,,LegioProtectActive,LegioProtectActive,,,b509,0d7300,value,,UCH,0=no;1=yes,,legionella protection is active
-r,,,BMUB51101HwcState,BMUB51101_DHWState,,,b509,0d7500,value,,UCH,0=off;1=on,,flame is on because of either tapping or tank loading
-r,,,VF1,VF_1,,,b509,0d7600,temp,,D2C,,°C,current external flow temperature and sensorstate,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,BMUB51101BoilerFlowTemp,BMUB51101_BoilerFlowTemp,,,b509,0d7700,value,,D1C,,°C,current flow temperature inside the BMU
-r,,,EnermanState,EnermanState,,,b509,0d7a00,value,,UCH,,,"current energy-manager-state (Off = 0, Heating = 1, DHW = 2, DHW pump lag = 3)"
-r,,,B51000TempDesiredLoadingPump,B51000SetPointLoadingPump,,,b509,0d7b00,value,,D1C,,,loading pump's setpoint sent via B5 10 00 to the BMU
-r,,,HcMc1CPLPState,BKMK1CPLPState,,,b509,0d7f00,value,,UCH,0=off;1=on,,nominal condition of the VR61's circulation or loading pump
-r,,,CPLPLast24started,CP_LPLast24started,,,b509,0d8300,value,,UCH,0=no;1=yes,,circulation respectively loading pump has been started during the last 24h
-r,,,Hc1PumpLast24started,HK1PumpLast24started,,,b509,0d8400,value,,UCH,0=no;1=yes,,first heating circuit's pump has been started during the last 24h
-r,,,FrostProtectStateMonitor,FrostProtectState_Monitor,,,b509,0d8900,value,,UCH,,,monitoring of the frost protection's state transition diagram
-r,,,FrostProtectionRequiredMonitor,FrostProtectionRequired_Monitor,,,b509,0d8a00,value,,UCH,0=no;1=yes,,frost protection should be enabled
-r,,,Hc1PreOrContinuosHeatingActive,HC1PreOrContinuosHeatingActive,,,b509,0d8b00,value,,UCH,0=no;1=yes,,preheating or continous heating is active for the first heating circuit
-r,,,CalculatedKickStopTime,CalculatedKickStopTime,,,b509,0d8c00,value,,UCH,,min,calculated time in between two pump kicks during frostprotection (time depends on outside temperature)
-r,,,B51000FlowSetMonitor,B51000FlowSetMonitor,,,b509,0d8d00,value,,D1C,,°C,flow temperature setpoint sent via B5 10 00 to the BMU
-r,,,FrostProtectDelayMonitor,FrostProtectDelayMonitor,,,b509,0d8f00,value,,UCH,0=no;1=yes,,frost protection delay has not elapsed yet
-r,,,ChimneySweepModeActive,ChimneySweepModeActive,,,b509,0d9000,value,,UCH,0=no;1=yes,,chimney sweep mode has been enabled by the BMU
-r,,,PumpEnergySaveStateMonitor,PumpEnergySaveStateMonitor,,,b509,0d9100,value,,UCH,,,monitoring of the pump energy saving's state transition diagram
-r,,,PumpEnergySaveCalculatedTimeMonitor,PumpEnergySaveCalculatedTimeMonitor,,,b509,0d9200,value,,UCH,,min,calculated time for the heating circuit's pump's switch off time during pump energy saving function (depends on outside temperature)
-r,,,HwcLoadingIn430Active,DHWLoadingIn430Active,,,b509,0d9300,value,,UCH,0=no;1=yes,,DHW-loading is active in non parallel loading cases
-r,,,ActoSTOROPMode,actoSTOR_OPMode,,,b509,0d9400,value,,UCH,,,Zustands-Automat actSTOR Ansteuerung
-r,,,HwcLoadingInBMUActive,DHWLoadingInBMUActive,,,b509,0d9d00,value,,UCH,0=no;1=yes,,indicates that BMU is in DHW preparation
+r,,,HwcActualTempDesired,DHW_ActualDesired_Setpoint: current domestic hot water setpoint,,,b509,0d8600,value,,D1C,,°C,register value
+r,,,BMUFlowTempOrVF1,BMU_FlowTempOrVF_1: value of either an externally connected flow temperature sensor or the BMU's internal flow sensor if an external sensor is missing,,,b509,0d8700,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,RFQualityOTDCF,RF_Quality_OT_DCF: RF quality of the connection between VR20/21 and base station,,,b509,0dba00,value,,UCH,,,register value
+r,,,RFQualityCI,RF_Quality_CI: RF quality of the connection between CI and base station,,,b509,0dbb00,value,,UCH,,,register value
+r,,,StartEepromUpdate,StarteEepromAktualisierung: update of the EEPROM is to be started,,,b509,0d0e00,value,,UCH,0=off;1=on,,register value
+r,,,EepromUpdateActive,EepromAktualisierungAktiv: update of the EEPROM has been started,,,b509,0d0f00,value,,UCH,0=off;1=on,,register value
+r,,,RoomTempOffsetSelfWarming,RaumTempOffsetEigenErwaerm: room temperature intrinsic heating offset,,,b509,0d1500,value,,D2C,,°C,register value
+r,,,CountryVariant,"CountryVariant: country variant (0 = west, 1 = east)",,,b509,0d1700,value,,UCH,,,register value
+r,,,ActualRoomTempDesiredHc1,ActualRoomTempSetpointHC1: current room setpoint considering all basic conditions passed to the control algorithms,,,b509,0d6300,value,,D2C,,°C,register value
+r,,,SolModuleDetected,SolarModuleDetected: indicates that a VR68 has been detected,,,b509,0d6c00,value,,UCH,0=no;1=yes,,register value
+r,,,HcMc1Detected,BKMK1Detected: indicates that a VR61 has been detected,,,b509,0d6d00,value,,UCH,0=no;1=yes,,register value
+r,,,HRUDetected,HRUDetected: indicates that an airvent module / a heat recovery unit has been detected,,,b509,0d6e00,value,,UCH,0=no;1=yes,,register value
+r,,,ACTOstorDetected,ACTOstorDetected: indicates that an ACTOstor has been detected,,,b509,0d6f00,value,,UCH,0=no;1=yes,,register value
+r,,,BMUB51101ErrorStatus,BMUB51101_ErrorStatus: error state of BMU received via eBUS service B51101,,,b509,0d7000,value,,UCH,,,register value
+r,,,BMUB51101StorageTemp,BMUB51101_TankTemp: hot water storage temperature received via eBUS service B5 11 01,,,b509,0d7100,value,,D1C,,°C,register value
+r,,,LegioProtectActive,LegioProtectActive: legionella protection is active,,,b509,0d7300,value,,UCH,0=no;1=yes,,register value
+r,,,BMUB51101HwcState,BMUB51101_DHWState: flame is on because of either tapping or tank loading,,,b509,0d7500,value,,UCH,0=off;1=on,,register value
+r,,,VF1,VF_1: current external flow temperature and sensorstate,,,b509,0d7600,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,BMUB51101BoilerFlowTemp,BMUB51101_BoilerFlowTemp: current flow temperature inside the BMU,,,b509,0d7700,value,,D1C,,°C,register value
+r,,,EnermanState,"EnermanState: current energy-manager-state (Off = 0, Heating = 1, DHW = 2, DHW pump lag = 3)",,,b509,0d7a00,value,,UCH,,,register value
+r,,,B51000TempDesiredLoadingPump,B51000SetPointLoadingPump: loading pump's setpoint sent via B5 10 00 to the BMU,,,b509,0d7b00,value,,D1C,,,register value
+r,,,HcMc1CPLPState,BKMK1CPLPState: nominal condition of the VR61's circulation or loading pump,,,b509,0d7f00,value,,UCH,0=off;1=on,,register value
+r,,,CPLPLast24started,CP_LPLast24started: circulation respectively loading pump has been started during the last 24h,,,b509,0d8300,value,,UCH,0=no;1=yes,,register value
+r,,,Hc1PumpLast24started,HK1PumpLast24started: first heating circuit's pump has been started during the last 24h,,,b509,0d8400,value,,UCH,0=no;1=yes,,register value
+r,,,FrostProtectStateMonitor,FrostProtectState_Monitor: monitoring of the frost protection's state transition diagram,,,b509,0d8900,value,,UCH,,,register value
+r,,,FrostProtectionRequiredMonitor,FrostProtectionRequired_Monitor: frost protection should be enabled,,,b509,0d8a00,value,,UCH,0=no;1=yes,,register value
+r,,,Hc1PreOrContinuosHeatingActive,HC1PreOrContinuosHeatingActive: preheating or continous heating is active for the first heating circuit,,,b509,0d8b00,value,,UCH,0=no;1=yes,,register value
+r,,,CalculatedKickStopTime,CalculatedKickStopTime: calculated time in between two pump kicks during frostprotection (time depends on outside temperature),,,b509,0d8c00,value,,UCH,,min,register value
+r,,,B51000FlowSetMonitor,B51000FlowSetMonitor: flow temperature setpoint sent via B5 10 00 to the BMU,,,b509,0d8d00,value,,D1C,,°C,register value
+r,,,FrostProtectDelayMonitor,FrostProtectDelayMonitor: frost protection delay has not elapsed yet,,,b509,0d8f00,value,,UCH,0=no;1=yes,,register value
+r,,,ChimneySweepModeActive,ChimneySweepModeActive: chimney sweep mode has been enabled by the BMU,,,b509,0d9000,value,,UCH,0=no;1=yes,,register value
+r,,,PumpEnergySaveStateMonitor,PumpEnergySaveStateMonitor: monitoring of the pump energy saving's state transition diagram,,,b509,0d9100,value,,UCH,,,register value
+r,,,PumpEnergySaveCalculatedTimeMonitor,PumpEnergySaveCalculatedTimeMonitor: calculated time for the heating circuit's pump's switch off time during pump energy saving function (depends on outside temperature),,,b509,0d9200,value,,UCH,,min,register value
+r,,,HwcLoadingIn430Active,DHWLoadingIn430Active: DHW-loading is active in non parallel loading cases,,,b509,0d9300,value,,UCH,0=no;1=yes,,register value
+r,,,ActoSTOROPMode,actoSTOR_OPMode: Zustands-Automat actSTOR Ansteuerung,,,b509,0d9400,value,,UCH,,,register value
+r,,,HwcLoadingInBMUActive,DHWLoadingInBMUActive: indicates that BMU is in DHW preparation,,,b509,0d9d00,value,,UCH,0=no;1=yes,,register value
 r,,,MonitorEEpromInkonsiNumber,MonitorEEpromInkonsiNumber,,,b509,0d9f00,value,,HEX:8,,,identification of the last eight EEPROM inconsistencies
 r,,,Variant,Variant,,,b509,0d2c00,uin,,UIN,,,control type (430f: 43605; 21930 392f: 61455; 4080),uin_1,,UIN,,,
 r,,,AssertFileName,AssertFileName,,,b509,0da000,value,,STR:10,,,"shows, if assert is enabled, the name of the module where the 'assert fail' occured"
-r,,,AssertLineNumber,AssertLineNumber,,,b509,0da100,value,,UIN,,,assert fail occured in this line
-r,,,Actostorstate,actostorstate,,,b509,0da400,value,,UCH,,,state of the actoSTOR control (0 = off; 1 = DHW released; 2 = DHW loading; 3 = Pump overrun; 4 = stop pump overrun)
-r,,,B50418actDesFlowTemp,B50418actDesFlowTemp,,,b509,0d6b00,value,,D1C,,,flow temperature setpoint calculated by actoSTOR (S3 of B5 04 18)
+r,,,AssertLineNumber,AssertLineNumber: assert fail occured in this line,,,b509,0da100,value,,UIN,,,register value
+r,,,Actostorstate,actostorstate: state of the actoSTOR control (0 = off; 1 = DHW released; 2 = DHW loading; 3 = Pump overrun; 4 = stop pump overrun),,,b509,0da400,value,,UCH,,,register value
+r,,,B50418actDesFlowTemp,B50418actDesFlowTemp: flow temperature setpoint calculated by actoSTOR (S3 of B5 04 18),,,b509,0d6b00,value,,D1C,,,register value
 r,,,NetID,Net_ID,,,b509,0db400,value,,HEX:2,,,net ID from teach in
-r,,,RfChannelSettings,Rf_ChannelSettings,,,b509,0db900,value,,UCH,,,used rf channel settings
+r,,,RfChannelSettings,Rf_ChannelSettings: used rf channel settings,,,b509,0db900,value,,UCH,,,register value
 r,,,CcTimer_Monday,Periods Monday,,,b515,0002,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,CcTimer_Monday,Periods Monday,,,b515,0002,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,CcTimer_Tuesday,Periods Tuesday,,,b515,0102,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days

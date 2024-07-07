@@ -1,22 +1,22 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,Date,System Date,,,b509,0d6100,value,,HDA,,,current date
-w,,,Date,System Date,,,b509,0e6100,value,,HDA,,,current date
-r,,,Time,System Time,,,b509,0d6000,value,,HTI,,,current time
-w,,,Time,System Time,,,b509,0e6000,value,,HTI,,,current time
+r,,,Date,System Date: current date,,,b509,0d6100,value,,HDA,,,register value
+w,,,Date,System Date: current date,,,b509,0e6100,value,,HDA,,,register value
+r,,,Time,System Time: current time,,,b509,0d6000,value,,HTI,,,register value
+w,,,Time,System Time: current time,,,b509,0e6000,value,,HTI,,,register value
 r,,,SystemOnOff,System OnOFF,,,b509,0d0100,value,,UCH,0=on;1=off,,
 w,,,SystemOnOff,System OnOFF,,,b509,0e0100,value,,UCH,0=on;1=off,,
 r,,,OperatingMode,Operation mode,,,b509,0d2f00,value,,UCH,2=Auto;3=Comfort,,
 w,,,OperatingMode,Operation mode,,,b509,0e2f00,value,,UCH,2=Auto;3=Comfort,,
 r,,,OverrideMode,Override mode,,,b509,0d5d00,value,,UCH,0=None;1=Party;4=Holiday,,
 w,,,OverrideMode,Override mode,,,b509,0e5d00,value,,UCH,0=None;1=Party;4=Holiday,,
-r,,,HolidayStartPeriod,HolidayStartPeriod,,,b509,0d1100,value,,HDA,,,start date of holiday
-w,,,HolidayStartPeriod,HolidayStartPeriod,,,b509,0e1100,value,,HDA,,,start date of holiday
-r,,,HolidayEndPeriod,HolidayEndPeriod,,,b509,0d1200,value,,HDA,,,end date of holiday
-w,,,HolidayEndPeriod,HolidayEndPeriod,,,b509,0e1200,value,,HDA,,,end date of holiday
-r,,,LcdContrastValue,LcdContrastValue,,,b509,0d5a00,value,,UCH,,,setting of the LCD contrast
-w,,,LcdContrastValue,LcdContrastValue,,,b509,0e5a00,value,,UCH,,,setting of the LCD contrast
+r,,,HolidayStartPeriod,HolidayStartPeriod: start date of holiday,,,b509,0d1100,value,,HDA,,,register value
+w,,,HolidayStartPeriod,HolidayStartPeriod: start date of holiday,,,b509,0e1100,value,,HDA,,,register value
+r,,,HolidayEndPeriod,HolidayEndPeriod: end date of holiday,,,b509,0d1200,value,,HDA,,,register value
+w,,,HolidayEndPeriod,HolidayEndPeriod: end date of holiday,,,b509,0e1200,value,,HDA,,,register value
+r,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0d5a00,value,,UCH,,,register value
+w,,,LcdContrastValue,LcdContrastValue: setting of the LCD contrast,,,b509,0e5a00,value,,UCH,,,register value
 r,,,HwcTimer_Monday,Periods Monday,,,b515,0001,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HwcTimer_Monday,Periods Monday,,,b515,0001,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,HwcTimer_Tuesday,Periods Tuesday,,,b515,0101,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
