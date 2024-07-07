@@ -1,7 +1,7 @@
 ## Source Mapping
 This is the current mapping from [`src` files of ebusd-configuration](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src) to the CSV files served here.
 
-It was last built on 2024-07-07 from [git revision d5be5ba](https://github.com/john30/ebusd-configuration/tree/d5be5ba29c2b485fb1021b112b2668f8f8bdd982).
+It was last built on 2024-07-07 from [git revision ff863f1](https://github.com/john30/ebusd-configuration/tree/ff863f1104284c2cdd3f4d8b26d3e9225c4560bf).
 
 <!-- note: template file to be amended with the actual data by the workflow -->
  - [broadcast.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/broadcast.tsp) &rarr; [en: broadcast.csv](en/broadcast.csv) / [de: broadcast.csv](de/broadcast.csv)

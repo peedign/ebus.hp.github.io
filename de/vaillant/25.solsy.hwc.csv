@@ -1,42 +1,42 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,register value
-r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,register value
-r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,register value
-r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,register value
-r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,register value
-r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,register value
-r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,register value
-r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,register value
-r,,,Storage1Sensor2,Temperature of SP1 sensor,,,b509,0d0000,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,CirPump2,Zirkulationspumpe: State of the circulation pump,,,b509,0d0c00,value,,UCH,0=off;1=on,,register value
-r,,,ThreeWayValveLoadingPump12,State of LP/UV1,,,b509,0d1000,value,,UCH,0=off;1=on,,register value
-r,,,LegioPump2,Legionellenpumpe: State of the legionella pump,,,b509,0d1100,value,,UCH,0=off;1=on,,register value
-r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,register value
-r,,,OneTimeCirSwitch,1x ZP Schalter: non-recurring circulation pump running period,,,b509,0d0b00,value,,UCH,0=off;1=on,,register value
-r,,,IsInParty,Partyfunktion aktiv: Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC,,,b509,0d4e00,value,,UCH,,,register value
-r,,,HwcLaggingTime2,WP Nachlaufzeit WW: Time pump is running after energy demand is met,,,b509,0d6100,value,,UCH,,min,register value
-w,,,HwcLaggingTime2,WP Nachlaufzeit WW: Time pump is running after energy demand is met,,,b509,0e6100,value,,UCH,,min,register value
-r,,,FlowTempDesired2,Vorlaufsolltemperatur: Flow setpoint if tank has an energy demand,,,b509,0d4600,value,,D1C,,°C,register value
-r,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2: Heating cuircuits can be loaded in parallel to an active tank loading,,,b509,0d5500,value,,UCH,0=no;1=yes,,register value
-w,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2: Heating cuircuits can be loaded in parallel to an active tank loading,,,b509,0e5500,value,,UCH,0=no;1=yes,,register value
-r,,,HwcLoadingDelay2,WW Ladeverzögerung: Time waiting for a heating demand in caser of solar gain,,,b509,0d6200,value,,UCH,,min,register value
-w,,,HwcLoadingDelay2,WW Ladeverzögerung: Time waiting for a heating demand in caser of solar gain,,,b509,0e6200,value,,UCH,,min,register value
-r,,,SpreadingHwcLoading,Offset Warmwasserladung: Offset for DHW flow temperature,,,b509,0d8800,value,,UCH,,K,register value
-w,,service,SpreadingHwcLoading,Offset Warmwasserladung: Offset for DHW flow temperature,,,b509,0e8800,value,,UCH,,K,register value
-r,,,LegioStartTime2,LegioStartTime2: Hour for legio protection,,,b509,0d8a00,value,,UCH,,,register value
-w,,,LegioStartTime2,LegioStartTime2: Hour for legio protection,,,b509,0e8a00,value,,UCH,,,register value
-r,,,NativeHwcCircuitDisabled,Warmwasserkreis deaktivieren: Disable DHW,,,b509,0da900,value,,UCH,0=no;1=yes,,register value
-w,,install,NativeHwcCircuitDisabled,Warmwasserkreis deaktivieren: Disable DHW,,,b509,0ea900,value,,UCH,0=no;1=yes,,register value
-r,,,NormalHwcHysteresis,Hysterese Warmwasserladung: The hysteresis for DHW loading,,,b509,0daf00,value,,UCH,,K,register value
-w,,,NormalHwcHysteresis,Hysterese Warmwasserladung: The hysteresis for DHW loading,,,b509,0eaf00,value,,UCH,,K,register value
-r,,,OperatingMode2,Betriebsart: Operating mode of the water circuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-w,,,OperatingMode2,Betriebsart: Operating mode of the water circuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-r,,,TempDesired2,Solltemperatur: Temperature setpoint of water tank,,,b509,0d3200,value,,D1C,,°C,register value
-w,,,TempDesired2,Solltemperatur: Temperature setpoint of water tank,,,b509,0e3200,value,,D1C,,°C,register value
-r,,,TeleswitchOperatingMode2,TeleSWITCH Betriebsart: If the tele switch port is activated the water circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-w,,,TeleswitchOperatingMode2,TeleSWITCH Betriebsart: If the tele switch port is activated the water circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
+r,,,Storage1Sensor2,Temperature of SP1 sensor,,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,CirPump2,Zirkulationspumpe: State of the circulation pump,,,b509,0d0c00,value,,UCH,0=off;1=on,,
+r,,,ThreeWayValveLoadingPump12,State of LP/UV1,,,b509,0d1000,value,,UCH,0=off;1=on,,
+r,,,LegioPump2,Legionellenpumpe: State of the legionella pump,,,b509,0d1100,value,,UCH,0=off;1=on,,
+r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,
+r,,,OneTimeCirSwitch,1x ZP Schalter: non-recurring circulation pump running period,,,b509,0d0b00,value,,UCH,0=off;1=on,,
+r,,,IsInParty,Partyfunktion aktiv: Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC,,,b509,0d4e00,value,,UCH,,,
+r,,,HwcLaggingTime2,WP Nachlaufzeit WW: Time pump is running after energy demand is met,,,b509,0d6100,value,,UCH,,min,Minuten
+w,,,HwcLaggingTime2,WP Nachlaufzeit WW: Time pump is running after energy demand is met,,,b509,0e6100,value,,UCH,,min,Minuten
+r,,,FlowTempDesired2,Vorlaufsolltemperatur: Flow setpoint if tank has an energy demand,,,b509,0d4600,value,,D1C,,°C,Temperatur
+r,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2: Heating cuircuits can be loaded in parallel to an active tank loading,,,b509,0d5500,value,,UCH,0=no;1=yes,,
+w,,,HcParallelStorageFillingEnabled2,HcParallelTankFillingEnabled2: Heating cuircuits can be loaded in parallel to an active tank loading,,,b509,0e5500,value,,UCH,0=no;1=yes,,
+r,,,HwcLoadingDelay2,WW Ladeverzögerung: Time waiting for a heating demand in caser of solar gain,,,b509,0d6200,value,,UCH,,min,Minuten
+w,,,HwcLoadingDelay2,WW Ladeverzögerung: Time waiting for a heating demand in caser of solar gain,,,b509,0e6200,value,,UCH,,min,Minuten
+r,,,SpreadingHwcLoading,Offset Warmwasserladung: Offset for DHW flow temperature,,,b509,0d8800,value,,UCH,,K,
+w,,service,SpreadingHwcLoading,Offset Warmwasserladung: Offset for DHW flow temperature,,,b509,0e8800,value,,UCH,,K,
+r,,,LegioStartTime2,LegioStartTime2: Hour for legio protection,,,b509,0d8a00,value,,UCH,,,
+w,,,LegioStartTime2,LegioStartTime2: Hour for legio protection,,,b509,0e8a00,value,,UCH,,,
+r,,,NativeHwcCircuitDisabled,Warmwasserkreis deaktivieren: Disable DHW,,,b509,0da900,value,,UCH,0=no;1=yes,,
+w,,install,NativeHwcCircuitDisabled,Warmwasserkreis deaktivieren: Disable DHW,,,b509,0ea900,value,,UCH,0=no;1=yes,,
+r,,,NormalHwcHysteresis,Hysterese Warmwasserladung: The hysteresis for DHW loading,,,b509,0daf00,value,,UCH,,K,
+w,,,NormalHwcHysteresis,Hysterese Warmwasserladung: The hysteresis for DHW loading,,,b509,0eaf00,value,,UCH,,K,
+r,,,OperatingMode2,Betriebsart: Operating mode of the water circuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,OperatingMode2,Betriebsart: Operating mode of the water circuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,TempDesired2,Solltemperatur: Temperature setpoint of water tank,,,b509,0d3200,value,,D1C,,°C,Temperatur
+w,,,TempDesired2,Solltemperatur: Temperature setpoint of water tank,,,b509,0e3200,value,,D1C,,°C,Temperatur
+r,,,TeleswitchOperatingMode2,TeleSWITCH Betriebsart: If the tele switch port is activated the water circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,TeleswitchOperatingMode2,TeleSWITCH Betriebsart: If the tele switch port is activated the water circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
 r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
 r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
 w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur

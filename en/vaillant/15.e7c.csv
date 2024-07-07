@@ -1,61 +1,61 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,HeatingScheduleEnable,Heating Schedule Enable,,,b509,0d0200,value,,UCH,0=off;1=on,,register value
-w,,,HeatingScheduleEnable,Heating Schedule Enable,,,b509,0e0200,value,,UCH,0=off;1=on,,register value
-r,,,HeatingEnable,Heating Enable,,,b509,0d0300,value,,UCH,0=off;1=on,,register value
-w,,,HeatingEnable,Heating Enable,,,b509,0e0300,value,,UCH,0=off;1=on,,register value
-r,,,HeatingTempSet,Heating Temp Manual Set,,,b509,0d2200,value,,D2C,,°C,register value
-w,,,HeatingTempSet,Heating Temp Manual Set,,,b509,0e2200,value,,D2C,,°C,register value
-r,,,HeatingOverrideEnable,Heating Override Enable,,,b509,0d2300,value,,UCH,0=off;1=on,,register value
-w,,,HeatingOverrideEnable,Heating Override Enable,,,b509,0e2300,value,,UCH,0=off;1=on,,register value
-r,,,HeatingOverrideTemp,Heating Override Temp,,,b509,0d2400,value,,D2C,,°C,register value
-w,,,HeatingOverrideTemp,Heating Override Temp,,,b509,0e2400,value,,D2C,,°C,register value
-r,,,HeatingOverrideEndTime,Heating Override End Time,,,b509,0d2500,value,,DTM,,,register value
-w,,,HeatingOverrideEndTime,Heating Override End Time,,,b509,0e2500,value,,DTM,,,register value
-r,,,KeyboardLockEnable,Keyboard Lock Enable,,,b509,0d2a00,value,,UCH,0=off;1=on,,register value
-w,,,KeyboardLockEnable,Keyboard Lock Enable,,,b509,0e2a00,value,,UCH,0=off;1=on,,register value
-r,,,Contrast,Contrast,,,b509,0d2b00,value,,UCH,,,register value
-w,,,Contrast,Contrast,,,b509,0e2b00,value,,UCH,,,register value
-r,,,Brightness,Brightness,,,b509,0d2c00,value,,UCH,,,register value
-w,,,Brightness,Brightness,,,b509,0e2c00,value,,UCH,,,register value
-r,,,Time_Date,Time & Date,,,b509,0d2e00,value,,DTM,,,register value
-w,,,Time_Date,Time & Date,,,b509,0e2e00,value,,DTM,,,register value
-r,,,DateFormat,Date format 1-dd.mm.yyyy 2-yyyy.mm.dd,,,b509,0d2d00,value,,UCH,,,register value
-w,,,DateFormat,Date format 1-dd.mm.yyyy 2-yyyy.mm.dd,,,b509,0e2d00,value,,UCH,,,register value
-r,,,Weekday,weekday,,,b509,0d2f00,value,,BDY,,,register value
-w,,,Weekday,weekday,,,b509,0e2f00,value,,BDY,,,register value
+r,,,HeatingScheduleEnable,Heating Schedule Enable,,,b509,0d0200,value,,UCH,0=off;1=on,,
+w,,,HeatingScheduleEnable,Heating Schedule Enable,,,b509,0e0200,value,,UCH,0=off;1=on,,
+r,,,HeatingEnable,Heating Enable,,,b509,0d0300,value,,UCH,0=off;1=on,,
+w,,,HeatingEnable,Heating Enable,,,b509,0e0300,value,,UCH,0=off;1=on,,
+r,,,HeatingTempSet,Heating Temp Manual Set,,,b509,0d2200,value,,D2C,,°C,temperature
+w,,,HeatingTempSet,Heating Temp Manual Set,,,b509,0e2200,value,,D2C,,°C,temperature
+r,,,HeatingOverrideEnable,Heating Override Enable,,,b509,0d2300,value,,UCH,0=off;1=on,,
+w,,,HeatingOverrideEnable,Heating Override Enable,,,b509,0e2300,value,,UCH,0=off;1=on,,
+r,,,HeatingOverrideTemp,Heating Override Temp,,,b509,0d2400,value,,D2C,,°C,temperature
+w,,,HeatingOverrideTemp,Heating Override Temp,,,b509,0e2400,value,,D2C,,°C,temperature
+r,,,HeatingOverrideEndTime,Heating Override End Time,,,b509,0d2500,value,,DTM,,,
+w,,,HeatingOverrideEndTime,Heating Override End Time,,,b509,0e2500,value,,DTM,,,
+r,,,KeyboardLockEnable,Keyboard Lock Enable,,,b509,0d2a00,value,,UCH,0=off;1=on,,
+w,,,KeyboardLockEnable,Keyboard Lock Enable,,,b509,0e2a00,value,,UCH,0=off;1=on,,
+r,,,Contrast,Contrast,,,b509,0d2b00,value,,UCH,,,
+w,,,Contrast,Contrast,,,b509,0e2b00,value,,UCH,,,
+r,,,Brightness,Brightness,,,b509,0d2c00,value,,UCH,,,
+w,,,Brightness,Brightness,,,b509,0e2c00,value,,UCH,,,
+r,,,Time_Date,Time & Date,,,b509,0d2e00,value,,DTM,,,
+w,,,Time_Date,Time & Date,,,b509,0e2e00,value,,DTM,,,
+r,,,DateFormat,Date format 1-dd.mm.yyyy 2-yyyy.mm.dd,,,b509,0d2d00,value,,UCH,,,
+w,,,DateFormat,Date format 1-dd.mm.yyyy 2-yyyy.mm.dd,,,b509,0e2d00,value,,UCH,,,
+r,,,Weekday,weekday,,,b509,0d2f00,value,,BDY,,,weekday
+w,,,Weekday,weekday,,,b509,0e2f00,value,,BDY,,,weekday
 r,,,RoomName,Room Name,,,b509,0d3000,value,,STR:14,,,Room Name
 w,,,RoomName,Room Name,,,b509,0e3000,value,,STR:14,,,Room Name
 r,,,Language,Language,,,b509,0d3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Language
 w,,,Language,Language,,,b509,0e3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Language
-r,,,RoomTemp,Room Temp,,,b509,0d3a00,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d3b00,value,,D2C,,°C,register value
-r,,,OutsideTemp,Outside Temp,,,b509,0d3c00,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,DHWTempSet,DHW Temp Manual Set,,,b509,0d4000,value,,D2C,,°C,register value
-w,,,DHWTempSet,DHW Temp Manual Set,,,b509,0e4000,value,,D2C,,°C,register value
-r,,,DHWEnable,DHW Enable,,,b509,0d4100,value,,UCH,0=off;1=on,,register value
-w,,,DHWEnable,DHW Enable,,,b509,0e4100,value,,UCH,0=off;1=on,,register value
-r,,,DHWScheduleEnable,DHW Schedule Enable,,,b509,0d4200,value,,UCH,0=off;1=on,,register value
-w,,,DHWScheduleEnable,DHW Schedule Enable,,,b509,0e4200,value,,UCH,0=off;1=on,,register value
-r,,,DHWOverrideEnable,DHW Override Enable,,,b509,0d5100,value,,UCH,0=off;1=on,,register value
-w,,,DHWOverrideEnable,DHW Override Enable,,,b509,0e5100,value,,UCH,0=off;1=on,,register value
-r,,,DHWOverrideState,DHW Override State,,,b509,0d5200,value,,UCH,0=off;1=on,,register value
-w,,,DHWOverrideState,DHW Override State,,,b509,0e5200,value,,UCH,0=off;1=on,,register value
-r,,,DHWOverrideEndTime,DHW Override End Time,,,b509,0d5300,value,,DTM,,,register value
-w,,,DHWOverrideEndTime,DHW Override End Time,,,b509,0e5300,value,,DTM,,,register value
-r,,,VacationEnable,Vacation Enable,,,b509,0d5400,value,,UCH,0=off;1=on,,register value
-w,,,VacationEnable,Vacation Enable,,,b509,0e5400,value,,UCH,0=off;1=on,,register value
-r,,,VacationStartTime,Vacation Start Time,,,b509,0d5500,value,,DTM,,,register value
-w,,,VacationStartTime,Vacation Start Time,,,b509,0e5500,value,,DTM,,,register value
-r,,,VacationEndTime,Vacation End Time,,,b509,0d5700,value,,DTM,,,register value
-w,,,VacationEndTime,Vacation End Time,,,b509,0e5700,value,,DTM,,,register value
-r,,,VacationTempSet,Vacation Temp Manual Set,,,b509,0d5800,value,,D2C,,°C,register value
-w,,,VacationTempSet,Vacation Temp Manual Set,,,b509,0e5800,value,,D2C,,°C,register value
-r,,,HeatingTemp1,Heating Temp 1,,,b509,0d7300,value,,D2C,,°C,register value
-w,,,HeatingTemp1,Heating Temp 1,,,b509,0e7300,value,,D2C,,°C,register value
-r,,,HeatingTemp2,Heating Temp 2,,,b509,0d7400,value,,D2C,,°C,register value
-w,,,HeatingTemp2,Heating Temp 2,,,b509,0e7400,value,,D2C,,°C,register value
+r,,,RoomTemp,Room Temp,,,b509,0d3a00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d3b00,value,,D2C,,°C,temperature
+r,,,OutsideTemp,Outside Temp,,,b509,0d3c00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
+r,,,DHWTempSet,DHW Temp Manual Set,,,b509,0d4000,value,,D2C,,°C,temperature
+w,,,DHWTempSet,DHW Temp Manual Set,,,b509,0e4000,value,,D2C,,°C,temperature
+r,,,DHWEnable,DHW Enable,,,b509,0d4100,value,,UCH,0=off;1=on,,
+w,,,DHWEnable,DHW Enable,,,b509,0e4100,value,,UCH,0=off;1=on,,
+r,,,DHWScheduleEnable,DHW Schedule Enable,,,b509,0d4200,value,,UCH,0=off;1=on,,
+w,,,DHWScheduleEnable,DHW Schedule Enable,,,b509,0e4200,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideEnable,DHW Override Enable,,,b509,0d5100,value,,UCH,0=off;1=on,,
+w,,,DHWOverrideEnable,DHW Override Enable,,,b509,0e5100,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideState,DHW Override State,,,b509,0d5200,value,,UCH,0=off;1=on,,
+w,,,DHWOverrideState,DHW Override State,,,b509,0e5200,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideEndTime,DHW Override End Time,,,b509,0d5300,value,,DTM,,,
+w,,,DHWOverrideEndTime,DHW Override End Time,,,b509,0e5300,value,,DTM,,,
+r,,,VacationEnable,Vacation Enable,,,b509,0d5400,value,,UCH,0=off;1=on,,
+w,,,VacationEnable,Vacation Enable,,,b509,0e5400,value,,UCH,0=off;1=on,,
+r,,,VacationStartTime,Vacation Start Time,,,b509,0d5500,value,,DTM,,,
+w,,,VacationStartTime,Vacation Start Time,,,b509,0e5500,value,,DTM,,,
+r,,,VacationEndTime,Vacation End Time,,,b509,0d5700,value,,DTM,,,
+w,,,VacationEndTime,Vacation End Time,,,b509,0e5700,value,,DTM,,,
+r,,,VacationTempSet,Vacation Temp Manual Set,,,b509,0d5800,value,,D2C,,°C,temperature
+w,,,VacationTempSet,Vacation Temp Manual Set,,,b509,0e5800,value,,D2C,,°C,temperature
+r,,,HeatingTemp1,Heating Temp 1,,,b509,0d7300,value,,D2C,,°C,temperature
+w,,,HeatingTemp1,Heating Temp 1,,,b509,0e7300,value,,D2C,,°C,temperature
+r,,,HeatingTemp2,Heating Temp 2,,,b509,0d7400,value,,D2C,,°C,temperature
+w,,,HeatingTemp2,Heating Temp 2,,,b509,0e7400,value,,D2C,,°C,temperature
 r,,,MondayHeatingTime,Monday heating time,,,b509,0d0500,ttm,,TTM,,,Monday heating time,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
 w,,,MondayHeatingTime,Monday heating time,,,b509,0e0500,ttm,,TTM,,,Monday heating time,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
 r,,,TuesdayHeatingTime,Tuesday heating time,,,b509,0d0600,ttm,,TTM,,,Tuesday heating time,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
@@ -140,39 +140,39 @@ r,,,SaturdayRecirculationState,Saturday recirculation state,,,b509,0d8600,onoff,
 w,,install,SaturdayRecirculationState,Saturday recirculation state,,,b509,0e8600,onoff,,UCH,0=off;1=on,,Saturday recirculation state,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
 r,,,SundayRecirculationState,Sunday recirculation state,,,b509,0d8700,onoff,,UCH,0=off;1=on,,Sunday recirculation state,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
 w,,install,SundayRecirculationState,Sunday recirculation state,,,b509,0e8700,onoff,,UCH,0=off;1=on,,Sunday recirculation state,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
-r,,,RoomTempMaxAllowed,Max Allowed Room Temp,,,b509,0d3200,value,,D2C,,°C,register value
-w,,install,RoomTempMaxAllowed,Max Allowed Room Temp,,,b509,0e3200,value,,D2C,,°C,register value
-r,,,RoomTempCorr,Room Temp Correction,,,b509,0d3300,value,,D2C,,°C,register value
-w,,install,RoomTempCorr,Room Temp Correction,,,b509,0e3300,value,,D2C,,°C,register value
-r,,,OutsideTempCorr,Outside Temp Correction,,,b509,0d3600,value,,D2C,,°C,register value
-w,,install,OutsideTempCorr,Outside Temp Correction,,,b509,0e3600,value,,D2C,,°C,register value
-r,,,RoomTempCorrFact,Room Temp Factory Correction: Room Temp Correction (factory calibrated),,,b509,0d3900,value,,D2C,,°C,register value
-w,,install,RoomTempCorrFact,Room Temp Factory Correction: Room Temp Correction (factory calibrated),,,b509,0e3900,value,,D2C,,°C,register value
+r,,,RoomTempMaxAllowed,Max Allowed Room Temp,,,b509,0d3200,value,,D2C,,°C,temperature
+w,,install,RoomTempMaxAllowed,Max Allowed Room Temp,,,b509,0e3200,value,,D2C,,°C,temperature
+r,,,RoomTempCorr,Room Temp Correction,,,b509,0d3300,value,,D2C,,°C,temperature
+w,,install,RoomTempCorr,Room Temp Correction,,,b509,0e3300,value,,D2C,,°C,temperature
+r,,,OutsideTempCorr,Outside Temp Correction,,,b509,0d3600,value,,D2C,,°C,temperature
+w,,install,OutsideTempCorr,Outside Temp Correction,,,b509,0e3600,value,,D2C,,°C,temperature
+r,,,RoomTempCorrFact,Room Temp Factory Correction: Room Temp Correction (factory calibrated),,,b509,0d3900,value,,D2C,,°C,temperature
+w,,install,RoomTempCorrFact,Room Temp Factory Correction: Room Temp Correction (factory calibrated),,,b509,0e3900,value,,D2C,,°C,temperature
 r,,,HeatCurve,Heat Curve,,,b509,0d5c00,value,,UIN,100,,Heat Curv
 w,,install,HeatCurve,Heat Curve,,,b509,0e5c00,value,,UIN,100,,Heat Curv
-r,,,DHWTempMaxAllowed,Max Allowed DHW Temp,,,b509,0d5e00,value,,D2C,,°C,register value
-w,,install,DHWTempMaxAllowed,Max Allowed DHW Temp,,,b509,0e5e00,value,,D2C,,°C,register value
-r,,,DHWScheduleOptEnable,DHWScheduleOptEnable: DHW Schedule Opt Enable,,,b509,0d5f00,value,,UCH,0=off;1=on,,register value
-w,,install,DHWScheduleOptEnable,DHWScheduleOptEnable: DHW Schedule Opt Enable,,,b509,0e5f00,value,,UCH,0=off;1=on,,register value
-r,,,DHWOptEnable,DHW Option Enable,,,b509,0d6000,value,,UCH,0=off;1=on,,register value
-w,,install,DHWOptEnable,DHW Option Enable,,,b509,0e6000,value,,UCH,0=off;1=on,,register value
-r,,,AutoTimeCorr,Auto Time Correction,,,b509,0d7200,value,,UCH,0=off;1=on,,register value
-w,,install,AutoTimeCorr,Auto Time Correction,,,b509,0e7200,value,,UCH,0=off;1=on,,register value
+r,,,DHWTempMaxAllowed,Max Allowed DHW Temp,,,b509,0d5e00,value,,D2C,,°C,temperature
+w,,install,DHWTempMaxAllowed,Max Allowed DHW Temp,,,b509,0e5e00,value,,D2C,,°C,temperature
+r,,,DHWScheduleOptEnable,DHWScheduleOptEnable: DHW Schedule Opt Enable,,,b509,0d5f00,value,,UCH,0=off;1=on,,
+w,,install,DHWScheduleOptEnable,DHWScheduleOptEnable: DHW Schedule Opt Enable,,,b509,0e5f00,value,,UCH,0=off;1=on,,
+r,,,DHWOptEnable,DHW Option Enable,,,b509,0d6000,value,,UCH,0=off;1=on,,
+w,,install,DHWOptEnable,DHW Option Enable,,,b509,0e6000,value,,UCH,0=off;1=on,,
+r,,,AutoTimeCorr,Auto Time Correction,,,b509,0d7200,value,,UCH,0=off;1=on,,
+w,,install,AutoTimeCorr,Auto Time Correction,,,b509,0e7200,value,,UCH,0=off;1=on,,
 r,,,PrevHeatCurve,Prev Heat Curve,,,b509,0d7500,value,,UIN,100,,Previous Heat Curve Setting
-r,,,MaintenanceAlarm,Maintenance Alarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,register value
-w,,install,MaintenanceAlarm,Maintenance Alarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,register value
-r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0d7000,value,,ULG,,,register value
-w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0e7000,value,,ULG,,,register value
-r,,,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0d6e00,value,,UCH,0=off;1=on,,register value
-w,,install,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0e6e00,value,,UCH,0=off;1=on,,register value
-r,,,Preheat,Preheat,,,b509,0d6c00,value,,UCH,0=off;1=on,,register value
-w,,install,Preheat,Preheat,,,b509,0e6c00,value,,UCH,0=off;1=on,,register value
-r,,,RecirculationOptEnable,Recirculation Option Enable,,,b509,0d6d00,value,,UCH,0=off;1=on,,register value
-w,,install,RecirculationOptEnable,Recirculation Option Enable,,,b509,0e6d00,value,,UCH,0=off;1=on,,register value
+r,,,MaintenanceAlarm,Maintenance Alarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,
+w,,install,MaintenanceAlarm,Maintenance Alarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,
+r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0d7000,value,,ULG,,,
+w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0e7000,value,,ULG,,,
+r,,,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0d6e00,value,,UCH,0=off;1=on,,
+w,,install,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0e6e00,value,,UCH,0=off;1=on,,
+r,,,Preheat,Preheat,,,b509,0d6c00,value,,UCH,0=off;1=on,,
+w,,install,Preheat,Preheat,,,b509,0e6c00,value,,UCH,0=off;1=on,,
+r,,,RecirculationOptEnable,Recirculation Option Enable,,,b509,0d6d00,value,,UCH,0=off;1=on,,
+w,,install,RecirculationOptEnable,Recirculation Option Enable,,,b509,0e6d00,value,,UCH,0=off;1=on,,
 r,,,MaintenanceTel,Maintenance Telephone,,,b509,0d6100,value,,STR:13,,,Maintenance Telephone
 w,,install,MaintenanceTel,Maintenance Telephone,,,b509,0e6100,value,,STR:13,,,Maintenance Telephone
-r,,,RoomTempOptEnable,Room Temp Option Enable,,,b509,0d6b00,value,,UCH,0=off;1=on,,register value
-w,,install,RoomTempOptEnable,Room Temp Option Enable,,,b509,0e6b00,value,,UCH,0=off;1=on,,register value
+r,,,RoomTempOptEnable,Room Temp Option Enable,,,b509,0d6b00,value,,UCH,0=off;1=on,,
+w,,install,RoomTempOptEnable,Room Temp Option Enable,,,b509,0e6b00,value,,UCH,0=off;1=on,,
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

@@ -1,73 +1,73 @@
 type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
 *r,
 *w,
-r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,register value
-r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,register value
-r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,register value
-r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,register value
-r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,register value
-r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,register value
-r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,register value
-r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,register value
-r,,,FlowTempDesired,Vorlaufsolltemperatur: Desired flow temperature of MK1,,,b509,0d4600,value,,D1C,,°C,register value
-r,,,FlowTemp,VF1 Sensor: Vorlauftemperatur,,,b509,0d0100,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,OutsideTemp,Außentemp. Sensor: current outside temperature (valid only if a sensor is connected to the VR60),,,b509,0d0600,temp,,D2C,,°C,register value,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,register value
-r,,,IsInHoliday,Ferienprogramm aktiv: Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit,,,b509,0d2700,value,,UCH,,,register value
-r,,,IsInParty,Partyfunktion aktiv: Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC,,,b509,0d4e00,value,,UCH,,,register value
-r,,,CleaningLady,Sparfunktion: saving function is activated until read value * 1/2 h,,,b509,0d4b00,value,,UCH,,,register value
-r,,,IsInStorageFilling,Speicherladung aktiv: heating circuit is locked because of ongoing tank loading unless parallel loading has been activated,,,b509,0d4700,value,,UCH,0=no;1=yes,,register value
-r,,,MixerDutyCycle,"ED Mischer: Teleswitch,Pumpe,Zirkulationspumpe,WW Anforderung,WW Freigabe",,,b509,0d0e00,value,,SCH,,,register value
-r,,,HcPumpPort,HK2-P: Status of mixer cicuit pump on MK1P,,,b509,0d9100,value,,UCH,0=off;1=on,,register value
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
+r,,,FlowTempDesired,Vorlaufsolltemperatur: Desired flow temperature of MK1,,,b509,0d4600,value,,D1C,,°C,Temperatur
+r,,,FlowTemp,VF1 Sensor: Vorlauftemperatur,,,b509,0d0100,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,OutsideTemp,Außentemp. Sensor: current outside temperature (valid only if a sensor is connected to the VR60),,,b509,0d0600,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,TeleSwitch,State of the Teleswitch,,,b509,0d0a00,value,,UCH,0=off;1=on,,
+r,,,IsInHoliday,Ferienprogramm aktiv: Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit,,,b509,0d2700,value,,UCH,,,
+r,,,IsInParty,Partyfunktion aktiv: Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC,,,b509,0d4e00,value,,UCH,,,
+r,,,CleaningLady,Sparfunktion: saving function is activated until read value * 1/2 h,,,b509,0d4b00,value,,UCH,,,
+r,,,IsInStorageFilling,Speicherladung aktiv: heating circuit is locked because of ongoing tank loading unless parallel loading has been activated,,,b509,0d4700,value,,UCH,0=no;1=yes,,
+r,,,MixerDutyCycle,"ED Mischer: Teleswitch,Pumpe,Zirkulationspumpe,WW Anforderung,WW Freigabe",,,b509,0d0e00,value,,SCH,,,
+r,,,HcPumpPort,HK2-P: Status of mixer cicuit pump on MK1P,,,b509,0d9100,value,,UCH,0=off;1=on,,
 r,,,CfgHeatSinkType,Kreis Typ,,,b509,0d3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,Type of the configurable mixer circuit
 w,,install,CfgHeatSinkType,Kreis Typ,,,b509,0e3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,Type of the configurable mixer circuit
-r,,,OperatingMode,Betriebsart: Operating mode of mixer circuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-w,,,OperatingMode,Betriebsart: Operating mode of mixer circuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-r,,,TempDesired,Solltemperatur: Day temperature setpoint of the circuit,,,b509,0d3200,value,,D1C,,°C,register value
-w,,,TempDesired,Solltemperatur: Day temperature setpoint of the circuit,,,b509,0e3200,value,,D1C,,°C,register value
-r,,,TempDesiredLow,Absenksollwert: Night temperature setpoint of the circuit,,,b509,0d3300,value,,D1C,,°C,register value
-w,,,TempDesiredLow,Absenksollwert: Night temperature setpoint of the circuit,,,b509,0e3300,value,,D1C,,°C,register value
-r,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0d3500,value,,UIN,100,,register value
-w,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0e3500,value,,UIN,100,,register value
-r,,,OtShutdownLimit,"AT-Abschaltgrenze: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0d3600,value,,UCH,,°C,register value
-w,,,OtShutdownLimit,"AT-Abschaltgrenze: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0e3600,value,,UCH,,°C,register value
-r,,,HcPumpIdlePeriod,Pumpensperrzeit: Time pump is not running in a pause at least,,,b509,0d4f00,value,,UCH,,min,register value
-w,,,HcPumpIdlePeriod,Pumpensperrzeit: Time pump is not running in a pause at least,,,b509,0e4f00,value,,UCH,,min,register value
-r,,,FlowTempMin,Minimaler Vorlaufsollwert: For a heat demand the desired flow temperature will at least be this value,,,b509,0d3000,value,,UCH,,°C,register value
-w,,,FlowTempMin,Minimaler Vorlaufsollwert: For a heat demand the desired flow temperature will at least be this value,,,b509,0e3000,value,,UCH,,°C,register value
-r,,,FlowTempMax,Maximaler Vorlaufsollwert: For a heat demand the desired flow temperature will maximal be this value,,,b509,0d3100,value,,UCH,,°C,register value
-w,,,FlowTempMax,Maximaler Vorlaufsollwert: For a heat demand the desired flow temperature will maximal be this value,,,b509,0e3100,value,,UCH,,°C,register value
-r,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,register value
-w,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,register value
-r,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-w,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-r,,,FloorPavingDryingDay,Estrichtrocknungstag: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,register value
-w,,install,FloorPavingDryingDay,Estrichtrocknungstag: Current day of floor paving drying routine,,,b509,0e3b00,value,,UCH,,,register value
-r,,,CoolingRequest,Anforderung Kühlung,,,b509,0db600,value,,UCH,0=no;1=yes,,register value
-r,,,AutocoolTestModeActive,Automatische Kühlung Testbetrieb,,,b509,0db500,value,,UCH,0=no;1=yes,,register value
-r,,,SystemMode,Systemmodus,,,b509,0db400,value,,UCH,,,register value
-r,,,CoolingSupported,Automatische Kühlung freigegeben,,,b509,0db900,value,,UCH,0=no;1=yes,,register value
-r,,,DWMOffToHeatingDelay,Sperrzeit Bereitschaft - Heizen,,,b509,0db700,value,,UCH,,,register value
-r,,,DWMOffToCoolingDelay,Sperrzeit Bereitschaft -> Kühlen,,,b509,0db800,value,,UCH,,,register value
-r,,,CoolingStartOffset,Kühlen start Offset,,,b509,0dba00,value,,D1C,,,register value
-w,,,CoolingStartOffset,Kühlen start Offset,,,b509,0eba00,value,,D1C,,,register value
-r,,,Tot24h,24h Mittelwert Aussentemperatur: Outside temperature mean value over 24 hours,,,b509,0dbb00,value,,D2C,,°C,register value
-r,,,TotAverageTime,Außentemperatur Mittelungszeitraum,,,b509,0dbc00,value,,UCH,,,register value
-r,,,CoolingEfficiencyState,Effizienzzustand Kühlung,,,b509,0dbd00,value,,UCH,,,register value
-r,,,EfficiencyHysteresisMin,Minimale Raum zu Vorlauftemperaturdifferenz,,,b509,0dbe00,value,,D1C,,,register value
-w,,,EfficiencyHysteresisMin,Minimale Raum zu Vorlauftemperaturdifferenz,,,b509,0ebe00,value,,D1C,,,register value
-r,,,CoolingOperatingMode,Betriebsart Kühlen: Operating mode of cooling circuit,,,b509,0dbf00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-w,,,CoolingOperatingMode,Betriebsart Kühlen: Operating mode of cooling circuit,,,b509,0ebf00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,register value
-r,,,TempDiffInOutdoor,Zulässige Raum zu Außentemperaturunterschreitung,,,b509,0dc100,value,,D1C,,,register value
-r,,,HcManualWorkingModeTriggeringActive,Manuelle Kühlung aktiviert,,,b509,0dc200,value,,UCH,,,register value
-r,,,HcMode,Heizkreismodus,,,b509,0dc300,value,,UCH,,,register value
-r,,,HcModeAutomaticState,Heizkreismodus automatische Kühlung,,,b509,0dc400,value,,UCH,,,register value
-r,,,HcModeManualState,Heizkreismodus manuelle Kühlung,,,b509,0dc500,value,,UCH,,,register value
-r,,,CoolingOpmodeAutoState,Kühlbetriebsart Auto Zustand,,,b509,0dc600,value,,UCH,,,register value
-r,,,CoolingModeAutomaticState,CoolingModeAutomaticState,,,b509,0dc700,value,,UCH,,,register value
-r,,,CoolingWhileHolidaySupported,Kühlung freigegeben während Urlaubszeitraum,,,b509,0dc800,value,,UCH,,,register value
-r,,,RcRoomTemp,RcRoomTemp,,,b509,0dc900,value,,D2C,,°C,register value
-r,,,SystemWithCooling,SystemWithCooling,,,b509,0dd400,value,,UCH,0=no;1=yes,,register value
+r,,,OperatingMode,Betriebsart: Operating mode of mixer circuit,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,OperatingMode,Betriebsart: Operating mode of mixer circuit,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,TempDesired,Solltemperatur: Day temperature setpoint of the circuit,,,b509,0d3200,value,,D1C,,°C,Temperatur
+w,,,TempDesired,Solltemperatur: Day temperature setpoint of the circuit,,,b509,0e3200,value,,D1C,,°C,Temperatur
+r,,,TempDesiredLow,Absenksollwert: Night temperature setpoint of the circuit,,,b509,0d3300,value,,D1C,,°C,Temperatur
+w,,,TempDesiredLow,Absenksollwert: Night temperature setpoint of the circuit,,,b509,0e3300,value,,D1C,,°C,Temperatur
+r,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0d3500,value,,UIN,100,,Heizkurve: Heating curve
+w,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0e3500,value,,UIN,100,,Heizkurve: Heating curve
+r,,,OtShutdownLimit,"AT-Abschaltgrenze: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0d3600,value,,UCH,,°C,Solltemperatur
+w,,,OtShutdownLimit,"AT-Abschaltgrenze: For outside temperatures higher than this, there is no heat demand generated anymore",,,b509,0e3600,value,,UCH,,°C,Solltemperatur
+r,,,HcPumpIdlePeriod,Pumpensperrzeit: Time pump is not running in a pause at least,,,b509,0d4f00,value,,UCH,,min,Minuten
+w,,,HcPumpIdlePeriod,Pumpensperrzeit: Time pump is not running in a pause at least,,,b509,0e4f00,value,,UCH,,min,Minuten
+r,,,FlowTempMin,Minimaler Vorlaufsollwert: For a heat demand the desired flow temperature will at least be this value,,,b509,0d3000,value,,UCH,,°C,Temperatur
+w,,,FlowTempMin,Minimaler Vorlaufsollwert: For a heat demand the desired flow temperature will at least be this value,,,b509,0e3000,value,,UCH,,°C,Temperatur
+r,,,FlowTempMax,Maximaler Vorlaufsollwert: For a heat demand the desired flow temperature will maximal be this value,,,b509,0d3100,value,,UCH,,°C,Temperatur
+w,,,FlowTempMax,Maximaler Vorlaufsollwert: For a heat demand the desired flow temperature will maximal be this value,,,b509,0e3100,value,,UCH,,°C,Temperatur
+r,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,Stunden
+w,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,Stunden
+r,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,FloorPavingDryingDay,Estrichtrocknungstag: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,
+w,,install,FloorPavingDryingDay,Estrichtrocknungstag: Current day of floor paving drying routine,,,b509,0e3b00,value,,UCH,,,
+r,,,CoolingRequest,Anforderung Kühlung,,,b509,0db600,value,,UCH,0=no;1=yes,,
+r,,,AutocoolTestModeActive,Automatische Kühlung Testbetrieb,,,b509,0db500,value,,UCH,0=no;1=yes,,
+r,,,SystemMode,Systemmodus,,,b509,0db400,value,,UCH,,,
+r,,,CoolingSupported,Automatische Kühlung freigegeben,,,b509,0db900,value,,UCH,0=no;1=yes,,
+r,,,DWMOffToHeatingDelay,Sperrzeit Bereitschaft - Heizen,,,b509,0db700,value,,UCH,,,
+r,,,DWMOffToCoolingDelay,Sperrzeit Bereitschaft -> Kühlen,,,b509,0db800,value,,UCH,,,
+r,,,CoolingStartOffset,Kühlen start Offset,,,b509,0dba00,value,,D1C,,,
+w,,,CoolingStartOffset,Kühlen start Offset,,,b509,0eba00,value,,D1C,,,
+r,,,Tot24h,24h Mittelwert Aussentemperatur: Outside temperature mean value over 24 hours,,,b509,0dbb00,value,,D2C,,°C,Temperatur
+r,,,TotAverageTime,Außentemperatur Mittelungszeitraum,,,b509,0dbc00,value,,UCH,,,
+r,,,CoolingEfficiencyState,Effizienzzustand Kühlung,,,b509,0dbd00,value,,UCH,,,
+r,,,EfficiencyHysteresisMin,Minimale Raum zu Vorlauftemperaturdifferenz,,,b509,0dbe00,value,,D1C,,,
+w,,,EfficiencyHysteresisMin,Minimale Raum zu Vorlauftemperaturdifferenz,,,b509,0ebe00,value,,D1C,,,
+r,,,CoolingOperatingMode,Betriebsart Kühlen: Operating mode of cooling circuit,,,b509,0dbf00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,CoolingOperatingMode,Betriebsart Kühlen: Operating mode of cooling circuit,,,b509,0ebf00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,TempDiffInOutdoor,Zulässige Raum zu Außentemperaturunterschreitung,,,b509,0dc100,value,,D1C,,,
+r,,,HcManualWorkingModeTriggeringActive,Manuelle Kühlung aktiviert,,,b509,0dc200,value,,UCH,,,
+r,,,HcMode,Heizkreismodus,,,b509,0dc300,value,,UCH,,,
+r,,,HcModeAutomaticState,Heizkreismodus automatische Kühlung,,,b509,0dc400,value,,UCH,,,
+r,,,HcModeManualState,Heizkreismodus manuelle Kühlung,,,b509,0dc500,value,,UCH,,,
+r,,,CoolingOpmodeAutoState,Kühlbetriebsart Auto Zustand,,,b509,0dc600,value,,UCH,,,
+r,,,CoolingModeAutomaticState,CoolingModeAutomaticState,,,b509,0dc700,value,,UCH,,,
+r,,,CoolingWhileHolidaySupported,Kühlung freigegeben während Urlaubszeitraum,,,b509,0dc800,value,,UCH,,,
+r,,,RcRoomTemp,RcRoomTemp,,,b509,0dc900,value,,D2C,,°C,Temperatur
+r,,,SystemWithCooling,SystemWithCooling,,,b509,0dd400,value,,UCH,0=no;1=yes,,
 r,,,CoolingTimer_Monday,Zeitfenster Montag,,,b515,0003,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,CoolingTimer_Monday,Zeitfenster Montag,,,b515,0003,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,CoolingTimer_Tuesday,Zeitfenster Dienstag,,,b515,0103,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
