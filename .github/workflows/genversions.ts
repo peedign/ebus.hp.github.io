@@ -1,5 +1,5 @@
 import {createReadStream} from "fs";
-import {stat} from "fs/promises";
+import {readFile, stat} from "fs/promises";
 import {normalize} from "path";
 import {createInterface} from "readline";
 
@@ -33,9 +33,27 @@ const calcVersion = async (file: string): Promise<Entry> => {
 };
 
 (async (): Promise<Record<string, Entry>> => {
+  const files = process.argv.slice(2);
+  let previous: Record<string, Entry> = {};
+  if (files[0]==='-i') {
+    const input = files.splice(0, 2)[1];
+    try {
+      previous = JSON.parse(await readFile(input, 'utf-8'));
+    } catch (e) {
+      console.error('unable to read previous input: '+e);
+    }
+  }
   const ret: Record<string, Entry> = {};
-  for (const file of process.argv.slice(2)) {
-    ret[normalize(file)] = await calcVersion(file);
+  for (const file of files) {
+    const version = await calcVersion(file);
+    const normFile = normalize(file);
+    const prev = previous[normFile];
+    if (prev) {
+      if (version.hash === prev.hash && version.size == prev.size) {
+        version.mtime = Math.min(prev.mtime, version.mtime); // keep previous mtime
+      }
+    }
+    ret[normFile] = version;
   }
   return ret;
 })().then(entries => console.log(JSON.stringify(entries, undefined, 2)), console.error);
