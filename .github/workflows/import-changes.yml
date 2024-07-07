@@ -41,8 +41,12 @@ jobs:
         mv ebusd-configuration/outcsv.de/@ebusd/ebus-typespec/* de/
     - name: Generate mapping
       run: |
-        cat mapping.md.tmpl > mapping.md
-        ((cd ebusd-configuration/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md ebusd-configuration/src)
+        date=$(date +%Y-%m-%d)
+        ref=$(cd ebusd-configuration && git rev-parse HEAD)
+        shortref=$(cd ebusd-configuration && git rev-parse --short HEAD)
+        branch=$(cd ebusd-configuration && git branch --show-current)
+        cat mapping.md.tmpl | sed -e "s#\$date#$date#g" -e "s#\$ref#$ref#g" -e "s#\$shortref#$shortref#g" -e "s#\$branch#$branch#g" > mapping.md
+        ((cd ebusd-configuration/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md ebusd-configuration/src $branch)
     - name: Unstash versions
       continue-on-error: true
       run: |
