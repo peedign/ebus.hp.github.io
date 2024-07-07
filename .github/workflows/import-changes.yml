@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         persist-credentials: false
-        fetch-depth: 0
+        fetch-depth: 1
         submodules: true
     - name: Use Node.js node 20.x
       uses: actions/setup-node@v4
@@ -44,7 +44,7 @@ jobs:
         date=$(date +%Y-%m-%d)
         ref=$(cd ebusd-configuration && git rev-parse HEAD)
         shortref=$(cd ebusd-configuration && git rev-parse --short HEAD)
-        branch=$(cd ebusd-configuration && git branch --show-current)
+        branch=$(egrep "submodule |branch =" .gitmodules |egrep -A1 'submodule "ebusd-configuration"'|egrep branch|head -n 1|sed -e 's#.*= *##')
         cat mapping.md.tmpl | sed -e "s#\$date#$date#g" -e "s#\$ref#$ref#g" -e "s#\$shortref#$shortref#g" -e "s#\$branch#$branch#g" > mapping.md
         ((cd ebusd-configuration/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md ebusd-configuration/src $branch)
     - name: Unstash versions
