@@ -119,8 +119,8 @@ r,,,HwcUnderHundredStarts,BW_UnderHundred_SwiActi_DK: DHW switch cycles under hu
 r,,,EbusSourceOn,EbusSourceOn_DK: Activation signal of the eBus source,,,b509,0d3400,value,,UCH,0=off;1=on,,
 r,,,Fluegasvalve,Fluegasvalve_DK: flue gasvalve activation signal,,,b509,0d3c00,value,,UCH,0=off;1=on,,
 r,,,ExternalFaultmessage,External_Faultmessage_DK: external fault message,,,b509,0d3e00,value,,UCH,0=off;1=on,,
-r,,,R_ckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,b509,0d4700,value,,UCH,240=off;15=on,,feedback gasvalve (from ASIC)
-r,,,R_ckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,b509,0d4800,value,,UCH,240=off;15=on,,feedback gasvalve (from Microcontroller)
+r,,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,b509,0d4700,value,,UCH,240=off;15=on,,feedback gasvalve (from ASIC)
+r,,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,b509,0d4800,value,,UCH,240=off;15=on,,feedback gasvalve (from Microcontroller)
 r,,,Ignitor,SD_Ignitor_DK,,,b509,0d4900,value,,UCH,240=off;15=on,,igniton activated
 r,,,Fan,Fan_DK: Fan activation signal,,,b509,0d4a00,value,,UCH,0=no;1=yes,,
 r,,,HwcTypes,DHW_Types_DK: DHW type of the appliance,,,b509,0d4b00,value,,UCH,,,
@@ -154,7 +154,7 @@ r,,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK,,,b509,0dcf00,value,,UCH,240=no
 r,,,TemplimiterWithNTC,SD_STL_with_NTC,,,b509,0dd200,value,,UCH,240=no;15=yes,,Safety temperature limit concept:1 = safety temp. Limit check with NTC0 = safety temp. Limit check with contact
 r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK,,,b509,0dd300,value,,UCH,240=no;15=yes,,all IFC faults are volataile
 r,,,DisplayMode,DisplayMode_DK: Display mode of the aplliance,,,b509,0dda00,value,,UCH,,,
-r,,,R_ckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,b509,0ddb00,value,,UCH,240=off;15=on,,Gasvalve activation signal (from Microcontroller)
+r,,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,b509,0ddb00,value,,UCH,240=off;15=on,,Gasvalve activation signal (from Microcontroller)
 r,,,InitialisationEEPROM,InitialisationEEPROM: Initialisation off all EEPROM values (done in the production),,,b509,0ddc00,value,,UCH,0=no;1=yes,,
 r,,,DefaultSettingEEPROM,DefaultSettingEEPROM_DK: default value setting off all EEPROM values (done in the production),,,b509,0ddd00,value,,UCH,0=no;1=yes,,
 r,,,TimerInputHc,TimerInputCH_DK: timer input (block heatdemand),,,b509,0dde00,value,,UCH,0=off;1=on,,
