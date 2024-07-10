@@ -14,8 +14,8 @@ r,,,RoomTemp,RaumtemperaturIst: raw value current room temperature and sensorsta
 r,,,OutsideTemp,OutsideTempSensor: current outdoor temperature and sensorstate,,,b509,0d6200,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d5f00,value,,BDY,,,weekday
 w,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0e5f00,value,,BDY,,,weekday
-r,,,Time,current time,,,b509,0d6000,value,,HTI,,,time
-w,,,Time,current time,,,b509,0e6000,value,,HTI,,,time
+r,,,Time,current time,,,b509,0d6000,value,,VTI,,,time
+w,,,Time,current time,,,b509,0e6000,value,,VTI,,,time
 r,,,Date,current date,,,b509,0d6100,value,,HDA:3,,,date
 w,,,Date,current date,,,b509,0e6100,value,,HDA:3,,,date
 r,,,StatusDcf,StatusDcf: status of the DCF signal (0x00 = no DCF-Signal detected / no RTC value; 0x01 = DCF-signal detected; 0x02 = DCF-signal is being interpreted; 0x03 = DCF-data valid; 0x04 = RTC-data is valid),,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state
@@ -77,8 +77,8 @@ r,,,HwcParallelLoading,DHW_Parallel_Loading: enable parallel tank loading,,,b509
 w,,install,HwcParallelLoading,DHW_Parallel_Loading: enable parallel tank loading,,,b509,0e4800,value,,UCH,0=off;1=on,,
 r,,,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
 w,,install,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
-r,,,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0d4a00,value,,HTI,,,time
-w,,install,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0e4a00,value,,HTI,,,time
+r,,,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0d4a00,value,,VTI,,,time
+w,,install,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0e4a00,value,,VTI,,,time
 r,,,HwcCircuitActive,DHW_CircuitActive: domestic hot water circuit is enabled,,,b509,0d4b00,value,,UCH,0=no;1=yes,,
 w,,install,HwcCircuitActive,DHW_CircuitActive: domestic hot water circuit is enabled,,,b509,0e4b00,value,,UCH,0=no;1=yes,,
 r,,,AutoOffMode,AutoOFF_Mode,,,b509,0d4d00,value,,UCH,0=frostprotection;1=lowering;2=eco,,operation during the lowering time
@@ -180,7 +180,7 @@ w,,,HwcTimer_Saturday,Periods Saturday,,,b515,0501,from,,TTM,,,from,to,,TTM,,,to
 r,,,HwcTimer_Sunday,Periods Sunday,,,b515,0601,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HwcTimer_Sunday,Periods Sunday,,,b515,0601,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,HcTimer_Monday,Periods Monday,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HcTimer_Monday,Periods Monday,,,b515,0000,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
@@ -211,5 +211,5 @@ w,,,Setpoints_Saturday,Temperatures Saturday,,,b505,2e06,temp,,D1C,,°C,temperat
 r,,,Setpoints_Sunday,Temperatures Sunday,,,b504,1907,value,,IGN:1,,,,temp,,D1C,,°C,temperature,temp_1,,D1C,,°C,temperature,temp_2,,D1C,,°C,temperature
 w,,,Setpoints_Sunday,Temperatures Sunday,,,b505,2e07,temp,,D1C,,°C,temperature,temp_1,,D1C,,°C,temperature,temp_2,,D1C,,°C,temperature
 r,,,Currentservice,Current service message,,,b503,0002,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Servicehistory,Service message history,,,b503,0102,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Servicehistory,Service message history,,,b503,0102,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearservicehistory,Clear service message history,,,b503,0202,cleared,s,UCH,0=no;1=yes,,

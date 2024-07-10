@@ -431,5 +431,5 @@ w,,,Z3Timer_Friday,timer heating friday,,,b555,a6020004,slotindex,,UCH,,,array i
 w,,,Z3Timer_Saturday,timer heating saturday,,,b555,a6020005,slotindex,,UCH,,,array index for the zones. Array Index start at 0 for the first element,slotcount,,UCH,,,Number of total slots in the array. May be Zero.,htm,,HTM,,,,htm_1,,HTM,,,,slottemp,,UIN,10,,Temperature stored in the slot. Degrees Celsius
 w,,,Z3Timer_Sunday,timer heating sunday,,,b555,a6020006,slotindex,,UCH,,,array index for the zones. Array Index start at 0 for the first element,slotcount,,UCH,,,Number of total slots in the array. May be Zero.,htm,,HTM,,,,htm_1,,HTM,,,,slottemp,,UIN,10,,Temperature stored in the slot. Degrees Celsius
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

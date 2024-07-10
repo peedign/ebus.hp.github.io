@@ -217,7 +217,7 @@ r,,,Injection,Injection,,,b509,0d1f00,value,,UCH,0=off;1=on,,
 r,,,Date,Actual Date,,,b509,0d2900,value,,HDA:3,,,date
 r,,,CompDemand,Compressor_Demand: shows that regulation wants to start the heat source,,,b509,0d5400,value,,UCH,0=no;1=yes,,
 r,,,Weekday,Actual Weekday,,,b509,0d2a00,value,,BDY,,,weekday
-r,,,Time,Actual Time,,,b509,0d2800,value,,HTI,,,time
+r,,,Time,Actual Time,,,b509,0d2800,value,,VTI,,,time
 r,,,HeatPumpStatus,Heat_Pump_Status: contains the status of the heatpump shown to the installer. Values do not fit here. Please ask R&D for values.,,,b509,0dd000,value,,UCH,0=off;3=heat;6=standby;7=otshutdown;8=water,,heating state
 u,,,HeatPumpStatus,Heat_Pump_Status: contains the status of the heatpump shown to the installer. Values do not fit here. Please ask R&D for values.,,,b509,29d000,value,,IGN:2,,,,value,,UCH,0=off;3=heat;6=standby;7=otshutdown;8=water,,heating state
 r,,,BackupType,Ext_Backup: Configuration of backup heater installation location,,,b509,0d9200,value,,UCH,0=not_present;1=externalheat;2=externalwater;3=externalheatandwater;4=internalheatandwater,,
@@ -289,8 +289,8 @@ r,,,RebootCounter,RebootCounter: number of appliance starts,,,b509,0df500,value,
 r,,,T19MaxToCompOff,T19_Max_To_Compressor_Off: limit on compressor outlet temp that leads to an overpressure situation,,,b509,0d2b01,value,,D2C,,°C,temperature
 r,,,EnergyBalancingRelease,read/write register,,,b509,0dd100,value,,UCH,0=off;1=on,,
 w,,,EnergyBalancingRelease,read/write register,,,b509,0ed100,value,,UCH,0=off;1=on,,
-r,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,0dd300,value,,HTI,,,time
-u,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,29d300,value,,IGN:2,,,,value,,HTI,,,time
+r,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,0dd300,value,,VTI,,,time
+u,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,29d300,value,,IGN:2,,,,value,,VTI,,,time
 r,,,PowerCutPreloading,default *r for register,,,b509,0df400,value,,UCH,0=off;1=on,,
 w,,,PowerCutPreloading,default *whwc,,25,b509,0ef400,value,,UCH,0=off;1=on,,
 r,,,HcParallelStorageFillingEnabled,"HcParallelTankFillingEnabled: BMR: indicates that heating circuits can keep running at dhw loading; for heatpumps, this is 1 if there is a heat buffer, 0 otherwise",,,b509,0d5500,value,,UCH,0=no;1=yes,,
@@ -317,7 +317,7 @@ w,,install,StorageTempTopOffset,T_HB_Top_Offset: Offset for calibrating temperat
 w,,install,Iotest,I/O test,,,b506,02,value,,UCH,0=off;1=coolvalve;2=sourcepump;3=hcpump;4=injector;5=caseheater;6=backup;7=hwchcvalve;8=cirpump;9=sc2pump;10=hc2pump;11=hc2mixeropen;12=hc2mixerclose,,
 w,,install,Ioteststop,stop I/O test,,,b506,01,
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,DateTime,date/time,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state,btime,,BTI,,,time,bdate,,BDA,,,date,temp,,D2B,,°C,temperature
 r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature

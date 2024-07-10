@@ -17,8 +17,8 @@ r,,,RoomTemp,Raumisttemp: raw value current room temperature and sensorstate (wi
 r,,,OutsideTemp,Außentemp. Sensor: Außentemperatur und Sensorstatus,,,b509,0d6200,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d5f00,value,,BDY,,,Wochentag
 w,,,ActualWeekday,Aktueller Wochentag,,,b509,0e5f00,value,,BDY,,,Wochentag
-r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,HTI,,,Uhrzeit
-w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,HTI,,,Uhrzeit
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,VTI,,,Uhrzeit
+w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,VTI,,,Uhrzeit
 r,,,Date,Aktuelles Datum,,,b509,0d6100,value,,HDA:3,,,Datum
 w,,,Date,Aktuelles Datum,,,b509,0e6100,value,,HDA:3,,,Datum
 r,,,StatusDcf,Status DCF: status of the DCF signal (0x00 = no DCF-Signal detected / no RTC value; 0x01 = DCF-signal detected; 0x02 = DCF-signal is being interpreted; 0x03 = DCF-data valid; 0x04 = RTC-data is valid),,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus
@@ -61,8 +61,8 @@ w,,install,Hc1LineMatchingAdaption,HC1_LineMatchingAdaption: Abgleich Regelstrec
 r,,,Hc1ActualFlowTempDesired,Aktuelle Vorlauftemperatur Soll Heizkreis 1: calculated flow temperature setpoint of the heating circuit,,,b509,0d3e00,value,,D1C,,°C,Temperatur
 r,,,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
 w,,install,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
-r,,,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0d4a00,value,,HTI,,,Uhrzeit
-w,,install,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0e4a00,value,,HTI,,,Uhrzeit
+r,,,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0d4a00,value,,VTI,,,Uhrzeit
+w,,install,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0e4a00,value,,VTI,,,Uhrzeit
 r,,,HwcCircuitActive,Warmwasserkreis aktiv: Warmwasserkreis ist eingeschaltet,,,b509,0d4b00,value,,UCH,0=no;1=yes,,
 w,,install,HwcCircuitActive,Warmwasserkreis aktiv: Warmwasserkreis ist eingeschaltet,,,b509,0e4b00,value,,UCH,0=no;1=yes,,
 r,,,PhoneNumber1,Telefonnummer Teil 1: first part of the installer's telephone number,,,b509,0d5400,value,,STR:9,,,Telefonnummer
@@ -121,7 +121,7 @@ w,,,HwcTimer_Saturday,Zeitfenster Samstag,,,b515,0501,from,,TTM,,,von,to,,TTM,,,
 r,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

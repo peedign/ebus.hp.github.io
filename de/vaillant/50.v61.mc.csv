@@ -44,7 +44,7 @@ w,,install,FloorPavingDryingDay,Estrichtrocknung Tag: Aktiver Tag der estrichtro
 r,,,FloorPavingDryingTemp,Estrichtrocknungstemperatur: flow temperature setpoint for the current day of floor pavement drying,,,b509,0d0400,value,,D1C,,°C,Temperatur
 r,,,Weekday,Aktueller Wochentag,,,b509,0d0b00,value,,BDY,,,Wochentag
 r,,,Date,Aktuelles Datum,,,b509,0d0a00,value,,HDA:3,,,Datum
-r,,,Time,Aktuelle Uhrzeit,,,b509,0d0900,value,,HTI,,,Uhrzeit
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d0900,value,,VTI,,,Uhrzeit
 r,,,ActualTempDesired,Akt. Solltemperatur: current setpoint for the second heating circuit considering all basic conditions passed to the control algorithms,,,b509,0d2f00,value,,D1C,,°C,Temperatur
 r,,,DayNightState,"DayNightState: 0 = day, 1 = night",,,b509,0d5000,value,,UCH,,,
 r,,,FrostProtectDelay,Frostschutz-Verzögerung: delay before frost protection is activated,,,b509,0d2500,value,,UCH,,h,Stunden
@@ -76,7 +76,7 @@ r,,,FrostProtConfig,"0 = _FrostProtConfig_Low, 1 = _FrostProtConfig_PumpKick",,,
 r,,,FrostProtState,"FrostProtState: 0 = _Fps_NoFrost, 1 = _Fps_Delay, 2 = _Fps_PumpKick, 3 = _Fps_KickOff, 4 = _Fps_Active",,,b509,0d4b00,value,,UCH,,,
 r,,,ThermostatState,"ThermostatState: 0 = _ThermOn, 1 =_ThermOff",,,b509,0d5100,value,,UCH,,,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

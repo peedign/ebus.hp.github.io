@@ -37,8 +37,8 @@ r,,,OperatingMode,Operation mode,,,b509,0d1500,value,,UCH,0=disabled;1=on;2=off;
 w,,install,OperatingMode,Operation mode,,,b509,0e1500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode
 r,,,Weekday,Day of week,,,b509,0d1600,value,,BDY,,,weekday
 w,,install,Weekday,Day of week,,,b509,0e1600,value,,BDY,,,weekday
-r,,,Time,time,,,b509,0d1700,value,,HTI,,,time
-w,,install,Time,time,,,b509,0e1700,value,,HTI,,,time
+r,,,Time,time,,,b509,0d1700,value,,VTI,,,time
+w,,install,Time,time,,,b509,0e1700,value,,VTI,,,time
 r1,,,Yield,Solar gain,,,b509,0d1e00,value,,UIN,,,
 w,,install,Yield,Solar gain,,,b509,0e1e00,value,,UIN,,,
 r1,,,CollPumpHRuntime,Operation time solar pump,,,b509,0d1f00,uin,,UIN,,,,uin_1,,UIN,,,

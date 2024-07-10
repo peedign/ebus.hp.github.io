@@ -47,7 +47,7 @@ r,,,SumSolGainDayBefore,SumSolarGain_day_before: sum of yesterday's solar gain,,
 r,,,SumSolGain,SumSolarGain: accumulated solar gain,,,b509,0d3300,value,,ULG,,kWh,
 r,,,Weekday,Aktueller Wochentag,,,b509,0d0e00,value,,BDY,,,Wochentag
 r,,,Date,Aktuelles Datum,,,b509,0d0d00,value,,HDA:3,,,Datum
-r,,,Time,Aktuelle Uhrzeit,,,b509,0d0c00,value,,HTI,,,Uhrzeit
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d0c00,value,,VTI,,,Uhrzeit
 r,,,HydraulicScheme,Hydraulikplan: 1..8 nur Solar,,,b509,0d2100,value,,UCH,,,
 r,,,SystemMode,"Systemmodus: 0 = heatpump; 1 = 430 system, must be cyclicly written by the CI",,,b509,0d3d00,value,,UCH,0=off;1=on,,
 r,,,MultifunctionOutput,Multifunktionsausgang: Output of multifunction relay,,,b509,0d0a00,value,,UCH,0=off;1=on,,
@@ -70,7 +70,7 @@ r,,,Hc2zPort,Hk2z_Port: Port replay,,,b509,0d5800,value,,UCH,0=off;1=on,,
 r9,,,YieldThisYear,Ertrag dieses Jahr,,,b509,0d3f00:2;0d3f08:2;0d3f10:2;0d3f18:2;0d3f20:2;0d3f28:2;0d3f30:2;0d3f38:2;0d3f40:2;0d3f48:2;0d3f50:2;0d3f58:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
 r,,,YieldLastYear,Ertrag letztes Jahr,,,b509,0d4000:2;0d4008:2;0d4010:2;0d4018:2;0d4020:2;0d4028:2;0d4030:2;0d4038:2;0d4040:2;0d4048:2;0d4050:2;0d4058:2,energy,,UIN,,kWh,,energy_1,,UIN,,kWh,,energy_2,,UIN,,kWh,,energy_3,,UIN,,kWh,,energy_4,,UIN,,kWh,,energy_5,,UIN,,kWh,,energy_6,,UIN,,kWh,,energy_7,,UIN,,kWh,,energy_8,,UIN,,kWh,,energy_9,,UIN,,kWh,,energy_10,,UIN,,kWh,,energy_11,,UIN,,kWh,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,1=off;2=col1pump;4=legiopump;8=ma,,
 w,,install,Ioteststop,I/O Test stoppen,,,b506,01,

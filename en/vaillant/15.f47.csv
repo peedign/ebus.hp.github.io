@@ -4,8 +4,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 r,,,ActualWeekday,ActualWeekday: current day of week,,,b509,0d5f00,value,,BDY,,,weekday
 r,,,Date,current date,,,b509,0d6100,value,,HDA:3,,,date
 w,,,Date,current date,,,b509,0e6100,value,,HDA:3,,,date
-r,,,Time,current time,,,b509,0d6000,value,,HTI,,,time
-w,,,Time,current time,,,b509,0e6000,value,,HTI,,,time
+r,,,Time,current time,,,b509,0d6000,value,,VTI,,,time
+w,,,Time,current time,,,b509,0e6000,value,,VTI,,,time
 r,,,RoomTemp,RaumtemperaturIst: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,RoomTempCorrection,RoomTempCorrection: room temperature correction,,,b509,0d5700,value,,SCH,2,K,
 w,,,RoomTempCorrection,RoomTempCorrection: room temperature correction,,,b509,0e5700,value,,SCH,2,K,
@@ -96,8 +96,8 @@ r,,,HwcPressLowpostrunningtime,DHW_LP_postrunningtime: duration of the tank load
 w,,install,HwcPressLowpostrunningtime,DHW_LP_postrunningtime: duration of the tank loading pump's lag (only relevant if DHW control is done by control),,,b509,0e4700,value,,UCH,,min,minutes
 r,,,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
 w,,install,HwcLegioStartDay,DHW_LegioStartDay,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,weekday on which legionella protection is started (may also be every day of the week)
-r,,,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0d4a00,value,,HTI,,,time
-w,,install,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0e4a00,value,,HTI,,,time
+r,,,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0d4a00,value,,VTI,,,time
+w,,install,HwcLegioStartTime,DHW_LegioStartTime: time on which legionella protection is started,,,b509,0e4a00,value,,VTI,,,time
 r,,,DisplayedHwcStorageTemp,DisplayedDHWTankTemperature: display of the storage's temperature (also in case of an SP1error),,,b509,0d9e00,value,,D1C,,°C,temperature
 r,,,HwcActualTempDesired,DHW_ActualDesired_Setpoint: current domestic hot water setpoint,,,b509,0d8600,value,,D1C,,°C,temperature
 r,,,FrostOverRideTime,FrostOverRideTime: delay before frost protection is activated,,,b509,0d1a00,value,,UCH,,h,hours
@@ -220,5 +220,5 @@ w,,,HcTimer_Saturday,Periods Saturday,,,b515,0500,from,,TTM,,,from,to,,TTM,,,to,
 r,,,HcTimer_Sunday,Periods Sunday,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 w,,,HcTimer_Sunday,Periods Sunday,,,b515,0600,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,days
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

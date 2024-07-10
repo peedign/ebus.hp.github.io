@@ -81,7 +81,7 @@ r,,,TimerInputHc,Eingang Schaltuhr: timer input (block heatdemand),,,b509,0dde00
 r,,,FanMinSpeedOperation,Min. Lüfterdrehzahl,,,b509,0ddf00,value,,UIN,,1/min,Lüfter Minimaldrehzahl
 r,,,FanMaxSpeedOperation,Max. Lüfterdrehzahl,,,b509,0de000,value,,UIN,,1/min,Lüfter Maximaldrehzahl
 r,,,ExternGasvalve,Ext. Gasventil: Externes Magnetventil,,,b509,0de400,value,,UCH,0=off;1=on,,
-r,,,DCFTimeDate,DCF Datum/Uhrzeit,,,b509,0de500,vti,,HTI,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;,hda,,HDA,,,
+r,,,DCFTimeDate,DCF Datum/Uhrzeit,,,b509,0de500,vti,,VTI,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;,hda,,HDA,,,
 r,,,HwcSwitch,Wasserschalter,,,b509,0df303,value,,UCH,0=off;1=on,,WW aus/ein
 w,,install_NOT_YET_CONFIRMED,HwcSwitch,Wasserschalter,,,b509,0ef303,value,,UCH,0=off;1=on,,WW aus/ein
 r,,,ProductionByte,ProductionByte,,,b509,0d3e04,value,,UCH,,,
@@ -175,5 +175,5 @@ r,,,PrEnergyCountHc2,PrEnergyCountCH2: Wartungsdaten,,,b509,0df800,value,,ULG,,,
 r,,,PrEnergySumHc3,PrEnergySumCH3: Wartungsdaten,,,b509,0df900,value,,ULG,,,
 r,,,PrEnergyCountHc3,PrEnergyCountCH3: Wartungsdaten,,,b509,0dfa00,value,,ULG,,,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

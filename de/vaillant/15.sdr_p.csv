@@ -37,8 +37,8 @@ r,,,OperatingMode,Betriebsmodus,,,b509,0d1500,value,,UCH,0=disabled;1=on;2=off;3
 w,,install,OperatingMode,Betriebsmodus,,,b509,0e1500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
 r,,,Weekday,Wochentag,,,b509,0d1600,value,,BDY,,,Wochentag
 w,,install,Weekday,Wochentag,,,b509,0e1600,value,,BDY,,,Wochentag
-r,,,Time,Uhrzeit,,,b509,0d1700,value,,HTI,,,Uhrzeit
-w,,install,Time,Uhrzeit,,,b509,0e1700,value,,HTI,,,Uhrzeit
+r,,,Time,Uhrzeit,,,b509,0d1700,value,,VTI,,,Uhrzeit
+w,,install,Time,Uhrzeit,,,b509,0e1700,value,,VTI,,,Uhrzeit
 r1,,,Yield,Solarertrag,,,b509,0d1e00,value,,UIN,,,
 w,,install,Yield,Solarertrag,,,b509,0e1e00,value,,UIN,,,
 r1,,,CollPumpHRuntime,Laufzeit Solarpumpe,,,b509,0d1f00,uin,,UIN,,,,uin_1,,UIN,,,

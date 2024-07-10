@@ -4,8 +4,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d5f00,value,,BDY,,,Wochentag
 r,,,Date,Aktuelles Datum,,,b509,0d6100,value,,HDA:3,,,Datum
 w,,,Date,Aktuelles Datum,,,b509,0e6100,value,,HDA:3,,,Datum
-r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,HTI,,,Uhrzeit
-w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,HTI,,,Uhrzeit
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,VTI,,,Uhrzeit
+w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,VTI,,,Uhrzeit
 r,,,RoomTemp,Raumisttemp: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 r,,,RoomTempCorrection,Raumtemperatur-Abgleich: Korrekturwert der Raumtemperaturanzeige,,,b509,0d5700,value,,SCH,2,K,
 w,,,RoomTempCorrection,Raumtemperatur-Abgleich: Korrekturwert der Raumtemperaturanzeige,,,b509,0e5700,value,,SCH,2,K,
@@ -96,8 +96,8 @@ r,,,HwcPressLowpostrunningtime,Vorlaufzeit Speicherladung Warmwasserkreis: durat
 w,,install,HwcPressLowpostrunningtime,Vorlaufzeit Speicherladung Warmwasserkreis: duration of the tank loading pump's lag (only relevant if DHW control is done by control),,,b509,0e4700,value,,UCH,,min,Minuten
 r,,,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
 w,,install,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
-r,,,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0d4a00,value,,HTI,,,Uhrzeit
-w,,install,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0e4a00,value,,HTI,,,Uhrzeit
+r,,,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0d4a00,value,,VTI,,,Uhrzeit
+w,,install,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0e4a00,value,,VTI,,,Uhrzeit
 r,,,DisplayedHwcStorageTemp,DisplayedDHWTankTemperature: display of the storage's temperature (also in case of an SP1error),,,b509,0d9e00,value,,D1C,,°C,Temperatur
 r,,,HwcActualTempDesired,Aktuelle Temperatur Soll Warmwasserkreis: current domestic hot water setpoint,,,b509,0d8600,value,,D1C,,°C,Temperatur
 r,,,FrostOverRideTime,Frostschutz-Verzögerung: delay before frost protection is activated,,,b509,0d1a00,value,,UCH,,h,Stunden
@@ -220,5 +220,5 @@ w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,b
 r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

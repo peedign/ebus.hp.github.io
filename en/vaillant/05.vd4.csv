@@ -96,8 +96,8 @@ r,,,PredMaintConnectionCycle,installer level register,,,b509,0d3100,value,,UCH,,
 w,,install,PredMaintConnectionCycle,installer level register,,,b509,0e3100,value,,UCH,,,
 r,,,LastKnownEbusAddr,installer level register,,,b509,0d3200,value,,UCH,,,
 w,,install,LastKnownEbusAddr,installer level register,,,b509,0e3200,value,,UCH,,,
-r,,,Time,installer level register,,,b509,0d3300,value,,HTI,,,time
-w,,install,Time,installer level register,,,b509,0e3300,value,,HTI,,,time
+r,,,Time,installer level register,,,b509,0d3300,value,,VTI,,,time
+w,,install,Time,installer level register,,,b509,0e3300,value,,VTI,,,time
 r,,,Date,installer level register,,,b509,0d3400,value,,HDA:3,,,date
 w,,install,Date,installer level register,,,b509,0e3400,value,,HDA:3,,,date
 r,,,Weekday,installer level register,,,b509,0d3500,value,,BDY,,,weekday

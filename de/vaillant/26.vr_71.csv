@@ -8,5 +8,5 @@ w,,,Mc3FlowTempDesired,default *w,,,b523,0202,ftstatus,,UCH,0=off;1=on,,,ftdesir
 r,,,SensorData1,default *r,,,b523,06,s1,,D2C,,°C,Temperatur,s2,,D2C,,°C,Temperatur,s3,,D2C,,°C,Temperatur,s4,,D2C,,°C,Temperatur,s5,,D2C,,°C,Temperatur,s6,,D2C,,°C,Temperatur,s7,,D2C,,°C,Temperatur,ignore,,HEX:2,,,
 r,,,SensorData2,default *r,,,b523,07,s8,,D2C,,°C,Temperatur,s9,,D2C,,°C,Temperatur,s10,,D2C,,°C,Temperatur,s11,,D2C,,°C,Temperatur,s12,,D2C,,°C,Temperatur,sx,,D2C,,°C,Temperatur,ignore,,HEX:3,,,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
-r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,BTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

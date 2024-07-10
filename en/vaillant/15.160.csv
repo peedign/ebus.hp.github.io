@@ -3,8 +3,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *w,
 r,,,Date,System Date: current date,,,b509,0d6100,value,,HDA:3,,,date
 w,,,Date,System Date: current date,,,b509,0e6100,value,,HDA:3,,,date
-r,,,Time,System Time: current time,,,b509,0d6000,value,,HTI,,,time
-w,,,Time,System Time: current time,,,b509,0e6000,value,,HTI,,,time
+r,,,Time,System Time: current time,,,b509,0d6000,value,,VTI,,,time
+w,,,Time,System Time: current time,,,b509,0e6000,value,,VTI,,,time
 r,,,SystemOnOff,System OnOFF,,,b509,0d0100,value,,UCH,0=on;1=off,,
 w,,,SystemOnOff,System OnOFF,,,b509,0e0100,value,,UCH,0=on;1=off,,
 r,,,OperatingMode,Operation mode,,,b509,0d2f00,value,,UCH,2=Auto;3=Comfort,,
