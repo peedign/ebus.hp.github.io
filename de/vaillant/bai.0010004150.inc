@@ -91,7 +91,7 @@ r,,,HwcSetPotmeter,WW Sollwert Potentiometer: WW Sollwertpotentiometer,,,b509,0d
 r,,,HwcSwitch,Wasserschalter: WW aus/ein,,,b509,0df303,value,,UCH,0=off;1=on,,
 r,,,ProductionByte,ProductionByte,,,b509,0d3e04,value,,UCH,,,
 r,,,SerialNumber,SerialNumber,,,b509,0d3f04,value,,HEX:8,,,Seriennummer AI
-r,,,FaultlistDK_0_,Fehlerliste,,,b509,0d2600,value,,HEX:10,,,Liste der letzten 10 Fehler
+r,,,FaultlistDK,Fehlerliste,,,b509,0d2600,value,,HEX:10,,,Liste der letzten 10 Fehler
 r,,,ReturnRegulation,d.17 Rücklaufregelung: Aktivierung der Rücklaufregelung,,,b509,0d0c04,value,,UCH,0=off;1=on,,
 w,,install,ReturnRegulation,d.17 Rücklaufregelung: Aktivierung der Rücklaufregelung,,,b509,0e0c04,value,,UCH,0=off;1=on,,
 r,,,HcPumpMode,d.18 Pumpenbetriebsart,,,b509,0d4904,value,,UCH,0=post_run;1=permanent;2=winter,,Pumpenbetriebsart für den Heizbetrieb

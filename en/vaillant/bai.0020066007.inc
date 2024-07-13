@@ -46,7 +46,7 @@ r,,,InitialisationEEPROM,InitialisationEEPROM: Initialisation off all EEPROM val
 r,,,TimerInputHc,TimerInputCH_DK: timer input (block heatdemand),,,b509,0dde00,value,,UCH,0=off;1=on,,
 r,,,FanMinSpeedOperation,FanMinSpeedOperation,,,b509,0ddf00,value,,UIN,,1/min,Minimum Fan speed of the appliance
 r,,,FanMaxSpeedOperation,FanMaxSpeedOperation,,,b509,0de000,value,,UIN,,1/min,Maximum Fan speed of the appliance
-r,,,FaultlistDK_0_,Faultlist_DK[0],,,b509,0d2600,value,,HEX:10,,,fault list (of the last 10 failures)
+r,,,FaultlistDK,Faultlist_DK[0],,,b509,0d2600,value,,HEX:10,,,fault list (of the last 10 failures)
 r,,,TempDiffBlock,TempDiffBlock_DK: Number of modulationblocking of the boilers cause of to high/incorrect difference of flow/return temperatures,,,b509,0d1200,value,,UCH,,°C,temperature
 r,,,TempDiffFailure,TempDiffFailure_DK: Number of cut offs of the boilers cause of to high/incorrect differences of flow/return temperatures,,,b509,0d1300,value,,UCH,,°C,temperature
 r,,,ValveStarts,TWV_Communt_DK: commutations of the three way valve,,,b509,0d1a00,value,,UIN,,,start count

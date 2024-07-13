@@ -26,8 +26,8 @@ r,,,FlowTemp,d.40 TFT_DK: flow temperature,,,b509,0d1800,temp,,D2C,,°C,temperat
 r,,,ReturnTemp,d.41 Temp heating return: return temperature,,,b509,0d9800,temp,,D2C,,°C,temperature,tempmirror,,UIN,,,,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,IonisationVoltageLevel,d.44 Dig. ionisation voltage,,,b509,0da400,value,,SIN,10,,digital ionisation voltage> 80 no flame< 40 good flame
 r,,,OutdoorstempSensor,d.47 Temp outside: Outside temperature (uncorrected value),,,b509,0d7600,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,Night_timeOffset,d.62 Night-time offset,,,b509,0d3f04,ign,,IGN:7,,,Night-time offset (Specific function for Belgium and NL: RT does not stop the burner but change the set-point. Do not use in other countries),uch,,UCH,,,
-w,,install,Night_timeOffset,d.62 Night-time offset,,,b509,0e3f04,ign,,IGN:7,,,Night-time offset (Specific function for Belgium and NL: RT does not stop the burner but change the set-point. Do not use in other countries),uch,,UCH,,,
+r,,,NighttimeOffset,d.62 Night-time offset,,,b509,0d3f04,ign,,IGN:7,,,Night-time offset (Specific function for Belgium and NL: RT does not stop the burner but change the set-point. Do not use in other countries),uch,,UCH,,,
+w,,install,NighttimeOffset,d.62 Night-time offset,,,b509,0e3f04,ign,,IGN:7,,,Night-time offset (Specific function for Belgium and NL: RT does not stop the burner but change the set-point. Do not use in other countries),uch,,UCH,,,
 r,,,RemainingBoilerblocktime,d.67 Remaining burner block time: Remaining burner anti cycling time,,,b509,0d3800,value,,UCH,,min,minutes
 r,,,EBusHeatcontrol,d.90 Digital control recognized: Digital regulator status,,,b509,0d7400,value,,UCH,0=no;1=yes,,
 r,,,ReturnRegulation,d.17 Return regulation: heating flow/return regulation activation,,,b509,0db300,value,,UCH,0=off;1=on,,
