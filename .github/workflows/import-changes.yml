@@ -20,11 +20,8 @@ jobs:
     - name: Install packages
       run: npm install -omit=dev
       working-directory: ebusd-configuration/
-    - name: Convert typespec files (en)
-      run: npm run compile
-      working-directory: ebusd-configuration/
-    - name: Convert typespec files (de)
-      run: npm run compile-de
+    - name: Convert typespec files (en+de)
+      run: ./utils/precheck.sh
       working-directory: ebusd-configuration/
     - name: Stash versions
       continue-on-error: true
@@ -33,11 +30,9 @@ jobs:
         mv en/versions.json en-versions.json
     - name: Move files and generate index
       run: |
-        rm -rf de en
-        mkdir de en
-        mv ebusd-configuration/outcsv/@ebusd/ebus-typespec/* en/
-        mv ebusd-configuration/outcsv.de/@ebusd/ebus-typespec/* de/
-        find ebusd-configuration/src -type l -exec ./.github/workflows/copylink.sh ebusd-configuration/src \{\} de en \;
+        mv -rf de en
+        mv ebusd-configuration/outcsv/en en/
+        mv ebusd-configuration/outcsv/de de/
         find en/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
         find de/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
     - name: Generate mapping
