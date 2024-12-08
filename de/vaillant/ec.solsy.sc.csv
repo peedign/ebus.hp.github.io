@@ -48,8 +48,8 @@ r,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion: Temperature for colle
 w,,,SolProtectionStartTemp,Starttemp. Sol. Schutzfunktion: Temperature for collector pump protection in case of high temperatures,,,b509,0e8200,value,,UCH,,°C,Temperatur
 r,,,ColKickGradient,Gradient Kollektorkick,,,b509,0d9d00,value,,UCH,,0.1 K / 30 min,
 w,,service,ColKickGradient,Gradient Kollektorkick,,,b509,0e9d00,value,,UCH,,0.1 K / 30 min,
-r,,,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0d9e00,value,,UCH,,s,Sekunden
-w,,service,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0e9e00,value,,UCH,,s,Sekunden
+r,,,ColKickPumpTime,Länge Kollektorkick,,,b509,0d9e00,value,,UCH,,s,Sekunden
+w,,service,ColKickPumpTime,Länge Kollektorkick,,,b509,0e9e00,value,,UCH,,s,Sekunden
 r,,,ScProtectionHysteresis,Hysterese Schutzfunktion: Hysterese für die Kollektorkreisschutzfunktion,,,b509,0d9f00,value,,UCH,,°C,Solltemperatur
 w,,,ScProtectionHysteresis,Hysterese Schutzfunktion: Hysterese für die Kollektorkreisschutzfunktion,,,b509,0e9f00,value,,UCH,,°C,Solltemperatur
 r,,,FrostProtectionLimit,Grenze für Solarkreis Frostschutz,,,b509,0da200,value,,SCH,,K,limits for the solar collector frost protection

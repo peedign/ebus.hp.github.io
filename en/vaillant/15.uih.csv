@@ -44,8 +44,8 @@ r,,,TempIncrease,TempIncrease: temperature increase,,,b509,0d2f00,value,,D2C,,°
 w,,install,TempIncrease,TempIncrease: temperature increase,,,b509,0e2f00,value,,D2C,,°C,temperature
 r,,,PreShutDownTime,PreShutDownTime: pre shut down time,,,b509,0d2d00,value,,UCH,,min,minutes
 w,,install,PreShutDownTime,PreShutDownTime: pre shut down time,,,b509,0e2d00,value,,UCH,,min,minutes
-r,,,FrostOverRideTime,FrostOverRideTime,,,b509,0d2e00,value,,UCH,,hours,FrostOverRideTime
-w,,install,FrostOverRideTime,FrostOverRideTime,,,b509,0e2e00,value,,UCH,,hours,FrostOverRideTime
+r,,,FrostOverRideTime,FrostOverRideTime: frost over ride time,,,b509,0d2e00,value,,UCH,,h,hours
+w,,install,FrostOverRideTime,FrostOverRideTime: frost over ride time,,,b509,0e2e00,value,,UCH,,h,hours
 r,,,EhpBackupRelease,EhpBackupHeaterRelease: backup heater release,,,b509,0d7100,value,,UCH,0=off;1=on,,
 r,,,EhpTimeOfPredictedPowerCut,EhpTimeOfPredictedPowerCut: time of the next predicted power cut,,,b509,0d7300,value,,VTI,,,time
 r,,,TempFailDetectTime,TempFailDetectTime: temperature fail detection time,,,b509,0d3300,value,,UCH,,°C,temperature

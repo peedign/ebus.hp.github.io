@@ -22,7 +22,7 @@ r,,,HwcDemand,d.22 WW Anforderung: Brauchwasseranforderung (Zapfung oder Schalts
 r,,,HeatingSwitch,d.23 Winterbetrieb: Wintermodus aktiv (Heizbetrieb und Warmwasser),,,b509,0df203,value,,UCH,0=off;1=on,,
 r,,,SourcePressureSwitch,d.24 AirPressureSwitch_DK: contact of the air pressure switch,,,b509,0d0300,value,,UCH,0=no;1=yes,,
 r,,,StoragereleaseClock,d.25 Speicherfreigabe: Freigabe der Speichrladung oder des Warmstartspeichers durcheinen eBUS Regler,,,b509,0d4704,value,,UCH,0=no;1=yes,,
-r,,,Gasvalve,d.30 Gasventil,,,b509,0dbb00,value,,UCH,240=off;15=on,,GMV Ansteuersignal
+r,,,Gasvalve,d.30 Gasventil: GMV Ansteuersignal,,,b509,0dbb00,value,,UCH,240=off;15=on,,
 r,,,TargetFanSpeed,d.33 Lüfter Solldrehzahl,,,b509,0d2400,value,,UIN,,1/min,Drehzahlsollwert des Lüfters
 r,,,FanSpeed,d.34 Lüfteristdrehzahl,,,b509,0d8300,value,,UIN,,1/min,Aktuelle Lüfterdrehzahl
 r,,,FlowTemp,d.40 Vorlauftemperatur,,,b509,0d1800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
@@ -121,11 +121,11 @@ r,,,PrVortexFlowSensorValue,PrVortexFlowSensorValue_DK,,,b509,0df400,value,,SIN,
 r,,,PrEnergyCountHc1,PrEnergyCountCH1_DK: Wartungsdaten,,,b509,0df500,value,,ULG,,,
 r,,,ExternalFlowTempDesired,ext. Vorlaufsollwert: Vorlaufsollwert von einem externen Regler an Klemme 7-8-9,,,b509,0d2500,value,,D2C,,°C,Temperatur
 r,,,ExternalHwcSwitch,Wasserschalter: Speicheranforderung eines externen Speichers über den Speicherkontakt,,,b509,0d0000,value,,UCH,0=off;1=on,,
-r,,,Flame,Flammensignal,,,b509,0d0500,value,,UCH,240=off;15=on,,Flammensignal
-r,,,IFCFault,SD_IFC_Fault_DK,,,b509,0d0700,value,,UCH,240=off;15=on,,IFC error
+r,,,Flame,Flammensignal,,,b509,0d0500,value,,UCH,240=off;15=on,,
+r,,,IFCFault,SD_IFC_Fault_DK: IFC error,,,b509,0d0700,value,,UCH,240=off;15=on,,
 r,,,ChangesDSN,Anzhl der DSN Änderungen: Anzahl der DSN (Gerätekennung) Änderungen,,,b509,0d0c00,value,,UCH,,,
-r,,,Brennstoffventil,Brennstoffventil,,,b509,0d0d00,value,,UCH,240=off;15=on,,Schaltsignal für das Gasventil
-r,,,VolatileLockout,Verriegelnde Störabschaltungen,,,b509,0d1000,value,,UCH,240=no;15=yes,,WAHR: STB Fehler sind verriegelnd
+r,,,Brennstoffventil,Brennstoffventil: Schaltsignal für das Gasventil,,,b509,0d0d00,value,,UCH,240=off;15=on,,
+r,,,VolatileLockout,Verriegelnde Störabschaltungen: WAHR: STB Fehler sind verriegelnd,,,b509,0d1000,value,,UCH,240=no;15=yes,,
 r,,,Faultlist,Faultlist_DK,,,b509,0d2600,value,,HEX:10,,,last 10 fault codes
 r,,,ModulationTempDesired,Modulationssollwert,,,b509,0d2e00,value,,SIN,10,%,Modulationssollwert
 r,,,FlameSensingASIC,SD_Flame_Sensing_ASIC_DK: Ioni/ADC Wert vom Flammenwächter,,,b509,0d2f00,value,,UIN,,,
@@ -134,25 +134,25 @@ r,,,HwcUnderHundredStarts,BW_UnderHundred_SwiActi_DK: DHW switch cycles under hu
 r,,,EbusSourceOn,eBUS Spannungsversorgung: Aktivierung der eBUS Speisung,,,b509,0d3400,value,,UCH,0=off;1=on,,
 r,,,Fluegasvalve,Abgasklappe: Flüssiggas Magnetventil,,,b509,0d3c00,value,,UCH,0=off;1=on,,
 r,,,ExternalFaultmessage,Ext. Störmeldung: Signal für die externe Störmeldeeinrichtung,,,b509,0d3e00,value,,UCH,0=off;1=on,,
-r,,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,b509,0d4700,value,,UCH,240=off;15=on,,Rückmeldung Gasventil vom ASIC
-r,,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,b509,0d4800,value,,UCH,240=off;15=on,,Rückmeldung Gasventil vom Prozessor
-r,,,Ignitor,Zünder,,,b509,0d4900,value,,UCH,240=off;15=on,,Zündung aktiviert
+r,,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1: Rückmeldung Gasventil vom ASIC,,,b509,0d4700,value,,UCH,240=off;15=on,,
+r,,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2: Rückmeldung Gasventil vom Prozessor,,,b509,0d4800,value,,UCH,240=off;15=on,,
+r,,,Ignitor,Zünder: Zündung aktiviert,,,b509,0d4900,value,,UCH,240=off;15=on,,
 r,,,Fan,Lüfter: Fan activation signal,,,b509,0d4a00,value,,UCH,0=no;1=yes,,
 r,,,HwcTypes,WW Typen: DHW type of the appliance,,,b509,0d4b00,value,,UCH,,,
-r,,,TemplimiterFault,SD_TL_Fault_DK,,,b509,0d4d00,value,,UCH,240=off;15=on,,temperature limiter error
-r,,,ADCOk,SD_ADC_ok_DK,,,b509,0d4e00,value,,UCH,240=off;15=on,,internal electronic error
-r,,,FanFault,SD_Fan_Fault_DK,,,b509,0d5300,value,,UCH,240=off;15=on,,Fan error
+r,,,TemplimiterFault,SD_TL_Fault_DK: temperature limiter error,,,b509,0d4d00,value,,UCH,240=off;15=on,,
+r,,,ADCOk,SD_ADC_ok_DK: internal electronic error,,,b509,0d4e00,value,,UCH,240=off;15=on,,
+r,,,FanFault,SD_Fan_Fault_DK: Fan error,,,b509,0d5300,value,,UCH,240=off;15=on,,
 r,,,BoilerType,BoilerType_DK: Boiler typ of the bmu,,,b509,0d5e00,value,,UCH,,,
 r,,,FunctionFlags,FunctionFlags_DK: differrent function flags,,,b509,0d5f00,value,,UCH,,,
 r,,,ParamToken,ParamToken_DK: token for parameter managment,,,b509,0d6000,value,,UCH,,,
 r,,,ExpertlevelMain_ReturnTemp,Externer Rücklauftemperatursensor,,,b509,0d6b00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 r,,,FloorHeatingContact,Eingang Anlegethermostat,,,b509,0d7000,value,,UCH,0=off;1=on,,
-r,,,Templimiter,Temperaturbegrenzer,,,b509,0d7700,value,,UCH,240=off;15=on,,Rückmeldung des Temperaturbegrenzer Signals
+r,,,Templimiter,Rückmeldung des Temperaturbegrenzer Signals,,,b509,0d7700,value,,UCH,240=off;15=on,,
 r,,,SRIFCEEFaultCause,SR_IFC_EE_FaultCause_DK: current IFC fault cause,,,b509,0d7a00,value,,UCH,,,
 r,,,ParamReplication,ParamReplication_DK: activated the parameter managment again,,,b509,0d7c00,value,,UCH,0=no;1=yes,,
 r,,,AnodeINFeedback,Anode_IN_Feedback_DK: feedback signal of the anode,,,b509,0d7e00,value,,UCH,0=no;1=yes,,
 r,,,EbusVoltage,Rückmeldung der eBUS Spannung,,,b509,0d7f00,value,,UCH,0=off;1=on,,
-r,,,SRTFINSDFeedback,SR_TF_IN_SD_Feedback_DK,,,b509,0d8400,value,,UCH,240=off;15=on,,Thermal fuse error
+r,,,SRTFINSDFeedback,SR_TF_IN_SD_Feedback_DK: Thermal fuse error,,,b509,0d8400,value,,UCH,240=off;15=on,,
 r,,,DemandCirPump,Demand_CirculationPump_DK: remote control activated accessory circulation pump,,,b509,0d8800,value,,UCH,0=no;1=yes,,
 r,,,FluegasvalveOpen,Abgasklappe offen: Rückmeldung Flüssiggasventil,,,b509,0d8900,value,,UCH,0=off;1=on,,
 r,,,FunctionFault,Function_Fault_DK: boiler stopped by a internal function fault,,,b509,0d9500,value,,UCH,0=no;1=yes,,
@@ -165,11 +165,11 @@ r,,,DSNStart,DSN Startadresse,,,b509,0dbc00,value,,UIN,,,
 r,,,Shiftloadtankpump,Shiftloadtankpump_DK: current status of the shift load pump,,,b509,0db400,value,,UCH,0=no;1=yes,,
 r,,,ExtStorageModulCon,VR65 angeschlossen: Externes Speichermodul (VR65) angeschlosssen,,,b509,0dbf00,value,,UCH,0=no;1=yes,,
 r,,,PartnumberBox,Partnumber_Box,,,b509,0dc000,value,,HEX:5,,,part number of the eBox
-r,,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK,,,b509,0dcf00,value,,UCH,240=no;15=yes,,feedback of the syphon switch contact
-r,,,TemplimiterWithNTC,SD_STL_with_NTC,,,b509,0dd200,value,,UCH,240=no;15=yes,,Temperaturbegrenzer Art:1 = NTC0 = Schaltkontakt
-r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK,,,b509,0dd300,value,,UCH,240=no;15=yes,,Alle IFC Fehler sind nichtflüchtig
+r,,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK: feedback of the syphon switch contact,,,b509,0dcf00,value,,UCH,240=no;15=yes,,
+r,,,TemplimiterWithNTC,SD_STL_with_NTC: Temperaturbegrenzer Art:1 = NTC0 = Schaltkontakt,,,b509,0dd200,value,,UCH,240=no;15=yes,,
+r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK: Alle IFC Fehler sind nichtflüchtig,,,b509,0dd300,value,,UCH,240=no;15=yes,,
 r,,,DisplayMode,DisplayMode_DK: Display mode of the aplliance,,,b509,0dda00,value,,UCH,,,
-r,,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,b509,0ddb00,value,,UCH,240=off;15=on,,Gasventil Schaltsignal (vom Prozessor)
+r,,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3: Gasventil Schaltsignal (vom Prozessor),,,b509,0ddb00,value,,UCH,240=off;15=on,,
 r,,,InitialisationEEPROM,InitialisationEEPROM_DK: EEPROM Initialisierrung (für die Produktion),,,b509,0ddc00,value,,UCH,0=no;1=yes,,
 r,,,DefaultSettingEEPROM,DefaultSettingEEPROM_DK: default value setting off all EEPROM values (done in the production),,,b509,0ddd00,value,,UCH,0=no;1=yes,,
 r,,,TimerInputHc,Eingang Schaltuhr: timer input (block heatdemand),,,b509,0dde00,value,,UCH,0=off;1=on,,
@@ -178,7 +178,7 @@ r,,,FanMaxSpeedOperation,Max. Lüfterdrehzahl,,,b509,0de000,value,,UIN,,1/min,L�
 r,,,RManagEE_VirtualPartloadEnableTemp,TR_Manag_EE.Virtual_Partload_Enable_DK: Überschrift,,,b509,0de300,value,,UCH,,,
 w,,install,RManagEE_VirtualPartloadEnableTemp,TR_Manag_EE.Virtual_Partload_Enable_DK: Überschrift,,,b509,0ee300,value,,UCH,,,
 r,,,ExternGasvalve,Ext. Gasventil: Externes Magnetventil,,,b509,0de400,value,,UCH,0=off;1=on,,
-r,,,DCFTimeDate,DCF Datum/Uhrzeit,,,b509,0de500,value,,HEX:8,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;
+r,,,DCFTimeDate,DCF Datum/Uhrzeit,,,b509,0de500,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum
 r,,,InitialisationSequence,InitialisationSequence_DK: value:0 -> off1-> full initialisation incl. all defaultvalues (done in the production),,,b509,0d9a01,value,,UCH,,,
 r,,,FlowSetPotmeter,Vorlaufsollwert Poti: Vorlaufsollwert Potentiometer,,,b509,0d1900,value,,D2C,,°C,Temperatur
 r,,,HwcSetPotmeter,WW Sollwert Potentiometer: WW Sollwertpotentiometer,,,b509,0df103,value,,D2C,,°C,Temperatur

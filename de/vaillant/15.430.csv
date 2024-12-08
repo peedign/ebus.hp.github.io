@@ -152,13 +152,13 @@ r,,,ActoSTOROPMode,actoSTOR_OPMode: Zustands-Automat actSTOR Ansteuerung,,,b509,
 r,,,B50418actDesFlowTemp,B50418actDesFlowTemp: Vorlaufsolltemperatur von actoSTOR berechnet,,,b509,0d6b00,value,,D1C,,,
 r,,,AdpPreHRoomTempDesired,adpPreH_RoomSetpoint,,,b509,0db400,value,,D2C,,°C,Temperatur
 r,,,AdpPreHCurrentRoomTemp,adpPreH_CurrentRoomTemp,,,b509,0db500,value,,D2C,,°C,Temperatur
-r,,,AdpPreHMinutesBeforeFirstTW,adpPreH_MinutesBeforeFirstTW,,,b509,0db600,value,,UIN,,sec,
+r,,,AdpPreHMinutesBeforeFirstTW,adpPreH_MinutesBeforeFirstTW,,,b509,0db600,value,,UIN,,s,Sekunden
 r,,,AdpPreHPreheatingTime,adpPreH_PreheatingTime,,,b509,0db700,value,,UIN,,min,Minuten
 r,,,AdpPreHOutdoorTemp,adpPreH_OutdoorTemp,,,b509,0db800,value,,D2C,,°C,Temperatur
 r,,,AdpPreHInSideTW,adpPreH_InSideTW,,,b509,0db900,value,,UCH,0=off;1=on,,
 r,,,AdpPreHOutdoorTempStart,adpPreH_OutdoorTempStart,,,b509,0dba00,value,,D2C,,°C,Temperatur
 r,,,AdpPreHRamp,adpPreH_Ramp,,,b509,0dbb00,value,,UIN,,,
-r,,,AdpPreHStarttime,adpPreH_Starttime,,,b509,0dbc00,value,,UIN,,sec,
+r,,,AdpPreHStarttime,adpPreH_Starttime,,,b509,0dbc00,value,,UIN,,s,Sekunden
 r,,,AdpPreHRoomTempStart,adpPreH_RoomTempStart,,,b509,0dbd00,value,,D2C,,°C,Temperatur
 r,,,AdpPreHActive,adpPreH_Active,,,b509,0dbe00,value,,UCH,0=off;1=on,,
 r,,,CcTimer_Monday,Zeitfenster Montag,,,b515,0002,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

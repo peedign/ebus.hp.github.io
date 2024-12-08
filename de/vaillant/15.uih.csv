@@ -44,8 +44,8 @@ r,,,TempIncrease,Temperaturüberhöhung,,,b509,0d2f00,value,,D2C,,°C,Temperatur
 w,,install,TempIncrease,Temperaturüberhöhung,,,b509,0e2f00,value,,D2C,,°C,Temperatur
 r,,,PreShutDownTime,Vorabschaltzeit,,,b509,0d2d00,value,,UCH,,min,Minuten
 w,,install,PreShutDownTime,Vorabschaltzeit,,,b509,0e2d00,value,,UCH,,min,Minuten
-r,,,FrostOverRideTime,Frostschutz-Verzögerung,,,b509,0d2e00,value,,UCH,,hours,Frostschutz-Verzögerung
-w,,install,FrostOverRideTime,Frostschutz-Verzögerung,,,b509,0e2e00,value,,UCH,,hours,Frostschutz-Verzögerung
+r,,,FrostOverRideTime,Frostschutz-Verzögerung: Frostschutzverzögerung,,,b509,0d2e00,value,,UCH,,h,Stunden
+w,,install,FrostOverRideTime,Frostschutz-Verzögerung: Frostschutzverzögerung,,,b509,0e2e00,value,,UCH,,h,Stunden
 r,,,EhpBackupRelease,Freigabe Zusatzheizer: Freigabe Reserveheizung,,,b509,0d7100,value,,UCH,0=off;1=on,,
 r,,,EhpTimeOfPredictedPowerCut,Erwarteter EVU Abschaltzeitpunkt: Zeit bis zur nächsten Abschaltung durch das EVU,,,b509,0d7300,value,,VTI,,,Uhrzeit
 r,,,TempFailDetectTime,Temperaturfehlererkennung nach: Zeit für die Temperaturfehlererkennung,,,b509,0d3300,value,,UCH,,°C,Temperatur

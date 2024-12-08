@@ -20,7 +20,7 @@ r,,,DCRoomthermostat,d.16 room thermostat 24 V: External controls heat demand (C
 r,,,HwcDemand,d.22 DHW demand: domestic hot water (tapping or tank contact) demand,,,b509,0d5800,value,,UCH,0=no;1=yes,,
 r,,,HeatingSwitch,d.23 operation mode: Wintermode active,,,b509,0df203,value,,UCH,0=off;1=on,,
 r,,,StoragereleaseClock,d.25 DHW demand enabled: hot water release (tank storage) via eBus Control,,,b509,0d4704,value,,UCH,0=no;1=yes,,
-r,,,Gasvalve,d.30 Gasvalve,,,b509,0dbb00,value,,UCH,240=off;15=on,,Gasvalve activation signal
+r,,,Gasvalve,d.30 Gasvalve: Gasvalve activation signal,,,b509,0dbb00,value,,UCH,240=off;15=on,,
 r,,,FlowTemp,d.40 TFT_DK: flow temperature,,,b509,0d1800,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,ReturnTemp,d.41 Temp heating return: return temperature,,,b509,0d9800,temp,,D2C,,°C,temperature,tempmirror,,UIN,,,,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,OutdoorstempSensor,d.47 Temp outside: Outside temperature (uncorrected value),,,b509,0d7600,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
@@ -106,11 +106,11 @@ r,,,WaterpressureVariantSum,WaterpressureVariantSum_DK: Predictive Maintenance d
 r,,,WaterpressureMeasureCounter,WaterpressureMeasureCounter_DK: Predictive Maintenance data,,,b509,0df100,value,,UCH,,,
 r,,,ExternalFlowTempDesired,external flowsetpoint: Flow target temperature from external regulator to terminal 7-8-9,,,b509,0d2500,value,,D2C,,°C,temperature
 r,,,ExternalHwcSwitch,DHWSwitch_DK: Demand external tank (via contact),,,b509,0d0000,value,,UCH,0=off;1=on,,
-r,,,Flame,flame,,,b509,0d0500,value,,UCH,240=off;15=on,,flame
-r,,,IFCFault,SD_IFC_Fault_DK,,,b509,0d0700,value,,UCH,240=off;15=on,,IFC error
+r,,,Flame,Flame,,,b509,0d0500,value,,UCH,240=off;15=on,,
+r,,,IFCFault,SD_IFC_Fault_DK: IFC error,,,b509,0d0700,value,,UCH,240=off;15=on,,
 r,,,ChangesDSN,Changes_DSN_DK: Numbers adjusting (storing) the DSN,,,b509,0d0c00,value,,UCH,,,
-r,,,Brennstoffventil,Brennstoffventil,,,b509,0d0d00,value,,UCH,240=off;15=on,,Activation signal of the gasvalve (activated via micrcontroller)
-r,,,VolatileLockout,SD_VolatileLockout_DK,,,b509,0d1000,value,,UCH,240=no;15=yes,,TRUE: STB failures is volatileFALSE: STB failure is not volataile
+r,,,Brennstoffventil,Brennstoffventil: Activation signal of the gasvalve (activated via micrcontroller),,,b509,0d0d00,value,,UCH,240=off;15=on,,
+r,,,VolatileLockout,SD_VolatileLockout_DK: TRUE: STB failures is volatileFALSE: STB failure is not volataile,,,b509,0d1000,value,,UCH,240=no;15=yes,,
 r,,,Faultlist,Faultlist_DK,,,b509,0d2600,value,,HEX:10,,,last 10 fault codes
 r,,,ModulationTempDesired,Modulationsetpoint_DK,,,b509,0d2e00,value,,SIN,10,%,Modulation set point
 r,,,FlameSensingASIC,SD_Flame_Sensing_ASIC_DK: ioni/adc value from the flame control circuit,,,b509,0d2f00,value,,UIN,,,
@@ -119,25 +119,25 @@ r,,,HwcUnderHundredStarts,BW_UnderHundred_SwiActi_DK: DHW switch cycles under hu
 r,,,EbusSourceOn,EbusSourceOn_DK: Activation signal of the eBus source,,,b509,0d3400,value,,UCH,0=off;1=on,,
 r,,,Fluegasvalve,Fluegasvalve_DK: flue gasvalve activation signal,,,b509,0d3c00,value,,UCH,0=off;1=on,,
 r,,,ExternalFaultmessage,External_Faultmessage_DK: external fault message,,,b509,0d3e00,value,,UCH,0=off;1=on,,
-r,,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,b509,0d4700,value,,UCH,240=off;15=on,,feedback gasvalve (from ASIC)
-r,,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,b509,0d4800,value,,UCH,240=off;15=on,,feedback gasvalve (from Microcontroller)
-r,,,Ignitor,SD_Ignitor_DK,,,b509,0d4900,value,,UCH,240=off;15=on,,igniton activated
+r,,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1: feedback gasvalve (from ASIC),,,b509,0d4700,value,,UCH,240=off;15=on,,
+r,,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2: feedback gasvalve (from Microcontroller),,,b509,0d4800,value,,UCH,240=off;15=on,,
+r,,,Ignitor,SD_Ignitor_DK: igniton activated,,,b509,0d4900,value,,UCH,240=off;15=on,,
 r,,,Fan,Fan_DK: Fan activation signal,,,b509,0d4a00,value,,UCH,0=no;1=yes,,
 r,,,HwcTypes,DHW_Types_DK: DHW type of the appliance,,,b509,0d4b00,value,,UCH,,,
-r,,,TemplimiterFault,SD_TL_Fault_DK,,,b509,0d4d00,value,,UCH,240=off;15=on,,temperature limiter error
-r,,,ADCOk,SD_ADC_ok_DK,,,b509,0d4e00,value,,UCH,240=off;15=on,,internal electronic error
-r,,,FanFault,SD_Fan_Fault_DK,,,b509,0d5300,value,,UCH,240=off;15=on,,Fan error
+r,,,TemplimiterFault,SD_TL_Fault_DK: temperature limiter error,,,b509,0d4d00,value,,UCH,240=off;15=on,,
+r,,,ADCOk,SD_ADC_ok_DK: internal electronic error,,,b509,0d4e00,value,,UCH,240=off;15=on,,
+r,,,FanFault,SD_Fan_Fault_DK: Fan error,,,b509,0d5300,value,,UCH,240=off;15=on,,
 r,,,BoilerType,BoilerType_DK: Boiler typ of the bmu,,,b509,0d5e00,value,,UCH,,,
 r,,,FunctionFlags,FunctionFlags_DK: differrent function flags,,,b509,0d5f00,value,,UCH,,,
 r,,,ParamToken,ParamToken_DK: token for parameter managment,,,b509,0d6000,value,,UCH,,,
 r,,,ExpertlevelMain_ReturnTemp,ReturnTemperature_DK: external return sensor,,,b509,0d6b00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,FloorHeatingContact,Floor heating contact,,,b509,0d7000,value,,UCH,0=off;1=on,,
-r,,,Templimiter,SD_Temperaturelimiter_DK,,,b509,0d7700,value,,UCH,240=off;15=on,,feedback signal of the temperature limiter
+r,,,Templimiter,SD_Temperaturelimiter_DK: feedback signal of the temperature limiter,,,b509,0d7700,value,,UCH,240=off;15=on,,
 r,,,SRIFCEEFaultCause,SR_IFC_EE_FaultCause_DK: current IFC fault cause,,,b509,0d7a00,value,,UCH,,,
 r,,,ParamReplication,ParamReplication_DK: activated the parameter managment again,,,b509,0d7c00,value,,UCH,0=no;1=yes,,
 r,,,AnodeINFeedback,Anode_IN_Feedback_DK: feedback signal of the anode,,,b509,0d7e00,value,,UCH,0=no;1=yes,,
 r,,,EbusVoltage,EbusVoltage_DK: feedback signal of the eBus source,,,b509,0d7f00,value,,UCH,0=off;1=on,,
-r,,,SRTFINSDFeedback,SR_TF_IN_SD_Feedback_DK,,,b509,0d8400,value,,UCH,240=off;15=on,,Thermal fuse error
+r,,,SRTFINSDFeedback,SR_TF_IN_SD_Feedback_DK: Thermal fuse error,,,b509,0d8400,value,,UCH,240=off;15=on,,
 r,,,DemandCirPump,Demand_CirculationPump_DK: remote control activated accessory circulation pump,,,b509,0d8800,value,,UCH,0=no;1=yes,,
 r,,,FluegasvalveOpen,FluegasvalveOpen_DK: feedback of the flue gas valve,,,b509,0d8900,value,,UCH,0=off;1=on,,
 r,,,FunctionFault,Function_Fault_DK: boiler stopped by a internal function fault,,,b509,0d9500,value,,UCH,0=no;1=yes,,
@@ -150,17 +150,17 @@ r,,,DSNStart,DSN Start adress,,,b509,0dbc00,value,,UIN,,,
 r,,,Shiftloadtankpump,Shiftloadtankpump_DK: current status of the shift load pump,,,b509,0db400,value,,UCH,0=no;1=yes,,
 r,,,ExtStorageModulCon,ExtTankModulCon_DK: external tank modul connected (VR65),,,b509,0dbf00,value,,UCH,0=no;1=yes,,
 r,,,PartnumberBox,Partnumber_Box,,,b509,0dc000,value,,HEX:5,,,part number of the eBox
-r,,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK,,,b509,0dcf00,value,,UCH,240=no;15=yes,,feedback of the syphon switch contact
-r,,,TemplimiterWithNTC,SD_STL_with_NTC,,,b509,0dd200,value,,UCH,240=no;15=yes,,Safety temperature limit concept:1 = safety temp. Limit check with NTC0 = safety temp. Limit check with contact
-r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK,,,b509,0dd300,value,,UCH,240=no;15=yes,,all IFC faults are volataile
+r,,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK: feedback of the syphon switch contact,,,b509,0dcf00,value,,UCH,240=no;15=yes,,
+r,,,TemplimiterWithNTC,SD_STL_with_NTC: Safety temperature limit concept:1 = safety temp. Limit check with NTC0 = safety temp. Limit check with contact,,,b509,0dd200,value,,UCH,240=no;15=yes,,
+r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK: all IFC faults are volataile,,,b509,0dd300,value,,UCH,240=no;15=yes,,
 r,,,DisplayMode,DisplayMode_DK: Display mode of the aplliance,,,b509,0dda00,value,,UCH,,,
-r,,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,b509,0ddb00,value,,UCH,240=off;15=on,,Gasvalve activation signal (from Microcontroller)
+r,,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3: Gasvalve activation signal (from Microcontroller),,,b509,0ddb00,value,,UCH,240=off;15=on,,
 r,,,InitialisationEEPROM,InitialisationEEPROM: Initialisation off all EEPROM values (done in the production),,,b509,0ddc00,value,,UCH,0=no;1=yes,,
 r,,,DefaultSettingEEPROM,DefaultSettingEEPROM_DK: default value setting off all EEPROM values (done in the production),,,b509,0ddd00,value,,UCH,0=no;1=yes,,
 r,,,TimerInputHc,TimerInputCH_DK: timer input (block heatdemand),,,b509,0dde00,value,,UCH,0=off;1=on,,
 r,,,RManagEE_VirtualHcPartloadEnableDTemp,TR_Manag_EE.Virtual_CH_Partload_Enable_DK: enable the adaptive CH-partload calulation,,,b509,0de300,value,,UCH,0=off;1=on,,
 r,,,ExternGasvalve,ExternGasvalve_DK: external gasvalve activated,,,b509,0de400,value,,UCH,0=off;1=on,,
-r,,,DCFTimeDate,DCF_TimeDate_DK,,,b509,0de500,value,,HEX:8,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;
+r,,,DCFTimeDate,DCF_TimeDate_DK,,,b509,0de500,btime,,BTI,,,time,bdate,,BDA,,,date
 r,,,ActoSTOREEPreventiveCounter,actoSTOR_EE_PreventiveCounter_DK,,,b509,0dec00,uin,,UIN,,,Predictive maintenance date of the actoSTOR,uin_1,,UIN,,,,uin_2,,UIN,,,
 r,,,InitialisationSequence,InitialisationSequence_DK: value:0 -> off1-> full initialisation incl. all defaultvalues (done in the production),,,b509,0d9a01,value,,UCH,,,
 r,,,FlowSetPotmeter,FlowSetPotmeter: flow setpoint potentiometer,,,b509,0d1900,value,,D2C,,°C,temperature

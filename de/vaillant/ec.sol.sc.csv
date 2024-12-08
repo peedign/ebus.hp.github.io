@@ -13,7 +13,7 @@ r,,,RuntimeCollPump,Laufzeit Kollektorpumpe: accumulated runtime of the collecto
 r,,,RuntimeCollPumpSeconds,RuntimeCollectorPumpSeconds: runtime in seconds base for runtime in hours,,,b509,0d2900,value,,UIN,,,
 r,,,KickFunction,KickFunction: enable kick function,,,b509,0d3200,value,,UCH,0=off;1=on,,
 w,,install,KickFunction,KickFunction: enable kick function,,,b509,0e3200,value,,UCH,0=off;1=on,,
-r,,,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0d3b00,value,,UCH,,sec,time pump is running when collector kick function is activated
+r,,,ColKickPumpTime,Länge Kollektorkick: time pump is running when collector kick function is activated,,,b509,0d3b00,value,,UCH,,s,Sekunden
 r,,,ColKickTempDelta,ColKickTempDelta: temperature difference necessary for activating the pump kick,,,b509,0d3c00,value,,UCH,,°C,Temperatur
 r,,,FlowRate,Volumenstrom,,,b509,0d2d00,value,,SIN,10,l/min,chosen flow rate of the collector pump (to calculate solar gain)
 w,,install,FlowRate,Volumenstrom,,,b509,0e2d00,value,,SIN,10,l/min,chosen flow rate of the collector pump (to calculate solar gain)
@@ -36,7 +36,7 @@ r,,,SolCollPumpED,ED Kollektorpumpe: percentage of 'pump is on' during one minut
 r,,,ScProtectionLimit,Abschaltgrenze Schutzfunktion: switch off temperature for collector protection (109 <=> off),,,b509,0d3000,value,,UCH,,°C,Solltemperatur
 w,,install,ScProtectionLimit,Abschaltgrenze Schutzfunktion: switch off temperature for collector protection (109 <=> off),,,b509,0e3000,value,,UCH,,°C,Solltemperatur
 r,,,ScProtectionHysteresis,Hysterese Schutzfunktion: temperature hysteresis for activating solar pump after collector protection,,,b509,0d3100,value,,UCH,,K,
-r,,,ScProtectionTime,SolarCircuitProtectionTime: time for which KOL temperature has to exceed the protection temperature to enter solar circuit protection mode,,,b509,0d3e00,value,,UCH,,sec,time for which KOL temperature has to exceed the protection temperature to enter solar circuit protection mode
+r,,,ScProtectionTime,SolarCircuitProtectionTime: time for which KOL temperature has to exceed the protection temperature to enter solar circuit protection mode,,,b509,0d3e00,value,,UCH,,s,Sekunden
 r,,,EnableScProtection,Solarkreisschutzfunktion: enable solar circuit protection,,,b509,0d5900,value,,UCH,0=off;1=on,,
 w,,install,EnableScProtection,Solarkreisschutzfunktion: enable solar circuit protection,,,b509,0e5900,value,,UCH,0=off;1=on,,
 r,,,FrostProtectionEnabled,Solarkreis Frostschutzfunktion: set TRUE to enable solar frost protection,,,b509,0d5a00,value,,UCH,0=no;1=yes,,

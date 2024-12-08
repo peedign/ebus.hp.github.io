@@ -1,12 +1,18 @@
 ## Source Mapping
 This is the current mapping from [`src` files of ebusd-configuration](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src) to the CSV files served here.
 
-It was last built on 2024-07-13 from [git revision d38af50](https://github.com/john30/ebusd-configuration/tree/d38af50114e92679b98a4c4e821c3642c43a7ed0).
+It was last built on 2024-12-08 from [git revision 7fbac63](https://github.com/john30/ebusd-configuration/tree/7fbac6337a17776671ba154894331dae39ce787b).
 
 <!-- note: template file to be amended with the actual data by the workflow -->
  - [broadcast.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/broadcast.tsp) &rarr; [en: broadcast.csv](en/broadcast.csv) / [de: broadcast.csv](de/broadcast.csv)
  - [memory.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/memory.tsp) &rarr; [en: memory.csv](en/memory.csv) / [de: memory.csv](de/memory.csv)
  - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/_templates.tsp) &rarr; inlined in other file(s)
+ - [opdata_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/opdata_inc.tsp) &rarr; inlined in other file(s)
+ - [wolf](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/wolf/)
+   - [08.hc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/wolf/08.hc.tsp) &rarr; [en: 08.hc.csv](en/wolf/08.hc.csv) / [de: 08.hc.csv](de/wolf/08.hc.csv)
+   - [50.mc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/wolf/50.mc.tsp) &rarr; [en: 50.mc.csv](en/wolf/50.mc.csv) / [de: 50.mc.csv](de/wolf/50.mc.csv)
+   - [broadcast.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/wolf/broadcast.tsp) &rarr; [en: broadcast.csv](en/wolf/broadcast.csv) / [de: broadcast.csv](de/wolf/broadcast.csv)
+   - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/wolf/_templates.tsp) &rarr; inlined in other file(s)
  - [vaillant](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/)
    - [05.vd2.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/05.vd2.tsp) &rarr; [en: 05.vd2.csv](en/vaillant/05.vd2.csv) / [de: 05.vd2.csv](de/vaillant/05.vd2.csv)
    - [05.vd3.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/05.vd3.tsp) &rarr; [en: 05.vd3.csv](en/vaillant/05.vd3.csv) / [de: 05.vd3.csv](de/vaillant/05.vd3.csv)
@@ -15,6 +21,7 @@ It was last built on 2024-07-13 from [git revision d38af50](https://github.com/j
    - [05.vl8.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/05.vl8.tsp) &rarr; [en: 05.vl8.csv](en/vaillant/05.vl8.csv) / [de: 05.vl8.csv](de/vaillant/05.vl8.csv)
    - [05.vl9.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/05.vl9.tsp) &rarr; [en: 05.vl9.csv](en/vaillant/05.vl9.csv) / [de: 05.vl9.csv](de/vaillant/05.vl9.csv)
    - [06.pms.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/06.pms.tsp) &rarr; [en: 06.pms.csv](en/vaillant/06.pms.csv) / [de: 06.pms.csv](de/vaillant/06.pms.csv)
+   - [06.vmd.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/06.vmd.tsp) &rarr; [en: 06.vmd.csv](en/vaillant/06.vmd.csv) / [de: 06.vmd.csv](de/vaillant/06.vmd.csv)
    - [06.vms.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/06.vms.tsp) &rarr; [en: 06.vms.csv](en/vaillant/06.vms.csv) / [de: 06.vms.csv](de/vaillant/06.vms.csv)
    - [08.bai.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/08.bai.tsp) &rarr; [en: 08.bai.csv](en/vaillant/08.bai.csv) / [de: 08.bai.csv](de/vaillant/08.bai.csv)
    - [08.ehp.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/08.ehp.tsp) &rarr; [en: 08.ehp.csv](en/vaillant/08.ehp.csv) / [de: 08.ehp.csv](de/vaillant/08.ehp.csv)
@@ -114,6 +121,7 @@ It was last built on 2024-07-13 from [git revision d38af50](https://github.com/j
    - [bai.0010007508_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010007508_inc.tsp) &rarr; inlined in other file(s)
    - [bai.0010008045_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010008045_inc.tsp) &rarr; inlined in other file(s)
    - [bai.0010010674_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010010674_inc.tsp) &rarr; inlined in other file(s)
+   - [bai.0010011701_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010011701_inc.tsp) &rarr; inlined in other file(s)
    - [bai.0010015600_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010015600_inc.tsp) &rarr; inlined in other file(s)
    - [bai.0010021961_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0010021961_inc.tsp) &rarr; inlined in other file(s)
    - [bai.0020066007_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/bai.0020066007_inc.tsp) &rarr; inlined in other file(s)
@@ -143,3 +151,6 @@ It was last built on 2024-07-13 from [git revision d38af50](https://github.com/j
    - [yield4445_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/yield4445_inc.tsp) &rarr; inlined in other file(s)
    - [yield8485_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/yield8485_inc.tsp) &rarr; inlined in other file(s)
    - [yield8485r_inc.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/vaillant/yield8485r_inc.tsp) &rarr; inlined in other file(s)
+ - [ochsner](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/ochsner/)
+   - [15.22102.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/ochsner/15.22102.tsp) &rarr; [en: 15.22102.csv](en/ochsner/15.22102.csv) / [de: 15.22102.csv](de/ochsner/15.22102.csv)
+   - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/rework-normalize/src/ochsner/_templates.tsp) &rarr; inlined in other file(s)

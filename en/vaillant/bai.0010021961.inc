@@ -43,10 +43,10 @@ r,,,EBusHeatcontrol,d.90 Digital control recognized: Digital regulator status,,,
 r,,,DcfState,d.91 DCF Status,,,b509,0d6900,value,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF receiver state
 r,,,ExternalHwcSwitch,Demand external HWC tank (via contact),,,b509,0d0000,value,,UCH,0=off;1=on,,
 r,,,WaterPressure,CH water pressure,,,b509,0d0200,press,,FLT,,bar,pressure,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
-r,,,Flame,flame,,,b509,0d0500,value,,UCH,240=off;15=on,,flame
+r,,,Flame,Flame,,,b509,0d0500,value,,UCH,240=off;15=on,,
 r,,,ChangesDSN,Changes_DSN_DK: Numbers adjusting (storing) the DSN,,,b509,0d0c00,value,,UCH,,,
-r,,,GasvalveUC,SD_Gasvalve_uC_DK,,,b509,0d0d00,value,,UCH,240=off;15=on,,Activation signal of the gasvalve (activated via micrcontroller)
-r,,,VolatileLockout,SD_VolatileLockout_DK,,,b509,0d1000,value,,UCH,240=no;15=yes,,TRUE: STB errors are locking
+r,,,GasvalveUC,SD_Gasvalve_uC_DK: Activation signal of the gasvalve (activated via micrcontroller),,,b509,0d0d00,value,,UCH,240=off;15=on,,
+r,,,VolatileLockout,SD_VolatileLockout_DK: TRUE: STB errors are locking,,,b509,0d1000,value,,UCH,240=no;15=yes,,
 r,,,ModulationTempDesired,Modulationsetpoint_DK,,,b509,0d2e00,value,,SIN,10,%,Modulation set point
 r,,,FlameSensingASIC,SD_Flame_Sensing_ASIC: ioni/adc value from the flame control circuit,,,b509,0d2f00,value,,UIN,,,
 r,,,HcUnderHundredStarts,HZ_UnderHundred_SwiActi: Heat switch cycles under hundred,,,b509,0d3000,value,,UCH,,,
@@ -54,9 +54,9 @@ r,,,HwcUnderHundredStarts,BW_UnderHundred_SwiActi: DHW switch cycles under hundr
 r,,,EbusSourceOn,EbusSourceOn_DK: Activation signal of the eBus source,,,b509,0d3400,value,,UCH,0=off;1=on,,
 r,,,Fluegasvalve,FluegasvalveOpen_DK: Feedback from the flue gas valve,,,b509,0d3c00,value,,UCH,0=off;1=on,,
 r,,,ExternalFaultmessage,External_Faultmessage_DK: external fault message,,,b509,0d3e00,value,,UCH,0=off;1=on,,
-r,,,GasvalveASICFeedback,SD_Gasvalve_ASICFeedback_DK,,,b509,0d4700,value,,UCH,240=off;15=on,,Gas valve feedback (from ASIC)
-r,,,GasvalveUCFeedback,SD_Gasvalve_uCFeedback_DK,,,b509,0d4800,value,,UCH,240=off;15=on,,Gas valve feedback (from micro controller)
-r,,,Ignitor,SD_Ignitor_DK,,,b509,0d4900,value,,UCH,240=off;15=on,,Ignition status
+r,,,GasvalveASICFeedback,SD_Gasvalve_ASICFeedback_DK: Gas valve feedback (from ASIC),,,b509,0d4700,value,,UCH,240=off;15=on,,
+r,,,GasvalveUCFeedback,SD_Gasvalve_uCFeedback_DK: Gas valve feedback (from micro controller),,,b509,0d4800,value,,UCH,240=off;15=on,,
+r,,,Ignitor,SD_Ignitor_DK: Ignition status,,,b509,0d4900,value,,UCH,240=off;15=on,,
 r,,,HwcTypes,DHW_Types_DK: DHW type of the appliance,,,b509,0d4b00,value,,UCH,,,
 r,,,HwcImpellorSwitch,DHW impellor switch: DHW demand from impeller switch,,,b509,0d5700,value,,UCH,0=no;1=yes,,
 r,,,WarmstartDemand,WarmstartDemand: Status of warmstarr mode,,,b509,0d3a04,value,,UCH,0=no;1=yes,,
@@ -64,7 +64,7 @@ r,,,BoilerType,BoilerType: Boiler typ of the BMU,,,b509,0d5e00,value,,UCH,,,
 r,,,ParamToken,ParamToken: Token for parameter managment,,,b509,0d6000,value,,UCH,,,
 r,,,ReturnTempExternal,Ext. return temperature: External return temperature sensor,,,b509,0d6b00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,FloorHeatingContact,Floor heating contact,,,b509,0d7000,value,,UCH,0=off;1=on,,
-r,,,Templimiter,Temperature limiter sensor,,,b509,0d7700,value,,UCH,240=off;15=on,,Feedback of the temperature limiter sensor
+r,,,Templimiter,Feedback of the temperature limiter sensor,,,b509,0d7700,value,,UCH,240=off;15=on,,
 r,,,EbusVoltage,eBUS voltage feedback,,,b509,0d7f00,value,,UCH,0=off;1=on,,
 r,,,FluegasvalveOpen,Flue flap open: Exhaust (flue) flap open,,,b509,0d8900,value,,UCH,0=off;1=on,,
 r,,,Testbyte,Testbyte (relevant for testers),,,b509,0d9900,value,,UCH,,,
@@ -77,16 +77,16 @@ r,,,DSNStart,DSN starting address,,,b509,0d3104,value,,UIN,,,
 r,,,ExtStorageModulCon,VR65 memory module: External memory module (VR65) connected,,,b509,0dbf00,value,,UCH,0=no;1=yes,,
 r,,,PartnumberBox,Partnumber_Box,,,b509,0dc000,value,,HEX:5,,,part number of the eBox
 r,,,WPSecondStage,WP_SecondStage: Second stage of the pump activated,,,b509,0ded00,value,,UCH,0=off;1=on,,
-r,,,TemplimiterWithNTC,SD_STL_with_NTC,,,b509,0dd200,value,,UCH,240=no;15=yes,,Temperature limiter (1 = NTC; 0 = switching contact)
-r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV,,,b509,0dd300,value,,UCH,240=no;15=yes,,All IFC errors are non-volatile
+r,,,TemplimiterWithNTC,SD_STL_with_NTC: Temperature limiter (1 = NTC; 0 = switching contact),,,b509,0dd200,value,,UCH,240=no;15=yes,,
+r,,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV: All IFC errors are non-volatile,,,b509,0dd300,value,,UCH,240=no;15=yes,,
 r,,,DisplayMode,DisplayMode: Display mode of the appliance,,,b509,0dda00,value,,UCH,,,
-r,,,Gasvalve3UC,Gasventil 3,,,b509,0ddb00,value,,UCH,240=off;15=on,,Gas valve switching signal (from the processor)
+r,,,Gasvalve3UC,Gasventil 3: Gas valve switching signal (from the processor),,,b509,0ddb00,value,,UCH,240=off;15=on,,
 r,,,InitialisationEEPROM,InitialisationEEPROM: EEPROM initialization (for production),,,b509,0ddc00,value,,UCH,0=no;1=yes,,
 r,,,TimerInputHc,Eingang Schaltuhr: Timer input (block heatdemand),,,b509,0dde00,value,,UCH,0=off;1=on,,
 r,,,FanMinSpeedOperation,Minimum fan speed,,,b509,0ddf00,value,,UIN,,1/min,Fan minimum speed
 r,,,FanMaxSpeedOperation,Maximum fan speed,,,b509,0de000,value,,UIN,,1/min,Fan maximum speed
 r,,,ExternGasvalve,External gas valve: External solenoid valve,,,b509,0de400,value,,UCH,0=off;1=on,,
-r,,,DCFTimeDate,DCF date/time,,,b509,0de500,vti,,VTI,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;,hda,,HDA,,,
+r,,,DCFTimeDate,DCF date/time,,,b509,0de500,vti,,VTI,,,,hda,,HDA,,,
 r,,,HwcSwitch,DHW switch,,,b509,0df303,value,,UCH,0=off;1=on,,Domestic hot water switch
 w,,install_NOT_YET_CONFIRMED,HwcSwitch,DHW switch,,,b509,0ef303,value,,UCH,0=off;1=on,,Domestic hot water switch
 r,,,ProductionByte,ProductionByte,,,b509,0d3e04,value,,UCH,,,

@@ -161,8 +161,8 @@ w,,install,AutoTimeCorr,Auto Time Correction,,,b509,0e7200,value,,UCH,0=off;1=on
 r,,,PrevHeatCurve,Prev Heat Curve,,,b509,0d7500,value,,UIN,100,,Previous Heat Curve Setting
 r,,,MaintenanceAlarm,Maintenance Alarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,
 w,,install,MaintenanceAlarm,Maintenance Alarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,
-r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0d7000,value,,ULG,,,
-w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0e7000,value,,ULG,,,
+r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0d7000,value,,DTM,,,
+w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Maintance Alarm Date,,,b509,0e7000,value,,DTM,,,
 r,,,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0d6e00,value,,UCH,0=off;1=on,,
 w,,install,AutoHeatCurveRegulation,Auto Heat Curve Regulation,,,b509,0e6e00,value,,UCH,0=off;1=on,,
 r,,,Preheat,Preheat,,,b509,0d6c00,value,,UCH,0=off;1=on,,

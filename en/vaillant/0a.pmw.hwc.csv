@@ -26,8 +26,8 @@ r,,,PumpED,Pump_ED: Power in %,,,b509,0d0500,value,,UCH,,%,
 r,,,CalculatedMixerPosition,CalculatedMixerPosition: 0: primary open; 220: primary closed,,,b509,0d0600,value,,UIN,,,
 r,,,ElectricalHeater,ElectricalHeater,,,b509,0d0800,value,,UCH,0=off;1=on,,
 r,,,HeatDemand,HeatDemand,,,b509,0d0900,value,,D2C,,°C,temperature
-r,,,OperatingMode,"OperatingMode: 0=OFF, 1=ON, 2=AUTO, 3=MANUAL",,,b509,0d0a00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode
-w,,install,OperatingMode,"OperatingMode: 0=OFF, 1=ON, 2=AUTO, 3=MANUAL",,,b509,0e0a00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode
+r,,,OperatingMode,OperatingMode,,,b509,0d0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,hot water mode
+w,,install,OperatingMode,OperatingMode,,,b509,0e0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,hot water mode
 r,,,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0d0b00,value,,D2C,,°C,temperature
 w,,install,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0e0b00,value,,D2C,,°C,temperature
 r,,,AutoTappingTempDesired,AutoTappingSetpoint,,,b509,0d0c00,value,,D2C,,°C,temperature

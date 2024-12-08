@@ -26,8 +26,8 @@ r,,,PumpED,Einschaltdauer Pumpe: Leistung in %,,,b509,0d0500,value,,UCH,,%,
 r,,,CalculatedMixerPosition,Berechnete Mischerposition: 0 : primär offen .. 220 primär geschlossen,,,b509,0d0600,value,,UIN,,,
 r,,,ElectricalHeater,Elektrischer Heizstab,,,b509,0d0800,value,,UCH,0=off;1=on,,
 r,,,HeatDemand,Wärmeanforderung,,,b509,0d0900,value,,D2C,,°C,Temperatur
-r,,,OperatingMode,"Betriebsart: 0=OFF, 1=ON, 2=AUTO, 3=MANUAL",,,b509,0d0a00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
-w,,install,OperatingMode,"Betriebsart: 0=OFF, 1=ON, 2=AUTO, 3=MANUAL",,,b509,0e0a00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,OperatingMode,Betriebsart,,,b509,0d0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,Warmwasser Modus
+w,,install,OperatingMode,Betriebsart,,,b509,0e0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,Warmwasser Modus
 r,,,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0d0b00,value,,D2C,,°C,Temperatur
 w,,install,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0e0b00,value,,D2C,,°C,Temperatur
 r,,,AutoTappingTempDesired,Automatischer Zapfsollwert,,,b509,0d0c00,value,,D2C,,°C,Temperatur
