@@ -30,7 +30,7 @@ jobs:
         mv en/versions.json en-versions.json
     - name: Move files and generate index
       run: |
-        mv -rf de en
+        rm -rf de en
         mv ebusd-configuration/outcsv/en en/
         mv ebusd-configuration/outcsv/de de/
         find en/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
