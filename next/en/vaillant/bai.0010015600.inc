@@ -19,8 +19,8 @@ r,,,WP,d.10 Central heating pump: Internal central heating pump,,,b509,0d4400,va
 r,,,ExtWP,d.11 External heating pump: External central heating pump,,,b509,0d3f00,value,,UCH,0=off;1=on,,
 r,,,Storageloadpump,d.12 storage load pump: tank load pump demand,,,b509,0d9e00,value,,UCH,,%,
 r,,,CirPump,d.13 Circulation pump: Hot water circulation pump (via external module),,,b509,0d7b00,value,,UCH,0=off;1=on,,
-r,,,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0da100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Desired central heating pump power
-w,,install_NOT_YET_CONFIRMED,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0ea100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Desired central heating pump power
+r,,,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0da100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Desired central heating pump power
+w,,install_NOT_YET_CONFIRMED,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0ea100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Desired central heating pump power
 r,,,PumpPower,d.15 Current heating pump power: Current central heating pump power,,,b509,0d7300,value,,UCH,,,
 r,,,DCRoomthermostat,d.16 Room thermostat 24 V: xternal controls heat demand (Clamp 3-4),,,b509,0d0e00,value,,UCH,0=off;1=on,,
 r,,,HwcDemand,d.22 DHW demand: Domestic hot water demand,,,b509,0d5800,value,,UCH,0=no;1=yes,,

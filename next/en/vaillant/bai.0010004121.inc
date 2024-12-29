@@ -137,8 +137,8 @@ r,,,FlowSetPotmeter,FlowSetPotmeter: flow setpoint potentiometer,,,b509,0df003,v
 r,,,HwcSetPotmeter,DHWSetPotmeter: DHW setpoint potentiometer,,,b509,0df103,value,,D2C,,°C,temperature
 r,,,ProductionByte,ProductionByte,,,b509,0d3e04,value,,UCH,,,
 r,,,SerialNumber,SerialNumber,,,b509,0d3f04,value,,HEX:8,,,serial number of AI
-r,,,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0da100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Desired central heating pump power
-w,,install,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0ea100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Desired central heating pump power
+r,,,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0da100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Desired central heating pump power
+w,,install,PumpPowerDesired,d.14 Desired heating pump power,,,b509,0ea100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Desired central heating pump power
 r,,,ReturnRegulation,d.17 Return regulation: heating flow/return regulation activation,,,b509,0d0c04,value,,UCH,0=off;1=on,,
 w,,install,ReturnRegulation,d.17 Return regulation: heating flow/return regulation activation,,,b509,0e0c04,value,,UCH,0=off;1=on,,
 r,,,HcPumpMode,d.18 CH pump mode,,,b509,0d4904,value,,UCH,0=post_run;1=permanent;2=winter,,"Pump mode: 0=post run, 1=continous, 2=Winter, 3=intermittend"

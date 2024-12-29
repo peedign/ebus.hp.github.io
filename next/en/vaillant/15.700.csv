@@ -75,8 +75,8 @@ r,,,PrEnergySum,total energy consumption,,,b524,020000005c00,value,,IGN:4,,,,val
 w,,,PrEnergySum,total energy consumption,,,b524,020100005c00,value,,ULG,,kWh,Dieses Jahr Stromverbrauch gesamt
 r,,,PrFuelSum,total fuel consumption,,,b524,020000005d00,value,,IGN:4,,,,value,,ULG,,kWh,Dieses Jahr Brennstoffverbrauch gesamt
 w,,,PrFuelSum,total fuel consumption,,,b524,020100005d00,value,,ULG,,kWh,Dieses Jahr Brennstoffverbrauch gesamt
-r,,,OpModeEffect,OpModeEffect,,,b524,020000006900,value,,IGN:4,,,,value,,UIN,0=alle;1=_1;2=_2;3=_3;4=_4;5=_5;6=_6,,selection which heating circuit is affected by changing parameters in the basic display
-w,,,OpModeEffect,OpModeEffect,,,b524,020100006900,value,,UIN,0=alle;1=_1;2=_2;3=_3;4=_4;5=_5;6=_6,,selection which heating circuit is affected by changing parameters in the basic display
+r,,,OpModeEffect,OpModeEffect,,,b524,020000006900,value,,IGN:4,,,,value,,UIN,0=alle;1=1;2=2;3=3;4=4;5=5;6=6,,selection which heating circuit is affected by changing parameters in the basic display
+w,,,OpModeEffect,OpModeEffect,,,b524,020100006900,value,,UIN,0=alle;1=1;2=2;3=3;4=4;5=5;6=6,,selection which heating circuit is affected by changing parameters in the basic display
 r,,,Installer1,installer name 1,,,b524,020000006c00,value,,IGN:4,,,,value,,STR:6,,,installer's name
 w,,,Installer1,installer name 1,,,b524,020100006c00,value,,STR:6,,,installer's name
 r,,,Installer2,installer name 2,,,b524,020000006d00,value,,IGN:4,,,,value,,STR:6,,,installer's name

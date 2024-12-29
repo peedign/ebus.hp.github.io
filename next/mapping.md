@@ -1,7 +1,7 @@
 ## Source Mapping
 This is the current mapping from [`src` files of ebusd-configuration](https://github.com/john30/ebusd-configuration/tree//src) to the CSV files served here.
 
-It was last built on 2024-12-29 from [git revision a863e76](https://github.com/john30/ebusd-configuration/tree/a863e764cbc7b1162042ddd37b2f071add43461a).
+It was last built on 2024-12-29 from [git revision cafba50](https://github.com/john30/ebusd-configuration/tree/cafba50f874c2d37d035c7260adfdcbffe6bfdad).
 
 <!-- note: template file to be amended with the actual data by the workflow -->
  - [](https://github.com/john30/ebusd-configuration/tree/./src//)

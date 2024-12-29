@@ -102,8 +102,8 @@ r,,,Date,installer level register,,,b509,0d3400,value,,HDA:3,,,Datum
 w,,install,Date,installer level register,,,b509,0e3400,value,,HDA:3,,,Datum
 r,,,Weekday,installer level register,,,b509,0d3500,value,,BDY,,,Wochentag
 w,,install,Weekday,installer level register,,,b509,0e3500,value,,BDY,,,Wochentag
-r,,,CurrentPppProvider,default *r for register,,,b509,0d3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
-w,,install,CurrentPppProvider,"default *wi for register with user level ""install""",,,b509,0e3600,value,,UCH,0=_1;1=_2;2=emergency_provider,,
+r,,,CurrentPppProvider,default *r for register,,,b509,0d3600,value,,UCH,0=1;1=2;2=emergency_provider,,
+w,,install,CurrentPppProvider,"default *wi for register with user level ""install""",,,b509,0e3600,value,,UCH,0=1;1=2;2=emergency_provider,,
 r,,,GsmGprsPin,GSM SIM Pin,,,b509,0d3700,value,,STR:4,,,Achtung ! Die falsche PIN macht die Kommunikationseinheit unbrauchbar
 w,,install,GsmGprsPin,GSM SIM Pin,,,b509,0e3700,value,,STR:4,,,Achtung ! Die falsche PIN macht die Kommunikationseinheit unbrauchbar
 r,,,ModemType,default *r for register,,,b509,0d3800,value,,UCH,0=analogue;1=GSM;2=GPRS,,
