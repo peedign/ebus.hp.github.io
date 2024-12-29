@@ -4,3 +4,4 @@ exclude:
   - .github
   - "*.tmpl"
   - ebusd-configuration
+  - ebusd-configuration-next
