@@ -1,0 +1,148 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d5f00,value,,BDY,,,Wochentag
+r,,,Date,Aktuelles Datum,,,b509,0d6100,value,,HDA:3,,,Datum
+w,,,Date,Aktuelles Datum,,,b509,0e6100,value,,HDA:3,,,Datum
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d6000,value,,VTI,,,Uhrzeit
+w,,,Time,Aktuelle Uhrzeit,,,b509,0e6000,value,,VTI,,,Uhrzeit
+r,,,RoomTemp,Raumisttemp: raw value current room temperature and sensorstate (without any correction),,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,RoomTempCorrection,Raumtemperatur-Abgleich: Korrekturwert der Raumtemperaturanzeige,,,b509,0d5700,value,,SCH,2,K,
+w,,,RoomTempCorrection,Raumtemperatur-Abgleich: Korrekturwert der Raumtemperaturanzeige,,,b509,0e5700,value,,SCH,2,K,
+r,,,DisplayedHc1RoomTempDesired,"Angezeigte Raumtemperatur Soll Heizkreis 1: 0= >5°C, currently displayed room temperature setpoint",,,b509,0d9600,value,,D1C,,°C,Temperatur
+r,,,Hc1OPMode,Betriebsart Heizkreis 1,,,b509,0d2f00,value,,UCH,2=auto;3=on;4=night;5=summer,,operation mode of the first heating circuit
+w,,,Hc1OPMode,Betriebsart Heizkreis 1,,,b509,0e2f00,value,,UCH,2=auto;3=on;4=night;5=summer,,operation mode of the first heating circuit
+r,,,Hc1DayTemp,HC1_DaySetTemp: day setpoint,,,b509,0d2700,value,,D1C,,°C,Temperatur
+w,,,Hc1DayTemp,HC1_DaySetTemp: day setpoint,,,b509,0e2700,value,,D1C,,°C,Temperatur
+r,,,Hc1NightTemp,Absenktemperatur Heizkreis 1: Absenktemperatur des 1. Heizkreises,,,b509,0d3000,value,,D1C,,°C,Temperatur
+w,,,Hc1NightTemp,Absenktemperatur Heizkreis 1: Absenktemperatur des 1. Heizkreises,,,b509,0e3000,value,,D1C,,°C,Temperatur
+r,,,Hc1QuickVetoTemp,Quick Veto Temperatur Heizkreis 1: manual override setpoint of the first heating circuit,,,b509,0d3c00,value,,D1C,,°C,Temperatur
+r,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0d4000,value,,D1C,,,
+w,,,Hc1HolidayRoomTemp,"HC1_HolidayRoomSetTemp: 4.5=frostprotect, room setpoint during holidays",,,b509,0e4000,value,,D1C,,,
+r,,,Hc1SFMode,HC1_SFMode,,,b509,0d5d00,value,,UCH,0=none;1=party;2=onedaybankholiday;3=onedayholiday;4=holiday;5=bankholiday;6=quickveto;7=onetimeventilation;8=onetimewater,,activated special function of first heating circuit
+r,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0d1100,value,,HDA:3,,,Datum
+w,,,Hc1HolidayStartPeriod,HC1HolidayStartPeriod: first heating circuit's start date of holidays,,,b509,0e1100,value,,HDA:3,,,Datum
+r,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0d1200,value,,HDA:3,,,Datum
+w,,,Hc1HolidayEndPeriod,HC1HolidayEndPeriod: first heating circuit's end date of holidays,,,b509,0e1200,value,,HDA:3,,,Datum
+r,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0d2100,value,,HDA:3,,,Datum
+w,,,Hc1BankHolidayStartPeriod,HC1BankHolidayStartPeriod: first heating circuit's start date of bank holidays,,,b509,0e2100,value,,HDA:3,,,Datum
+r,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0d2200,value,,HDA:3,,,Datum
+w,,,Hc1BankHolidayEndPeriod,HC1BankHolidayEndPeriod: first heating circuit's end date of bank holidays,,,b509,0e2200,value,,HDA:3,,,Datum
+r,,,HwcTempDesired,gewünschte Temperatur Warmwasserkreis: setpoint of domestic hot water circuit,,,b509,0d4400,value,,D1C,,°C,Temperatur
+w,,,HwcTempDesired,gewünschte Temperatur Warmwasserkreis: setpoint of domestic hot water circuit,,,b509,0e4400,value,,D1C,,°C,Temperatur
+r,,,HcName1,"Heizkreisname HK1: labelling of the first heating circuit (only A-Z,0-9,blank)",,,b509,0d3f00,value,,STR:11,,,Name des Heizkreises
+w,,,HcName1,"Heizkreisname HK1: labelling of the first heating circuit (only A-Z,0-9,blank)",,,b509,0e3f00,value,,STR:11,,,Name des Heizkreises
+r,,,ContactName,aucContactName,,,b509,0db400,value,,STR:13,,,"Fachhandwerker Name (nur A-Z,0-9 und Leerzeichen)"
+w,,install,ContactName,aucContactName,,,b509,0eb400,value,,STR:13,,,"Fachhandwerker Name (nur A-Z,0-9 und Leerzeichen)"
+r,,,PhoneNumber,Telefonnummer Fachhandwerker,,,b509,0d5400,value,,STR:13,,,"Fachhandwerker Telefonnummer (nur 0-9,- und Leerzeichen)"
+w,,install,PhoneNumber,Telefonnummer Fachhandwerker,,,b509,0e5400,value,,STR:13,,,"Fachhandwerker Telefonnummer (nur 0-9,- und Leerzeichen)"
+r,,,MaintenanceDate,Datum nächste Wartung,,,b509,0d5900,value,,HDA:3,,,Datum
+w,,install,MaintenanceDate,Datum nächste Wartung,,,b509,0e5900,value,,HDA:3,,,Datum
+r,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0d5a00,value,,UCH,,,
+w,,,LcdContrastValue,Display Kontrastwert: Einstellung des LCD-Kontrasts,,,b509,0e5a00,value,,UCH,,,
+r,,,SummerWinterTimeAdjust,Sommer/Winterzeit Umstellung,,,b509,0d5300,value,,UCH,0=off;1=auto,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
+w,,,SummerWinterTimeAdjust,Sommer/Winterzeit Umstellung,,,b509,0e5300,value,,UCH,0=off;1=auto,,enable automatic switching over to daylight saving's time (when a DCF receiver is connected to the BMU the value is set fix to ON)
+r,,,LanguageVariant,Sprachvariante,,,b509,0d1600,value,,UCH,0=german;1=english;2=french;3=italian;4=danish;5=dutch;6=spanish;7=turkish;8=hungarian;9=russian;10=ukrainian;11=estonian;12=latvian;13=lithuanian;14=swedish;15=norwegian;16=polish;17=czech;18=croatian;19=slovakian;20=romanian;21=slovenian;22=serbian,,display language
+w,,,LanguageVariant,Sprachvariante,,,b509,0e1600,value,,UCH,0=german;1=english;2=french;3=italian;4=danish;5=dutch;6=spanish;7=turkish;8=hungarian;9=russian;10=ukrainian;11=estonian;12=latvian;13=lithuanian;14=swedish;15=norwegian;16=polish;17=czech;18=croatian;19=slovakian;20=romanian;21=slovenian;22=serbian,,display language
+r,,,BMUFlowTempOrVF1,Vorlauftemperaturfühler 1: value of either an externally connected flow temperature sensor or the BMU's internal flow sensor if an external sensor is missing,,,b509,0d8700,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,RoomTempOffsetSelfWarming,Offset Eigenerwärmung: room temperature intrinsic heating offset,,,b509,0d1500,value,,D2C,,°C,Temperatur
+r,,,Hc12stepanalogCtrl,HC1_2stepanalogCtrl,,,b509,0d3600,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
+w,,install,Hc12stepanalogCtrl,HC1_2stepanalogCtrl,,,b509,0e3600,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
+r,,,Hc1LineMatchingAdaption,HC1_LineMatchingAdaption: Abgleich Regelstrecke,,,b509,0d3700,value,,SCH,,,
+w,,install,Hc1LineMatchingAdaption,HC1_LineMatchingAdaption: Abgleich Regelstrecke,,,b509,0e3700,value,,SCH,,,
+r,,,CirPump,Zirkulationspumpe aktiv: circulation pump's state,,,b509,0d8100,value,,UCH,0=no;1=yes,,
+r,,,Hc1ActualFlowTempDesired,Aktuelle Vorlauftemperatur Soll Heizkreis 1: current flow temperature setpoint of the first heating circuit,,,b509,0d3e00,value,,D1C,,°C,Temperatur
+r,,,HwcCircuitActive,Warmwasserkreis aktiv: Warmwasserkreis ist eingeschaltet,,,b509,0d4b00,value,,UCH,0=no;1=yes,,
+w,,install,HwcCircuitActive,Warmwasserkreis aktiv: Warmwasserkreis ist eingeschaltet,,,b509,0e4b00,value,,UCH,0=no;1=yes,,
+r,,,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0d4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
+w,,install,HwcLegioStartDay,Start Legionellenschutz Warmwasserkreis,,,b509,0e4900,value,,UCH,0=Mon;1=Tue;2=Wed;3=Thu;4=Fri;5=Sat;6=Sun;7=off;8=Mon_Sun,,Wochentag an dem die Legionellenschutzfunktion gestartet wird (evt. auch täglich)
+r,,,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0d4a00,value,,VTI,,,Uhrzeit
+w,,install,HwcLegioStartTime,Startzeit Legionellenschutz Warmwasserkreis: time on which legionella protection is started,,,b509,0e4a00,value,,VTI,,,Uhrzeit
+r,,,DisplayedHwcStorageTemp,DisplayedDHWTankTemperature: display of the storage's temperature (also in case of an SP1error),,,b509,0d9e00,value,,D1C,,°C,Temperatur
+r,,,HwcActualTempDesired,Aktuelle Temperatur Soll Warmwasserkreis: current domestic hot water setpoint,,,b509,0d8600,value,,D1C,,°C,Temperatur
+r,,,KeyCodeforConfigMenu,Passwort für das Konfigurationsmenü: code for the installer's menues,,,b509,0d5500,value,,PIN,,,
+w,,install,KeyCodeforConfigMenu,Passwort für das Konfigurationsmenü: code for the installer's menues,,,b509,0e5500,value,,PIN,,,
+r,,,GlobalSystemOff,"GlobalSystemOFF: Set to TRUE if ""System Off"" is selected",,,b509,0d0100,value,,UCH,0=off;1=on,,
+r,,,StatusDcf,Status DCF,,,b509,0d0200,value,,UCH,0=nosignal;1=ok;2=sync;3=validDCF;4=validRTC,,Status DCF Signal
+r,,,DcfIsValid,DcfIsValid: validity of DCF signal,,,b509,0d0400,value,,UCH,0=no;1=yes,,
+r,,,ACTOstorDetected,ACTOstorDetected: indicates that an ACTOstor has been detected,,,b509,0d6f00,value,,UCH,0=no;1=yes,,
+r,,,HydraulicMap,"HydraulicMap: hydraulic map (0 = H1, 3 = H4, 11 = A1, 12 = A2, 14 = A5, 15 = S1, 16 = S3a, 17 = S3b)",,,b509,0d1800,value,,UCH,,,
+r,,,ActualRoomTempDesiredHc1,Raumsolltemp. HK1: current room setpoint considering all basic conditions passed to the control algorithms,,,b509,0d6300,value,,D2C,,°C,Temperatur
+r,,,B51000M7OpModeMonitor,"B51000M7OpModeMonitor: operation mode sent via B5 10 00 (0 = auto, 1 = forced off, 2 = forced CH, 3 = forced DHW)",,,b509,0d6500,value,,UCH,,,
+r,,,B51000M8HeatFlowSetMonitor,B51000M8HeatFlowSetMonitor: flow temperature setpoint sent via B5 10 00 to the BMU,,,b509,0d8d00,value,,D1C,,,
+r,,,B51000M9TappingSetMon,B51000M9TappingSetMon: DHW setpoint without loading offset (for hydraulic map H1),,,b509,0d5600,value,,D1C,,,
+r,,,B51000M10HwcFlowSetMon,B51000M10DHWFlowSetMon: flow setpoint DHW sent via B5 10 00,,,b509,0d6600,value,,UCH,,,
+r,,,B51000M12DisableBitsMon,"B51000M12DisableBitsMon: bits 0-7: disable CH/disable DHW tapping/disable DHW tank loading/not used/clear burner blocking DHW/dis, disable bits sent via B5 10 00 (left bit 0, right bit 7)",,,b509,0d6700,value,,UCH,,,
+r,,,B51000M14Monitor,"B51000M14Monitor: bits 0-7: remote control CH pump/release backup heater/release cooling/not used/left stop position DHW o, bits sent in M14 of B5 10 00 (left bit 0, right bit 7; relevant is bit 0: remote control of CH pump)",,,b509,0d6800,value,,UCH,,,
+r,,,TestVarActivateFunction,TestVarActivateFunction: 0=All SF_OFF11/2=1DayHolON/OFF13/4=1DayBankON/OFF19/10=1xDHWLoadON/OFF11/12=QVetoON/OFF115/16=PartyON/OFF119/20=Ventil.ON/OFF123/24=SystemOff_ON/OFF,,,b509,0d0b00,value,,UCH,,,
+r,,,HwcOPMode,"Betriebsart Warmwasserkreis: operation mode of the domestic hot water circuit set implicitly (0 = off, 1 = on, 2 = auto, 3 = auto sunday, 4 = party, 6 = one time tank loading, 7 = holiday)",,,b509,0d4200,value,,UCH,,,
+r,,,BMUB51101HwcState,BMUB51101_DHWState: flame is on because of either tapping or tank loading,,,b509,0d7500,value,,UCH,,,
+r,,,B51000TempDesiredLoadingPump,B51000SetPointLoadingPump: loading pump's setpoint sent via B5 10 00 to the BMU,,,b509,0d7b00,value,,D1C,,,
+r,,,BMUB51101BoilerFlowTemp,BMUB51101_BoilerFlowTemp: Gemessene Vorlauftemperatur am internen Sensor,,,b509,0d7700,value,,D1C,,°C,Temperatur
+r,,,BMUB51101StorageTemp,Speichertemperatur Ist: hot water storage temperature received via eBUS service B5 11 01,,,b509,0d7100,value,,D1C,,°C,Temperatur
+r,,,BMUB51101ErrorStatus,BMUB51101_ErrorStatus: error state of BMU received via eBUS service B51101,,,b509,0d7000,value,,UCH,,,
+r,,,StartEepromUpdate,Starte EEPROM Aktualsiserung: update of the EEPROM has to be started,,,b509,0d0e00,value,,UCH,0=off;1=on,,
+r,,,EepromUpdateActive,EEPROM Aktivierung aktiv: update of the EEPROM has been started,,,b509,0d0f00,value,,UCH,0=off;1=on,,
+r,,,ChimneySweepModeActive,Schornsteinfegerbetrieb: chimney sweep mode has been enabled by the BMU,,,b509,0d9000,value,,UCH,0=no;1=yes,,
+r,,,HwcLoadingIn430Active,DHWLoadingIn430Active: DHW-loading is active in non parallel loading cases,,,b509,0d9300,value,,UCH,0=no;1=yes,,
+r,,,LegioProtectActive,LegioProtectActive: legionella protection is active,,,b509,0d7300,value,,UCH,0=no;1=yes,,
+r,,,InstallAssistant,"InstallAssistant: install assistant not active (0 = active, 1 = not active)",,,b509,0d5e00,value,,UCH,0=off;1=on,,
+r,,,FactoryTestActive,Fertigungstest aktiv: Factory Test Pin,,,b509,0d1000,value,,UCH,0=no;1=yes,,
+r,,,CPLPLast24started,CP_LPLast24started: circulation respectively loading pump has been started during the last 24h,,,b509,0d8300,value,,UCH,0=no;1=yes,,
+r,,,PumpEnergySaveStateMonitor,PumpEnergySaveStateMonitor: monitoring of the pump energy saving's state transition diagram,,,b509,0d9100,value,,UCH,,,
+r,,,PumpEnergySaveCalculatedTimeMonitor,PumpEnergySaveCalculatedTimeMonitor: calculated time for the heating circuit's pump's switch off time during pump energy saving function (depends on outside temperature),,,b509,0d9200,value,,UCH,,min,Minuten
+r,,,ActoSTOROPMode,actoSTOR_OPMode: state diagram actoSTOR control,,,b509,0d9400,value,,UCH,,,
+r,,,ClockSwitchSummerWinterDone,Umschaltung Sommer-Winterzeit erfolgt: automatic switching over to/from daylight saving's time has been done,,,b509,0d7800,value,,UCH,0=no;1=yes,,
+r,,,MonitorEEpromInkonsiNumber,MonitorEEpromInkonsiNumber,,,b509,0d9f00,value,,HEX:8,,,identification of the last eight EEPROM inconsistencies
+r,,,MonitorCurrentIPart,MonitorCurrent_I_Anteil: current i-control value; updated every 3 minutes,,,b509,0d3300,value,,D2C,,°C,Temperatur
+r,,,CountryVariant,"Ländervariante: country variant (0 = west, 1 = east, 2 = all)",,,b509,0d1700,value,,UCH,,,
+r,,,DisplayedRoomTemp,Raumtemperatur Ist: Aktuelle Raumtemperatur,,,b509,0d8000,value,,D2C,,°C,Temperatur
+r,,,RaumtempIstOben,RaumtempIstOben,,,b509,0dc000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,ADCValueTempabove,ADCValue_T_above,,,b509,0d2d00,value,,UIN,,,
+r,,,RaumtempIstUnten,RaumtempIstUnten,,,b509,0dc100,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,ADCValueTempbelow,ADCValue_T_below,,,b509,0d4e00,value,,UIN,,,
+r,,,CcTimer_Monday,Zeitfenster Montag,,,b515,0002,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Monday,Zeitfenster Montag,,,b515,0002,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0102,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0102,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0202,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0202,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0302,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0302,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Friday,Zeitfenster Freitag,,,b515,0402,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Friday,Zeitfenster Freitag,,,b515,0402,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Saturday,Zeitfenster Samstag,,,b515,0502,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Saturday,Zeitfenster Samstag,,,b515,0502,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CcTimer_Sunday,Zeitfenster Montag,,,b515,0602,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CcTimer_Sunday,Zeitfenster Montag,,,b515,0602,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Monday,Zeitfenster Montag,,,b515,0001,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0101,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0101,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0201,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0201,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0301,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0301,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Friday,Zeitfenster Freitag,,,b515,0401,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Friday,Zeitfenster Freitag,,,b515,0401,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Saturday,Zeitfenster Samstag,,,b515,0501,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Saturday,Zeitfenster Samstag,,,b515,0501,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HwcTimer_Sunday,Zeitfenster Montag,,,b515,0601,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

@@ -1,0 +1,8 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*u,
+*w,
+u,Broadcast,,Vdatetime,Datum Uhrzeit,,fe,b516,00,time,,BTI,,,,date,,BDA,,,
+w,Broadcast,,Vdatetime,Datum Uhrzeit,,fe,b516,00,time,,BTI,,,,date,,BDA,,,
+u,Broadcast,,Outsidetemp,Außentemperatur,,fe,b516,01,value,,D2B,,°C,Temperatur
+u,Broadcast,,HwcStatus,Status Warmwasser,,fe,b505,27,onoff,,UCH,0=off;1=on,,,vf1,,UCH,,°C,Temperatur,onoff_1,,UCH,0=off;1=on,,
+u,Broadcast,,Load,Quick - WW Speicherladung,,fe,b505,06,value,,UCH,0=off;1=on,,

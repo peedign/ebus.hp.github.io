@@ -1,0 +1,48 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,Ntc1Sensor,NTC 1 Sensor: Temperature in solar flow (from solar collector),,,b509,0d0500,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Ntc2Sensor,NTC 2 Sensor: Temperature in solar back flow (to solar collector),,,b509,0d0600,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,SolPumpRelay,Relais Solarpumpe: Solar pump relay: 0: OFF; 1: ON,,,b509,0d0f00,value,,UCH,0=off;1=on,,
+w,,install,SolPumpRelay,Relais Solarpumpe: Solar pump relay: 0: OFF; 1: ON,,,b509,0e0f00,value,,UCH,0=off;1=on,,
+r,,,SolPumpPower,Leistung Solarpumpe: Performance of solar pump: (7 - 100 %),,,b509,0d1000,value,,UCH,,%,
+w,,install,SolPumpPower,Leistung Solarpumpe: Performance of solar pump: (7 - 100 %),,,b509,0e1000,value,,UCH,,%,
+r,,,BufferPumpPower,Leistung Pufferpumpe: Performance of buffer pump: (15 - 100%),,,b509,0d1100,value,,UCH,,%,
+w,,install,BufferPumpPower,Leistung Pufferpumpe: Performance of buffer pump: (15 - 100%),,,b509,0e1100,value,,UCH,,%,
+r,,,MonitorMatlabLast5minSolAverage,MonitorMatlab_Last5minSolarAverage,,,b509,0d1700,value,,SIN,,,
+r,,,CurrentVPMLoadingMode,Aktuelle Betriebsart: 1 = Warmwasser (autonom)2 = Heizung (autonom)3 = +10K (autonom)4 = Schwimmbad5 = Warmwasser6 = Heizung7 = +10K,,,b509,0d1900,value,,UCH,,,
+r,,,RunTimePump1Minutes,Laufzeit Pumpe 1: Laufzeit der Solarpumpe (Minuten Anteil),,,b509,0d1a00,value,,UCH,,min,Minuten
+r,,,RunTimePump1Hours,Laufzeit Pumpe 1: Laufzeit der Solarpumpe (Stunden Anteil),,,b509,0d1b00,value,,UIN,,h,Stunden
+r,,,ExternalHwcRequest,Externe Warmwasseranforderung: 0: No request; 1: Request,,,b509,0d1c00,value,,UCH,0=off;1=on,,
+r,,,ExternalHcRequest,Externe Heizungsanforderung: 0: No request; 1: Request,,,b509,0d1d00,value,,UCH,0=off;1=on,,
+r,,,ExternalHwcTempDesired,Externer Warmwassersollwert: Requested temperature for DHW,,,b509,0d1e00,value,,UCH,,°C,Solltemperatur
+r,,,ExternalHcTempDesired,Externer Heizungssollwert: Requested temperature for CH,,,b509,0d1f00,value,,UCH,,°C,Solltemperatur
+r,,,CurrentASCStateforExternals,CurrentASCStateforExternals: 1:OFF 2: Proofing 3:DHWLoading 4:CHLoading 5:Overtemperature,,,b509,0d2000,value,,UCH,,,
+r,,,CurrentASCStateforASI,CurrentASCStateforASI: 1: Standby 2:Proofing 3:StorageLoading 4:Error_System_blocked,,,b509,0d2100,value,,UCH,,,
+r,,,DateAndTimeIsSet,DateAndTimeIsSet: 0: Date and Time is not set; 1: Date and Time is set,,,b509,0d2200,value,,UCH,0=off;1=on,,
+r,,,Time,Uhrzeit,,,b509,0d2300,value,,VTI,,,Uhrzeit
+w,,install,Time,Uhrzeit,,,b509,0e2300,value,,VTI,,,Uhrzeit
+r,,,Date,Datum,,,b509,0d2400,value,,HDA:3,,,Datum
+w,,install,Date,Datum,,,b509,0e2400,value,,HDA:3,,,Datum
+r,,,FlowSensorFrequency,FlowSensorFrequency,,,b509,0d2d00,value,,UIN,,,
+r,,,CurrentFlow,Volumenstrom,,,b509,0d2e00,value,,UIN,,ml / min,Flow thru buffer circuit if loading the storage
+r,,,Variante,Variante: 1: VMS 302: VPM 20 S3: VPM 60 S,,,b509,0d3000,value,,UCH,,,
+r,,,CurrentSystemMode,Aktueller Systemmodus: 1 : Autonomer Modus3 : Regler Modus,,,b509,0d3300,value,,UCH,,,
+r,,,InternalHwcTempDesired,InternalDHWSetpoint: Temperature target for DHW loading if solar module is in stand alone appliccation without external control,,,b509,0d3500,value,,UCH,,,
+r,,,InternalHcTempDesired,InternalCHSetpoint: Temperature target for CW loading if solar module is in stand alone appliccation without external control,,,b509,0d3600,value,,UCH,,,
+r,,,ASIDetected,ASIDetected,,,b509,0d3800,value,,UCH,0=off;1=on,,
+r,,,CountryZone,Land: Standort der für den Sonnenkalender herangezogen wird. Siehe Anleitung,,,b509,0d3900,value,,UCH,,,
+w,,install,CountryZone,Land: Standort der für den Sonnenkalender herangezogen wird. Siehe Anleitung,,,b509,0e3900,value,,UCH,,,
+r,,,RequestForExternalDateTimeSetting,Status Datum/Uhrzeit: 0: Time and Date is set; 1: Time and Date is not set,,,b509,0d3a00,value,,UCH,0=off;1=on,,
+r,,,YieldCurrentDay,Heutiger Solarertrag: Accumulated solar gain from 00:00 to 24:00 if time is set,,,b509,0d3b00,value,,UIN,,kWh,
+w,,install,YieldCurrentDay,Heutiger Solarertrag: Accumulated solar gain from 00:00 to 24:00 if time is set,,,b509,0e3b00,value,,UIN,,kWh,
+r,,,ForceStartSolPumpKick,Pumpenkick erzwingen: Startet die Kollektorpumpe für maximal 5 Minuten um die Kollektortemperatur zu überprüfen.0 = aus1 = ein,,,b509,0d4700,value,,UCH,0=off;1=on,,
+r,,,MonitorMatlabState,MonitorMatlabState: main states: 201: Waiting; 209: Loading; 41: Night Modus,,,b509,0d4800,value,,UCH,,,
+r,,,RunTimeBufferPumpMinutes,Laufzeit Pufferpumpe: Laufzeit der Pufferpumpe (Minuten Anteil),,,b509,0d4b00,value,,UCH,,min,Minuten
+r,,,RunTimeBufferPumpHours,Laufzeit Pufferpumpe: Laufzeit der Pufferpumpe (Stunden Anteil),,,b509,0d4c00,value,,UIN,,h,Stunden
+r,,,MonitorOverheatState,MonitorOverheatState: 111: Waiting; 112 and 113: Temperature to high; 220 and 221: In Overheat protection,,,b509,0d4f00,value,,UCH,,,
+r,,,YieldTotal,Solarertrag gesamt: Kumulierter Solarertrag seit Installation,,,b509,0d5600,value,,ULG,,kWh,
+w,,install,YieldTotal,Solarertrag gesamt: Kumulierter Solarertrag seit Installation,,,b509,0e5600,value,,ULG,,kWh,
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

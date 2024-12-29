@@ -1,0 +1,69 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+*[id_sw],scan,,,,SW
+[id_sw>=201]r,,,DisplayedRoomTemp,Raumtemperatur Ist: Aktuelle Raumtemperatur,,,b509,0d3e00,value,,D2C,,°C,Temperatur
+[id_sw=102-131]r,,,RoomTemp,Raumisttemp: Rohwert Raumtemperatur,,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,OutsideTemp,Außentemp. Sensor: Außentemperatur und Sensorstatus,,,b509,0d0300,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,OperatingMode,Betriebsart,,,b509,0d0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,OperatingMode,Betriebsart,,,b509,0e0500,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,ActualWeekday,Aktueller Wochentag,,,b509,0d0600,value,,BDY,,,Wochentag
+w,,,ActualWeekday,Aktueller Wochentag,,,b509,0e0600,value,,BDY,,,Wochentag
+r,,,Time,Aktuelle Uhrzeit,,,b509,0d0700,value,,VTI,,,Uhrzeit
+w,,,Time,Aktuelle Uhrzeit,,,b509,0e0700,value,,VTI,,,Uhrzeit
+r,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0d0800,value,,D2C,,°C,Temperatur
+w,,,ReducedNightTemp,Nachttemperatur: drop temperature setpoint,,,b509,0e0800,value,,D2C,,°C,Temperatur
+r,,,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0d0b00,value,,UCH,0=off;1=on,,
+w,,install,YearCalendarActive,Jahreskalender: Automatische Umschaltung Sommer-Winterzeit,,,b509,0e0b00,value,,UCH,0=off;1=on,,
+r,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0d0d00,value,,HDA:3,,,Datum
+w,,,Date,Datum: current date (calendar must be enabled previously!),,,b509,0e0d00,value,,HDA:3,,,Datum
+r,,,IsInHoliday,Ferienprogramm aktiv: Restliche Urlaubstage,,,b509,0d1100,value,,UCH,,,
+r,,,IsInQuickVeto,Quick Veto aktiv: Quick Veto Funktion aktiv,,,b509,0d1600,value,,UCH,0=off;1=on,,
+r,,,QuickVetoTemp,Quick Veto Temp: room temperature setpoint during activated quick veto function,,,b509,0d1700,value,,D2C,,°C,Temperatur
+r,,,HwcTempDesired,WW Sollwert,,,b509,0d1e00,value,,D2C,,°C,Temperatur
+w,,,HwcTempDesired,WW Sollwert,,,b509,0e1e00,value,,D2C,,°C,Temperatur
+r,,,ComfTempDesired,Komforttemp,,,b509,0d2000,temp,,D2C,,°C,Raumsollwert,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur
+w,,,ComfTempDesired,Komforttemp,,,b509,0e2000,temp,,D2C,,°C,Raumsollwert,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur
+r,,,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0d0200,value,,D2C,,°C,Temperatur
+w,,install,RoomTempOffset,Raumisttemp. Korrekturwert: Korrekturwert der Raumtemperaturanzeige,,,b509,0e0200,value,,D2C,,°C,Temperatur
+r,,,OutsideTempOffset,Außentemperatur-Abgleich: Korrekturwert für die Außentemperatur,,,b509,0d0400,value,,D2C,,°C,Temperatur
+w,,install,OutsideTempOffset,Außentemperatur-Abgleich: Korrekturwert für die Außentemperatur,,,b509,0e0400,value,,D2C,,°C,Temperatur
+r,,,HeatingCurve,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist),,,b509,0d2300,value,,UIN,100,,Heizkurve: Heating curve
+w,,install,HeatingCurve,Heizkurve (nur relevant wenn ein Außentemperaturfühler an das Heizgerät angeschlossen ist),,,b509,0e2300,value,,UIN,100,,Heizkurve: Heating curve
+r,,,ZweipunktAnalogSlct,Zweipunkt / Analogbetrieb,,,b509,0d2900,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
+w,,install,ZweipunktAnalogSlct,Zweipunkt / Analogbetrieb,,,b509,0e2900,value,,UCH,0=two_point_control;1=analogue_control,,Zweipunktregelung
+r,,,WeekDayProgSwitch,Wochenprogramm,,,b509,0d2b00,value,,UCH,1=daily;7=weekly,,Umschaltung von Tagesprogramm (die Zeitprogramme sind dann jeden Tag identisch) zum Wochenprogramm (jeder Tag kann idividuell programmiert werden)
+w,,install,WeekDayProgSwitch,Wochenprogramm,,,b509,0e2b00,value,,UCH,1=daily;7=weekly,,Umschaltung von Tagesprogramm (die Zeitprogramme sind dann jeden Tag identisch) zum Wochenprogramm (jeder Tag kann idividuell programmiert werden)
+r,,,StackeBUSTaskMax,MaxStackeBUSTask: maximum number of bytes needed for the eBUS task stack,,,b509,0d1800,value,,UCH,,,
+r,,,StackMainTaskMax,MaxStackMainTask: maximum number of bytes needed for the main task stack,,,b509,0d1900,value,,UCH,,,
+r,,,StackLifeCheckTaskMax,MaxStackLifeCheckTask: maximum number of bytes needed for the life check task stack,,,b509,0d1a00,value,,UCH,,,
+r,,,EBUSFifoDiffCntMax,eBUSFifoDiffCntMax: max. eBUS-Fifo Füllstand,,,b509,0d2800,value,,UCH,,,
+r,,,RTCAdjustment,"RTC Abgleich: Korrekturwert der Echtzeituhr.Anzahl der Minuten X nach deren Ablauf eine Korrektur durchgeführt wird. Ist der Wert negativ, dann wird alle X Minuten eine Sekunde abgezogen. Ist der Wert positiv, dann wird alle X Minuten eine Sekunde addiert.",,,b509,0d2c00,value,,SIN,,,
+r,,,EEpromMaxInkonsCnt,EEpromMaxInkonsCnt: Zähler EEPROM Inkonsistenz,,,b509,0d2d00,value,,UIN,,,
+r,,,POCResetCnt,Netz ein Zähler: Power-On-Resets,,,b509,0d2e00,value,,UIN,,,
+r,,,WDResetCnt,Watchdog Zähler: Watchdog-Resets,,,b509,0d2f00,value,,UIN,,,
+r,,,LVResetCnt,LVResetCnt: counter of low voltage reset events,,,b509,0d3000,value,,UIN,,,
+r,,,CMResetCnt,CMResetCnt: counter of clock monitor reset events,,,b509,0d3100,value,,UIN,,,
+r,,,COMErrorCnt,COMErrorCnt: Fehler eBUS-Kommunikation,,,b509,0d3200,value,,UIN,,,
+r,,,VariantDKRefreshCnt,VariantDKRefreshCnt: counts how often variant ID has been corrected,,,b509,0d3300,value,,UCH,,,
+r,,,RfCommErrorPending,Übertragungsfehler auf der Funkstrecke: Kommunikationsstörung auf der Funkstrecke,,,b509,0d3500,value,,UCH,0=off;1=on,,
+r,,,BMUErrorStatus,Fehlerstatus Heizgerät: Fehlerstatus des Heizgerätes,,,b509,0d3600,value,,UCH,,,
+r,,,BatteryError,Battriefehler: low battery,,,b509,0d3700,value,,UCH,0=off;1=on,,
+r,,,EBUSCommErrorPending,eBUSCommErrorPending: eBUS Kommunikationsfehler,,,b509,0d3900,value,,UCH,0=off;1=on,,
+r,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Monday,Zeitfenster Montag,,,b515,0000,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Tuesday,Zeitfenster Dienstag,,,b515,0100,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Wednesday,Zeitfenster Mittwoch,,,b515,0200,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Thursday,Zeitfenster Donnerstag,,,b515,0300,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Friday,Zeitfenster Freitag,,,b515,0400,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Saturday,Zeitfenster Samstag,,,b515,0500,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,HcTimer_Sunday,Zeitfenster Montag,,,b515,0600,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
