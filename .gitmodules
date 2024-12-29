@@ -1,4 +1,7 @@
 [submodule "ebusd-configuration"]
 	path = ebusd-configuration
 	url = https://github.com/john30/ebusd-configuration.git
-	branch = rework-normalize
+	branch = master
+[submodule "ebusd-configuration-next"]
+	path = ebusd-configuration-next
+	url = https://github.com/john30/ebusd-configuration.git

@@ -2,10 +2,23 @@ name: Import changes from ebusd-configuration repository.
 
 on:
   workflow_dispatch:
+    inputs:
+      next:
+        description: whether to update the "next" folder or the top folder
+        required: true
+        type: choice
+        options:
+          - main
+          - next
+      commit:
+        description: whether to commit the changes
+        type: boolean
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      next: '${{ inputs.next }}' # or empty
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -17,57 +30,70 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
+    - name: Determine suffix and subdir
+      run: |
+        if [[ "$next" == "next" ]]; then
+          suffix='-next'
+          subdir='next'
+        else
+          suffix=''
+          subdir='.'
+        fi
+        echo "suffix=$suffix" >> "$GITHUB_ENV"
+        echo "subdir=$subdir" >> "$GITHUB_ENV"
     - name: Install packages
       run: npm install -omit=dev
-      working-directory: ebusd-configuration/
+      working-directory: ebusd-configuration${suffix}/
     - name: Convert typespec files (en+de)
       run: ./utils/precheck.sh
-      working-directory: ebusd-configuration/
+      working-directory: ebusd-configuration${suffix}/
     - name: Stash versions
       continue-on-error: true
       run: |
-        mv de/versions.json de-versions.json
-        mv en/versions.json en-versions.json
+        mv ${subdir}/de/versions.json de-versions.json
+        mv ${subdir}/en/versions.json en-versions.json
     - name: Move files and generate index
       run: |
-        rm -rf de en
-        mv ebusd-configuration/outcsv/en en/
-        mv ebusd-configuration/outcsv/de de/
-        find en/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
-        find de/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
+        rm -rf ${subdir}/de ${subdir}/en
+        mv ebusd-configuration${suffix}/outcsv/en ${subdir}/
+        mv ebusd-configuration${suffix}/outcsv/de ${subdir}/
+        find ${subdir}/en/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
+        find ${subdir}/de/ -type d -exec ./.github/workflows/genindex.sh \{\} \;
     - name: Generate mapping
       run: |
         date=$(date +%Y-%m-%d)
-        ref=$(cd ebusd-configuration && git rev-parse HEAD)
-        shortref=$(cd ebusd-configuration && git rev-parse --short HEAD)
-        branch=$(egrep "submodule |branch =" .gitmodules |egrep -A1 'submodule "ebusd-configuration"'|egrep branch|head -n 1|sed -e 's#.*= *##')
-        cat mapping.md.tmpl | sed -e "s#\$date#$date#g" -e "s#\$ref#$ref#g" -e "s#\$shortref#$shortref#g" -e "s#\$branch#$branch#g" > mapping.md
-        ((cd ebusd-configuration/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh mapping.md ebusd-configuration/src $branch)
-    - name: Unstash versions
+        ref=$(cd ebusd-configuration${suffix} && git rev-parse HEAD)
+        shortref=$(cd ebusd-configuration${suffix} && git rev-parse --short HEAD)
+        branch=$(egrep "submodule |branch =" .gitmodules |egrep -A1 "submodule \"ebusd-configuration${suffix}\""|egrep branch|head -n 1|sed -e 's#.*= *##')
+        cat mapping.md.tmpl | sed -e "s#\$date#$date#g" -e "s#\$ref#$ref#g" -e "s#\$shortref#$shortref#g" -e "s#\$branch#$branch#g" > ${subdir}/mapping.md
+        ((cd ebusd-configuration${suffix}/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh ${subdir}/mapping.md ebusd-configuration${suffix}/src $branch)
+    - name: Unstash versions (current)
       continue-on-error: true
       run: |
-        mv de-versions.json de/versions.json
-        mv en-versions.json en/versions.json
+        mv de-versions.json ${subdir}/de/versions.json
+        mv en-versions.json ${subdir}/en/versions.json
     - name: Update versions
       run: |
-        ./.github/workflows/genversions.sh en
-        ./.github/workflows/genversions.sh de
+        ./.github/workflows/genversions.sh ${subdir}/en
+        ./.github/workflows/genversions.sh ${subdir}/de
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: conversion_result
         path: |
           mapping.md
-          en
-          de
+          ${subdir}/en
+          ${subdir}/de
 
     - name: Commit files
+      if: ${{ inputs.commit }}
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add de en mapping.md
-        git commit -a -m "import changes from ebusd-configuration"
+        git add ${subdir}/de ${subdir}/en ${subdir}/mapping.md
+        git commit -a -m "import changes from ebusd-configuration${suffix}"
     - name: Push changes
+      if: ${{ inputs.commit }}
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
