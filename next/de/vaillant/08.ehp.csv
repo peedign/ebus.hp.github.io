@@ -291,8 +291,8 @@ r,,,EnergyBalancingRelease,read/write register,,,b509,0dd100,value,,UCH,0=off;1=
 w,,,EnergyBalancingRelease,read/write register,,,b509,0ed100,value,,UCH,0=off;1=on,,
 r,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,0dd300,value,,VTI,,,Uhrzeit
 u,,,TimeOfNextPredictedPowerCut,read only updated register,,,b509,29d300,value,,IGN:2,,,,value,,VTI,,,Uhrzeit
-r,,,PowerCutPreloading,default *r for register,,,b509,0df400,value,,UCH,0=off;1=on,,
-w,,,PowerCutPreloading,default *whwc,,25,b509,0ef400,value,,UCH,0=off;1=on,,
+r,,,PowerCutPreloading,,,,b509,0df400,value,,UCH,0=off;1=on,,
+w,,,PowerCutPreloading,,,25,b509,0ef400,value,,UCH,0=off;1=on,,
 r,,,HcParallelStorageFillingEnabled,"Parallele Speicherladung: BMR: indicates that heating circuits can keep running at dhw loading; for heatpumps, this is 1 if there is a heat buffer, 0 otherwise",,,b509,0d5500,value,,UCH,0=no;1=yes,,
 r,,,OutsideTempOffset,"Aussentemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc300,value,,D2C,,K,
 w,,install,OutsideTempOffset,"Aussentemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec300,value,,D2C,,K,
