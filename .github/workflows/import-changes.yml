@@ -67,8 +67,9 @@ jobs:
         ref=$(cd ebusd-configuration${suffix} && git rev-parse HEAD)
         shortref=$(cd ebusd-configuration${suffix} && git rev-parse --short HEAD)
         branch=$(egrep "submodule |branch =" .gitmodules |egrep -A1 "submodule \"ebusd-configuration${suffix}\""|egrep branch|head -n 1|sed -e 's#.*= *##')
+        branch=${branch:-master}
         cat mapping.md.tmpl | sed -e "s#\$date#$date#g" -e "s#\$ref#$ref#g" -e "s#\$shortref#$shortref#g" -e "s#\$branch#$branch#g" > ${subdir}/mapping.md
-        ((cd ebusd-configuration${suffix}/src/ && find . -type d) | xargs -L1 ./.github/workflows/genmapping.sh ${subdir}/mapping.md ebusd-configuration${suffix}/src $branch)
+        ((cd ebusd-configuration${suffix}/src/ && find . -type d) | xargs -i ./.github/workflows/genmapping.sh "${subdir}/mapping.md" "ebusd-configuration${suffix}/src" "$branch" "{}")
     - name: Unstash versions
       continue-on-error: true
       run: |
