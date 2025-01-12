@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 mapfile=$(realpath "$1")
 base=$(realpath "$2/$4")
 cd "$base" || exit 1
