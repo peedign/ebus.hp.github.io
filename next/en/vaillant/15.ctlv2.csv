@@ -188,6 +188,10 @@ r,,,Z1OpMode,Betriebsart Zone 1,,,b524,020003000600,value,,IGN:4,,,,value,,UIN,0
 w,,,Z1OpMode,Betriebsart Zone 1,,,b524,020103000600,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode of zone 1
 r,,,Z1QuickVetoTemp,Quick Veto Temperatur Zone 1,,,b524,020003000800,value,,IGN:4,,,,value,,EXP,,°C,manual override setpoint for zone 1
 w,,,Z1QuickVetoTemp,Quick Veto Temperatur Zone 1,,,b524,020103000800,value,,EXP,,°C,manual override setpoint for zone 1
+r,,,Z1QuickVetoDuration,Duration of Quick Veto mode Zone 1,,,b524,020003002600,value,,IGN:4,,,,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+w,,,Z1QuickVetoDuration,Duration of Quick Veto mode Zone 1,,,b524,020103002600,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+r,,,Z1QuickVetoEndTime,Quick Veto end time Zone 1,,,b524,020003001e00,value,,IGN:4,,,,value,,HTI,,,
+r,,,Z1QuickVetoEndDate,Quick Veto end date Zone 1,,,b524,020003002400,value,,IGN:4,,,,value,,HDA:3,,,date
 r,,,Z1NightTemp,Absenktemperatur Zone 1,,,b524,020003000900,value,,IGN:4,,,,value,,EXP,,°C,night setpoint for zone 1
 w,,,Z1NightTemp,Absenktemperatur Zone 1,,,b524,020103000900,value,,EXP,,°C,night setpoint for zone 1
 r,,,Z1BankHolidayStartPeriod,Bank Feiertag Start Zone 1,,,b524,020003000c00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays for zone 1
@@ -223,6 +227,10 @@ r,,,Z2OpMode,Betriebsart Zone 2,,,b524,020003010600,value,,IGN:4,,,,value,,UIN,0
 w,,,Z2OpMode,Betriebsart Zone 2,,,b524,020103010600,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode of zone 2
 r,,,Z2QuickVetoTemp,Quick Veto Temperatur Zone 2,,,b524,020003010800,value,,IGN:4,,,,value,,EXP,,°C,manual override setpoint for zone 2
 w,,,Z2QuickVetoTemp,Quick Veto Temperatur Zone 2,,,b524,020103010800,value,,EXP,,°C,manual override setpoint for zone 2
+r,,,Z2QuickVetoDuration,Duration of Quick Veto mode Zone 2,,,b524,020003012600,value,,IGN:4,,,,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+w,,,Z2QuickVetoDuration,Duration of Quick Veto mode Zone 2,,,b524,020103012600,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+r,,,Z2QuickVetoEndTime,Quick Veto end time Zone 2,,,b524,020003011e00,value,,IGN:4,,,,value,,HTI,,,
+r,,,Z2QuickVetoEndDate,Quick Veto end date Zone 2,,,b524,020003012400,value,,IGN:4,,,,value,,HDA:3,,,date
 r,,,Z2NightTemp,Absenktemperatur Zone 2,,,b524,020003010900,value,,IGN:4,,,,value,,EXP,,°C,night setpoint for zone 2
 w,,,Z2NightTemp,Absenktemperatur Zone 2,,,b524,020103010900,value,,EXP,,°C,night setpoint for zone 2
 r,,,Z2BankHolidayStartPeriod,Bank Feiertag Start Zone 2,,,b524,020003010c00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays for zone 2
@@ -256,6 +264,10 @@ r,,,Z3OpMode,Betriebsart Zone 3,,,b524,020003020600,value,,IGN:4,,,,value,,UIN,0
 w,,,Z3OpMode,Betriebsart Zone 3,,,b524,020103020600,value,,UIN,0=off;1=auto;2=day;3=night,,operation mode of zone 3
 r,,,Z3QuickVetoTemp,Quick Veto Temperatur Zone 3,,,b524,020003020800,value,,IGN:4,,,,value,,EXP,,°C,manual override setpoint for zone 3
 w,,,Z3QuickVetoTemp,Quick Veto Temperatur Zone 3,,,b524,020103020800,value,,EXP,,°C,manual override setpoint for zone 3
+r,,,Z3QuickVetoDuration,Duration of Quick Veto mode Zone 3,,,b524,020003022600,value,,IGN:4,,,,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+w,,,Z3QuickVetoDuration,Duration of Quick Veto mode Zone 3,,,b524,020103022600,value,,EXP,,h,valid values are 0.5-12 in steps of 0.5 and writing enables quick veto mode
+r,,,Z3QuickVetoEndTime,Quick Veto end time Zone 3,,,b524,020003021e00,value,,IGN:4,,,,value,,HTI,,,
+r,,,Z3QuickVetoEndDate,Quick Veto end date Zone 3,,,b524,020003022400,value,,IGN:4,,,,value,,HDA:3,,,date
 r,,,Z3NightTemp,Absenktemperatur Zone 3,,,b524,020003020900,value,,IGN:4,,,,value,,EXP,,°C,night setpoint for zone 3
 w,,,Z3NightTemp,Absenktemperatur Zone 3,,,b524,020103020900,value,,EXP,,°C,night setpoint for zone 3
 r,,,Z3BankHolidayStartPeriod,Bank Feiertag Start Zone 3,,,b524,020003020c00,value,,IGN:4,,,,value,,HDA:3,,,start date of bank holidays for zone 3

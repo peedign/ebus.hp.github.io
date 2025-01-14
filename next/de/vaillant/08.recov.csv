@@ -67,8 +67,8 @@ r,,,IntensiveVentilation,Intensivlüftung,,,b509,0dca0d,value,,UCH,0=off;1=on,,
 w,,,IntensiveVentilation,Intensivlüftung,,,b509,0eca0d,value,,UCH,0=off;1=on,,
 r,,,OutsideAirTemp,Außenlufttemperatur,,,b509,0d0c0e,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 u,,,OutsideAirTemp,Außenlufttemperatur,,,b509,290c0e,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-r,,,ExitAirTemp,Fortlufttemperatur,,,b509,0d0d0e,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-u,,,ExitAirTemp,Fortlufttemperatur,,,b509,290d0e,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,ExitAirTemp,Exit air temperature,,,b509,0d0d0e,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+u,,,ExitAirTemp,Exit air temperature,,,b509,290d0e,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 r,,,ExhaustAirTemp,Ablufttemperatur,,,b509,0db40d,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 u,,,ExhaustAirTemp,Ablufttemperatur,,,b509,29b40d,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
 r,,,ExhaustAirHumidity,Abluftfeuchte,,,b509,0d8503,value,,D2C,,%,

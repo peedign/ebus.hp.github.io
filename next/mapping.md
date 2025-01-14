@@ -1,7 +1,7 @@
 ## Source Mapping
 This is the current mapping from [`src` files of ebusd-configuration](https://github.com/john30/ebusd-configuration/tree/master/src) to the CSV files served here.
 
-It was last built on 2025-01-12 from [git revision 4d937b8](https://github.com/john30/ebusd-configuration/tree/4d937b808e8e0d6ad7985eae5b2c5c2b12cba13d).
+It was last built on 2025-01-14 from [git revision ff7b74d](https://github.com/john30/ebusd-configuration/tree/ff7b74d723afbafd94ff202da6099f47e4378df1).
 
 <!-- note: template file to be amended with the actual data by the workflow -->
  - [broadcast.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/broadcast.tsp) &rarr; [en: broadcast.csv](en/broadcast.csv) / [de: broadcast.csv](de/broadcast.csv)
