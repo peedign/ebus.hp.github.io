@@ -27,8 +27,8 @@ r,,,Weekday,weekday,,,b509,0d2f00,value,,BDY,,,weekday
 w,,,Weekday,weekday,,,b509,0e2f00,value,,BDY,,,weekday
 r,,,RoomName,Room Name,,,b509,0d3000,value,,STR:14,,,Room Name
 w,,,RoomName,Room Name,,,b509,0e3000,value,,STR:14,,,Room Name
-r,,,Language,Language,,,b509,0d3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Language
-w,,,Language,Language,,,b509,0e3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch__AT_,,Language
+r,,,Language,Language,,,b509,0d3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch_AT,,Language
+w,,,Language,Language,,,b509,0e3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch_AT,,Language
 r,,,RoomTemp,Room Temp,,,b509,0d3a00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status
 r,,,DisplayedRoomTemp,Displayed Room Temp,,,b509,0d3b00,value,,D2C,,°C,temperature
 r,,,OutsideTemp,Outside Temp,,,b509,0d3c00,temp,,D2C,,°C,temperature,sensor,,UCH,0=ok;85=circuit;170=cutoff,,sensor status

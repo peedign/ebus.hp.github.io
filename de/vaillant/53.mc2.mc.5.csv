@@ -37,8 +37,8 @@ r,,,FlowTempMin,MinFlowTemp3: For a heat demand the desired flow temperature wil
 w,,,FlowTempMin,MinFlowTemp3: For a heat demand the desired flow temperature will at least be this value,,,b509,0e3000,value,,UCH,,°C,Temperatur
 r,,,FlowTempMax,MaxFlowTemp3: For a heat demand the desired flow temperature will maximal be this value,,,b509,0d3100,value,,UCH,,°C,Temperatur
 w,,,FlowTempMax,MaxFlowTemp3: For a heat demand the desired flow temperature will maximal be this value,,,b509,0e3100,value,,UCH,,°C,Temperatur
-r,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,Stunden
-w,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,Stunden
+r,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,-5,min,Minuten
+w,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,-5,min,Minuten
 r,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
 w,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
 r,,,FloorPavingDryingDay,FloorPavingDryingDay3: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,
@@ -73,8 +73,8 @@ r,,,CoolingTimer_Friday,Zeitfenster Freitag,,,b515,0403,value,,IGN:1,,,,from,,TT
 w,,,CoolingTimer_Friday,Zeitfenster Freitag,,,b515,0403,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,CoolingTimer_Saturday,Zeitfenster Samstag,,,b515,0503,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,CoolingTimer_Saturday,Zeitfenster Samstag,,,b515,0503,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-r,,,CoolingTimer_Sunday,Zeitfenster Montag,,,b515,0603,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-w,,,CoolingTimer_Sunday,Zeitfenster Montag,,,b515,0603,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,CoolingTimer_Sunday,Zeitfenster Sonntag,,,b515,0603,value,,IGN:1,,,,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,CoolingTimer_Sunday,Zeitfenster Sonntag,,,b515,0603,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
 r,,,Mode,Betriebsmodus,,,b504,01,tempdesired,,UCH,,°C,Temperatur,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,floorpavingdryingday,,UCH,,,Tage,floorpavingdryingtemp,,UCH,,°C,Temperatur,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
 w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
@@ -88,8 +88,9 @@ w,,,SetShutdownTemp,Aussentemp. Abschaltgrenze setzen,,,b505,0c,value,,UCH,,°C,
 w,,,SetPumpIdlePeriod,Pumpensperrzeit setzen,,,b505,0d,value,,UCH,,min,Minuten
 w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
 w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
-w,,,SetMaxPreHeating,Max. Voraufheizung setzen,,,b505,10,value,,UCH,-12,h,Stunden
-r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Heizkurve: Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,-12,h,Stunden
+w,,,SetMaxPreHeating,Max. Voraufheizung setzen,,,b505,10,value,,UCH,,h,Stunden
+w,,,SetMaxPreHeatingFine,Max. Voraufheizung setzen,,,b505,3f,value,,UCH,-5,min,Minuten
+r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Heizkurve: Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,,h,Stunden
 r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
 r,,,Status,Status Vorlauf Soll/Ist,,,b504,0d,flowtempdesired,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,Temperatur,tempdesired,,UCH,,°C,Temperatur
 r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
@@ -105,8 +106,8 @@ r,,,Timer_Friday,Zeitfenster Freitag,,,b504,06,from,,TTM,,,von,to,,TTM,,,bis,fro
 w,,,Timer_Friday,Zeitfenster Freitag,,,b505,0905,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Timer_Saturday,Zeitfenster Samstag,,,b504,07,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,Timer_Saturday,Zeitfenster Samstag,,,b505,0906,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-r,,,Timer_Sunday,Zeitfenster Montag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-w,,,Timer_Sunday,Zeitfenster Montag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Sunday,Zeitfenster Sonntag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Sunday,Zeitfenster Sonntag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
 r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

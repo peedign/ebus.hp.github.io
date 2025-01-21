@@ -34,8 +34,9 @@ w,,,SetShutdownTemp,Set outside shutdown temperature,,,b505,0c,value,,UCH,,°C,t
 w,,,SetPumpIdlePeriod,Set pump idle period,,,b505,0d,value,,UCH,,min,minutes
 w,,,SetFlowTempMin,Set min flow temperature,,,b505,0e,value,,UCH,,°C,temperature
 w,,,SetFlowTempMax,Set max flow temperature,,,b505,0f,value,,UCH,,°C,temperature
-w,,,SetMaxPreHeating,Set max pre-heating,,,b505,10,value,,UCH,-12,h,hours
-r,,,Params,Parameters,,,b504,09,tempdesired,,UCH,,°C,temperature,tempdesiredlow,,SCH,,°C,temperature,curve,,UIN,100,,Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,shutdowntemp,,SCH,,°C,temperature,pumpidleperiod,,UCH,,min,minutes,flowtempmin,,SCH,,°C,temperature,flowtempmax,,SCH,,°C,temperature,maxpreheating,,UCH,-12,h,hours
+w,,,SetMaxPreHeating,Set max pre-heating,,,b505,10,value,,UCH,,h,hours
+w,,,SetMaxPreHeatingFine,Set max pre-heating,,,b505,3f,value,,UCH,-5,min,minutes
+r,,,Params,Parameters,,,b504,09,tempdesired,,UCH,,°C,temperature,tempdesiredlow,,SCH,,°C,temperature,curve,,UIN,100,,Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,shutdowntemp,,SCH,,°C,temperature,pumpidleperiod,,UCH,,min,minutes,flowtempmin,,SCH,,°C,temperature,flowtempmax,,SCH,,°C,temperature,maxpreheating,,UCH,,h,hours
 r,,,Status0a,Status flow temperature/mixer/pump/desired flow temperature,,,b504,0a,flowtemp,,D2C,,°C,temperature,mixer,,UCH,0=off;1=open;2=close,,mixer State,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,temperature
 r,,,Status,Status flow desired/current,,,b504,0d,flowtempdesired,,UCH,,°C,temperature,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,temperature,tempdesired,,UCH,,°C,temperature
 r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature

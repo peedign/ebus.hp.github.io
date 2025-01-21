@@ -22,8 +22,8 @@ r,,,WP,d.10 Wasserpumpe: Interne Heizungspumpe,,,b509,0d4400,value,,UCH,0=off;1=
 r,,,ExtWP,d.11 ext. Heizungspumpe: Externe Heizungspumpe,,,b509,0d3f00,value,,UCH,0=off;1=on,,
 r,,,Storageloadpump,d.12 Speicherladepumpe: Ladepumpenanforderung,,,b509,0d9e00,value,,UCH,,%,
 r,,,CirPump,d.13 Zirkulationspumpe: Status Zirkulationspumpe (über ein externes Modul ansteuerbar),,,b509,0d7b00,value,,UCH,0=off;1=on,,
-r,,,PumpPowerDesired,d.14 Leistung Heizungspumpe Soll,,,b509,0da100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Leistungsstufe der Heizungspumpe
-w,,install_NOT_YET_CONFIRMED,PumpPowerDesired,d.14 Leistung Heizungspumpe Soll,,,b509,0ea100,value,,UCH,0=auto;1=_53;2=_60;3=_70;4=_85;5=_100,%,PWM-Leistungsstufe der Heizungspumpe
+r,,,PumpPowerDesired,d.14 WP_PWMPowerDia_DK: Set-PWM-Powerrate of electronic-pump,,,b509,0da100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Leistungsstufe der Heizungspumpe
+w,,install_NOT_YET_CONFIRMED,PumpPowerDesired,d.14 WP_PWMPowerDia_DK: Set-PWM-Powerrate of electronic-pump,,,b509,0ea100,value,,UCH,0=auto;1=53;2=60;3=70;4=85;5=100,%,PWM-Leistungsstufe der Heizungspumpe
 r,,,PumpPower,d.15 Leistung Heizungspumpe,,,b509,0d7300,value,,UCH,,,
 r,,,DCRoomthermostat,d.16 Raumthermostat: Wärmeanforderung vom externen Regler (Klemme 3-4),,,b509,0d0e00,value,,UCH,0=off;1=on,,
 r,,,HwcDemand,d.22 WW Anforderung: Brauchwasseranforderung (Zapfung oder Schaltsignal vom Speicher),,,b509,0d5800,value,,UCH,0=no;1=yes,,
@@ -171,24 +171,36 @@ r,,,PumpHwcFlowSum,PumpDHWFlowSum: summed up DHW flow rate,,,b509,0dc100,value,,
 r,,,PumpHwcFlowNumber,PumpDHWFlowNumber: number of times DHW flow rate was detected,,,b509,0dc200,value,,UCH,,,
 r,,,SHEMaxFlowTemp,Max. WW Vorlauftemp.: Max. Vorlauftemperatur für WW,,,b509,0dc300,value,,D2C,,°C,Temperatur
 r,,,SHEMaxDeltaHwcFlow,SHE_MaxDeltaFlowDHW: maximum difference between flow and DHW outlet temperature,,,b509,0dc400,value,,D2C,,°C,Temperatur
-r,,,PrEnergySumHwc1,PrEnergySumDHW1: Wartungsdaten,,,b509,0dc500,value,,ULG,,,
-r,,,PrEnergyCountHwc1,PrEnergyCountDHW1: Wartungsdaten,,,b509,0dc600,value,,ULG,,,
-r,,,PrEnergySumHwc2,PrEnergySumDHW2: Wartungsdaten,,,b509,0dc700,value,,ULG,,,
-r,,,PrEnergyCountHwc2,PrEnergyCountDHW2: Wartungsdaten,,,b509,0dc800,value,,ULG,,,
-r,,,PrEnergySumHwc3,PrEnergySumDHW3: Wartungsdaten,,,b509,0dc900,value,,ULG,,,
-r,,,PrEnergyCountHwc3,PrEnergyCountDHW3: Wartungsdaten,,,b509,0dca00,value,,ULG,,,
+r,,,PrEnergySumHwc1,PrEnergySumDHW1,,,b509,0dc500,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHwc1,PrEnergySumDHW1,,,b509,0ec500,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHwc1,PrEnergyCountDHW1,,,b509,0dc600,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHwc1,PrEnergyCountDHW1,,,b509,0ec600,value,,ULG,,,Wartungsdaten
+r,,,PrEnergySumHwc2,PrEnergySumDHW2,,,b509,0dc700,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHwc2,PrEnergySumDHW2,,,b509,0ec700,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHwc2,PrEnergyCountDHW2,,,b509,0dc800,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHwc2,PrEnergyCountDHW2,,,b509,0ec800,value,,ULG,,,Wartungsdaten
+r,,,PrEnergySumHwc3,PrEnergySumDHW3,,,b509,0dc900,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHwc3,PrEnergySumDHW3,,,b509,0ec900,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHwc3,PrEnergyCountDHW3,,,b509,0dca00,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHwc3,PrEnergyCountDHW3,,,b509,0eca00,value,,ULG,,,Wartungsdaten
 r,,,WaterHcFlowMax,MaxWaterFlowCH: Wartungsdaten,,,b509,0dd000,value,,UIN,,,
 r,,,WaterpressureVariantSum,WaterpressureVariantSum: Wartungsdaten,,,b509,0df000,value,,UIN,,mbar,Druck
 r,,,WaterpressureMeasureCounter,WaterpressureMeasureCounter: Wartungsdaten,,,b509,0df100,value,,UCH,,,
 r,,,PrAPSCounter,PrAPSCounter: Wartungsdaten,,,b509,0df200,value,,UCH,,,
 r,,,PrAPSSum,PrAPSSum: Wartungsdaten,,,b509,0df300,value,,UIN,,s,Sekunden
 r,,,PrVortexFlowSensorValue,PrVortexFlowSensorValue,,,b509,0df400,value,,SIN,,ADC,Wartungsdaten
-r,,,PrEnergySumHc1,PrEnergySumCH1: Wartungsdaten,,,b509,0df500,value,,ULG,,,
-r,,,PrEnergyCountHc1,PrEnergyCountCH1: Wartungsdaten,,,b509,0df600,value,,ULG,,,
-r,,,PrEnergySumHc2,PrEnergySumCH2: Wartungsdaten,,,b509,0df700,value,,ULG,,,
-r,,,PrEnergyCountHc2,PrEnergyCountCH2: Wartungsdaten,,,b509,0df800,value,,ULG,,,
-r,,,PrEnergySumHc3,PrEnergySumCH3: Wartungsdaten,,,b509,0df900,value,,ULG,,,
-r,,,PrEnergyCountHc3,PrEnergyCountCH3: Wartungsdaten,,,b509,0dfa00,value,,ULG,,,
+r,,,PrEnergySumHc1,PrEnergySumCH1,,,b509,0df500,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHc1,PrEnergySumCH1,,,b509,0ef500,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHc1,PrEnergyCountCH1,,,b509,0df600,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHc1,PrEnergyCountCH1,,,b509,0ef600,value,,ULG,,,Wartungsdaten
+r,,,PrEnergySumHc2,PrEnergySumCH2,,,b509,0df700,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHc2,PrEnergySumCH2,,,b509,0ef700,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHc2,PrEnergyCountCH2,,,b509,0df800,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHc2,PrEnergyCountCH2,,,b509,0ef800,value,,ULG,,,Wartungsdaten
+r,,,PrEnergySumHc3,PrEnergySumCH3,,,b509,0df900,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergySumHc3,PrEnergySumCH3,,,b509,0ef900,value,,ULG,,,Wartungsdaten
+r,,,PrEnergyCountHc3,PrEnergyCountCH3,,,b509,0dfa00,value,,ULG,,,Wartungsdaten
+w,,install_NOT_YET_CONFIRMED,PrEnergyCountHc3,PrEnergyCountCH3,,,b509,0efa00,value,,ULG,,,Wartungsdaten
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
 r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
 w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

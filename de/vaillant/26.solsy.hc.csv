@@ -4,8 +4,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *uw,
 *[id_sw],scan,,,,SW
 [id_sw>=401]r,,,EnergyDemandNotReachedDelay,Verzögerung Fehler Wärmebedarf nicht gedeckt: Delay time for not reached temperature,,,b509,0d7b00,value,,UCH,,h,Stunden
-[id_sw>=401]r,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0d3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
-[id_sw>=401]w,,install,HcMaxPreHeating,Max. Voraufheizung,,,b509,0e3800,value,,UCH,,min / 5,maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature)
+[id_sw>=401]r,,,HcMaxPreHeating,Max. Voraufheizung: maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature),,,b509,0d3800,value,,UCH,-5,min,Minuten
+[id_sw>=401]w,,install,HcMaxPreHeating,Max. Voraufheizung: maximum time central heating is released in advance of the first time window (time is adjusted according to current outside temperature),,,b509,0e3800,value,,UCH,-5,min,Minuten
 [id_sw<=400]r,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,Stunden
 [id_sw<=400]w,,,HcMaxPreHeating,Max. Voraufheizung: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,Stunden
 r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
@@ -51,11 +51,12 @@ r,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is a
 w,,,TeleswitchOperatingMode,TeleSWITCH Betriebsart: If the tele switch port is activated the burner circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
 r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
 r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
-uw,,,SetMode,Betriebsmodus,,,b510,00,hcmode,,UCH,0=auto;1=off;2=heat;2=water,,Boiler Modus,flowtempdesired,,D1C,,°C,Temperatur,hwctempdesired,,D1C,,°C,Temperatur,hwcflowtempdesired,,UCH,,°C,Temperatur,ign,,IGN:1,,,,disablehc,,BI0,,,,disablehwctapping,,BI1,,,,disablehwcload,,BI2,,,,ign_1,,IGN:1,,,,remotecontrolhcpump,,BI0,,,,releasebackup,,BI1,,,,releasecooling,,BI2,,,
+uw,,,SetMode,Betriebsmodus,,,b510,00,hcmode,,UCH,0=auto;1=off;2=heat;3=water,,Boiler Modus,flowtempdesired,,D1C,,°C,Temperatur,hwctempdesired,,D1C,,°C,Temperatur,hwcflowtempdesired,,UCH,,°C,Temperatur,ign,,IGN:1,,,,disablehc,,BI0,,,,disablehwctapping,,BI1,,,,disablehwcload,,BI2,,,,ign_1,,IGN:1,,,,remotecontrolhcpump,,BI0,,,,releasebackup,,BI1,,,,releasecooling,,BI2,,,
+w,,install,SetMode,Betriebsmodus,,,b510,00,hcmode,,UCH,0=auto;1=off;2=heat;3=water,,Boiler Modus,flowtempdesired,,D1C,,°C,Temperatur,hwctempdesired,,D1C,,°C,Temperatur,hwcflowtempdesired,,UCH,,°C,Temperatur,ign,,IGN:1,,,,disablehc,,BI0,,,,disablehwctapping,,BI1,,,,disablehwcload,,BI2,,,,ign_1,,IGN:1,,,,remotecontrolhcpump,,BI0,,,,releasebackup,,BI1,,,,releasecooling,,BI2,,,
 r,,,Status01,Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus,,,b511,01,temp,,D1C,,°C,Temperatur,temp_1,,D1C,,°C,Temperatur,temp_2,,D2B,,°C,Temperatur,temp_3,,D1C,,°C,Temperatur,temp_4,,D1C,,°C,Temperatur,pumpstate,,UCH,0=off;1=on;2=overrun;4=hwc,,Pumpenstatus
-r,,,Status02,Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp,,,b511,02,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,temp,,UCH,,°C,Temperatur,temp_1,,D1C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur,temp_3,,D1C,,°C,Temperatur
+r,,,Status02,Betriebsart/Maximaltemperatur/ReglerCurrentTemp/Maximaltemperatur/ReglerCurrentTemp,,,b511,02,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,temp,,UCH,,°C,Temperatur,temp_1,,D1C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur,temp_3,,D1C,,°C,Temperatur
 r,,,Status,Status,,,b511,03,temp,,D2C,,°C,Temperatur,press,,FLT,,bar,Druck,press_1,,FLT,,bar,Druck,hcmode,,UCH,0=off;3=heat;4=water,,Boiler Modus,hex,,HEX,,,
-uw,,,StatusCirPump,Betriebsart,,,b512,00,value,,UCH,0=off;100=on,,
+uw,,,StatusCirPump,Status Zirkulationspumpe,,,b512,00,value,,UCH,0=off;100=on,,
 r,,,Timer_Monday,Zeitfenster Montag,,,b504,02,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,Timer_Monday,Zeitfenster Montag,,,b505,0901,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Timer_Tuesday,Zeitfenster Dienstag,,,b504,03,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
@@ -68,8 +69,8 @@ r,,,Timer_Friday,Zeitfenster Freitag,,,b504,06,from,,TTM,,,von,to,,TTM,,,bis,fro
 w,,,Timer_Friday,Zeitfenster Freitag,,,b505,0905,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 r,,,Timer_Saturday,Zeitfenster Samstag,,,b504,07,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,,Timer_Saturday,Zeitfenster Samstag,,,b505,0906,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-r,,,Timer_Sunday,Zeitfenster Montag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
-w,,,Timer_Sunday,Zeitfenster Montag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Sunday,Zeitfenster Sonntag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Sunday,Zeitfenster Sonntag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
 w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,0=valve1;1=cirpump;2=pump1;3=hc2mixeropen;4=hc2mixerclose;5=hc2pump;6=col1pump;7=col2pump;8=valve2;9=valve3;10=legiopump;11=valve4;12=c1c2,,
 w,,install,Ioteststop,I/O Test stoppen,,,b506,01,
 r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer

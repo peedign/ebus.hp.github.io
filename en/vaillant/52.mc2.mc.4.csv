@@ -37,8 +37,8 @@ r,,,FlowTempMin,MinFlowTemp1: For a heat demand the desired flow temperature wil
 w,,,FlowTempMin,MinFlowTemp1: For a heat demand the desired flow temperature will at least be this value,,,b509,0e3000,value,,UCH,,°C,temperature
 r,,,FlowTempMax,MaxFlowTemp1: For a heat demand the desired flow temperature will maximal be this value,,,b509,0d3100,value,,UCH,,°C,temperature
 w,,,FlowTempMax,MaxFlowTemp1: For a heat demand the desired flow temperature will maximal be this value,,,b509,0e3100,value,,UCH,,°C,temperature
-r,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,,h,hours
-w,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,,h,hours
+r,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0d3800,value,,UCH,-5,min,minutes
+w,,,HcMaxPreHeating,HcMaxPreHeating1: The heating start before a time window could shifted forwards maximal this time (related to the outside temperature),,,b509,0e3800,value,,UCH,-5,min,minutes
 r,,,TeleswitchOperatingMode,TeleswitchOperatingMode1: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode
 w,,,TeleswitchOperatingMode,TeleswitchOperatingMode1: If the tele switch port is activated the mixer circuit operates in this mode,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode
 r,,,FloorPavingDryingDay,FloorPavingDryingDay1: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,
@@ -95,8 +95,9 @@ w,,,SetShutdownTemp,Set outside shutdown temperature,,,b505,0c,value,,UCH,,°C,t
 w,,,SetPumpIdlePeriod,Set pump idle period,,,b505,0d,value,,UCH,,min,minutes
 w,,,SetFlowTempMin,Set min flow temperature,,,b505,0e,value,,UCH,,°C,temperature
 w,,,SetFlowTempMax,Set max flow temperature,,,b505,0f,value,,UCH,,°C,temperature
-w,,,SetMaxPreHeating,Set max pre-heating,,,b505,10,value,,UCH,-12,h,hours
-r,,,Params,Parameters,,,b504,09,tempdesired,,UCH,,°C,temperature,tempdesiredlow,,SCH,,°C,temperature,curve,,UIN,100,,Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,shutdowntemp,,SCH,,°C,temperature,pumpidleperiod,,UCH,,min,minutes,flowtempmin,,SCH,,°C,temperature,flowtempmax,,SCH,,°C,temperature,maxpreheating,,UCH,-12,h,hours
+w,,,SetMaxPreHeating,Set max pre-heating,,,b505,10,value,,UCH,,h,hours
+w,,,SetMaxPreHeatingFine,Set max pre-heating,,,b505,3f,value,,UCH,-5,min,minutes
+r,,,Params,Parameters,,,b504,09,tempdesired,,UCH,,°C,temperature,tempdesiredlow,,SCH,,°C,temperature,curve,,UIN,100,,Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,shutdowntemp,,SCH,,°C,temperature,pumpidleperiod,,UCH,,min,minutes,flowtempmin,,SCH,,°C,temperature,flowtempmax,,SCH,,°C,temperature,maxpreheating,,UCH,,h,hours
 r,,,Status0a,Status flow temperature/mixer/pump/desired flow temperature,,,b504,0a,flowtemp,,D2C,,°C,temperature,mixer,,UCH,0=off;1=open;2=close,,mixer State,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,temperature
 r,,,Status,Status flow desired/current,,,b504,0d,flowtempdesired,,UCH,,°C,temperature,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,temperature,tempdesired,,UCH,,°C,temperature
 r,,,Status16,outside temperature,,,b504,16,value,,D2C,,°C,temperature
