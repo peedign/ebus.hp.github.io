@@ -1,17 +1,13 @@
 ## Source Mapping
 This is the current mapping from [`src` files of ebusd-configuration](https://github.com/john30/ebusd-configuration/tree/master/src) to the CSV files served here.
 
-It was last built on 2025-01-14 from [git revision ff7b74d](https://github.com/john30/ebusd-configuration/tree/ff7b74d723afbafd94ff202da6099f47e4378df1).
+It was last built on 2025-01-27 from [git revision a654389](https://github.com/john30/ebusd-configuration/tree/a65438906b04d91e4f4cc42a90ee07c69e1341ed).
 
 <!-- note: template file to be amended with the actual data by the workflow -->
  - [broadcast.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/broadcast.tsp) &rarr; [en: broadcast.csv](en/broadcast.csv) / [de: broadcast.csv](de/broadcast.csv)
  - [memory.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/memory.tsp) &rarr; [en: memory.csv](en/memory.csv) / [de: memory.csv](de/memory.csv)
  - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/_templates.tsp) &rarr; inlined in other file(s)
  - [opdata_inc.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/opdata_inc.tsp) &rarr; inlined in other file(s)
- - [wolf](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/)
-   - [08..hc.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/08..hc.tsp) &rarr; [en: 08..hc.csv](en/wolf/08..hc.csv) / [de: 08..hc.csv](de/wolf/08..hc.csv)
-   - [50..mc.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/50..mc.tsp) &rarr; [en: 50..mc.csv](en/wolf/50..mc.csv) / [de: 50..mc.csv](de/wolf/50..mc.csv)
-   - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/_templates.tsp) &rarr; inlined in other file(s)
  - [vaillant](https://github.com/john30/ebusd-configuration/tree/master/src/vaillant/)
    - [05.vd2.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/vaillant/05.vd2.tsp) &rarr; [en: 05.vd2.csv](en/vaillant/05.vd2.csv) / [de: 05.vd2.csv](de/vaillant/05.vd2.csv)
    - [05.vd3.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/vaillant/05.vd3.tsp) &rarr; [en: 05.vd3.csv](en/vaillant/05.vd3.csv) / [de: 05.vd3.csv](de/vaillant/05.vd3.csv)
@@ -158,6 +154,15 @@ It was last built on 2025-01-14 from [git revision ff7b74d](https://github.com/j
  - [tem](https://github.com/john30/ebusd-configuration/tree/master/src/tem/)
    - [15.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/tem/15.tsp) &rarr; [en: 15.csv](en/tem/15.csv) / [de: 15.csv](de/tem/15.csv)
    - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/tem/_templates.tsp) &rarr; inlined in other file(s)
+ - [encon](https://github.com/john30/ebusd-configuration/tree/master/src/encon/)
+   - [0a..co2.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/encon/0a..co2.tsp) &rarr; [en: 0a..co2.csv](en/encon/0a..co2.csv) / [de: 0a..co2.csv](de/encon/0a..co2.csv)
+   - [3c..Excellent.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/encon/3c..Excellent.tsp) &rarr; [en: 3c..Excellent.csv](en/encon/3c..Excellent.csv) / [de: 3c..Excellent.csv](de/encon/3c..Excellent.csv)
+   - [7c..Excellent.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/encon/7c..Excellent.tsp) &rarr; [en: 7c..Excellent.csv](en/encon/7c..Excellent.csv) / [de: 7c..Excellent.csv](de/encon/7c..Excellent.csv)
+   - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/encon/_templates.tsp) &rarr; inlined in other file(s)
+ - [wolf](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/)
+   - [08..hc.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/08..hc.tsp) &rarr; [en: 08..hc.csv](en/wolf/08..hc.csv) / [de: 08..hc.csv](de/wolf/08..hc.csv)
+   - [50..mc.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/50..mc.tsp) &rarr; [en: 50..mc.csv](en/wolf/50..mc.csv) / [de: 50..mc.csv](de/wolf/50..mc.csv)
+   - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/wolf/_templates.tsp) &rarr; inlined in other file(s)
  - [ochsner](https://github.com/john30/ebusd-configuration/tree/master/src/ochsner/)
    - [15.22102.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/ochsner/15.22102.tsp) &rarr; [en: 15.22102.csv](en/ochsner/15.22102.csv) / [de: 15.22102.csv](de/ochsner/15.22102.csv)
    - [_templates.tsp](https://github.com/john30/ebusd-configuration/tree/master/src/ochsner/_templates.tsp) &rarr; inlined in other file(s)

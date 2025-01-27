@@ -3,87 +3,87 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *u,
 *w,
 *uw,
-*[heatpumptype],,,heatpumptype,,value
+*[Ehp_heatpumptype],Ehp,,heatpumptype,,value
 *[id_sw],scan,,,,SW
-[heatpumptype=3]r,,,SourceTempOutput,"Austrittstemp: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=3]u,,,SourceTempOutput,"Austrittstemp: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=3]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
-[heatpumptype=3]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
-[heatpumptype=3]r,,,Source2Pump,Brine2_P: Status externe Quellenpumpe: AN/AUS,,,b509,0d1a00,value,,UCH,0=off;1=on,,
-[heatpumptype=3]r,,,SourceSwitch,Status interner Strömungsschalter,,,b509,0d2600,value,,UCH,0=ok;1=error,,
-[heatpumptype=3]u,,,SourceSwitch,Status interner Strömungsschalter,,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
-[heatpumptype=3]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=3]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=3]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
-[heatpumptype=3]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
-[heatpumptype=3]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=3]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=3]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
-[heatpumptype=3]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
-[heatpumptype=3]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
-[heatpumptype=3]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
-[heatpumptype=3]r,,,EvaporatorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0500,value,,D2C,,°C,Temperatur
-[heatpumptype=2]r,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=2]u,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=2]r,,,SourcePress,Druck Wärmequelle: Druck der Wärmequelle (Drucksensor Wärmequellenkreis),,,b509,0d1600,press,,FLT,,bar,Druck,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=2]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
-[heatpumptype=2]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
-[heatpumptype=2]r,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,0d2600,value,,UCH,0=ok;1=error,,
-[heatpumptype=2]u,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
-[heatpumptype=2]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=2]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=2]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
-[heatpumptype=2]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
-[heatpumptype=2]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=2]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=2]r,,,SourceTempOutputT8Min,Einfrierschutz: Minimal zulässige Wärmequellenaustrittstemperatur,,,b509,0d7a01,value,,SCH,,°C,Temperatur
-[heatpumptype=2]w,,install,SourceTempOutputT8Min,Einfrierschutz: Minimal zulässige Wärmequellenaustrittstemperatur,,,b509,0e7a01,value,,SCH,,°C,Temperatur
-[heatpumptype=2]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
-[heatpumptype=2]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
-[heatpumptype=2]r,,,FlowtempCoolingMin,Kühlungsvorlaufsollwert: Fester Vorlauftemperatursollwert für den Kühlbetrieb. Beachten Sie die Kondensationsgefahr bei niedrigen Vorlaufsolltemperaturen!,,,b509,0d7401,value,,UCH,,°C,Temperatur
-[heatpumptype=2]w,,install,FlowtempCoolingMin,Kühlungsvorlaufsollwert: Fester Vorlauftemperatursollwert für den Kühlbetrieb. Beachten Sie die Kondensationsgefahr bei niedrigen Vorlaufsolltemperaturen!,,,b509,0e7401,value,,UCH,,°C,Temperatur
-[heatpumptype=2]r,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0d1300,value,,UCH,0=no;1=yes,,
-[heatpumptype=2]w,,install,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0e1300,value,,UCH,0=no;1=yes,,
-[heatpumptype=2]u,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,291300,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
-[heatpumptype=2]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
-[heatpumptype=2]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
-[heatpumptype=1]r,,,SourceTempOutput,Fortlufttemperatur,,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=1]u,,,SourceTempOutput,Fortlufttemperatur,,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=1]r,,,Source,Lüfter,,,b509,0d1900,value,,UCH,0=off;1=on,,
-[heatpumptype=1]u,,,Source,Lüfter,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
-[heatpumptype=1]r,,,SourceSwitch,"Kontakt Lüfter: Motorschutzthermostat des Lüfters (ok = geschlossen, offen =Überhitzung der Motorwicklung)",,,b509,0d2600,value,,UCH,0=ok;1=error,,
-[heatpumptype=1]u,,,SourceSwitch,"Kontakt Lüfter: Motorschutzthermostat des Lüfters (ok = geschlossen, offen =Überhitzung der Motorwicklung)",,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
-[heatpumptype=1]r,,,EvaporatorTemp,Verdampfertemperatur: Verdampfertemp: Temperatur am Austritt des Verdampfers T7,,,b509,0d0500,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=1]r,,,CoolValve,V_Cool: Status 4-Wege-Ventil. Es kann zwei Zustände einnehmen:– Heizen (Normalbetrieb)– Abtauen (Abtaubetrieb),,,b509,0d1c00,value,,UCH,0=off;1=on,,
-[heatpumptype=1]r,,,OverpressureThreshold,Hochdruck Abschaltgrenze bei Luft/Wasser Maschinen,,,b509,0dfa00,value,,ULG,,mbar,Druck
-[heatpumptype=1]w,,service,OverpressureThreshold,Hochdruck Abschaltgrenze bei Luft/Wasser Maschinen,,,b509,0efa00,value,,ULG,,mbar,Druck
-[heatpumptype=1]r,,,StartDeicing,"Start Enteisung: Hier können Sie, unabhängig von der nächsten vorausberechneten Zeit bis zur nächsten Enteisung, eine solche manuell starten",,,b509,0d7100,value,,UCH,0=no;1=yes,,
-[heatpumptype=1]w,,install,StartDeicing,"Start Enteisung: Hier können Sie, unabhängig von der nächsten vorausberechneten Zeit bis zur nächsten Enteisung, eine solche manuell starten",,,b509,0e7100,value,,UCH,0=no;1=yes,,
-[heatpumptype=1]r,,,TimeBeforeNextDeicing,Zeit bis Enteisung: Time until next deicing in 0.5 secs,,,b509,0d7000,value,,ULG,2,s,Sekunden
-[heatpumptype=1]r,,,SourceTempOutputOffset,"Fortlufttemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
-[heatpumptype=1]w,,install,SourceTempOutputOffset,"Fortlufttemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
-[heatpumptype=5]r,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=5]u,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=5]r,,,SourcePress,Druck Wärmequelle: Druck der Wärmequelle (Drucksensor Wärmequellenkreis),,,b509,0d1600,press,,FLT,,bar,Druck,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=5]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
-[heatpumptype=5]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
-[heatpumptype=5]r,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,0d2600,value,,UCH,0=ok;1=error,,
-[heatpumptype=5]u,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
-[heatpumptype=5]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=5]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
-[heatpumptype=5]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
-[heatpumptype=5]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
-[heatpumptype=5]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=5]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
-[heatpumptype=5]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
-[heatpumptype=5]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
-[heatpumptype=5]r,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0d1300,value,,UCH,0=no;1=yes,,
-[heatpumptype=5]w,,install,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0e1300,value,,UCH,0=no;1=yes,,
-[heatpumptype=5]u,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,291300,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
-[heatpumptype=5]r,,,StartDeicing,Start Defrosting,,,b509,0d7100,value,,UCH,0=no;1=yes,,
-[heatpumptype=5]w,,install,StartDeicing,Start Defrosting,,,b509,0e7100,value,,UCH,0=no;1=yes,,
-[heatpumptype=5]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
-[heatpumptype=5]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
+[Ehp_heatpumptype=3]r,,,SourceTempOutput,"Austrittstemp: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=3]u,,,SourceTempOutput,"Austrittstemp: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=3]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=3]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=3]r,,,Source2Pump,Brine2_P: Status externe Quellenpumpe: AN/AUS,,,b509,0d1a00,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=3]r,,,SourceSwitch,Status interner Strömungsschalter,,,b509,0d2600,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=3]u,,,SourceSwitch,Status interner Strömungsschalter,,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=3]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=3]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=3]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=3]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=3]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=3]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=3]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=3]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=3]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
+[Ehp_heatpumptype=3]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
+[Ehp_heatpumptype=3]r,,,EvaporatorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0500,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=2]r,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=2]u,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=2]r,,,SourcePress,Druck Wärmequelle: Druck der Wärmequelle (Drucksensor Wärmequellenkreis),,,b509,0d1600,press,,FLT,,bar,Druck,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=2]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=2]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=2]r,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,0d2600,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=2]u,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=2]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=2]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=2]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=2]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=2]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=2]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=2]r,,,SourceTempOutputT8Min,Einfrierschutz: Minimal zulässige Wärmequellenaustrittstemperatur,,,b509,0d7a01,value,,SCH,,°C,Temperatur
+[Ehp_heatpumptype=2]w,,install,SourceTempOutputT8Min,Einfrierschutz: Minimal zulässige Wärmequellenaustrittstemperatur,,,b509,0e7a01,value,,SCH,,°C,Temperatur
+[Ehp_heatpumptype=2]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=2]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=2]r,,,FlowtempCoolingMin,Kühlungsvorlaufsollwert: Fester Vorlauftemperatursollwert für den Kühlbetrieb. Beachten Sie die Kondensationsgefahr bei niedrigen Vorlaufsolltemperaturen!,,,b509,0d7401,value,,UCH,,°C,Temperatur
+[Ehp_heatpumptype=2]w,,install,FlowtempCoolingMin,Kühlungsvorlaufsollwert: Fester Vorlauftemperatursollwert für den Kühlbetrieb. Beachten Sie die Kondensationsgefahr bei niedrigen Vorlaufsolltemperaturen!,,,b509,0e7401,value,,UCH,,°C,Temperatur
+[Ehp_heatpumptype=2]r,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0d1300,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=2]w,,install,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0e1300,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=2]u,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,291300,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=2]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
+[Ehp_heatpumptype=2]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
+[Ehp_heatpumptype=1]r,,,SourceTempOutput,Fortlufttemperatur,,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=1]u,,,SourceTempOutput,Fortlufttemperatur,,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=1]r,,,Source,Lüfter,,,b509,0d1900,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=1]u,,,Source,Lüfter,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=1]r,,,SourceSwitch,"Kontakt Lüfter: Motorschutzthermostat des Lüfters (ok = geschlossen, offen =Überhitzung der Motorwicklung)",,,b509,0d2600,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=1]u,,,SourceSwitch,"Kontakt Lüfter: Motorschutzthermostat des Lüfters (ok = geschlossen, offen =Überhitzung der Motorwicklung)",,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=1]r,,,EvaporatorTemp,Verdampfertemperatur: Verdampfertemp: Temperatur am Austritt des Verdampfers T7,,,b509,0d0500,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=1]r,,,CoolValve,V_Cool: Status 4-Wege-Ventil. Es kann zwei Zustände einnehmen:– Heizen (Normalbetrieb)– Abtauen (Abtaubetrieb),,,b509,0d1c00,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=1]r,,,OverpressureThreshold,Hochdruck Abschaltgrenze bei Luft/Wasser Maschinen,,,b509,0dfa00,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=1]w,,service,OverpressureThreshold,Hochdruck Abschaltgrenze bei Luft/Wasser Maschinen,,,b509,0efa00,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=1]r,,,StartDeicing,"Start Enteisung: Hier können Sie, unabhängig von der nächsten vorausberechneten Zeit bis zur nächsten Enteisung, eine solche manuell starten",,,b509,0d7100,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=1]w,,install,StartDeicing,"Start Enteisung: Hier können Sie, unabhängig von der nächsten vorausberechneten Zeit bis zur nächsten Enteisung, eine solche manuell starten",,,b509,0e7100,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=1]r,,,TimeBeforeNextDeicing,Zeit bis Enteisung: Time until next deicing in 0.5 secs,,,b509,0d7000,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1]r,,,SourceTempOutputOffset,"Fortlufttemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
+[Ehp_heatpumptype=1]w,,install,SourceTempOutputOffset,"Fortlufttemperatur: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
+[Ehp_heatpumptype=5]r,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,0d0800,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=5]u,,,SourceTempOutput,"Soleaustrittstemp.: Wärmequellentemperatur am Austritt der Wärmepumpe, T8",,,b509,290800,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=5]r,,,SourcePress,Druck Wärmequelle: Druck der Wärmequelle (Drucksensor Wärmequellenkreis),,,b509,0d1600,press,,FLT,,bar,Druck,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=5]r,,,Source,Quellenpumpe,,,b509,0d1900,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=5]u,,,Source,Quellenpumpe,,,b509,291900,value,,IGN:2,,,,value,,UCH,0=off;1=on,,
+[Ehp_heatpumptype=5]r,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,0d2600,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=5]u,,,SourceSwitch,Status externer Soledruckschalter:ok = Soledruckschalter geschlossen oder gebrückt (Zustand ab Werk)Fehler: = Soledruckschalter geöffnet (Soledruck zu hoch),,,b509,292600,value,,IGN:2,,,,value,,UCH,0=ok;1=error,,
+[Ehp_heatpumptype=5]r,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,0d0d00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=5]u,,,CondensorTemp,TEV-Eintritt: Temperatur am Eintritt des thermischen Expansionsventils,,,b509,290d00,value,,IGN:2,,,,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+[Ehp_heatpumptype=5]r,,,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0d7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=5]w,,service,OverpressureThreshold,Abschaltgrenze Hochdruck nach Warmwasserbereitung,,,b509,0e7701,value,,ULG,,mbar,Druck
+[Ehp_heatpumptype=5]r,,,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0d6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=5]w,,install,DeltaTempT6T7,Zul. Temp.Spreizung: Zul. Temp.-Spreizung: Max. zulässige Differenz der Wärmequellenein-und austrittstemperatur. Bei Überschreitung erscheint eine Fehlermeldung und der Kompressor schaltet sich ab.,,,b509,0e6e00,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=5]r,,,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0d7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=5]w,,install,SourcePumpPrerunTime,"Vorlauf Quellenpumpe: Zeitspanne, um die sich die Quellenpumpe vor dem Kompressor einschaltet",,,b509,0e7600,value,,ULG,120,min,Minuten
+[Ehp_heatpumptype=5]r,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0d1300,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5]w,,install,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,0e1300,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5]u,,,Bleeding,Entlüftung Sole: Solepumpe ist abwechselnd 50 min in Betrieb und 10 min aus,,,b509,291300,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5]r,,,StartDeicing,Start Defrosting,,,b509,0d7100,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5]w,,install,StartDeicing,Start Defrosting,,,b509,0e7100,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5]r,,,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0dc900,value,,D2C,,K,
+[Ehp_heatpumptype=5]w,,install,SourceTempOutputOffset,"Austrittstemp: Manuelle Anpassung der angezeigten Temperaturen.Kalibrier-VerstellbereichAußentemperatur: +/- 5 K, Schrittweite 1,0 K.alle anderen: +/- 3 K, Schrittweite 0,5 K.",,,b509,0ec900,value,,D2C,,K,
 [id_sw=350-400]r,,,CompRestartTimer,Kompressorrestsperrzeit: Verzögerung des nächsten Kompressorstartes. Wird nur aktualisiert wenn der Kompressor angefordert wird aber aufgrund der Laufzeitbedingungen nicht anlaufen darf.,,,b509,0d9c01,value,,ULG,120,min,Minuten
 [id_sw>=403]r,,,CompRestartTimer,Kompressorrestsperrzeit: Verzögerung des nächsten Kompressorstartes. Wird nur aktualisiert wenn der Kompressor angefordert wird aber aufgrund der Laufzeitbedingungen nicht anlaufen darf.,,,b509,0dc501,value,,ULG,120,min,Minuten
 [id_sw>=414]r,,,HysteresisTimeDelay,hysteresis_time_delay: defined time delay until backup heater hysteresis becomes valid,,,b509,0de001,value,,UCH,,min,Minuten
@@ -99,25 +99,25 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 [id_sw>=415]w,,service,SourceLimitSlope,BrineLimitSlope: Slope to calculate pressure switchpoint below lowest brine temperature,,,b509,0ee501,value,,UCH,,,
 [id_sw>=415]r,,,MaxNDPressure,maxNDPressure: max. allowed low pressure for compressor protection,,,b509,0de901,value,,ULG,,,
 [id_sw>=415]w,,service,MaxNDPressure,maxNDPressure: max. allowed low pressure for compressor protection,,,b509,0ee901,value,,ULG,,,
-[heatpumptype=5][id_sw>=400]r,,,SourceTempOutputT8Min,Einfrierschutz: Minimum heat source outlet temperature VWLS,,,b509,0db001,value,,SCH,,°C,Temperatur
-[heatpumptype=5][id_sw>=400]w,,install,SourceTempOutputT8Min,Einfrierschutz: Minimum heat source outlet temperature VWLS,,,b509,0eb001,value,,SCH,,°C,Temperatur
-[heatpumptype=1][id_sw=350-400]r,,,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0d9d01,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw=350-400]w,,install,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0e9d01,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw=350-400]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0d9e01,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw=350-400]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0e9e01,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw>=403]r,,,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0dc601,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw>=403]w,,install,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0ec601,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0dc701,value,,ULG,2,s,Sekunden
-[heatpumptype=1][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0ec701,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=5][id_sw>=400]r,,,SourceTempOutputT8Min,Einfrierschutz: Minimum heat source outlet temperature VWLS,,,b509,0db001,value,,SCH,,°C,Temperatur
+[Ehp_heatpumptype=5][id_sw>=400]w,,install,SourceTempOutputT8Min,Einfrierschutz: Minimum heat source outlet temperature VWLS,,,b509,0eb001,value,,SCH,,°C,Temperatur
+[Ehp_heatpumptype=1][id_sw=350-400]r,,,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0d9d01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw=350-400]w,,install,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0e9d01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw=350-400]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0d9e01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw=350-400]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0e9e01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw>=403]r,,,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0dc601,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw>=403]w,,install,FanPrerunTime,Lüfter Vorlaufzeit: Lüftervorlaufzeit in s,,,b509,0ec601,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0dc701,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=1][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the fan prerun time.,,,b509,0ec701,value,,ULG,2,s,Sekunden
 [id_sw>=370]r,,,FirstHcEnergySavingPumpOffTime,Ausschaltzeit interne Heizkreispumpe: Heizkreispumpenabschaltzeit in min während des Heizbetriebes über einen direkten Heizkreis sofern der Kompressor nicht läuft. Die Funktion muss per Code im Servicemenü aktiviert werden.,,,b509,0d9901,value,,UCH,,min,Minuten
 [id_sw>=370]w,,install,FirstHcEnergySavingPumpOffTime,Ausschaltzeit interne Heizkreispumpe: Heizkreispumpenabschaltzeit in min während des Heizbetriebes über einen direkten Heizkreis sofern der Kompressor nicht läuft. Die Funktion muss per Code im Servicemenü aktiviert werden.,,,b509,0e9901,value,,UCH,,min,Minuten
-[heatpumptype=2][id_sw=350-400]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0d9f01,value,,ULG,2,s,Sekunden
-[heatpumptype=2][id_sw=350-400]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0e9f01,value,,ULG,2,s,Sekunden
-[heatpumptype=2][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0dc801,value,,ULG,2,s,Sekunden
-[heatpumptype=2][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0ec801,value,,ULG,2,s,Sekunden
-[heatpumptype=5][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0dc901,value,,ULG,2,s,Sekunden
-[heatpumptype=5][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0ec901,value,,ULG,2,s,Sekunden
-[heatpumptype=2][id_sw>=350]r,,,SourcePumpCoolingHours,Solepumpengesamtlaufzeit Kühlbetrieb: Solepumpengesamtlaufzeit während Kühlbetrieb,,,b509,0d7d01,value,,ULG,,h,Stunden
+[Ehp_heatpumptype=2][id_sw=350-400]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0d9f01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=2][id_sw=350-400]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0e9f01,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=2][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0dc801,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=2][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0ec801,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=5][id_sw>=403]r,,,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0dc901,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=5][id_sw>=403]w,,install,Hc1PumpPrerunTime,Interne Heizkreispumpe Vorlaufzeit: Prerun time of the internal heat circuit pump in s. Relative to the heat source pump prerun time.,,,b509,0ec901,value,,ULG,2,s,Sekunden
+[Ehp_heatpumptype=2][id_sw>=350]r,,,SourcePumpCoolingHours,Solepumpengesamtlaufzeit Kühlbetrieb: Solepumpengesamtlaufzeit während Kühlbetrieb,,,b509,0d7d01,value,,ULG,,h,Stunden
 [id_sw>=407]r,,,SourcePumpStatus,BrinePumpStatus: 0=HEP_ok: 1= HEP_error; >=2=noHEP,,,b509,0db801,value,,UCH,,,
 [id_sw>=407]u,,,SourcePumpStatus,BrinePumpStatus: 0=HEP_ok: 1= HEP_error; >=2=noHEP,,,b509,29b801,value,,IGN:2,,,,value,,UCH,,,
 [id_sw>=407]r,,,SourcePumpPWM,BrinePumpPWM: actual speed of brine pump (7%=off),,,b509,0dac01,value,,UCH,,%,
@@ -125,25 +125,25 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 [id_sw>=407]w,,install,SourcePumpSpeedControlHeating,BrinePumpSpeedControlHeating: brine pump speed setpoint when compressor=on,,,b509,0eae01,value,,UCH,,%,
 [id_sw>=407]r,,,SourcePumpSpeedControlDefrost,BrinePumpSpeedControlDefrost: brine pump speed setpoint while defrosting,,,b509,0dcc01,value,,UCH,,%,
 [id_sw>=407]w,,install,SourcePumpSpeedControlDefrost,BrinePumpSpeedControlDefrost: brine pump speed setpoint while defrosting,,,b509,0ecc01,value,,UCH,,%,
-[heatpumptype=5][id_sw>=407]r,,,DeicingActive,DeicingActive: ODU is in defrosting mode,,,b509,0dce01,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,Selftest,"selftest adjustable steps: 0=off; 1=StartSelfTest, 30=bleeding (Entlüftung brine circuit)",,,b509,0dd001,value,,UCH,,,
-[heatpumptype=5][id_sw>=407]w,,service,Selftest,"selftest adjustable steps: 0=off; 1=StartSelfTest, 30=bleeding (Entlüftung brine circuit)",,,b509,0ed001,value,,UCH,,,
-[heatpumptype=5][id_sw>=407]r,,,BivalentPoint2Temp,BivalentPoint2_Temperature: temperature to force backup heater even if it is disabled,,,b509,0dbc01,value,,D2C,,°C,Temperatur
-[heatpumptype=5][id_sw>=407]w,,install,BivalentPoint2Temp,BivalentPoint2_Temperature: temperature to force backup heater even if it is disabled,,,b509,0ebc01,value,,D2C,,°C,Temperatur
-[heatpumptype=5][id_sw>=407]r,,,NoiseReduction,VWLS_NoiseReduction: noise reduction is activated by time schedule,,,b509,0da901,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]w,,,NoiseReduction,VWLS_NoiseReduction: noise reduction is activated by time schedule,,,b509,0ea901,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,NoiseReductionFactor,NoiseReductionFactor: amount of noise reduction when activated by time schedule,,,b509,0d2401,value,,UCH,,%,
-[heatpumptype=5][id_sw>=407]w,,,NoiseReductionFactor,NoiseReductionFactor: amount of noise reduction when activated by time schedule,,,b509,0e2401,value,,UCH,,%,
-[heatpumptype=5][id_sw>=407]r,,,FanError,VWLS_FanError: fan error OMU 1,,,b509,0da101,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,FanErrorOMU2,VWLS_FanError_OMU2: fan error OMU 2,,,b509,0db601,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,STBError,VWLS_STBError: defroster STB error OMU 1,,,b509,0da201,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,STBErrorOMU2,VWLS_STBError_OMU2: defroster STB error OMU 2,,,b509,0db701,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,BadWeather,VWLS_BadWeather: ambient too cold OMU 1,,,b509,0da401,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,BadWeatherOMU2,VWLS_BadWeather_OMU2: ambient too cold OMU 2,,,b509,0db901,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]u,,,BadWeatherOMU2,VWLS_BadWeather_OMU2: ambient too cold OMU 2,,,b509,29b901,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,HotSummer,VWLS_HotSummer: ambient too hot OMU 1,,,b509,0db501,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]r,,,HotSummerOMU2,VWLS_HotSummer_OMU2: ambient too hot OMU 2,,,b509,0db801,value,,UCH,0=no;1=yes,,
-[heatpumptype=5][id_sw>=407]u,,,HotSummerOMU2,VWLS_HotSummer_OMU2: ambient too hot OMU 2,,,b509,29b801,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,DeicingActive,DeicingActive: ODU is in defrosting mode,,,b509,0dce01,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,Selftest,"selftest adjustable steps: 0=off; 1=StartSelfTest, 30=bleeding (Entlüftung brine circuit)",,,b509,0dd001,value,,UCH,,,
+[Ehp_heatpumptype=5][id_sw>=407]w,,service,Selftest,"selftest adjustable steps: 0=off; 1=StartSelfTest, 30=bleeding (Entlüftung brine circuit)",,,b509,0ed001,value,,UCH,,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,BivalentPoint2Temp,BivalentPoint2_Temperature: temperature to force backup heater even if it is disabled,,,b509,0dbc01,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=5][id_sw>=407]w,,install,BivalentPoint2Temp,BivalentPoint2_Temperature: temperature to force backup heater even if it is disabled,,,b509,0ebc01,value,,D2C,,°C,Temperatur
+[Ehp_heatpumptype=5][id_sw>=407]r,,,NoiseReduction,VWLS_NoiseReduction: noise reduction is activated by time schedule,,,b509,0da901,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]w,,,NoiseReduction,VWLS_NoiseReduction: noise reduction is activated by time schedule,,,b509,0ea901,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,NoiseReductionFactor,NoiseReductionFactor: amount of noise reduction when activated by time schedule,,,b509,0d2401,value,,UCH,,%,
+[Ehp_heatpumptype=5][id_sw>=407]w,,,NoiseReductionFactor,NoiseReductionFactor: amount of noise reduction when activated by time schedule,,,b509,0e2401,value,,UCH,,%,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,FanError,VWLS_FanError: fan error OMU 1,,,b509,0da101,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,FanErrorOMU2,VWLS_FanError_OMU2: fan error OMU 2,,,b509,0db601,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,STBError,VWLS_STBError: defroster STB error OMU 1,,,b509,0da201,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,STBErrorOMU2,VWLS_STBError_OMU2: defroster STB error OMU 2,,,b509,0db701,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,BadWeather,VWLS_BadWeather: ambient too cold OMU 1,,,b509,0da401,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,BadWeatherOMU2,VWLS_BadWeather_OMU2: ambient too cold OMU 2,,,b509,0db901,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]u,,,BadWeatherOMU2,VWLS_BadWeather_OMU2: ambient too cold OMU 2,,,b509,29b901,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,HotSummer,VWLS_HotSummer: ambient too hot OMU 1,,,b509,0db501,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]r,,,HotSummerOMU2,VWLS_HotSummer_OMU2: ambient too hot OMU 2,,,b509,0db801,value,,UCH,0=no;1=yes,,
+[Ehp_heatpumptype=5][id_sw>=407]u,,,HotSummerOMU2,VWLS_HotSummer_OMU2: ambient too hot OMU 2,,,b509,29b801,value,,IGN:2,,,,value,,UCH,0=no;1=yes,,
 r,,,HeatpumpType,heatpump type,,,b509,0d7601,value,,UCH,1=airtowater;2=brinetowater;3=watertowater;4=indirectwatertowater;5=airtobrinetowater,,heatpump type
 r,,,CompStartsHwc,Compressor_Commutations_DHW: Number of commutations of,,,b509,0da800,value,,ULG,,,Anzahl Starts
 r,,,CompStartsHc,Compressor_Commutations_CH: Number of commutations of,,,b509,0da900,value,,ULG,,,Anzahl Starts
