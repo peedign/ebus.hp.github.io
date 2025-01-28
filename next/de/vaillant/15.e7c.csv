@@ -1,0 +1,178 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,HeatingScheduleEnable,Heating Shedule Enable: Heizplan aktivieren,,,b509,0d0200,value,,UCH,0=off;1=on,,
+w,,,HeatingScheduleEnable,Heating Shedule Enable: Heizplan aktivieren,,,b509,0e0200,value,,UCH,0=off;1=on,,
+r,,,HeatingEnable,Heating Enable: Heizung aktivieren,,,b509,0d0300,value,,UCH,0=off;1=on,,
+w,,,HeatingEnable,Heating Enable: Heizung aktivieren,,,b509,0e0300,value,,UCH,0=off;1=on,,
+r,,,HeatingTempSet,Heating Temp Manual Set: Manuelle Einstellung der Heiztemperatur,,,b509,0d2200,value,,D2C,,°C,Temperatur
+w,,,HeatingTempSet,Heating Temp Manual Set: Manuelle Einstellung der Heiztemperatur,,,b509,0e2200,value,,D2C,,°C,Temperatur
+r,,,HeatingOverrideEnable,Heating Override Enable: Heizungsüberbrückung aktivieren,,,b509,0d2300,value,,UCH,0=off;1=on,,
+w,,,HeatingOverrideEnable,Heating Override Enable: Heizungsüberbrückung aktivieren,,,b509,0e2300,value,,UCH,0=off;1=on,,
+r,,,HeatingOverrideTemp,Heating Override Temp: Übersteuerungstemperatur der Heizung,,,b509,0d2400,value,,D2C,,°C,Temperatur
+w,,,HeatingOverrideTemp,Heating Override Temp: Übersteuerungstemperatur der Heizung,,,b509,0e2400,value,,D2C,,°C,Temperatur
+r,,,HeatingOverrideEndTime,Heating Override End Time: Endzeit Heizungsübersteuerung,,,b509,0d2500,value,,DTM,,,
+w,,,HeatingOverrideEndTime,Heating Override End Time: Endzeit Heizungsübersteuerung,,,b509,0e2500,value,,DTM,,,
+r,,,KeyboardLockEnable,Keyboard Lock Enable: Tastatursperre aktivieren,,,b509,0d2a00,value,,UCH,0=off;1=on,,
+w,,,KeyboardLockEnable,Keyboard Lock Enable: Tastatursperre aktivieren,,,b509,0e2a00,value,,UCH,0=off;1=on,,
+r,,,Contrast,Contrast: Kontrast,,,b509,0d2b00,value,,UCH,,,
+w,,,Contrast,Contrast: Kontrast,,,b509,0e2b00,value,,UCH,,,
+r,,,Brightness,Brightness: Helligkeit,,,b509,0d2c00,value,,UCH,,,
+w,,,Brightness,Brightness: Helligkeit,,,b509,0e2c00,value,,UCH,,,
+r,,,TimeDate,Time & Date: Uhrzeit & Datum,,,b509,0d2e00,value,,DTM,,,
+w,,,TimeDate,Time & Date: Uhrzeit & Datum,,,b509,0e2e00,value,,DTM,,,
+r,,,DateFormat,Date Format: Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT,,,b509,0d2d00,value,,UCH,,,
+w,,,DateFormat,Date Format: Datumsformat 1-TT.MM.JJJJ 2-JJJJ.MM.TT,,,b509,0e2d00,value,,UCH,,,
+r,,,Weekday,Wochentag,,,b509,0d2f00,value,,BDY,,,Wochentag
+w,,,Weekday,Wochentag,,,b509,0e2f00,value,,BDY,,,Wochentag
+r,,,RoomName,Room Name,,,b509,0d3000,value,,STR:14,,,Room Name
+w,,,RoomName,Room Name,,,b509,0e3000,value,,STR:14,,,Room Name
+r,,,Language,Sprache,,,b509,0d3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch_AT,,Sprache
+w,,,Language,Sprache,,,b509,0e3100,value,,UCH,0=german;1=english;2=french;3=italian;4=flemish;5=dutch;6=spanish;7=catalan;8=basque;9=galician;10=hungarian;11=russian;12=ukrainian;13=polish;14=czech;15=croatian;16=slovakian;17=romanian;18=slovenian;19=Portuguese;20=dutch_AT,,Sprache
+r,,,RoomTemp,Room Temp: Zimmertemperatur,,,b509,0d3a00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,DisplayedRoomTemp,Displayed Room Temp: Angezeigte Raumtemperatur,,,b509,0d3b00,value,,D2C,,°C,Temperatur
+r,,,OutsideTemp,Outside Temp: Außentemperatur,,,b509,0d3c00,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,DHWTempSet,DHW Temp Manual Set: Manuelle Einstellung der Warmwassertemperatur,,,b509,0d4000,value,,D2C,,°C,Temperatur
+w,,,DHWTempSet,DHW Temp Manual Set: Manuelle Einstellung der Warmwassertemperatur,,,b509,0e4000,value,,D2C,,°C,Temperatur
+r,,,DHWEnable,DHW Enable: DHW Aktivieren,,,b509,0d4100,value,,UCH,0=off;1=on,,
+w,,,DHWEnable,DHW Enable: DHW Aktivieren,,,b509,0e4100,value,,UCH,0=off;1=on,,
+r,,,DHWScheduleEnable,DHW Shedule Enable: DHW Zeitplan aktivieren,,,b509,0d4200,value,,UCH,0=off;1=on,,
+w,,,DHWScheduleEnable,DHW Shedule Enable: DHW Zeitplan aktivieren,,,b509,0e4200,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideEnable,DHW Override Enable: DHW Überschreiben aktivieren,,,b509,0d5100,value,,UCH,0=off;1=on,,
+w,,,DHWOverrideEnable,DHW Override Enable: DHW Überschreiben aktivieren,,,b509,0e5100,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideState,DHW Override State: DHW Status überschreiben,,,b509,0d5200,value,,UCH,0=off;1=on,,
+w,,,DHWOverrideState,DHW Override State: DHW Status überschreiben,,,b509,0e5200,value,,UCH,0=off;1=on,,
+r,,,DHWOverrideEndTime,DHW Override End Time: DHW Endzeit überschreiben,,,b509,0d5300,value,,DTM,,,
+w,,,DHWOverrideEndTime,DHW Override End Time: DHW Endzeit überschreiben,,,b509,0e5300,value,,DTM,,,
+r,,,VacationEnable,Vacation Enable: Urlaub aktivieren,,,b509,0d5400,value,,UCH,0=off;1=on,,
+w,,,VacationEnable,Vacation Enable: Urlaub aktivieren,,,b509,0e5400,value,,UCH,0=off;1=on,,
+r,,,VacationStartTime,Vacation Start Time: Urlaubsstartzeit,,,b509,0d5500,value,,DTM,,,
+w,,,VacationStartTime,Vacation Start Time: Urlaubsstartzeit,,,b509,0e5500,value,,DTM,,,
+r,,,VacationEndTime,Vacation End Time: Urlaubsendzeit,,,b509,0d5700,value,,DTM,,,
+w,,,VacationEndTime,Vacation End Time: Urlaubsendzeit,,,b509,0e5700,value,,DTM,,,
+r,,,VacationTempSet,Vacation Temp Manual Set: Urlaubstemperatur manuell eingestellt,,,b509,0d5800,value,,D2C,,°C,Temperatur
+w,,,VacationTempSet,Vacation Temp Manual Set: Urlaubstemperatur manuell eingestellt,,,b509,0e5800,value,,D2C,,°C,Temperatur
+r,,,HeatingTemp1,Heating Temp 1: Heiztemperatur 1,,,b509,0d7300,value,,D2C,,°C,Temperatur
+w,,,HeatingTemp1,Heating Temp 1: Heiztemperatur 1,,,b509,0e7300,value,,D2C,,°C,Temperatur
+r,,,HeatingTemp2,Heating Temp 2: Heiztemperatur 2,,,b509,0d7400,value,,D2C,,°C,Temperatur
+w,,,HeatingTemp2,Heating Temp 2: Heiztemperatur 2,,,b509,0e7400,value,,D2C,,°C,Temperatur
+r,,,MondayHeatingTime,Montag Heizzeit,,,b509,0d0500,ttm,,TTM,,,Montag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,MondayHeatingTime,Montag Heizzeit,,,b509,0e0500,ttm,,TTM,,,Montag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,TuesdayHeatingTime,Dienstag Heizzeit,,,b509,0d0600,ttm,,TTM,,,Dienstag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,TuesdayHeatingTime,Dienstag Heizzeit,,,b509,0e0600,ttm,,TTM,,,Dienstag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,WednesdayHeatingTime,Mittwoch Heizzeit,,,b509,0d0700,ttm,,TTM,,,Mittwoch Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,WednesdayHeatingTime,Mittwoch Heizzeit,,,b509,0e0700,ttm,,TTM,,,Mittwoch Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,ThursdayHeatingTime,Donnerstag Heizzeit,,,b509,0d0800,ttm,,TTM,,,Donnerstag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,ThursdayHeatingTime,Donnerstag Heizzeit,,,b509,0e0800,ttm,,TTM,,,Donnerstag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,FridayHeatingTime,Freitag Heizzeit,,,b509,0d0900,ttm,,TTM,,,Freitag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,FridayHeatingTime,Freitag Heizzeit,,,b509,0e0900,ttm,,TTM,,,Freitag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SaturdayHeatingTime,Heizzeit am Samstag,,,b509,0d0a00,ttm,,TTM,,,Heizzeit am Samstag,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,SaturdayHeatingTime,Heizzeit am Samstag,,,b509,0e0a00,ttm,,TTM,,,Heizzeit am Samstag,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SundayHeatingTime,Sonntag Heizzeit,,,b509,0d0b00,ttm,,TTM,,,Sonntag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,SundayHeatingTime,Sonntag Heizzeit,,,b509,0e0b00,ttm,,TTM,,,Sonntag Heizzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,MondayHeatingTemp,Monday Heating Temp,,,b509,0d0c00,temp,,D2C,,°C,Montag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,MondayHeatingTemp,Monday Heating Temp,,,b509,0e0c00,temp,,D2C,,°C,Montag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,TuesdayHeatingTemp,Tuesday Heating Temp,,,b509,0d0d00,temp,,D2C,,°C,Dienstag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,TuesdayHeatingTemp,Tuesday Heating Temp,,,b509,0e0d00,temp,,D2C,,°C,Dienstag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,WednesdayHeatingTemp,Wednesday Heating Temp,,,b509,0d0e00,temp,,D2C,,°C,Mittwoch Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,WednesdayHeatingTemp,Wednesday Heating Temp,,,b509,0e0e00,temp,,D2C,,°C,Mittwoch Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,ThursdayHeatingTemp,Thursday Heating Temp,,,b509,0d0f00,temp,,D2C,,°C,Donnerstag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,ThursdayHeatingTemp,Thursday Heating Temp,,,b509,0e0f00,temp,,D2C,,°C,Donnerstag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,FridayHeatingTemp,Friday Heating Temp,,,b509,0d1000,temp,,D2C,,°C,Heiztemperaturen am Freitag,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,FridayHeatingTemp,Friday Heating Temp,,,b509,0e1000,temp,,D2C,,°C,Heiztemperaturen am Freitag,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,SaturdayHeatingTemp,Saturday Heating Temp,,,b509,0d1100,temp,,D2C,,°C,Heiztemperaturen am Samstag,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,SaturdayHeatingTemp,Saturday Heating Temp,,,b509,0e1100,temp,,D2C,,°C,Heiztemperaturen am Samstag,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,SundayHeatingTemp,Sunday Heating Temp,,,b509,0d1200,temp,,D2C,,°C,Sonntag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+w,,,SundayHeatingTemp,Sunday Heating Temp,,,b509,0e1200,temp,,D2C,,°C,Sonntag Heiztemperaturen,temp_1,,D2C,,°C,Temperatur,temp_2,,D2C,,°C,Temperatur,temp_3,,D2C,,°C,Temperatur,temp_4,,D2C,,°C,Temperatur,temp_5,,D2C,,°C,Temperatur,temp_6,,D2C,,°C,Temperatur
+r,,,MondayDHWTime,Montag Warmwasserzeit,,,b509,0d4300,ttm,,TTM,,,Montag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,MondayDHWTime,Montag Warmwasserzeit,,,b509,0e4300,ttm,,TTM,,,Montag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,TuesdayDHWTime,Dienstag Warmwasserzeit,,,b509,0d4400,ttm,,TTM,,,Dienstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,TuesdayDHWTime,Dienstag Warmwasserzeit,,,b509,0e4400,ttm,,TTM,,,Dienstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,WednesdayDHWTime,Mittwoch Warmwasserzeit,,,b509,0d4500,ttm,,TTM,,,Mittwoch Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,WednesdayDHWTime,Mittwoch Warmwasserzeit,,,b509,0e4500,ttm,,TTM,,,Mittwoch Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,ThursdayDHWTime,Donnerstag Warmwasserzeit,,,b509,0d4600,ttm,,TTM,,,Donnerstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,ThursdayDHWTime,Donnerstag Warmwasserzeit,,,b509,0e4600,ttm,,TTM,,,Donnerstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,FridayDHWTime,Freitag Warmwasserzeit,,,b509,0d4700,ttm,,TTM,,,Freitag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,FridayDHWTime,Freitag Warmwasserzeit,,,b509,0e4700,ttm,,TTM,,,Freitag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SaturdayDHWTime,Samstag Warmwasserzeit,,,b509,0d4800,ttm,,TTM,,,Samstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,SaturdayDHWTime,Samstag Warmwasserzeit,,,b509,0e4800,ttm,,TTM,,,Samstag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SundayDHWTime,Sonntag Warmwasserzeit,,,b509,0d4900,ttm,,TTM,,,Sonntag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,,SundayDHWTime,Sonntag Warmwasserzeit,,,b509,0e4900,ttm,,TTM,,,Sonntag Warmwasserzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,MondayDHWState,Montag Warmwasserzustand,,,b509,0d4a00,onoff,,UCH,0=off;1=on,,Montag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,MondayDHWState,Montag Warmwasserzustand,,,b509,0e4a00,onoff,,UCH,0=off;1=on,,Montag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,TuesdayDHWState,Dienstag Warmwasserzustand,,,b509,0d4b00,onoff,,UCH,0=off;1=on,,Dienstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,TuesdayDHWState,Dienstag Warmwasserzustand,,,b509,0e4b00,onoff,,UCH,0=off;1=on,,Dienstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,WednesdayDHWState,Mittwoch Warmwasserzustand,,,b509,0d4c00,onoff,,UCH,0=off;1=on,,Mittwoch Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,WednesdayDHWState,Mittwoch Warmwasserzustand,,,b509,0e4c00,onoff,,UCH,0=off;1=on,,Mittwoch Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,ThursdayDHWState,Donnerstag Warmwasserzustand,,,b509,0d4d00,onoff,,UCH,0=off;1=on,,Donnerstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,ThursdayDHWState,Donnerstag Warmwasserzustand,,,b509,0e4d00,onoff,,UCH,0=off;1=on,,Donnerstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,FridayDHWState,Freitag Warmwasserzustand,,,b509,0d4e00,onoff,,UCH,0=off;1=on,,Freitag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,FridayDHWState,Freitag Warmwasserzustand,,,b509,0e4e00,onoff,,UCH,0=off;1=on,,Freitag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,SaturdayDHWState,Samstag Warmwasserzustand,,,b509,0d4f00,onoff,,UCH,0=off;1=on,,Samstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,SaturdayDHWState,Samstag Warmwasserzustand,,,b509,0e4f00,onoff,,UCH,0=off;1=on,,Samstag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,SundayDHWState,Sonntag Warmwasserzustand,,,b509,0d5000,onoff,,UCH,0=off;1=on,,Sonntag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,,SundayDHWState,Sonntag Warmwasserzustand,,,b509,0e5000,onoff,,UCH,0=off;1=on,,Sonntag Warmwasserzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,MondayRecirculationTime,Montag Umluftzeit,,,b509,0d7a00,ttm,,TTM,,,Montag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,MondayRecirculationTime,Montag Umluftzeit,,,b509,0e7a00,ttm,,TTM,,,Montag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,TuesdayRecirculationTime,Dienstag Umluftzeit,,,b509,0d7b00,ttm,,TTM,,,Dienstag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,TuesdayRecirculationTime,Dienstag Umluftzeit,,,b509,0e7b00,ttm,,TTM,,,Dienstag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,WednesdayRecirculationTime,Mittwoch Umlaufzeit,,,b509,0d7c00,ttm,,TTM,,,Mittwoch Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,WednesdayRecirculationTime,Mittwoch Umlaufzeit,,,b509,0e7c00,ttm,,TTM,,,Mittwoch Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,ThursdayRecirculationTime,Donnerstag Umlaufzeit,,,b509,0d7d00,ttm,,TTM,,,Donnerstag Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,ThursdayRecirculationTime,Donnerstag Umlaufzeit,,,b509,0e7d00,ttm,,TTM,,,Donnerstag Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,FridayRecirculationTime,Freitag Umluftzeit,,,b509,0d7e00,ttm,,TTM,,,Freitag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,FridayRecirculationTime,Freitag Umluftzeit,,,b509,0e7e00,ttm,,TTM,,,Freitag Umluftzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SaturdayRecirculationTime,Umlaufzeit am Samstag,,,b509,0d7f00,ttm,,TTM,,,Umlaufzeit am Samstag,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,SaturdayRecirculationTime,Umlaufzeit am Samstag,,,b509,0e7f00,ttm,,TTM,,,Umlaufzeit am Samstag,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,SundayRecirculationTime,Sonntags-Umlaufzeit,,,b509,0d8000,ttm,,TTM,,,Sonntags-Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+w,,install,SundayRecirculationTime,Sonntags-Umlaufzeit,,,b509,0e8000,ttm,,TTM,,,Sonntags-Umlaufzeit,ttm_1,,TTM,,,,ttm_2,,TTM,,,,ttm_3,,TTM,,,,ttm_4,,TTM,,,,ttm_5,,TTM,,,,ttm_6,,TTM,,,
+r,,,MondayRecirculationState,Umluftzustand Montag,,,b509,0d8100,onoff,,UCH,0=off;1=on,,Umluftzustand Montag,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,MondayRecirculationState,Umluftzustand Montag,,,b509,0e8100,onoff,,UCH,0=off;1=on,,Umluftzustand Montag,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,TuesdayRecirculationState,Dienstag Rezirkulationszustand,,,b509,0d8200,onoff,,UCH,0=off;1=on,,Dienstag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,TuesdayRecirculationState,Dienstag Rezirkulationszustand,,,b509,0e8200,onoff,,UCH,0=off;1=on,,Dienstag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,WednesdayRecirculationState,Mittwoch Rezirkulationszustand,,,b509,0d8300,onoff,,UCH,0=off;1=on,,Mittwoch Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,WednesdayRecirculationState,Mittwoch Rezirkulationszustand,,,b509,0e8300,onoff,,UCH,0=off;1=on,,Mittwoch Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,ThursdayRecirculationState,Donnerstag Rezirkulationszustand,,,b509,0d8400,onoff,,UCH,0=off;1=on,,Donnerstag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,ThursdayRecirculationState,Donnerstag Rezirkulationszustand,,,b509,0e8400,onoff,,UCH,0=off;1=on,,Donnerstag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,FridayRecirculationState,Freitag Rezirkulationszustand,,,b509,0d8500,onoff,,UCH,0=off;1=on,,Freitag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,FridayRecirculationState,Freitag Rezirkulationszustand,,,b509,0e8500,onoff,,UCH,0=off;1=on,,Freitag Rezirkulationszustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,SaturdayRecirculationState,Umluftzustand Samstag,,,b509,0d8600,onoff,,UCH,0=off;1=on,,Umluftzustand Samstag,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,SaturdayRecirculationState,Umluftzustand Samstag,,,b509,0e8600,onoff,,UCH,0=off;1=on,,Umluftzustand Samstag,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,SundayRecirculationState,Sonntags-Umlaufzustand,,,b509,0d8700,onoff,,UCH,0=off;1=on,,Sonntags-Umlaufzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+w,,install,SundayRecirculationState,Sonntags-Umlaufzustand,,,b509,0e8700,onoff,,UCH,0=off;1=on,,Sonntags-Umlaufzustand,onoff_1,,UCH,0=off;1=on,,,onoff_2,,UCH,0=off;1=on,,,onoff_3,,UCH,0=off;1=on,,,onoff_4,,UCH,0=off;1=on,,,onoff_5,,UCH,0=off;1=on,,,onoff_6,,UCH,0=off;1=on,,
+r,,,RoomTempMaxAllowed,Max Allowed Room Temp: Max. zulässige Raumtemperatur,,,b509,0d3200,value,,D2C,,°C,Temperatur
+w,,install,RoomTempMaxAllowed,Max Allowed Room Temp: Max. zulässige Raumtemperatur,,,b509,0e3200,value,,D2C,,°C,Temperatur
+r,,,RoomTempCorr,Room Temp Correction: Korrektur der Raumtemperatur,,,b509,0d3300,value,,D2C,,°C,Temperatur
+w,,install,RoomTempCorr,Room Temp Correction: Korrektur der Raumtemperatur,,,b509,0e3300,value,,D2C,,°C,Temperatur
+r,,,OutsideTempCorr,Outside Temp Correction: Korrektur der Außentemperatur,,,b509,0d3600,value,,D2C,,°C,Temperatur
+w,,install,OutsideTempCorr,Outside Temp Correction: Korrektur der Außentemperatur,,,b509,0e3600,value,,D2C,,°C,Temperatur
+r,,,RoomTempCorrFact,Room Temp Factory Correction: Raumtemperaturkorrektur (werkseitig kalibriert),,,b509,0d3900,value,,D2C,,°C,Temperatur
+w,,install,RoomTempCorrFact,Room Temp Factory Correction: Raumtemperaturkorrektur (werkseitig kalibriert),,,b509,0e3900,value,,D2C,,°C,Temperatur
+r,,,HeatCurve,Heat Curve,,,b509,0d5c00,value,,UIN,100,,Wärmekurve
+w,,install,HeatCurve,Heat Curve,,,b509,0e5c00,value,,UIN,100,,Wärmekurve
+r,,,DHWTempMaxAllowed,Max Allowed DHW Temp: Max. zulässige Warmwassertemperatur,,,b509,0d5e00,value,,D2C,,°C,Temperatur
+w,,install,DHWTempMaxAllowed,Max Allowed DHW Temp: Max. zulässige Warmwassertemperatur,,,b509,0e5e00,value,,D2C,,°C,Temperatur
+r,,,DHWScheduleOptEnable,DHWScheduleOptEnable: WW-Zeitplan-Otp-Aktivierung,,,b509,0d5f00,value,,UCH,0=off;1=on,,
+w,,install,DHWScheduleOptEnable,DHWScheduleOptEnable: WW-Zeitplan-Otp-Aktivierung,,,b509,0e5f00,value,,UCH,0=off;1=on,,
+r,,,DHWOptEnable,DHW Option Enable: WW-Option aktivieren,,,b509,0d6000,value,,UCH,0=off;1=on,,
+w,,install,DHWOptEnable,DHW Option Enable: WW-Option aktivieren,,,b509,0e6000,value,,UCH,0=off;1=on,,
+r,,,AutoTimeCorr,Auto Time Correction: Automatische Zeitkorrektur,,,b509,0d7200,value,,UCH,0=off;1=on,,
+w,,install,AutoTimeCorr,Auto Time Correction: Automatische Zeitkorrektur,,,b509,0e7200,value,,UCH,0=off;1=on,,
+r,,,PrevHeatCurve,Prev Heat Curve,,,b509,0d7500,value,,UIN,100,,Vorherige Heizkurveneinstellung
+r,,,MaintenanceAlarm,Maintenance Alarm: Wartungsalarm,,,b509,0d6f00,value,,UCH,0=off;1=on,,
+w,,install,MaintenanceAlarm,Maintenance Alarm: Wartungsalarm,,,b509,0e6f00,value,,UCH,0=off;1=on,,
+r,,,MaintenanceAlarmDate,Maintenance Alarm Date: Wartungsalarmdatum,,,b509,0d7000,value,,DTM,,,
+w,,install,MaintenanceAlarmDate,Maintenance Alarm Date: Wartungsalarmdatum,,,b509,0e7000,value,,DTM,,,
+r,,,AutoHeatCurveRegulation,Auto Heat Curve Regulation: Automatische Heizkurvenregelung,,,b509,0d6e00,value,,UCH,0=off;1=on,,
+w,,install,AutoHeatCurveRegulation,Auto Heat Curve Regulation: Automatische Heizkurvenregelung,,,b509,0e6e00,value,,UCH,0=off;1=on,,
+r,,,Preheat,Preheat: vorheizen,,,b509,0d6c00,value,,UCH,0=off;1=on,,
+w,,install,Preheat,Preheat: vorheizen,,,b509,0e6c00,value,,UCH,0=off;1=on,,
+r,,,RecirculationOptEnable,Recirculation Option Enable: Umluftoption aktivieren,,,b509,0d6d00,value,,UCH,0=off;1=on,,
+w,,install,RecirculationOptEnable,Recirculation Option Enable: Umluftoption aktivieren,,,b509,0e6d00,value,,UCH,0=off;1=on,,
+r,,,MaintenanceTel,Wartungstelefon,,,b509,0d6100,value,,STR:13,,,Wartungstelefon
+w,,install,MaintenanceTel,Wartungstelefon,,,b509,0e6100,value,,STR:13,,,Wartungstelefon
+r,,,RoomTempOptEnable,Room Temp Option Enable: Option Raumtemperatur aktivieren,,,b509,0d6b00,value,,UCH,0=off;1=on,,
+w,,install,RoomTempOptEnable,Room Temp Option Enable: Option Raumtemperatur aktivieren,,,b509,0e6b00,value,,UCH,0=off;1=on,,
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,

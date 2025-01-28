@@ -1,0 +1,13 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,RoomTemp,Raumisttemp: Raumtemperatur,,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0d1f00,value,,D2C,,°C,Temperatur
+w,,install,RoomTempOffset,Raumisttemp. Korrekturwert,,,b509,0e1f00,value,,D2C,,°C,Temperatur
+r,,,RoomTempOffsetSelfWarming,Offset Eigenerwärmung,,,b509,0d2000,value,,D2C,,°C,Temperatur
+r,,,HolidayPeriod,Ferienzeitraum,,,b509,0d4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+w,,,HolidayPeriod,Ferienzeitraum,,,b509,0e4300,hfrom,,HDA:3,,,Ferienzeitraum von,hto,,HDA:3,,,Ferienzeitraum bis,hfrom_1,,HDA:3,,,Ferienzeitraum von,hto_1,,HDA:3,,,Ferienzeitraum bis
+r,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0d2200,value,,D2C,,°C,Temperatur
+w,,,RoomTempHoliday,Raumsollwert im Ferienbetrieb,,,b509,0e2200,value,,D2C,,°C,Temperatur
+r,,,LcdContrastPwmValue,LCD Kontrast: Displaykontrast,,,b509,0d3600,value,,UCH,,,
+w,,install,LcdContrastPwmValue,LCD Kontrast: Displaykontrast,,,b509,0e3600,value,,UCH,,,

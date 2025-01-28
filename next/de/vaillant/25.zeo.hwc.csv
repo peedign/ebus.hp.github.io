@@ -1,0 +1,35 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+r,,,OperatingMode,Betriebsart: 1=Ein 2=Aus 3=Auto,,,b509,0d0600,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,TempDesired,Solltemperatur: 1/2 °C resolution,,,b509,0d0d00,value,,D1C,,°C,Temperatur
+r,,,CircuitDiaState,CircuitDiaState,,,b509,0d1800,value,,UCH,,,
+r,,,CircuitsStates,Zustand Wärmeabnehmer,,,b509,0d1e00,value,,UCH,,,
+r,,,CleaningLady,"Sparfunktion: 0,5h",,,b509,0d2300,value,,UCH,,,
+r,,,HwcLegioProtectionMaxTimer,Legionellenschutz max. Timer,,,b509,0d2d00,value,,UCH,,,
+r,,,ActualTempDesired,Akt. Solltemperatur: 1/2°C Auflösung,,,b509,0d3300,value,,D1C,,°C,Temperatur
+r,,,HwcLegioTempOkTimer,Max. Rücklauftemperatur,,,b509,0d3400,value,,UCH,,°C,Temperatur
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+r,,,Params,Parameter,,,b504,09,temp,,UCH,,°C,Temperatur,ign,,IGN:3,,,,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,temps,,SCH,,°C,Temperatur,ign_1,,IGN,,,,temps_1,,SCH,,°C,Temperatur,temps_2,,SCH,,°C,Temperatur,ign_2,,IGN,,,
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Soll/Status/Ist/Soll,,,b504,0d,temp,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,temp_1,,D2C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
+r,,,Timer_Monday,Zeitfenster Montag,,,b504,02,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Monday,Zeitfenster Montag,,,b505,0901,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Tuesday,Zeitfenster Dienstag,,,b504,03,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Tuesday,Zeitfenster Dienstag,,,b505,0902,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b504,04,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b505,0903,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Thursday,Zeitfenster Donnerstag,,,b504,05,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Thursday,Zeitfenster Donnerstag,,,b505,0904,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Friday,Zeitfenster Freitag,,,b504,06,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Friday,Zeitfenster Freitag,,,b505,0905,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Saturday,Zeitfenster Samstag,,,b504,07,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Saturday,Zeitfenster Samstag,,,b505,0906,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Sunday,Zeitfenster Sonntag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Sunday,Zeitfenster Sonntag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage

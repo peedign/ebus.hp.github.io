@@ -1,0 +1,88 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+*[id_sw],scan,,,,SW
+[id_sw<=400]r,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0d3800,value,,UCH,,h,Stunden
+[id_sw<=400]w,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0e3800,value,,UCH,,h,Stunden
+[id_sw>=401]r,,,HcMaxPreHeating,Max. Voraufheizung,,,b509,0d3800,value,,UCH,-5,min,Minuten
+[id_sw>=401]w,,install,HcMaxPreHeating,Max. Voraufheizung,,,b509,0e3800,value,,UCH,-5,min,Minuten
+r,,,StatPowerOn,StatPowerOn,,,b509,0dcc00,value,,UIN,,,
+r,,,StatOperatingHours,StatOperatingHours,,,b509,0dcd00,value,,UIN,,,
+r,,,StatMonthOfInstallation,StatMonthOfInstallation,,,b509,0dce00,value,,UCH,,,
+r,,,StatYearOfInstallation,StatYearOfInstallation,,,b509,0dcf00,value,,UCH,,,
+r,,,Stat15MinBusTimeout,Stat15MinBusTimeout,,,b509,0dd000,value,,UCH,,,
+r,,,StatRTOSErrorcode,StatRTOSErrorcode,,,b509,0dd100,value,,UIN,,,
+r,,,StatRestarts,StatRestarts,,,b509,0dd200,value,,UIN,,,
+r,,,StatRTOSErrorCounter,StatRTOSErrorCounter,,,b509,0dd300,value,,UIN,,,
+r,,,FlowTemp,Vorlauftemp. IST,,,b509,0d0300,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,FlowTempDesired,Vorlauftemp. SOLL,,,b509,0d4600,value,,D1C,,°C,Temperatur
+r,,,TeleSwitch,TeleSWITCH,,,b509,0d0a00,value,,UCH,0=off;1=on,,
+r,,,IsInHoliday,Ferienmodus aktiv,,,b509,0d2700,value,,UCH,,,
+r,,,IsInStorageFilling,Speicherladung aktiv,,,b509,0d4700,value,,UCH,0=no;1=yes,,
+r,,,CleaningLady,Sparfunktion,,,b509,0d4b00,value,,UCH,,,
+r,,,IsInParty,Partymodus aktiv,,,b509,0d4e00,value,,UCH,,,
+r,,,MixerDutyCycle,Mischeransteuerung,,,b509,0d0f00,value,,SCH,,,
+r,,,HcPumpPort,Pumpenstatus,,,b509,0d9400,value,,UCH,0=off;1=on,,
+r,,,OtShutdownLimit,AT-Abschaltgrenze,,,b509,0d3600,value,,UCH,,°C,Solltemperatur
+w,,,OtShutdownLimit,AT-Abschaltgrenze,,,b509,0e3600,value,,UCH,,°C,Solltemperatur
+r,,,FlowTempMin,Minimaltemperatur,,,b509,0d3000,value,,UCH,,°C,Temperatur
+w,,,FlowTempMin,Minimaltemperatur,,,b509,0e3000,value,,UCH,,°C,Temperatur
+r,,,TempDesiredLow,Absenktemperatur,,,b509,0d3300,value,,D1C,,°C,Temperatur
+w,,,TempDesiredLow,Absenktemperatur,,,b509,0e3300,value,,D1C,,°C,Temperatur
+r,,,CfgHeatSinkType,Kreis deaktivieren,,,b509,0d3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,
+w,,install,CfgHeatSinkType,Kreis deaktivieren,,,b509,0e3c00,value,,UCH,0=disabled;1=mixer;2=water;3=fixvalue;4=backflow,,
+r,,,HcPumpIdlePeriod,Pumpensperrzeit,,,b509,0d4f00,value,,UCH,,min,Minuten
+w,,,HcPumpIdlePeriod,Pumpensperrzeit,,,b509,0e4f00,value,,UCH,,min,Minuten
+r,,,OperatingMode,Betriebsmodus,,,b509,0d2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,OperatingMode,Betriebsmodus,,,b509,0e2b00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,FlowTempMax,Maximaltemperatur,,,b509,0d3100,value,,UCH,,°C,Temperatur
+w,,,FlowTempMax,Maximaltemperatur,,,b509,0e3100,value,,UCH,,°C,Temperatur
+r,,,TempDesired,Solltemperatur,,,b509,0d3200,value,,D1C,,°C,Temperatur
+w,,,TempDesired,Solltemperatur,,,b509,0e3200,value,,D1C,,°C,Temperatur
+r,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0d3500,value,,UIN,100,,Heizkurve: Heating curve
+w,,,HeatingCurve,Heizkurve: Heating curve,,,b509,0e3500,value,,UIN,100,,Heizkurve: Heating curve
+r,,,FloorPavingDryingDay,FloorPavingDryingDay3: Current day of floor paving drying routine,,,b509,0d3b00,value,,UCH,,,
+r,,,TeleswitchOperatingMode,TeleSWITCH,,,b509,0d3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,TeleswitchOperatingMode,TeleSWITCH,,,b509,0e3f00,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,tempdesired,,UCH,,°C,Temperatur,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,floorpavingdryingday,,UCH,,,Tage,floorpavingdryingtemp,,UCH,,°C,Temperatur,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,Mischer Modus
+w,,,SetFloorPavingDryingDay,Estrichtrocknungstag setzen,,,b505,03,value,,UCH,,,Tage
+w,,,SetFloorPavingDryingTemp,Estrichtrocknungstemperatur setzen,,,b505,04,value,,UCH,,°C,Temperatur
+w,,,SetType,Kreis Typ setzen,,,b505,08,value,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,Mischer Typ
+w,,,SetTempDesiredLow,Absenksollwert setzen,,,b505,0a,value,,UCH,,°C,Temperatur
+w,,,SetHeatingCurve,Heizkurve setzen,,,b505,0b,value,,UIN,100,,Heizkurve: Heating curve
+w,,,SetShutdownTemp,Aussentemp. Abschaltgrenze setzen,,,b505,0c,value,,UCH,,°C,Temperatur
+w,,,SetPumpIdlePeriod,Pumpensperrzeit setzen,,,b505,0d,value,,UCH,,min,Minuten
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+w,,,SetMaxPreHeating,Max. Voraufheizung setzen,,,b505,10,value,,UCH,,h,Stunden
+w,,,SetMaxPreHeatingFine,Max. Voraufheizung setzen,,,b505,3f,value,,UCH,-5,min,Minuten
+r,,,Params,Parameter,,,b504,09,tempdesired,,UCH,,°C,Temperatur,tempdesiredlow,,SCH,,°C,Temperatur,curve,,UIN,100,,Heizkurve: Heating curve,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,shutdowntemp,,SCH,,°C,Temperatur,pumpidleperiod,,UCH,,min,Minuten,flowtempmin,,SCH,,°C,Temperatur,flowtempmax,,SCH,,°C,Temperatur,maxpreheating,,UCH,,h,Stunden
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Status Vorlauf Soll/Ist,,,b504,0d,flowtempdesired,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,flowtemp,,D2C,,°C,Temperatur,tempdesired,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
+r,,,Timer_Monday,Zeitfenster Montag,,,b504,02,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Monday,Zeitfenster Montag,,,b505,0901,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Tuesday,Zeitfenster Dienstag,,,b504,03,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Tuesday,Zeitfenster Dienstag,,,b505,0902,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b504,04,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b505,0903,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Thursday,Zeitfenster Donnerstag,,,b504,05,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Thursday,Zeitfenster Donnerstag,,,b505,0904,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Friday,Zeitfenster Freitag,,,b504,06,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Friday,Zeitfenster Freitag,,,b505,0905,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Saturday,Zeitfenster Samstag,,,b504,07,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Saturday,Zeitfenster Samstag,,,b505,0906,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Sunday,Zeitfenster Sonntag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Sunday,Zeitfenster Sonntag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,install,Iotest,I/O Test,,,b506,02,value,,UCH,0=valve1;1=cirpump;2=pump1;3=hc2mixeropen;4=hc2mixerclose;5=hc2pump;6=hc3mixeropen;7=hc3mixerclose;8=hc3pump;9=level1;10=level2;11=av;12=c1c2,,
+w,,install,Ioteststop,I/O Test stoppen,,,b506,01,
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+w,,,RoomTempOffset,Raumaufschaltung,,,b505,2d,value,,D2C,,°C,Temperatur
+w,,,Party,Quick - Party,,,b505,05,value,,UCH,0=off;1=on,,
+w,,,Load,Quick - WW Speicherladung,,,b505,06,value,,UCH,0=off;1=on,,
+w,,,Save,Quick - Sparen bis,,,b505,07,value,,TTH,,,

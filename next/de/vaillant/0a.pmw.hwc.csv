@@ -1,0 +1,99 @@
+type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
+*r,
+*w,
+*[id_sw],scan,,,,SW
+[id_sw>=38]r,,,SingleStorageCharge,1x Speicherladung: Enable SingleTankCharge,,,b509,0d4400,value,,UCH,0=off;1=on,,
+[id_sw>=38]r,,,ZaehlerBetriebsStunden,ZaehlerBetriebsStunden: Working Hours,,,b509,0d4500,value,,UIN,,,
+[id_sw>=39]r,,,DurchflussTemp,Volumenstrom in Liter / Minute,,,b509,0d4600,value,,D2C,,°C,Temperatur
+[id_sw>=112]r,,,VPMWMode,"VPMW Typ: 1=VPM 20/25W, 2=VPM 30/35W",,,b509,0d4b00,value,,UCH,,,
+[id_sw>=117]r,,,OverheatTimer,Overheat_timer,,,b509,0d5200,value,,UCH,,s,Sekunden
+[id_sw>=40]r,,,HexMonitoringCounter,HexMonitoringCounter: RO,,,b509,0d4700,value,,SIN,,,
+[id_sw>=40]r,,,HExThreshold,HExThreshold,,,b509,0d4800,value,,SIN,,in 1/100,RO
+[id_sw>=40]r,,,BigHExThreshold,BigHExThreshold,,,b509,0d4900,value,,SIN,,in 1/100,RW
+[id_sw>=40]r,,,HExIndex,HExIndex,,,b509,0d4a00,value,,SIN,,in 1/100,RO
+[id_sw>=113]r,,,ActualKrm,Actual_Krm,,,b509,0d4c00,value,,SIN,,in 1/1000,"Krm used for calculation (set in DynamicTnm), valid after 1. Tapping"
+[id_sw>=113]r,,,ActualTnm,Actual_Tnm,,,b509,0d4d00,value,,SIN,,in 1/1000,"Tnm used for calculation (set in DynamicTnm), valid after 1. Tapping"
+[id_sw>=114]r,,,KrmFaktorSmall,Krm_Faktor_Small,,,b509,0d4e00,value,,SIN,,in 1/1000,Krm Verstärkungsfaktor Small (1/1000)
+[id_sw>=114]r,,,KrmFaktorMiddl,Krm_Faktor_Middl,,,b509,0d4f00,value,,SIN,,in 1/1000,Krm Verstärkungsfaktor Middl (1/1000)
+[id_sw>=114]r,,,TnmFaktorSmall,Tnm_Faktor_Small,,,b509,0d5000,value,,SIN,,in 1/1000,Tnm Verstärkungsfaktor Small (1/1000)
+[id_sw>=114]r,,,TnmFaktorMiddl,Tnm_Faktor_Middl,,,b509,0d5100,value,,SIN,,in 1/1000,Tnm Verstärkungsfaktor Middl (1/1000)
+r,,,Ntc1Sensor,NTC 1 Sensor: T1 Temperature,,,b509,0d0000,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Ntc2Sensor,NTC 2 Sensor: T2 Temperature,,,b509,0d0100,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Ntc3Sensor,NTC 3 Sensor: T3 Temperature,,,b509,0d0200,temp,,D2C,,°C,Temperatur,sensor,,UCH,0=ok;85=circuit;170=cutoff,,Fühlerstatus
+r,,,Vortex,"Vortex: Frequency in Hz ( 1: y [l/min] = 0,0835 * x [Hz] - 0,03, 2: y [l/min] = 0,185 * x [Hz] )",,,b509,0d0300,value,,UIN,,Hz,Frequenz
+r,,,CircoPump,Zirkulationspumpe: Leistung in %,,,b509,0d0400,value,,UCH,,%,
+r,,,PumpED,Einschaltdauer Pumpe: Leistung in %,,,b509,0d0500,value,,UCH,,%,
+r,,,CalculatedMixerPosition,Berechnete Mischerposition: 0 : primär offen .. 220 primär geschlossen,,,b509,0d0600,value,,UIN,,,
+r,,,ElectricalHeater,Elektrischer Heizstab,,,b509,0d0800,value,,UCH,0=off;1=on,,
+r,,,HeatDemand,Wärmeanforderung,,,b509,0d0900,value,,D2C,,°C,Temperatur
+r,,,OperatingMode,Betriebsart,,,b509,0d0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,Warmwasser Modus
+w,,install,OperatingMode,Betriebsart,,,b509,0e0a00,value,,UCH,0=off;1=on;2=auto;3=manual,,Warmwasser Modus
+r,,,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0d0b00,value,,D2C,,°C,Temperatur
+w,,install,ManualTappingTempDesired,ManualTappingSetpoint,,,b509,0e0b00,value,,D2C,,°C,Temperatur
+r,,,AutoTappingTempDesired,Automatischer Zapfsollwert,,,b509,0d0c00,value,,D2C,,°C,Temperatur
+r,,,QuickVetoTempDesired,Quick Veto Sollwert,,,b509,0d0d00,value,,D2C,,°C,Temperatur
+r,,,ActualTappingTempDesired,Aktueller Zapfsollwert,,,b509,0d0e00,value,,D2C,,°C,Temperatur
+r,,,QuickVetoStart,Quick Veto start,,,b509,0d0f00,value,,UCH,0=off;1=on,,
+r,,,LegioStartDay,Starttag Legionellenschutz,,,b509,0d1000,value,,UCH,,0..8,0=Montag1 = Dienstag..6 = Sonntag7 = Legionellenschutz aus8 = täglich
+r,,,LegioStartTime,Startzeit Legionellenschutz: Time when LegioProtect starts on specific day,,,b509,0d1100,value,,VTI,,,Uhrzeit
+r,,,PartyStart,Start Partyfunktion: Start Party Mode,,,b509,0d1200,value,,UCH,0=off;1=on,,
+r,,,HolidayStart,Start Ferienfunktion: Start Holiday Mode,,,b509,0d1300,value,,UCH,0=off;1=on,,
+r,,,ActorFernsteuerung,ActorFernsteuerung: TRUE -> RemoteControl of actors,,,b509,0d1b00,value,,UCH,0=off;1=on,,
+r,,,Time,Zeit: System Time,,,b509,0d2c00,value,,VTI,,,Uhrzeit
+r,,,Date,Datum: System Date,,,b509,0d2d00,value,,HDA:3,,,Datum
+r,,,Weekday,"Wochentag: System Weekday (0=Monday, 5=Saturday, 6=Sunday)",,,b509,0d2e00,value,,BDY,,,Wochentag
+r,,,TeleSwitch,TeleSWITCH,,,b509,0d3900,value,,UCH,,0..3,"TeleSwitch Operating Mode (0=disabled, 1=ON, 2=OFF, 3=AUTO"
+r,,,TeleSwitchState,TeleSwitchState: Teleswitch port state (On / Off),,,b509,0d3a00,value,,UCH,0=off;1=on,,
+r,,,EnableHwcOperation,EnableDHWOperation: Enable DHW Ooperation,,,b509,0d4300,value,,UCH,0=off;1=on,,
+r,,,Krm,Krm,,,b509,0d1400,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Tm,Tm,,,b509,0d1500,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Tnm,Tnm,,,b509,0d1600,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Tvm,Tvm,,,b509,0d1700,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Krp,Krp,,,b509,0d1800,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Tvp,Tvp,,,b509,0d1900,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,Tp,Tp,,,b509,0d1a00,value,,SIN,,in 1/1000,"enter value in 1/1000: 25=0.025, 250=0,25, 2500=2,5"
+r,,,StateMainControl,State_MainControl: Aktuelle Zustandsnummer MainControl,,,b509,0d2f00,value,,UCH,,,
+r,,,StateMixerPumpControl,State_MixerPumpControl: Aktuelle Zustandsnummer MixerPumpControl,,,b509,0d3000,value,,UCH,,,
+r,,,StateCircoKick,State_CircoKick: Aktuelle Zustandsnummer CircoKickControl,,,b509,0d3100,value,,UCH,,,
+r,,,StateHExMonitoring,State_HExMonitoring: Aktuelle Zustandsnummer HExMonitoring,,,b509,0d3200,value,,UCH,,,
+r,,,TimeTicker,TimeTicker: Sekunden des Tages,,,b509,0d3300,value,,ULG,,s,Sekunden
+r,,,StLegioStopTimeCounter,Legionellenschutz Stop Zähler: End LegioProtect with Stop,,,b509,0d3e00,value,,UIN,,,
+w,,service,StLegioStopTimeCounter,Legionellenschutz Stop Zähler: End LegioProtect with Stop,,,b509,0e3e00,value,,UIN,,,
+r,,,StLegioAbortTimeCounter,Legionellenschutz Abbruch Zähler: End LegioProtect with Abort,,,b509,0d3f00,value,,UIN,,,
+w,,service,StLegioAbortTimeCounter,Legionellenschutz Abbruch Zähler: End LegioProtect with Abort,,,b509,0e3f00,value,,UIN,,,
+r,,,StFrostProtCounter,Frostschutz Zähler: FrostProtectCounter,,,b509,0d4000,value,,UIN,,,
+w,,service,StFrostProtCounter,Frostschutz Zähler: FrostProtectCounter,,,b509,0e4000,value,,UIN,,,
+r,,,StInstallationDate,Installationsdatum: Installation Date,,,b509,0d4100,value,,HDA:3,,,Datum
+w,,service,StInstallationDate,Installationsdatum: Installation Date,,,b509,0e4100,value,,HDA:3,,,Datum
+r,,,SteBusCheckFailedCounter,SteBusCheckFailedCounter: eBus Failed Counter,,,b509,0d4200,value,,UIN,,,
+w,,service,SteBusCheckFailedCounter,SteBusCheckFailedCounter: eBus Failed Counter,,,b509,0e4200,value,,UIN,,,
+r,,,DateTime,Datum Uhrzeit,,,b504,00,dcfstate,,UCH,0=nosignal;1=ok;2=sync;3=valid,,DCF Empfängerstatus,btime,,BTI,,,Uhrzeit,bdate,,BDA,,,Datum,temp,,D2B,,°C,Temperatur
+r,,,Mode,Betriebsmodus,,,b504,01,temp,,UCH,,°C,Temperatur,hwcmode,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,ign,,IGN:2,,,,hwcmode_1,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,hex,,HEX,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,Tag-/Nachtmodus
+w,,,SetTempDesired,Solltemperatur setzen,,,b505,01,value,,UCH,,°C,Temperatur
+w,,,SetMode,Betriebsart setzen,,,b505,02,value,,UCH,0=disabled;1=on;2=off;3=auto,,Warmwasser Modus
+w,,,SetFlowTempMin,Minimalen Vorlaufsollwert setzen,,,b505,0e,value,,UCH,,°C,Temperatur
+w,,,SetFlowTempMax,Maximalen Vorlaufsollwert setzen,,,b505,0f,value,,UCH,,°C,Temperatur
+r,,,Params,Parameter,,,b504,09,temp,,UCH,,°C,Temperatur,ign,,IGN:3,,,,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,Mischer Typ,temps,,SCH,,°C,Temperatur,ign_1,,IGN,,,,temps_1,,SCH,,°C,Temperatur,temps_2,,SCH,,°C,Temperatur,ign_2,,IGN,,,
+r,,,Status0a,Status Vorlauf Ist/Mixer/Pumpe/Vorlauf Soll,,,b504,0a,flowtemp,,D2C,,°C,Temperatur,mixer,,UCH,0=off;1=open;2=close,,Mixer Status,pump,,UCH,0=off;1=on,,,onoff,,UCH,0=off;1=on,,,flowtempdesired,,UCH,,°C,Temperatur
+r,,,Status,Soll/Status/Ist/Soll,,,b504,0d,temp,,UCH,,°C,Temperatur,onoff,,UCH,0=off;1=on,,,temp_1,,D2C,,°C,Temperatur,temp_2,,UCH,,°C,Temperatur
+r,,,Status16,Außentemperatur,,,b504,16,value,,D2C,,°C,Temperatur
+r,,,Timer_Monday,Zeitfenster Montag,,,b504,02,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Monday,Zeitfenster Montag,,,b505,0901,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Tuesday,Zeitfenster Dienstag,,,b504,03,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Tuesday,Zeitfenster Dienstag,,,b505,0902,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b504,04,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Wednesday,Zeitfenster Mittwoch,,,b505,0903,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Thursday,Zeitfenster Donnerstag,,,b504,05,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Thursday,Zeitfenster Donnerstag,,,b505,0904,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Friday,Zeitfenster Freitag,,,b504,06,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Friday,Zeitfenster Freitag,,,b505,0905,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Saturday,Zeitfenster Samstag,,,b504,07,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Saturday,Zeitfenster Samstag,,,b505,0906,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Timer_Sunday,Zeitfenster Sonntag,,,b504,08,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+w,,,Timer_Sunday,Zeitfenster Sonntag,,,b505,0907,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,from,,TTM,,,von,to,,TTM,,,bis,daysel,,UCH,0=selected;1=Mo_Fr;2=Sa_Su;3=Mo_Su,,Tage
+r,,,Currenterror,Aktuelle Fehler,,,b503,0001,error,,UIN,,,Fehlernummer,error_1,,UIN,,,Fehlernummer,error_2,,UIN,,,Fehlernummer,error_3,,UIN,,,Fehlernummer,error_4,,UIN,,,Fehlernummer
+r,,,Errorhistory,Fehlerhistorie,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,Uhrzeit,date,,HDA:3,,,Datum,error,,UIN,,,Fehlernummer
+w,,install,Clearerrorhistory,Fehlerhistorie löschen,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+w,,,Party,Quick - Party,,,b505,05,value,,UCH,0=off;1=on,,
+w,,,Load,Quick - WW Speicherladung,,,b505,06,value,,UCH,0=off;1=on,,
+w,,,Save,Quick - Sparen bis,,,b505,07,value,,TTH,,,
