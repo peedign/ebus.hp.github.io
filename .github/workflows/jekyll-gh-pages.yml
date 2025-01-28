@@ -32,6 +32,8 @@ jobs:
         run: |
           # resolve symlinks with ".." in the name
           for file in $(find . -maxdepth 5 -type l -name "*..*"); do
+            echo $file  
+            ls -la $file
             cat $file > ${file}.new && mv ${file}.new ${file}
           done
       - name: Setup Pages
