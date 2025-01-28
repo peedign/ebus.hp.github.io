@@ -1,3 +1,0 @@
-type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
-*u,
-u,,,State,,,,b512,02,setvalve,m,UCH,0=heat;50=both;100=water;254=standby,,Ventilposition,state,,UCH,0=heat;50=both;100=water;254=standby,,Ventilposition,dhwdemand,,UCH,0=no;1=yes,,,temp,,D2C,,°C,Temperatur
