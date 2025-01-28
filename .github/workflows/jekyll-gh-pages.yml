@@ -28,6 +28,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Workaround gh pages link name limit
+        run: |
+          # resolve symlinks with ".." in the name
+          for file in $(find . -maxdepth 5 -type l -name "*..*"); do
+            cat $file > ${file}.new && mv ${file}.new ${file}
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
