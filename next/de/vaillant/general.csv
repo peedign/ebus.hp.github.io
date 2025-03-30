@@ -1,3 +1,0 @@
-type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,unit,comment
-*r,
-r,General,,Valuerange,Register Wertebereich,,,b513,04,id,m,UIN,,,Registernummer,ign,,IGN:2,,,,cur,,UIN,,,aktueller Wert,min,,UIN,,,minimaler Wert,max,,UIN,,,maximaler Wert,def,,UIN,,,default Wert
