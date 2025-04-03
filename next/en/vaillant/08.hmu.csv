@@ -56,16 +56,16 @@ r,,,Fan2Hours,,,,b51a,05ff345e,value,,IGN:3,,,,value,,UIN,,h,hours
 u,,,Fan2Hours,,,,b51a,05e5345e,value,,IGN:3,,,,value,,UIN,,h,hours
 r,,,Fan2Starts,,,,b51a,05ff345f,value,,IGN:3,,,,value,,UIN,,,
 u,,,Fan2Starts,,,,b51a,05e5345f,value,,IGN:3,,,,value,,UIN,,,
-r,,,HeatCurve,,,,b51a,05ff348f352d,value,,IGN:3,,,,ign,,IGN:3,,,,bcd,,BCD,10,,heat curve 0.1 to 4.0
+r,,,HeatCurve,,,,b51a,0605ff348f352d,value,,IGN:3,,,,ign,,IGN:3,,,,bcd,,BCD,10,,heat curve 0.1 to 4.0
 r,,,SummerSwitchOffTemp,,,,b51a,05ff348f352e,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Switch-off temperature summer (°C)
 r,,,HcBivalencePoint,,,,b51a,05ff348f352f,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Central heating bivalence point (°C)
 r,,,HwcBivalencePoint,,,,b51a,05ff348f3530,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Bivalence point domestic hot water (°C)
-r,,,MaxFlowTemp,,,,b51a,05ff348f3532,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Maximum flow temperature (°C)
-r,,,MinFlowTemp,,,,b51a,05ff348f3533,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Minimum flow temperature (°C)
-r,,,HcModeActive,,,,b51a,05ff348f3534,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=no;1=yes,,Central heating mode active (yes/no)
-r,,,HwcModeActive,,,,b51a,05ff348f3535,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=no;1=yes,,Domestic hot water mode active (yes/no)
+r,,,MaxFlowTemp,,,,b51a,0605ff348f3532,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Maximum flow temperature (°C)
+r,,,MinFlowTemp,,,,b51a,0605ff348f3533,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°C,Minimum flow temperature (°C)
+r,,,HcModeActive,,,,b51a,0605ff348f3534,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=no;1=yes,,Central heating mode active (yes/no)
+r,,,HwcModeActive,,,,b51a,0605ff348f3535,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=no;1=yes,,Domestic hot water mode active (yes/no)
 r,,,HwcChargeHysteresis,,,,b51a,05ff348f3539,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°K,Hysteresis Hwc charging (°K)
-r,,,ImmersionHeaterMode,,,,b51a,05ff34c4331e,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=off;1=on,,Immersion heater mode (on/off)
+r,,,ImmersionHeaterMode,,,,b51a,0605ff34c4331e,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=off;1=on,,Immersion heater mode (on/off)
 r,,,CompressorHysteresisHc,,,,b51a,05ff34f83443,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,°K,Compressor hysteresis central heating (°K)
 r,,,CompressorHysteresisCooling,,,,b51a,05ff3486353f,value,,IGN:3,,,,ign,,IGN:3,,,,d2c,,D2C,,,Compressor hysteresis cooling (°K)
 r,,,HwcMode,,,,b51a,05ff34523444,value,,IGN:3,,,,ign,,IGN:3,,,,uch,,UCH,0=eco;1=normal;2=balance,,Domestic hot water mod (eco/normal/balance)
