@@ -463,6 +463,6 @@ r,,,Z3CoolingTimer_Saturday,timer cooling saturday,,,b524,0303020105,value,,IGN:
 w,,,Z3CoolingTimer_Saturday,timer cooling saturday,,,b524,0403020105,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to
 r,,,Z3CoolingTimer_Sunday,timer cooling sunday,,,b524,0303020106,value,,IGN:1,,,whether timeslot is valid,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to
 w,,,Z3CoolingTimer_Sunday,timer cooling sunday,,,b524,0403020106,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to,from,,TTM,,,from,to,,TTM,,,to
-r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number1,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
-r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
+r,,,Currenterror1,Current errors,,,b503,0001,error,,UIN,,,error number1,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
+r,,,Errorhistory1,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
