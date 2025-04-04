@@ -204,3 +204,16 @@ uw,,,StatusCirPump,Status circulation pump,,,b512,00,value,,UCH,0=off;100=on,,
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+r,,,UnknownSensorTemperature,,,,b507,02093c,value,,UIN,10,°C,Received temperature from sensor
+r,,,UnknownMode,,,,b510,0900003c,value,,UIN,1,,Received unknown MS cmd b510
+r,,,UnknownB511_0100,Unknown b511 command,,,b511,0100,value,,UCH,,,
+r,,,UnknownB511_0101,Unknown b511 command,,,b511,0101,value,,UCH,,,
+r,,,UnknownB512_020000,Unknown b512 command,,,b512,020000,value,,UCH,,,
+r,,,UnknownB512_0204FF,Unknown b512 command,,,b512,0204FF,value,,UCH,,,
+r,,,UnknownB503_020002,Unknown b503 command,,,b503,020002,value,,UCH,,,
+r,,,UnknownB503_020004,Unknown b503 command,,,b503,020004,value,,UCH,,,
+r,,,UnknownB503_020005,Unknown b503 command,,,b503,020005,value,,UCH,,,
+
+
+
+
