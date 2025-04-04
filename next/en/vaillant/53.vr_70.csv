@@ -9,4 +9,4 @@ r,,,Currenterror1,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,
 r,,,Errorhistory1,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install1,Clearerrorhistory1,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 w,,,McXXFlowTempDesired,,,,b523,0402,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,
-w,,,McXYFlowTempDesired,,,,b523,0207,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,
+w,,,McXYFlowTempDesired,,,,b523,0407,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,
