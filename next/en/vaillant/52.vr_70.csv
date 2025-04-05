@@ -2,8 +2,8 @@ type,circuit,level,name,comment,qq,zz,pbsb,id,*name,part,type,divisor/values,uni
 *w,
 *r,
 w,,,SetActorState,,,,b523,01,r1,,UCH,0=off;20=on,,,r2,,UCH,0=off;20=on,,,r3,,UCH,0=off;20=on,,,r4,,UCH,0=off;20=on,,,r5,,UCH,0=off;20=on,,,r6,,UCH,0=off;20=on,,,s7,,UCH,0=off;20=on,,
-#w,,,Mc4FlowTempDesired,,,,b523,0204,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,    # no known traffic seen yet
-#w,,,Mc5FlowTempDesired,,,,b523,0205,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,    # no known traffic seen yet
+w,,,Mc4FlowTempDesired,,,,b523,0204,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,    # no known traffic seen yet
+w,,,Mc5FlowTempDesired,,,,b523,0205,ftstatus,,UCH,0=off;1=on,,,ftdesired,,D1C,,°C,temperature,mixerstatus,s,UCH,0=off;1=on,,,mixermovement,s,SCH,,%,    # no known traffic seen yet
 #r,,,TEST_PossibleMc4Write,guessed write related to Mc4,,,,b523,04020000,value,,HEX:3,,,    # received unknown MS cmd: 1052b5230402000000
 #r,,,TEST_PossibleMc5Write,guessed write related to Mc5,,,,b523,04020100,value,,HEX:3,,,    # received unknown MS cmd: 1052b5230402010000
 r,,,SensorData,,,,b523,03,s1,,D2C,,°C,temperature,s2,,D2C,,°C,temperature,s3,,D2C,,°C,temperature,s4,,D2C,,°C,temperature,s5,,D2C,,°C,temperature,s6,,D2C,,°C,temperature,ignore,,HEX:3,,,
