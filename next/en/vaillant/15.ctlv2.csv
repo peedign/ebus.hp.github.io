@@ -277,7 +277,7 @@ r,,,Z3BankHolidayEndPeriod,Bank Feiertag Ende Zone 3,,,b524,020003020d00,value,,
 w,,,Z3BankHolidayEndPeriod,Bank Feiertag Ende Zone 3,,,b524,020103020d00,value,,HDA:3,,,end date of bank holidays for zone 3
 r,,,Z3SFMode,SF mode zone 3,,,b524,020003020e00,value,,IGN:4,,,,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
 w,,,Z3SFMode,SF mode zone 3,,,b524,020103020e00,value,,UCH,0=auto;1=ventilation;2=party;3=veto;4=onedayaway;5=onedayathome;6=load,,
-r,,,Z3RoomTemp,Raumisttemperatur Zone 3,,,b524,020003020f00,value,,IGN:4,,,,value,,EXP,,°C,aktuelle Raumtemperatur in Zone 3
+r,,,Z3RoomTemp,Raumisttemperatur Zone 3,,,b524,06020003020f00,value,,IGN:4,,,,value,,EXP,,°C,aktuelle Raumtemperatur in Zone 3
 r,,,Z3ValveStatus,Ventilstatus Zone 3,,,b524,020003021200,value,,IGN:4,,,,value,,UCH,,,valve status of zone 3
 w,,,Z3ValveStatus,Ventilstatus Zone 3,,,b524,020103021200,value,,UCH,,,valve status of zone 3
 r,,,Z3RoomZoneMapping,Raumregler Zuordnung Zone 3,,,b524,020003021300,value,,IGN:4,,,,value,,UIN,0=none;1=VRC700;2=VR91_1;3=VR91_2;4=VR91_3,,configures which room temperature is assigned to zone 3
