@@ -30,5 +30,10 @@ r,,,TEST_ModeStateUnknown,Unknown b510 0900 message,,,b510,0900,data,,HEX:6,,,,
 r,,,TEST_Status_Unknown_0100,Unknown b504 0100 message,,,b504,0100,value,,HEX:11,,,,
 #wrong config lines
 #r,,,TEST_RunDataDecoded,Decoded binary/status data from unknown run state,,b509,5402000609,mode,,U8,,Operating mode,value1,,U16,,Status ID,value2,,U8,,Substep A,value3,,U8,,Substep B,timestamp,,U32,,Possible timestamp or flags
+
 #r,,,TEST_StatusSomething,Unknown Status (0x03/0x0F/0x0001),,,b512,030f0001,param1,,UIN,,,param2,,UIN,,,param3,,UIN,,,flag,,UCH,,,
+
 #r,,,RunDataUnknownBlock,,,,b509,540200560d,data1,,UCH,,,data2,,D2C,,°C,,,data3,,D2C,,°C,,,ignore,,HEX:6,,,padding or unknown either this or raw #29
+#error message
+#2025-04-06 11:29:37.334 [main error] error reading scan config file vaillant/76.vwz.csv for ID "vwz00", SW0522, HW5103: ERR: invalid argument, vaillant/76.vwz.csv:26: ERR: invalid argument, part d2c in field 1
+#2025-04-06 11:29:37.334 [main error] scan config 76: ERR: invalid argument
