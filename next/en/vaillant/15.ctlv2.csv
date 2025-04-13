@@ -178,6 +178,7 @@ r,,,Hc3PumpStatus,PumpStatus Heizkreis 3,,,b524,020002021e00,value,,IGN:4,,,,val
 w,,,Hc3PumpStatus,PumpStatus Heizkreis 3,,,b524,020102021e00,value,,UIN,,,pump status of zone 3
 r,,,Hc4CircuitType,CircuitType Heizkreis 3,,,b524,020002030200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,mixer typ
 r,,,Hc4ActualFlowTempDesired,ActualFlowTempDesired Heizkreis 4,,,b524,020002030700,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature setpoint of Hc2
+r,,,Hc4FlowTemp,FlowTemp Heizkreis 3,,,b524,020002030800,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature of Hc3
 r,,,Z1CoolingTemp,KĂĽhlsolltemperatur Zone 1,,,b524,020003000200,value,,IGN:4,,,,value,,EXP,,°C,desired cooling setpoint for zone 1
 w,,,Z1CoolingTemp,KĂĽhlsolltemperatur Zone 1,,,b524,020103000200,value,,EXP,,°C,desired cooling setpoint for zone 1
 r,,,Z1HolidayStartPeriod,Ferienzeitraum Start Zone 1,,,b524,020003000300,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays for zone 1
