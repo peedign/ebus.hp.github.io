@@ -449,9 +449,9 @@ r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,t
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
-r;w,,PrEnergySumHcThisMonth,this months energy consumption heating,,,,4F00,,,energy4,,,current month electricity consumption heating
-r;w,,PrEnergySumHwcThisMonth,this months energy consumption hot water,,,,5000,,,energy4,,,current month electricity consumption hot water
-r;w,,PrEnergySumHcLastMonth,last months energy consumption heating,,,,5300,,,energy4,,,last month electricity consumption heating
-r;w,,PrEnergySumHwcLastMonth,last months energy consumption hot water,,,,5400,,,energy4,,,last month electricity consumption hot water
-r;w,,PrEnergySumHc,total energy consumption heating,,,,5700,,,energy4,,,total year electricity consumption heating
-r;w,,PrEnergySumHwc,total energy consumption hot water,,,,5800,,,energy4,,,total year electricity consumption hot water
+r,,PrEnergySumHcThisMonth,this months energy consumption heating,,,,4F00,,,energy4,,,current month electricity consumption heating
+r,,PrEnergySumHwcThisMonth,this months energy consumption hot water,,,,5000,,,energy4,,,current month electricity consumption hot water
+r,,PrEnergySumHcLastMonth,last months energy consumption heating,,,,5300,,,energy4,,,last month electricity consumption heating
+r,,PrEnergySumHwcLastMonth,last months energy consumption hot water,,,,5400,,,energy4,,,last month electricity consumption hot water
+r,,PrEnergySumHc,total energy consumption heating,,,,5700,,,energy4,,,total year electricity consumption heating
+r,,PrEnergySumHwc,total energy consumption hot water,,,,5800,,,energy4,,,total year electricity consumption hot water
