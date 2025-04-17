@@ -216,6 +216,7 @@ r,,,UnknownB512_0204FF,Unknown b512 command,,,b512,0204FF,value,,UCH,,,
 r,,,UnknownB503_020002,Unknown b503 command,,,b503,020002,value,,UCH,,,
 r,,,UnknownB503_020004,Unknown b503 command,,,b503,020004,value,,UCH,,,
 r,,,UnknownB503_020005,Unknown b503 command,,,b503,020005,value,,UCH,,,
+r,,,Currentservice,Current service message,,,b503,0002,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 
 
 
