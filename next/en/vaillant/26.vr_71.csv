@@ -11,4 +11,4 @@ r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,U
 r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
 r,,,RawErrorLogPayload,Raw B503 packet,,,b503,0c0700,part1,,HEX:4,,,part2,,HEX:6
-r,,TESTunknownMB513h0528,,,08,B513,0528,,,HEX:*,,,Unknown from CTLV2 to HMU,,,,,,,,,,,,,,,,,,
+
