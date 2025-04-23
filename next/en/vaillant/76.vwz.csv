@@ -8,6 +8,7 @@ r,,service,TestHwcTemp,hwc temperature,,,b514,052c,value,,IGN:2,,,,value,,SIN,10
 w,,service,EnableTestOutdoorTemp,enable test outdoor temperature,,,b514,05,ignore,,HEX:3,=03FFFF,,,
 r,,service,TestOutdoorTemp,outdoor temperature,,,b514,0545,value,,IGN:2,,,,value,,SIN,10,°C,temperature
 #additions
+r,,,Status01,Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus,,,b511,0101,temp,,D1C,,°C,temperature,temp_1,,D1C,,°C,temperature,temp_2,,D2B,,°C,temperature,temp_3,,D1C,,°C,temperature,temp_4,,D1C,,°C,temperature,pumpstate,,UCH,0=off;1=on;2=overrun;4=hwc,,pump state
 r,,,TEST_Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 r,,,TEST_Errorhistory,Error History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 r,,,TEST_Mode,Operation mode,,,b504,01,tempdesired,,UCH,,°C,temperature,mcmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode,floorpavingdryingday,,UCH,,,days,floorpavingdryingtemp,,UCH,,°C,temperature,teleswitchmode,,UCH,0=disabled;1=on;2=off;3=auto;4=eco;5=low,,mixer mode,mctype,,BI0:7,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool;6=circulation,,mixer type,ign,,IGN,,,,daynight,,UCH,0=night;1=day;7=floorpaving,,day/night mode
