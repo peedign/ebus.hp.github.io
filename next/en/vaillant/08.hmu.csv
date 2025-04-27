@@ -218,6 +218,20 @@ r,,,UnknownB503_020004,Unknown b503 command,,,b503,020004,value,,UCH,,,
 r,,,UnknownB503_020005,Unknown b503 command,,,b503,020005,value,,UCH,,,
 r,,,Currentservice,Current service message,,,b503,0002,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 r,,,UnknownMB513h0528,,,08,B513,0528,,,HEX:*,,,Unknown from CTLV2 to HMU,,,,,,,,,,,,,,,,,,
-
+#b516 energy section
+r,,,SolarHeatingSystem,,,,b516,1000ffff01030030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,SolarHotWaterSystem,,,,b516,1000ffff01040030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,SolarCoolingSystem,,,,b516,1000ffff01050030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalSumSystem,,,,b516,1000ffff02000030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalHeatingSystem,,,,b516,1000ffff02030030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalHotWaterSystem,,,,b516,1000ffff02040030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalCoolingSystem,,,,b516,1000ffff02050030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalSumSystem,,,,b516,1000ffff03000030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalHeatingSystem,,,,b516,1000ffff03030030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalHotWaterSystem,,,,b516,1000ffff03040030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalCoolingSystem,,,,b516,1000ffff03050030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,FuelSumSystem,,,,b516,1000ffff04000030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,FuelHeatingSystem,,,,b516,1000ffff04030030,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,FuelHotWaterSystem,,,,b516,1000ffff04040030,ign,,IGN:7,,,,energye,,EXP,,Wh,
 
 
