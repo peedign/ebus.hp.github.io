@@ -39,9 +39,6 @@ r,,,Z2Mode,Operation mode,,,b504,0100,tempdesired,,UCH,,°C,temperature,mcmode,,
 #2025-04-06 10:12:14.884 [main error] scan config 76: ERR: argument value out of valid range
 
 #2)
-r,,,StatusVWZ_001,Decoded status b512:030f0001,,,b512,030f0001,state1,,UCH,,,state2,,UCH,,,state3,,UCH,,,supplytemp,,D2C,,°C,pressure,,FLT,,bar,flag,,UCH,,,
-
-#3)
 #r,,,RunDataUnknownBlock,,,,b509,540200560d,data1,,UCH,,,data2,,D2C,,°C,,,data3,,D2C,,°C,,,ignore,,HEX:6,,,padding or unknown either this or raw #29
 #error message
 #2025-04-06 11:29:37.334 [main error] error reading scan config file vaillant/76.vwz.csv for ID "vwz00", SW0522, HW5103: ERR: invalid argument, vaillant/76.vwz.csv:26: ERR: invalid argument, part d2c in field 1
