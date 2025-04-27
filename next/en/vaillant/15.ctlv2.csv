@@ -176,9 +176,6 @@ r,,,Hc3Status,Status Heizkreis 3,,,b524,020002021b00,value,,IGN:4,,,,value,,UCH,
 w,,,Hc3Status,Status Heizkreis 3,,,b524,020102021b00,value,,UCH,,,status of zone 2
 r,,,Hc3PumpStatus,PumpStatus Heizkreis 3,,,b524,020002021e00,value,,IGN:4,,,,value,,UIN,,,pump status of zone 3
 w,,,Hc3PumpStatus,PumpStatus Heizkreis 3,,,b524,020102021e00,value,,UIN,,,pump status of zone 3
-r,,,Hc4CircuitType,CircuitType Heizkreis 3,,,b524,020002030200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,mixer typ
-r,,,Hc4ActualFlowTempDesired,ActualFlowTempDesired Heizkreis 4,,,b524,020002030700,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature setpoint of Hc2
-r,,,Hc4FlowTemp,FlowTemp Heizkreis 3,,,b524,020002030800,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature of Hc3
 r,,,Z1CoolingTemp,KĂĽhlsolltemperatur Zone 1,,,b524,020003000200,value,,IGN:4,,,,value,,EXP,,°C,desired cooling setpoint for zone 1
 w,,,Z1CoolingTemp,KĂĽhlsolltemperatur Zone 1,,,b524,020103000200,value,,EXP,,°C,desired cooling setpoint for zone 1
 r,,,Z1HolidayStartPeriod,Ferienzeitraum Start Zone 1,,,b524,020003000300,value,,IGN:4,,,,value,,HDA:3,,,start date of holidays for zone 1
@@ -447,3 +444,82 @@ w,,,Z3Timer_Sunday,timer heating sunday,,,b555,a6020006,slotindex,,UCH,,,array i
 r,,,Currenterror,Current errors,,,b503,0001,error,,UIN,,,error number,error_1,,UIN,,,error number,error_2,,UIN,,,error number,error_3,,UIN,,,error number,error_4,,UIN,,,error number
 r,,,Errorhistory,Error_History,,,b503,0101,index,m,UCH,,,,status,,UCH,,,Status,time,,VTM,,,time,date,,HDA:3,,,date,error,,UIN,,,error number
 w,,install,Clearerrorhistory,Clear error history,,,b503,0201,cleared,s,UCH,0=no;1=yes,,
+#new config lines
+### Heating Circuit 4
+r,,,Hc4CircuitType,CircuitType Heizkreis 4,,,b524,020004000200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,mixer type,ign,,IGN:1,,,
+r,,,Hc4ActualFlowTempDesired,ActualFlowTempDesired Heizkreis 4,,,b524,020004000700,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature setpoint of Hc4
+r,,,Hc4FlowTemp,FlowTemp Heizkreis 4,,,b524,020004000800,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature of Hc4
+r,,,Hc4ExcessTemp,ExcessTemp Heizkreis 4,,,b524,020004000b00,value,,IGN:4,,,,value,,EXP,,K,excess temperature of Hc4
+w,,,Hc4ExcessTemp,ExcessTemp Heizkreis 4,,,b524,020104000b00,value,,EXP,,K,excess temperature of Hc4
+r,,,Hc4AutoOffMode,AutoOffMode Heizkreis 4,,,b524,020004000e00,value,,IGN:4,,,,value,,UIN,0=eco;1=night,,auto-off mode Hc4
+w,,,Hc4AutoOffMode,AutoOffMode Heizkreis 4,,,b524,020104000e00,value,,UIN,0=eco;1=night,,auto-off mode Hc4
+r,,,Hc4HeatCurve,Heizkurve Heizkreis 4,,,b524,020004000f00,value,,IGN:4,,,,value,,EXP,,,heating curve of Hc4
+w,,,Hc4HeatCurve,Heizkurve Heizkreis 4,,,b524,020104000f00,value,,EXP,,,heating curve of Hc4
+r,,,Hc4MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 4,,,b524,020004001000,value,,IGN:4,,,,value,,EXP,,°C,max flow temperature setpoint Hc4
+w,,,Hc4MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 4,,,b524,020104001000,value,,EXP,,°C,max flow temperature setpoint Hc4
+r,,,Hc4MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 4,,,b524,020004001100,value,,IGN:4,,,,value,,EXP,,°C,min cooling setpoint Hc4
+w,,,Hc4MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 4,,,b524,020104001100,value,,EXP,,°C,min cooling setpoint Hc4
+r,,,Hc4MinFlowTempDesired,MinFlowTempDesired Heizkreis 4,,,b524,020004001200,value,,IGN:4,,,,value,,EXP,,°C,min flow setpoint Hc4
+w,,,Hc4MinFlowTempDesired,MinFlowTempDesired Heizkreis 4,,,b524,020104001200,value,,EXP,,°C,min flow setpoint Hc4
+r,,,Hc4SummerTempLimit,AT-Abschaltgrenze Heizkreis 4,,,b524,020004001400,value,,IGN:4,,,,value,,EXP,,°C,summer shutdown limit Hc4
+w,,,Hc4SummerTempLimit,AT-Abschaltgrenze Heizkreis 4,,,b524,020104001400,value,,EXP,,°C,summer shutdown limit Hc4
+r,,,Hc4RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 4,,,b524,020004001500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc4
+w,,,Hc4RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 4,,,b524,020104001500,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc4
+r,,,Hc4MixerMovement,MixerMovement Heizkreis 4,,,b524,020004001a00,value,,IGN:4,,,,value,,EXP,,,"mixer movement Hc4 (<0 closing, >0 opening)"
+r,,,Hc4HeatCurveAdaption,Anpassung Heizkurve Heizkreis 4,,,b524,020004001c00,value,,IGN:4,,,,value,,EXP,,,heat curve adaptation Hc4
+r,,,Hc4Status,Status Heizkreis 4,,,b524,020004001b00,value,,IGN:4,,,,value,,UCH,,,status of Hc4
+w,,,Hc4Status,Status Heizkreis 4,,,b524,020104001b00,value,,UCH,,,status of Hc4
+r,,,Hc4PumpStatus,PumpStatus Heizkreis 4,,,b524,020004001e00,value,,IGN:4,,,,value,,UIN,,,pump status of Hc4
+w,,,Hc4PumpStatus,PumpStatus Heizkreis 4,,,b524,020104001e00,value,,UIN,,,pump status of Hc4
+### Heating Circuit 5
+r,,,Hc5CircuitType,CircuitType Heizkreis 5,,,b524,020005000200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,mixer type,ign,,IGN:1,,,
+r,,,Hc5ActualFlowTempDesired,ActualFlowTempDesired Heizkreis 5,,,b524,020005000700,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature setpoint of Hc5
+r,,,Hc5FlowTemp,FlowTemp Heizkreis 5,,,b524,020005000800,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature of Hc5
+r,,,Hc5ExcessTemp,ExcessTemp Heizkreis 5,,,b524,020005000b00,value,,IGN:4,,,,value,,EXP,,K,excess temperature of Hc5
+w,,,Hc5ExcessTemp,ExcessTemp Heizkreis 5,,,b524,020105000b00,value,,EXP,,K,excess temperature of Hc5
+r,,,Hc5AutoOffMode,AutoOffMode Heizkreis 5,,,b524,020005000e00,value,,IGN:4,,,,value,,UIN,0=eco;1=night,,auto-off mode Hc5
+w,,,Hc5AutoOffMode,AutoOffMode Heizkreis 5,,,b524,020105000e00,value,,UIN,0=eco;1=night,,auto-off mode Hc5
+r,,,Hc5HeatCurve,Heizkurve Heizkreis 5,,,b524,020005000f00,value,,IGN:4,,,,value,,EXP,,,heating curve of Hc5
+w,,,Hc5HeatCurve,Heizkurve Heizkreis 5,,,b524,020105000f00,value,,EXP,,,heating curve of Hc5
+r,,,Hc5MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 5,,,b524,020005001000,value,,IGN:4,,,,value,,EXP,,°C,max flow temperature setpoint Hc5
+w,,,Hc5MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 5,,,b524,020105001000,value,,EXP,,°C,max flow temperature setpoint Hc5
+r,,,Hc5MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 5,,,b524,020005001100,value,,IGN:4,,,,value,,EXP,,°C,min cooling setpoint Hc5
+w,,,Hc5MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 5,,,b524,020105001100,value,,EXP,,°C,min cooling setpoint Hc5
+r,,,Hc5MinFlowTempDesired,MinFlowTempDesired Heizkreis 5,,,b524,020005001200,value,,IGN:4,,,,value,,EXP,,°C,min flow setpoint Hc5
+w,,,Hc5MinFlowTempDesired,MinFlowTempDesired Heizkreis 5,,,b524,020105001200,value,,EXP,,°C,min flow setpoint Hc5
+r,,,Hc5SummerTempLimit,AT-Abschaltgrenze Heizkreis 5,,,b524,020005001400,value,,IGN:4,,,,value,,EXP,,°C,summer shutdown limit Hc5
+w,,,Hc5SummerTempLimit,AT-Abschaltgrenze Heizkreis 5,,,b524,020105001400,value,,EXP,,°C,summer shutdown limit Hc5
+r,,,Hc5RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 5,,,b524,020005001500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc5
+w,,,Hc5RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 5,,,b524,020105001500,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc5
+r,,,Hc5MixerMovement,MixerMovement Heizkreis 5,,,b524,020005001a00,value,,IGN:4,,,,value,,EXP,,,"mixer movement Hc5 (<0 closing, >0 opening)"
+r,,,Hc5HeatCurveAdaption,Anpassung Heizkurve Heizkreis 5,,,b524,020005001c00,value,,IGN:4,,,,value,,EXP,,,heat curve adaptation Hc5
+r,,,Hc5Status,Status Heizkreis 5,,,b524,020005001b00,value,,IGN:4,,,,value,,UCH,,,status of Hc5
+w,,,Hc5Status,Status Heizkreis 5,,,b524,020105001b00,value,,UCH,,,status of Hc5
+r,,,Hc5PumpStatus,PumpStatus Heizkreis 5,,,b524,020005001e00,value,,IGN:4,,,,value,,UIN,,,pump status of Hc5
+w,,,Hc5PumpStatus,PumpStatus Heizkreis 5,,,b524,020105001e00,value,,UIN,,,pump status of Hc5
+### Heating Circuit 6
+r,,,Hc6CircuitType,CircuitType Heizkreis 6,,,b524,020006000200,value,,IGN:4,,,,mctype,,UCH,0=inactive;1=mixer;2=fixed;3=hwc;4=returnincr;5=pool,,mixer type,ign,,IGN:1,,,
+r,,,Hc6ActualFlowTempDesired,ActualFlowTempDesired Heizkreis 6,,,b524,020006000700,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature setpoint of Hc6
+r,,,Hc6FlowTemp,FlowTemp Heizkreis 6,,,b524,020006000800,value,,IGN:4,,,,value,,EXP,,°C,current flow temperature of Hc6
+r,,,Hc6ExcessTemp,ExcessTemp Heizkreis 6,,,b524,020006000b00,value,,IGN:4,,,,value,,EXP,,K,excess temperature of Hc6
+w,,,Hc6ExcessTemp,ExcessTemp Heizkreis 6,,,b524,020106000b00,value,,EXP,,K,excess temperature of Hc6
+r,,,Hc6AutoOffMode,AutoOffMode Heizkreis 6,,,b524,020006000e00,value,,IGN:4,,,,value,,UIN,0=eco;1=night,,auto-off mode Hc6
+w,,,Hc6AutoOffMode,AutoOffMode Heizkreis 6,,,b524,020106000e00,value,,UIN,0=eco;1=night,,auto-off mode Hc6
+r,,,Hc6HeatCurve,Heizkurve Heizkreis 6,,,b524,020006000f00,value,,IGN:4,,,,value,,EXP,,,heating curve of Hc6
+w,,,Hc6HeatCurve,Heizkurve Heizkreis 6,,,b524,020106000f00,value,,EXP,,,heating curve of Hc6
+r,,,Hc6MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 6,,,b524,020006001000,value,,IGN:4,,,,value,,EXP,,°C,max flow temperature setpoint Hc6
+w,,,Hc6MaxFlowTempDesired,MaxFlowTempDesired Heizkreis 6,,,b524,020106001000,value,,EXP,,°C,max flow temperature setpoint Hc6
+r,,,Hc6MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 6,,,b524,020006001100,value,,IGN:4,,,,value,,EXP,,°C,min cooling setpoint Hc6
+w,,,Hc6MinCoolingTempDesired,MinCoolingTempDesired Heizkreis 6,,,b524,020106001100,value,,EXP,,°C,min cooling setpoint Hc6
+r,,,Hc6MinFlowTempDesired,MinFlowTempDesired Heizkreis 6,,,b524,020006001200,value,,IGN:4,,,,value,,EXP,,°C,min flow setpoint Hc6
+w,,,Hc6MinFlowTempDesired,MinFlowTempDesired Heizkreis 6,,,b524,020106001200,value,,EXP,,°C,min flow setpoint Hc6
+r,,,Hc6SummerTempLimit,AT-Abschaltgrenze Heizkreis 6,,,b524,020006001400,value,,IGN:4,,,,value,,EXP,,°C,summer shutdown limit Hc6
+w,,,Hc6SummerTempLimit,AT-Abschaltgrenze Heizkreis 6,,,b524,020106001400,value,,EXP,,°C,summer shutdown limit Hc6
+r,,,Hc6RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 6,,,b524,020006001500,value,,IGN:4,,,,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc6
+w,,,Hc6RoomTempSwitchOn,RoomTempSwitchOn Heizkreis 6,,,b524,020106001500,value,,UIN,0=off;1=modulating;2=thermostat,,room temp modulation Hc6
+r,,,Hc6MixerMovement,MixerMovement Heizkreis 6,,,b524,020006001a00,value,,IGN:4,,,,value,,EXP,,,"mixer movement Hc6 (<0 closing, >0 opening)"
+r,,,Hc6HeatCurveAdaption,Anpassung Heizkurve Heizkreis 6,,,b524,020006001c00,value,,IGN:4,,,,value,,EXP,,,heat curve adaptation Hc6
+r,,,Hc6Status,Status Heizkreis 6,,,b524,020006001b00,value,,IGN:4,,,,value,,UCH,,,status of Hc6
+w,,,Hc6Status,Status Heizkreis 6,,,b524,020106001b00,value,,UCH,,,status of Hc6
+r,,,Hc6PumpStatus,PumpStatus Heizkreis 6,,,b524,020006001e00,value,,IGN:4,,,,value,,UIN,,,pump status of Hc6
+w,,,Hc6PumpStatus,PumpStatus Heizkreis 6,,,b524,020106001e00,value,,UIN,,,pump status of Hc6
