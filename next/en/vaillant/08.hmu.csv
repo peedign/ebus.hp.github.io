@@ -233,5 +233,14 @@ r,,,ElectricalCoolingSystem,,,,b516,1000ffff03050030,ign,,IGN:7,,,,energye,,EXP,
 r,,,FuelSumSystem,,,,b516,1000ffff04000030,ign,,IGN:7,,,,energye,,EXP,,Wh,
 r,,,FuelHeatingSystem,,,,b516,1000ffff04030030,ign,,IGN:7,,,,energye,,EXP,,Wh,
 r,,,FuelHotWaterSystem,,,,b516,1000ffff04040030,ign,,IGN:7,,,,energye,,EXP,,Wh,
-
+#b516 energy section by ChatGPT
+r,,,SolarHeatingSystem_Alt,,,,b516,1000ffff83030000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,SolarHotWaterSystem_Alt,,,,b516,1000ffff83040000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,SolarCoolingSystem_Alt,,,,b516,1000ffff83050000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalHeatingSystem_Alt,,,,b516,1000ffff42030000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalHotWaterSystem_Alt,,,,b516,1000ffff42040000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,EnvironmentalCoolingSystem_Alt,,,,b516,1000ffff42050000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalHeatingSystem_Alt,,,,b516,1000ffff49030000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalHotWaterSystem_Alt,,,,b516,1000ffff49040000,ign,,IGN:7,,,,energye,,EXP,,Wh,
+r,,,ElectricalCoolingSystem_Alt,,,,b516,1000ffff49050000,ign,,IGN:7,,,,energye,,EXP,,Wh,
 
